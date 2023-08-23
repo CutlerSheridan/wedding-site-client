@@ -16,6 +16,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/rsvp">RSVP</Link>
         <Link to="/hotels">Hotels</Link>
+        <Link to="/registry">Registry</Link>
       </nav>
       {isAdmin ? adminBar : <></>}
     </div>

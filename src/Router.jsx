@@ -4,6 +4,7 @@ import Error404 from './components/Error404.jsx';
 import Home from './components/Home.jsx';
 import Hotels from './components/Hotels.jsx';
 import Rsvp from './components/Rsvp/Rsvp.jsx';
+import Registry from './components/Registry.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const Router = () => {
         {
           path: 'hotels',
           element: <Hotels />,
+        },
+        {
+          path: 'registry',
+          element: <Registry />,
         },
       ],
     },

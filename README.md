@@ -20,6 +20,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.1.1_
+
+- add Registy page
+
 _0.1.0_
 
 - get some basic routes set up
