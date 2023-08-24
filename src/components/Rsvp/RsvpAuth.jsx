@@ -20,11 +20,12 @@ const RsvpAuth = (props) => {
       props.setGroupId(guests[0].group);
       localStorage.setItem('groupId', guests[0].group);
     } else if (!guests) {
+      submitButton.current.disabled = false;
       setErrors(['No guests found with that name']);
     } else {
+      submitButton.current.disabled = false;
       setErrors([`guests`]);
     }
-    submitButton.current.disabled = false;
   };
   const searchName = async (nameUri) => {
     try {

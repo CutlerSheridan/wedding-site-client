@@ -24,6 +24,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.1.5_
+
+- actually fix submit button
+
 _0.1.4_
 
 - fix RsvpAuth submit button disabling on load
