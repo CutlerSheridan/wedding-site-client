@@ -10,7 +10,7 @@ const RsvpAuth = (props) => {
   };
   const submitName = async (e) => {
     e.preventDefault();
-    submitButton.disabled = true;
+    submitButton.current.disabled = true;
     const nameUri = inputName.replace(' ', '_');
     const guests = await searchName(nameUri);
     console.log('searchName response: ', guests);
@@ -24,7 +24,7 @@ const RsvpAuth = (props) => {
     } else {
       setErrors([`guests`]);
     }
-    submitButton.disabled = false;
+    submitButton.current.disabled = false;
   };
   const searchName = async (nameUri) => {
     try {
