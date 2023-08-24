@@ -12,13 +12,22 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Features
 
+- add button to RsvpForms to return to search
+
 ##### Behavior
 
 ##### Style
 
+- underline active tab
+- add RSVP button to home page
 - add credit
 
 #### DONE
+
+_0.1.2_
+
+- write RsvpAuth component and logic
+- fix issue of auth dialogue not switching to RsvpForms after successfully fetching guest info
 
 _0.1.1_
 

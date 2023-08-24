@@ -5,17 +5,19 @@ import Loading from '../Loading';
 
 const Rsvp = () => {
   const [groupId, setGroupId] = useState(localStorage.getItem('groupId'));
-  const [guestsInGroup, setGuestsInGroup] = useState();
+  const [guestsInGroup, setGuestsInGroup] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchGuestsFromGroupId = async () => {
-      const response = await fetch(
-        `http://localhost:3000/api/1/groups/${groupId}`
-      );
-      const guests = await response.json();
-      if (!!guests) {
+      if (groupId && !guestsInGroup.length) {
+        const response = await fetch(
+          `http://localhost:3000/api/1/groups/${groupId}`
+        );
+        const guests = await response.json();
         setGuestsInGroup(guests);
+      } else if (!groupId) {
+        setGuestsInGroup([]);
       }
       setIsLoading(false);
     };
@@ -27,10 +29,17 @@ const Rsvp = () => {
     return (
       <div>
         {guestsInGroup.map((guest, index) => (
-          <RsvpForm guest={guest} key={index} />
+          <RsvpForm key={index} guest={guest} />
         ))}
       </div>
     );
+  };
+
+  const updateGroupId = (newId) => {
+    setGroupId(newId);
+  };
+  const updateGuestsInGroup = (newGuests) => {
+    setGuestsInGroup(newGuests);
   };
 
   const toggleStoredGroupId = () => {
@@ -50,10 +59,13 @@ const Rsvp = () => {
 
       {isLoading ? (
         <Loading />
-      ) : guestsInGroup.length > 0 ? (
+      ) : guestsInGroup.length ? (
         createFormComponents(guestsInGroup)
       ) : (
-        <RsvpAuth />
+        <RsvpAuth
+          setGroupId={updateGroupId}
+          setGuestsInGroup={updateGuestsInGroup}
+        />
       )}
     </div>
   );
