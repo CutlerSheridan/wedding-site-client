@@ -3,12 +3,14 @@ import { useState, seEffect, useRef } from 'react';
 const RsvpAuth = (props) => {
   const [inputName, setInputName] = useState('');
   const [errors, setErrors] = useState([]);
+  const submitButton = useRef(null);
 
   const handleNameChange = (e) => {
     setInputName(e.target.value);
   };
   const submitName = async (e) => {
     e.preventDefault();
+    submitButton.disabled = true;
     const nameUri = inputName.replace(' ', '_');
     const guests = await searchName(nameUri);
     console.log('searchName response: ', guests);
@@ -22,6 +24,7 @@ const RsvpAuth = (props) => {
     } else {
       setErrors([`guests`]);
     }
+    submitButton.disabled = false;
   };
   const searchName = async (nameUri) => {
     try {
@@ -49,7 +52,9 @@ const RsvpAuth = (props) => {
           onChange={handleNameChange}
           placeholder='Ex. "John Smith"'
         />
-        <button onClick={submitName}>Submit</button>
+        <button ref={submitButton} onClick={submitName} disabled={!inputName}>
+          Submit
+        </button>
       </form>
       <ul>
         {errors.map((x, index) => (

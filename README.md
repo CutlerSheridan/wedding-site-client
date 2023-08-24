@@ -24,6 +24,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.1.3_
+
+- disable RsvpAuth submit button when awaiting response
+- disable RsvpAuth submit button when name field is empty
+
 _0.1.2_
 
 - write RsvpAuth component and logic
