@@ -1,0 +1,23 @@
+.rsvp-formWrapper {
+  display: flex;
+  border: 1px solid pink;
+}
+.rsvp-formWrapper > * {
+  width: 50%;
+  border: 1px solid green;
+}
+.rsvp-eventWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvp-fieldsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rsvpSelector-wrapper {
+  /* border: 1px solid red; */
+}

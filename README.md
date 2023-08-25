@@ -7,12 +7,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - wire up RsvpForm to communicate with database via form selections
+- add address section under Rsvp
 
 #### TODO LATER
 
 ##### Features
 
-- add button to RsvpForms to return to search
+- add button to Rsvp to return to search
+- add "add to calendar" buttons under schedule
 
 ##### Behavior
 
@@ -23,6 +25,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.1.6_
+
+- add EVENTS constant
+- add logic to RsvpForm so it populates a selector for each guest's response next to each event
 
 _0.1.5_
 

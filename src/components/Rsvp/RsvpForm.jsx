@@ -1,9 +1,31 @@
 import { useState } from 'react';
+import './RsvpForm.css';
+import RsvpCheckboxField from './RsvpCheckboxField';
 
-const RsvpForm = ({ guest }) => {
+const RsvpForm = ({ event, guests, rsvpField }) => {
+  const timeSliceIndex = event.time.indexOf('#');
+  const time =
+    timeSliceIndex === -1 ? event.time : event.time.slice(0, timeSliceIndex);
+
   return (
-    <div>
-      <p>This is a form to RSVP for {guest.name}</p>
+    <div className="rsvp-formWrapper">
+      <div className="rsvp-eventWrapper">
+        <h2>{event.title}</h2>
+        <p>{time}</p>
+        {event.address.map((addressLine) => (
+          <p key={addressLine}>{addressLine}</p>
+        ))}
+        <ul>{event.description[0]}</ul>
+      </div>
+      <div className="rsvp-fieldsWrapper">
+        {guests.map((guest) => (
+          <RsvpCheckboxField
+            key={guest.name}
+            guest={guest}
+            rsvpField={rsvpField}
+          />
+        ))}
+      </div>
     </div>
   );
 };

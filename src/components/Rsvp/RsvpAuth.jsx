@@ -41,8 +41,6 @@ const RsvpAuth = (props) => {
 
   return (
     <div>
-      <h1>RSVP</h1>
-      <p>Please respond as soon as possible.</p>
       <p>
         Enter the first and last name of one member of your party below. You
         will be able to RSVP for your entire group on the next page.
