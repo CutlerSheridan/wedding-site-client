@@ -2,11 +2,13 @@ import { useState, useRef } from 'react';
 
 const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
   const [guest, setGuest] = useState({ ...initialGuest });
-  const [updatingDb, setUpdatingDb] = useState(false);
   const acceptButton = useRef(null);
   const declineButton = useRef(null);
 
   const handleButton = async (button) => {
+    acceptButton.current.classList.add('rsvp-button-disabled');
+    declineButton.current.classList.add('rsvp-button-disabled');
+
     let resData;
     if (
       guest[rsvpField] === null ||
@@ -39,7 +41,9 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
       resData = await response.json();
     }
     setGuest({ ...resData });
-    setUpdatingDb(false);
+    acceptButton.current.classList.remove('rsvp-button-disabled');
+    declineButton.current.classList.remove('rsvp-button-disabled');
+    button.current.blur();
   };
 
   return (
@@ -53,11 +57,10 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
             guest[rsvpField] ? 'rsvp-button-selected' : null
           }`}
           onClick={() => {
-            setUpdatingDb(true);
             handleButton(acceptButton);
           }}
           data-bool="true"
-          disabled={updatingDb}
+          // disabled={false}
         >
           YES
         </button>
@@ -68,11 +71,11 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
             guest[rsvpField] === false ? 'rsvp-button-selected' : null
           }`}
           onClick={() => {
-            setUpdatingDb(true);
+            // declineButton.current.disabled = true;
             handleButton(declineButton);
           }}
           data-bool="false"
-          disabled={updatingDb}
+          // disabled={updatingDb}
         >
           NO
         </button>

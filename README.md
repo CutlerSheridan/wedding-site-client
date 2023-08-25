@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add address section under Rsvp
-- add a bigger group to test data
+- throw events onto schedule page
+- start on admin dashboard
 
 #### TODO LATER
 
@@ -25,6 +25,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.1.8_
+
+- add address section under Rsvp
+- disable checkboxes while guest RSVP is updated
+- add address inputs
 
 _0.1.7_
 

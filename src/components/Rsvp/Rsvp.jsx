@@ -37,14 +37,7 @@ const Rsvp = () => {
           know you'll be there Saturday, go ahead and select your answer for
           Saturday and leave the others blank.
         </p>
-        {guests.length > 1 ? (
-          <p>
-            If {guests.length === 2 ? 'both' : 'all'} members of your party are
-            at the same address, you only need to fill that in for one person.
-          </p>
-        ) : (
-          <></>
-        )}
+        {guests.length > 1 ? <p></p> : <></>}
         {EVENTS.map((ev) => {
           if (ev.needsRsvp) {
             return (
@@ -53,10 +46,26 @@ const Rsvp = () => {
                 event={ev}
                 guests={guests}
                 rsvpField={rsvpFields[eventCounter++]}
+                fieldType="checkbox"
               />
             );
           }
         })}
+        <RsvpForm
+          event={{
+            title: 'Address',
+            time: '',
+            description: [
+              `If ${
+                guests.length === 2 ? 'both' : 'all'
+              } members of your party are
+            at the same address, you only need to fill it in for one person.`,
+            ],
+          }}
+          guests={guests}
+          rsvpField="address"
+          fieldType="address"
+        />
       </div>
     );
   };

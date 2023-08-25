@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './RsvpForm.css';
 import RsvpCheckboxField from './RsvpCheckboxField';
+import RsvpTextField from './RsvpTextField';
 
-const RsvpForm = ({ event, guests, rsvpField }) => {
-  const timeSliceIndex = event.time.indexOf('#');
+const RsvpForm = ({ event, guests, rsvpField, fieldType }) => {
+  const timeSliceIndex = event.time?.indexOf('#');
   const time =
     timeSliceIndex === -1 ? event.time : event.time.slice(0, timeSliceIndex);
 
@@ -11,22 +12,33 @@ const RsvpForm = ({ event, guests, rsvpField }) => {
     <div className="rsvp-formWrapper">
       <div className="rsvp-eventWrapper">
         <h2>{event.title}</h2>
-        <p>{event.date}</p>
-        <p>{time}</p>
-        {event.address.map((addressLine) => (
-          <p key={addressLine}>{addressLine}</p>
-        ))}
-        <ul>{event.description[0]}</ul>
+        {fieldType === 'checkbox' ? (
+          <>
+            <p>{event.date}</p>
+            <p>{time}</p>
+            {event.address.map((addressLine) => (
+              <p key={addressLine}>{addressLine}</p>
+            ))}
+          </>
+        ) : null}
+        <p>{event.description[0]}</p>
       </div>
       <div className="rsvp-fieldsWrapper">
-        {guests.map((guest) => (
-          <RsvpCheckboxField
-            key={guest.name}
-            initialGuest={guest}
-            rsvpField={rsvpField}
-            fieldType="checkbox"
-          />
-        ))}
+        {guests.map((guest) =>
+          fieldType === 'checkbox' ? (
+            <RsvpCheckboxField
+              key={guest.name + rsvpField}
+              initialGuest={guest}
+              rsvpField={rsvpField}
+            />
+          ) : (
+            <RsvpTextField
+              key={guest.name + rsvpField}
+              initialGuest={guest}
+              rsvpField={rsvpField}
+            />
+          )
+        )}
       </div>
     </div>
   );
