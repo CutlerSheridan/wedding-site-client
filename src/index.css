@@ -1,6 +1,9 @@
 :root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  --clr-white: rgb(222, 222, 222);
+  --clr-dark: #242424;
+  color: var(--clr-white);
+  background-color: var(--clr-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,7 +39,7 @@ a:hover {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.3rem 0.5rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;

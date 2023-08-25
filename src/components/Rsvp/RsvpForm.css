@@ -21,3 +21,16 @@
 .rsvpSelector-wrapper {
   /* border: 1px solid red; */
 }
+.rsvp-buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.rsvp-buttonsWrapper > button {
+  width: 5ch;
+  border: 1px solid white;
+}
+.rsvp-button-selected {
+  background: var(--clr-white);
+  color: var(--clr-dark);
+}

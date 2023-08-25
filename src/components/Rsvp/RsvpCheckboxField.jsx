@@ -1,12 +1,82 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
-const RsvpCheckboxField = (props) => {
-  const [guest, setGuest] = useState({ ...props.guest });
+const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
+  const [guest, setGuest] = useState({ ...initialGuest });
+  const [updatingDb, setUpdatingDb] = useState(false);
+  const acceptButton = useRef(null);
+  const declineButton = useRef(null);
+
+  const handleButton = async (button) => {
+    let resData;
+    if (
+      guest[rsvpField] === null ||
+      guest[rsvpField] !== (button.current.dataset.bool === 'true')
+    ) {
+      const response = await fetch(
+        `http://localhost:3000/api/1/guests/${guest._id}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify({
+            [rsvpField]: button.current.dataset.bool === 'true',
+          }),
+        }
+      );
+      resData = await response.json();
+    } else {
+      const response = await fetch(
+        `http://localhost:3000/api/1/guests/${guest._id}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify({ [rsvpField]: null }),
+        }
+      );
+      resData = await response.json();
+    }
+    setGuest({ ...resData });
+    setUpdatingDb(false);
+  };
 
   return (
     <div className="rsvpSelector-wrapper">
       <h2>{guest.name}</h2>
-      <p>Checkbox for {props.rsvpField} [_] [_]</p>
+      <div className="rsvp-buttonsWrapper">
+        <button
+          type="button"
+          ref={acceptButton}
+          className={`rsvp-button ${
+            guest[rsvpField] ? 'rsvp-button-selected' : null
+          }`}
+          onClick={() => {
+            setUpdatingDb(true);
+            handleButton(acceptButton);
+          }}
+          data-bool="true"
+          disabled={updatingDb}
+        >
+          YES
+        </button>
+        <button
+          type="button"
+          ref={declineButton}
+          className={`rsvp-button ${
+            guest[rsvpField] === false ? 'rsvp-button-selected' : null
+          }`}
+          onClick={() => {
+            setUpdatingDb(true);
+            handleButton(declineButton);
+          }}
+          data-bool="false"
+          disabled={updatingDb}
+        >
+          NO
+        </button>
+      </div>
     </div>
   );
 };

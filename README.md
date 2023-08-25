@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- wire up RsvpForm to communicate with database via form selections
 - add address section under Rsvp
+- add a bigger group to test data
 
 #### TODO LATER
 
@@ -25,6 +25,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.1.7_
+
+- add RSVP checkboxes that communicate with db
 
 _0.1.6_
 

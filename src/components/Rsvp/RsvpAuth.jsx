@@ -13,7 +13,7 @@ const RsvpAuth = (props) => {
     submitButton.current.disabled = true;
     const nameUri = inputName.replace(' ', '_');
     const guests = await searchName(nameUri);
-    console.log('searchName response: ', guests);
+
     if (Array.isArray(guests)) {
       setErrors([]);
       props.setGuestsInGroup(guests);

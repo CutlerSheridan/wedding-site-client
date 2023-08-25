@@ -11,6 +11,7 @@ const RsvpForm = ({ event, guests, rsvpField }) => {
     <div className="rsvp-formWrapper">
       <div className="rsvp-eventWrapper">
         <h2>{event.title}</h2>
+        <p>{event.date}</p>
         <p>{time}</p>
         {event.address.map((addressLine) => (
           <p key={addressLine}>{addressLine}</p>
@@ -21,8 +22,9 @@ const RsvpForm = ({ event, guests, rsvpField }) => {
         {guests.map((guest) => (
           <RsvpCheckboxField
             key={guest.name}
-            guest={guest}
+            initialGuest={guest}
             rsvpField={rsvpField}
+            fieldType="checkbox"
           />
         ))}
       </div>

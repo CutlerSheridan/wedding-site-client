@@ -28,7 +28,7 @@ const Rsvp = () => {
 
   const createFormComponents = (guests) => {
     const rsvpFields = ['fri_rsvp', 'sat_rsvp', 'sun_rsvp'];
-    let counter = 0;
+    let eventCounter = 0;
     return (
       <div>
         <p>Please respond as soon as possible.</p>
@@ -45,18 +45,16 @@ const Rsvp = () => {
         ) : (
           <></>
         )}
-        {EVENTS.map((ev, index) => {
+        {EVENTS.map((ev) => {
           if (ev.needsRsvp) {
             return (
               <RsvpForm
                 key={ev.title}
                 event={ev}
                 guests={guests}
-                rsvpField={rsvpFields[counter++]}
+                rsvpField={rsvpFields[eventCounter++]}
               />
             );
-          } else {
-            return <></>;
           }
         })}
       </div>
@@ -78,7 +76,6 @@ const Rsvp = () => {
       localStorage.setItem('groupId', '2hen1qB3QqjYwP8LbvDVx0nJ');
       setGroupId('2hen1qB3QqjYwP8LbvDVx0nJ');
     }
-    console.log('stored groupId: ', localStorage.getItem('groupId'));
   };
 
   return (
