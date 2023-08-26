@@ -1,0 +1,14 @@
+.schedule-eventWrapper > h2 {
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+.schedule-eventWrapper > div:first-of-type {
+  margin: 1rem 0;
+}
+.schedule-eventTitle {
+  font-size: 1.5rem;
+}
+.schedule-calendarButtonWrapper {
+  margin: auto;
+  width: max-content;
+}

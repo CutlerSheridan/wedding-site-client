@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   const isAdmin = !!localStorage.getItem('jwt');
@@ -11,10 +12,11 @@ const Navbar = () => {
   );
 
   return (
-    <div>
+    <div className="navbar-wrapper">
       <nav>
         <Link to="/">Home</Link>
         <Link to="/rsvp">RSVP</Link>
+        <Link to="/itinerary">Itinerary</Link>
         <Link to="/hotels">Hotels</Link>
         <Link to="/registry">Registry</Link>
       </nav>

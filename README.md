@@ -6,25 +6,30 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- throw events onto schedule page
 - start on admin dashboard
 
 #### TODO LATER
 
 ##### Features
 
+- add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
-- add "add to calendar" buttons under schedule
+- add RSVP button to home page
 
 ##### Behavior
 
 ##### Style
 
 - underline active tab
-- add RSVP button to home page
 - add credit
 
 #### DONE
+
+_0.2.0_
+
+- put events onto schedule page
+- add ability to have one link or span in event description
+- add "add to calendar" buttons under schedule
 
 _0.1.8_
 

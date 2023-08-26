@@ -65,3 +65,8 @@ p {
   margin: auto;
   max-width: 60ch;
 }
+ul {
+  margin: auto;
+  max-width: 50ch;
+  text-align: left;
+}

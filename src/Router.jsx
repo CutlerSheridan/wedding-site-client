@@ -5,6 +5,7 @@ import Home from './components/Home.jsx';
 import Hotels from './components/Hotels.jsx';
 import Rsvp from './components/Rsvp/Rsvp.jsx';
 import Registry from './components/Registry.jsx';
+import Schedule from './components/Schedule.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const Router = () => {
         {
           path: 'rsvp',
           element: <Rsvp />,
+        },
+        {
+          path: 'itinerary',
+          element: <Schedule />,
         },
         {
           path: 'hotels',
