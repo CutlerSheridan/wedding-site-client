@@ -43,7 +43,7 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
     setGuest({ ...resData });
     acceptButton.current.classList.remove('rsvp-button-disabled');
     declineButton.current.classList.remove('rsvp-button-disabled');
-    button.current.blur();
+    // button.current.blur();
   };
 
   return (

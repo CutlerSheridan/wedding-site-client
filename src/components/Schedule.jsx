@@ -25,6 +25,7 @@ const Schedule = () => {
                 </p>
               ))}
               <div className="schedule-calendarButtonWrapper">
+                {/* For more cal btn configs, go here:  https://add-to-calendar-button.com/configuration#style-parameters */}
                 <AddToCalendarButton
                   name={"Cutler and Tyler's " + event.title}
                   options={['Apple', 'Google', 'Outlook.com']}

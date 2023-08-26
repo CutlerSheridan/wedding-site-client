@@ -25,6 +25,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.2.1_
+
+- add styling to only show focused button outline if navigating with keyboard
+
 _0.2.0_
 
 - put events onto schedule page
