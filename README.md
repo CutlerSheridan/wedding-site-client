@@ -18,12 +18,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
+- get "Toggle stored groupId" button on RSVP page working again
+
 ##### Style
 
 - underline active tab
 - add credit
 
 #### DONE
+
+_0.2.2_
+
+- programmatically add commas to event addresses in calendar buttons
 
 _0.2.1_
 

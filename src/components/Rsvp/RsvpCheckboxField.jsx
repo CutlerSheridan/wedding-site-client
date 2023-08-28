@@ -43,7 +43,6 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
     setGuest({ ...resData });
     acceptButton.current.classList.remove('rsvp-button-disabled');
     declineButton.current.classList.remove('rsvp-button-disabled');
-    // button.current.blur();
   };
 
   return (
@@ -60,7 +59,6 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
             handleButton(acceptButton);
           }}
           data-bool="true"
-          // disabled={false}
         >
           YES
         </button>
@@ -71,11 +69,9 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
             guest[rsvpField] === false ? 'rsvp-button-selected' : null
           }`}
           onClick={() => {
-            // declineButton.current.disabled = true;
             handleButton(declineButton);
           }}
           data-bool="false"
-          // disabled={updatingDb}
         >
           NO
         </button>

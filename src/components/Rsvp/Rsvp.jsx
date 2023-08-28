@@ -33,7 +33,7 @@ const Rsvp = () => {
       <div>
         <p>Please respond as soon as possible.</p>
         <p>
-          You do not need to RSVP to all events at the same time. If you only
+          You do not need to RSVP for all events at the same time. If you only
           know you'll be there Saturday, go ahead and select your answer for
           Saturday and leave the others blank.
         </p>
@@ -80,6 +80,7 @@ const Rsvp = () => {
   const toggleStoredGroupId = () => {
     if (localStorage.getItem('groupId')) {
       localStorage.removeItem('groupId');
+      setGuestsInGroup([]);
       setGroupId(undefined);
     } else {
       localStorage.setItem('groupId', '2hen1qB3QqjYwP8LbvDVx0nJ');

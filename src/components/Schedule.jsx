@@ -27,10 +27,18 @@ const Schedule = () => {
               <div className="schedule-calendarButtonWrapper">
                 {/* For more cal btn configs, go here:  https://add-to-calendar-button.com/configuration#style-parameters */}
                 <AddToCalendarButton
-                  name={"Cutler and Tyler's " + event.title}
+                  name={
+                    event.title.toLowerCase().includes('wedding')
+                      ? "Cutler and Tyler's Wedding!"
+                      : event.title
+                  }
                   options={['Apple', 'Google', 'Outlook.com']}
-                  location={event.address.reduce((prev, cur) => {
-                    return (prev += cur);
+                  location={event.address.reduce((prev, cur, index) => {
+                    return (
+                      prev +
+                      cur +
+                      (index < event.address.length - 1 ? ', ' : '')
+                    );
                   }, '')}
                   // location="Los Angeles"
                   startDate={event.metaData[0]}
