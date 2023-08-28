@@ -6,7 +6,9 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- start on admin dashboard
+- delete unused routing code
+- set up AdminAuth page for logging in
+- set up AdminAuth page for signing up
 
 #### TODO LATER
 
@@ -19,13 +21,21 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Behavior
 
 - get "Toggle stored groupId" button on RSVP page working again
+- should 404 "Go back" button go to previous page or to home page?
+- add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
 
 ##### Style
 
 - underline active tab
+- research styling page transitions
 - add credit
 
 #### DONE
+
+_0.3.0_
+
+- add admin routes
+- have AdminWrapper display user auth if not signed in
 
 _0.2.2_
 
