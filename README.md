@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add logic to sign up
+- add global variable to pass to all API calls so I can swap it easily once I deploy production site
 
 #### TODO LATER
 
@@ -24,11 +24,19 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- make password field censor password
 - underline active tab
 - research styling page transitions
 - add credit
 
 #### DONE
+
+_0.3.3_
+
+- wire up signup form to call auth API
+- merge handleLogin() and handleSubmit()
+- print errors if any are returned
+- log in and store jwt if successful
 
 _0.3.2_
 

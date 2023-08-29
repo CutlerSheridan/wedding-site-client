@@ -2,7 +2,7 @@
   font-size: 0.7em;
 }
 .adminAuth-errorsList {
-  max-width: 20ch;
+  max-width: 25ch;
 }
 .adminAuth-error {
   color: crimson;

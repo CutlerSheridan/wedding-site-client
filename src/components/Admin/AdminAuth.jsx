@@ -7,40 +7,62 @@ const AdminAuth = ({ updateJwt }) => {
   const [confirmedPassword, setConfirmedPassword] = useState('');
   const [secret, setSecret] = useState('');
   const [isSigningUp, setIsSigningUp] = useState(false);
-  const [errors, setErrors] = useState([]);
+  const [loginErrors, setLoginErrors] = useState([]);
+  // const [signupErrors, setSignupErrors]
   const submitButton = useRef(null);
 
   const pageName = isSigningUp ? 'Sign up' : 'Log in';
 
   const swapModals = () => {
     setIsSigningUp(!isSigningUp);
+    setLoginErrors([]);
   };
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
+    // setLoginErrors([]);
+    const parsedResponse = await getResponseFromFetch(e);
+
+    if (parsedResponse.hasOwnProperty('token')) {
+      updateJwt(parsedResponse);
+    } else if (typeof parsedResponse === 'string') {
+      setLoginErrors([parsedResponse.split(': ')[1]]);
+    } else {
+      setLoginErrors(parsedResponse);
+    }
+  };
+  // const handleSignup = async (e) => {
+  //   const parsedResponse = await getResponseFromFetch(e);
+
+  //   if (typeof parsedResponse === 'string') {
+  //     setLoginErrors([parsedResponse.split(': ')[1]]);
+  //   } else if (Array.isArray(parsedResponse)) {
+  //     setLoginErrors(parsedResponse);
+  //   }
+  // };
+  const getResponseFromFetch = async (e) => {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
-    const response = await fetch('http://localhost:3000/api/1/auth/login', {
-      method: form.method,
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(formData.entries())),
-    });
+    const response = await fetch(
+      `http://localhost:3000/api/1/auth/${isSigningUp ? 'signup' : 'login'}`,
+      {
+        method: form.method,
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      }
+    );
     const parsedResponse = await response.json();
-    // console.log('response: ', parsedResponse);
+    console.log('response: ', parsedResponse);
     // console.log('typeof response: ', typeof parsedResponse);
-    if (typeof parsedResponse === 'string') {
-      setErrors([parsedResponse.split(': ')[1]]);
-    }
-    updateJwt(parsedResponse);
+    return parsedResponse;
   };
-  const handleSignup = async (e) => {};
 
   return (
     <>
       <h1>{pageName}</h1>
-      <form method="POST" onSubmit={isSigningUp ? handleSignup : handleLogin}>
+      <form method="POST" onSubmit={handleSubmit}>
         <div className="adminAuth-formGroup">
           <label htmlFor="username">Username:</label>
           <input
@@ -71,6 +93,7 @@ const AdminAuth = ({ updateJwt }) => {
                 id="confirmedPassword"
                 onChange={(e) => setConfirmedPassword(e.target.value)}
                 value={confirmedPassword}
+                name="confirmed_password"
               />
             </div>
             <div className="adminAuth-formGroup">
@@ -80,18 +103,23 @@ const AdminAuth = ({ updateJwt }) => {
                 id="secret"
                 onChange={(e) => setSecret(e.target.value)}
                 value={secret}
+                name="secret"
               />
             </div>
           </>
         ) : (
-          <>
-            <ul className="adminAuth-errorsList">
-              {errors.map((e) => (
-                <li className="adminAuth-error">{e}</li>
-              ))}
-            </ul>
-          </>
+          <></>
         )}
+        <ul className="adminAuth-errorsList">
+          {loginErrors.map((e) => (
+            <li
+              className="adminAuth-error"
+              key={typeof e === 'string' ? e : e.msg}
+            >
+              {typeof e === 'string' ? e : e.msg}
+            </li>
+          ))}
+        </ul>
 
         {isSigningUp ? (
           <button
