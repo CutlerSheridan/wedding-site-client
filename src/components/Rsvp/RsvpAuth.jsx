@@ -1,4 +1,5 @@
 import { useState, seEffect, useRef } from 'react';
+import SERVER_URL from '../../serverUrl';
 
 const RsvpAuth = (props) => {
   const [inputName, setInputName] = useState('');
@@ -30,7 +31,7 @@ const RsvpAuth = (props) => {
   const searchName = async (nameUri) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/1/groups/search?name=${nameUri}`
+        `${SERVER_URL}/api/1/groups/search?name=${nameUri}`
       );
       const guests = await response.json();
       return guests;

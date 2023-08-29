@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import SERVER_URL from '../../serverUrl';
 import './AdminAuth.css';
 
 const AdminAuth = ({ updateJwt }) => {
@@ -7,38 +8,27 @@ const AdminAuth = ({ updateJwt }) => {
   const [confirmedPassword, setConfirmedPassword] = useState('');
   const [secret, setSecret] = useState('');
   const [isSigningUp, setIsSigningUp] = useState(false);
-  const [loginErrors, setLoginErrors] = useState([]);
-  // const [signupErrors, setSignupErrors]
+  const [errors, setErrors] = useState([]);
   const submitButton = useRef(null);
 
   const pageName = isSigningUp ? 'Sign up' : 'Log in';
 
   const swapModals = () => {
     setIsSigningUp(!isSigningUp);
-    setLoginErrors([]);
+    setErrors([]);
   };
 
   const handleSubmit = async (e) => {
-    // setLoginErrors([]);
     const parsedResponse = await getResponseFromFetch(e);
 
     if (parsedResponse.hasOwnProperty('token')) {
       updateJwt(parsedResponse);
     } else if (typeof parsedResponse === 'string') {
-      setLoginErrors([parsedResponse.split(': ')[1]]);
+      setErrors([parsedResponse.split(': ')[1]]);
     } else {
-      setLoginErrors(parsedResponse);
+      setErrors(parsedResponse);
     }
   };
-  // const handleSignup = async (e) => {
-  //   const parsedResponse = await getResponseFromFetch(e);
-
-  //   if (typeof parsedResponse === 'string') {
-  //     setLoginErrors([parsedResponse.split(': ')[1]]);
-  //   } else if (Array.isArray(parsedResponse)) {
-  //     setLoginErrors(parsedResponse);
-  //   }
-  // };
   const getResponseFromFetch = async (e) => {
     e.preventDefault();
 
@@ -46,7 +36,7 @@ const AdminAuth = ({ updateJwt }) => {
     const formData = new FormData(form);
 
     const response = await fetch(
-      `http://localhost:3000/api/1/auth/${isSigningUp ? 'signup' : 'login'}`,
+      `${SERVER_URL}/api/1/auth/${isSigningUp ? 'signup' : 'login'}`,
       {
         method: form.method,
         headers: { 'Content-type': 'application/json' },
@@ -54,8 +44,7 @@ const AdminAuth = ({ updateJwt }) => {
       }
     );
     const parsedResponse = await response.json();
-    console.log('response: ', parsedResponse);
-    // console.log('typeof response: ', typeof parsedResponse);
+    // console.log('response: ', parsedResponse);
     return parsedResponse;
   };
 
@@ -111,7 +100,7 @@ const AdminAuth = ({ updateJwt }) => {
           <></>
         )}
         <ul className="adminAuth-errorsList">
-          {loginErrors.map((e) => (
+          {errors.map((e) => (
             <li
               className="adminAuth-error"
               key={typeof e === 'string' ? e : e.msg}

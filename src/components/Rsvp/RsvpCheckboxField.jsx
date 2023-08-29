@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import SERVER_URL from '../../serverUrl';
 
 const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
   const [guest, setGuest] = useState({ ...initialGuest });
@@ -14,30 +15,24 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
       guest[rsvpField] === null ||
       guest[rsvpField] !== (button.current.dataset.bool === 'true')
     ) {
-      const response = await fetch(
-        `http://localhost:3000/api/1/guests/${guest._id}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-type': 'application/json',
-          },
-          body: JSON.stringify({
-            [rsvpField]: button.current.dataset.bool === 'true',
-          }),
-        }
-      );
+      const response = await fetch(`${SERVER_URL}/api/1/guests/${guest._id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          [rsvpField]: button.current.dataset.bool === 'true',
+        }),
+      });
       resData = await response.json();
     } else {
-      const response = await fetch(
-        `http://localhost:3000/api/1/guests/${guest._id}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-type': 'application/json',
-          },
-          body: JSON.stringify({ [rsvpField]: null }),
-        }
-      );
+      const response = await fetch(`${SERVER_URL}/api/1/guests/${guest._id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({ [rsvpField]: null }),
+      });
       resData = await response.json();
     }
     setGuest({ ...resData });

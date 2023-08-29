@@ -23,6 +23,7 @@
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
+  text-align: center;
 }
 body {
   height: 100%;
@@ -66,6 +67,7 @@ button:focus:focus-visible {
 p {
   margin: auto;
   max-width: 60ch;
+  word-break: break-word;
 }
 ul {
   margin: auto;

@@ -23,7 +23,7 @@ const AdminWrapper = () => {
         Toggle auth {jwt ? 'off' : 'on'}
       </button>
       {jwt ? <Outlet /> : <AdminAuth updateJwt={updateJwt} />}
-      {'jwt: ' + jwt}
+      <p>{'jwt: ' + jwt}</p>
     </>
   );
 };

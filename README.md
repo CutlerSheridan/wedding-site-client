@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add global variable to pass to all API calls so I can swap it easily once I deploy production site
+- start working on Dashboard
 
 #### TODO LATER
 
@@ -30,6 +30,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.3.4_
+
+- disable App.css; move desired styles to index.css
+- add global variable to pass to all API calls so I can swap it easily once I deploy production site
 
 _0.3.3_
 

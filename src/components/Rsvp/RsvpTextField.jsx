@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import SERVER_URL from '../../serverUrl';
 
 const RsvpTextField = ({ initialGuest, rsvpField }) => {
   const [guest, setGuest] = useState({ ...initialGuest });
@@ -10,16 +11,13 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
   const handleButton = async (e) => {
     e.preventDefault();
     saveButton.current.classList.add('rsvp-button-disabled');
-    const response = await fetch(
-      `http://localhost:3000/api/1/guests/${guest._id}`,
-      {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify({ [rsvpField]: inputText }),
-      }
-    );
+    const response = await fetch(`${SERVER_URL}/api/1/guests/${guest._id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({ [rsvpField]: inputText }),
+    });
     const resData = await response.json();
     setGuest({ ...resData });
     saveButton.current.classList.remove('rsvp-button-disabled');

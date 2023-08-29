@@ -3,6 +3,7 @@ import RsvpAuth from './RsvpAuth';
 import RsvpForm from './RsvpForm';
 import Loading from '../Loading';
 import EVENTS from '../../eventInfo';
+import SERVER_URL from '../../serverUrl';
 
 const Rsvp = () => {
   const [groupId, setGroupId] = useState(localStorage.getItem('groupId'));
@@ -12,9 +13,7 @@ const Rsvp = () => {
   useEffect(() => {
     const fetchGuestsFromGroupId = async () => {
       if (groupId && !guestsInGroup.length) {
-        const response = await fetch(
-          `http://localhost:3000/api/1/groups/${groupId}`
-        );
+        const response = await fetch(`${SERVER_URL}/api/1/groups/${groupId}`);
         const guests = await response.json();
         setGuestsInGroup(guests);
       } else if (!groupId) {
