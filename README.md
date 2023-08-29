@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add logic to log in
 - add logic to sign up
 
 #### TODO LATER
@@ -30,6 +29,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.3.2_
+
+- wire up login form to call auth API
+- convert formdata to JSON for fetch payload
+- if successful, store jwt and update localstorage
+- refactor updateJwt() to extract token string if jwtData passed is an object
+- make login screen display error if there is one
 
 _0.3.1_
 

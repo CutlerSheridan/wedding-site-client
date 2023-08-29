@@ -2,11 +2,12 @@ import { useRef, useState } from 'react';
 import './AdminAuth.css';
 
 const AdminAuth = ({ updateJwt }) => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
-  const [confirmedPassword, setConfirmedPassword] = useState();
-  const [secret, setSecret] = useState();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmedPassword, setConfirmedPassword] = useState('');
+  const [secret, setSecret] = useState('');
   const [isSigningUp, setIsSigningUp] = useState(false);
+  const [errors, setErrors] = useState([]);
   const submitButton = useRef(null);
 
   const pageName = isSigningUp ? 'Sign up' : 'Log in';
@@ -15,17 +16,39 @@ const AdminAuth = ({ updateJwt }) => {
     setIsSigningUp(!isSigningUp);
   };
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const response = await fetch('http://localhost:3000/api/1/auth/login', {
+      method: form.method,
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(formData.entries())),
+    });
+    const parsedResponse = await response.json();
+    // console.log('response: ', parsedResponse);
+    // console.log('typeof response: ', typeof parsedResponse);
+    if (typeof parsedResponse === 'string') {
+      setErrors([parsedResponse.split(': ')[1]]);
+    }
+    updateJwt(parsedResponse);
+  };
+  const handleSignup = async (e) => {};
+
   return (
     <>
       <h1>{pageName}</h1>
-      <form>
+      <form method="POST" onSubmit={isSigningUp ? handleSignup : handleLogin}>
         <div className="adminAuth-formGroup">
           <label htmlFor="username">Username:</label>
           <input
             className="adminAuth-formControl"
             id="username"
-            onChange={setUsername}
+            onChange={(e) => setUsername(e.target.value)}
             value={username}
+            name="username"
           />
         </div>
         <div className="adminAuth-formGroup">
@@ -33,8 +56,9 @@ const AdminAuth = ({ updateJwt }) => {
           <input
             className="adminAuth-formControl"
             id="password"
-            onChange={setPassword}
+            onChange={(e) => setPassword(e.target.value)}
             value={password}
+            name="password"
           />
         </div>
 
@@ -45,7 +69,7 @@ const AdminAuth = ({ updateJwt }) => {
               <input
                 className="adminAuth-formControl"
                 id="confirmedPassword"
-                onChange={setConfirmedPassword}
+                onChange={(e) => setConfirmedPassword(e.target.value)}
                 value={confirmedPassword}
               />
             </div>
@@ -54,13 +78,19 @@ const AdminAuth = ({ updateJwt }) => {
               <input
                 className="adminAuth-formControl"
                 id="secret"
-                onChange={setSecret}
+                onChange={(e) => setSecret(e.target.value)}
                 value={secret}
               />
             </div>
           </>
         ) : (
-          <></>
+          <>
+            <ul className="adminAuth-errorsList">
+              {errors.map((e) => (
+                <li className="adminAuth-error">{e}</li>
+              ))}
+            </ul>
+          </>
         )}
 
         {isSigningUp ? (

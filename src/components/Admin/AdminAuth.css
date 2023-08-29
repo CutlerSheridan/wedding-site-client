@@ -1,6 +1,12 @@
 .admin-toggleAuthButton {
   font-size: 0.7em;
 }
+.adminAuth-errorsList {
+  max-width: 20ch;
+}
+.adminAuth-error {
+  color: crimson;
+}
 .adminAuth-swapModalButton {
   font-size: 0.7em;
   background: transparent;

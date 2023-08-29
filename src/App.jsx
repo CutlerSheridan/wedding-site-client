@@ -8,7 +8,9 @@ import { Outlet } from 'react-router-dom';
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem('jwt'));
 
-  const updateJwt = (newJwt) => {
+  const updateJwt = (jwtData) => {
+    const newJwt = jwtData?.token ?? jwtData;
+
     setJwt(newJwt);
     if (newJwt) {
       localStorage.setItem('jwt', newJwt);
