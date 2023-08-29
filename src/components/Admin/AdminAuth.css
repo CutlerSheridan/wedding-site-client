@@ -1,0 +1,8 @@
+.admin-toggleAuthButton {
+  font-size: 0.7em;
+}
+.adminAuth-swapModalButton {
+  font-size: 0.7em;
+  background: transparent;
+  text-decoration: underline;
+}

@@ -45,63 +45,10 @@ const Router = () => {
         {
           path: 'admin',
           element: <AdminWrapper />,
-          // loader: () => {
-          //   const jwt = localStorage.getItem('jwt');
-          //   console.log('jwt: ', jwt);
-          //   if (!jwt) {
-          //     console.log('should redirect!');
-          //     return redirect('/admin/auth');
-          //   }
-          //   return null;
-          //   // return redirect('/admin/dashboard');
-          // },
           children: [
-            // {
-            //   index: true,
-            //   element: <Loading />,
-            //   loader: () => {
-            //     const jwt = localStorage.getItem('jwt');
-            //     console.log('jwt: ', jwt);
-            //     if (!jwt) {
-            //       console.log('should redirect!');
-            //       return redirect('/auth');
-            //     }
-            //     return null;
-            //     // return redirect('/admin/dashboard');
-            //   },
-            // },
-            // {
-            //   index: true,
-            //   element: localStorage.getItem('jwt') ? (
-            //     <Dashboard />
-            //   ) : (
-            //     <AdminAuth />
-            //   ),
-            // },
-            // {
-            //   index: true,
-            //   element: <Dashboard />,
-            //   loader: () => {
-            //     const jwt = localStorage.getItem('jwt');
-            //     console.log('jwt: ', jwt);
-            //     if (!jwt) {
-            //       console.log('should redirect!');
-            //       return redirect('/admin/auth');
-            //     }
-            //     return null;
-            //     // return redirect('/admin/dashboard');
-            //   },
-            // },
             {
               index: true,
               loader: () => redirect('/admin/dashboard'),
-            },
-            {
-              path: '*',
-              loader: () => {
-                console.log('this: ', this);
-                return redirect('/admin');
-              },
             },
             {
               path: 'auth',

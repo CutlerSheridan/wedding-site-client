@@ -1,22 +1,29 @@
 import { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useOutletContext } from 'react-router-dom';
 import AdminAuth from './AdminAuth';
 
 const AdminWrapper = () => {
-  const [jwt, setJwt] = useState(localStorage.getItem('jwt'));
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const { jwt, updateJwt } = useOutletContext();
 
-  // useEffect(() => {
-  //   if (!jwt && location.pathname !== '/admin/auth') {
-  //     navigate('/admin/auth');
-  //   }
-  // }, [jwt, location]);
+  const toggleJwt = () => {
+    if (jwt) {
+      updateJwt(null);
+    } else {
+      updateJwt('lalsdjf.lafsjdklfjsf.foasdjfl');
+    }
+  };
 
   return (
     <>
-      {jwt ? <Outlet /> : <AdminAuth />}
-      {/* <Outlet /> */}
+      <button
+        type="button"
+        className="admin-toggleAuthButton"
+        onClick={toggleJwt}
+      >
+        Toggle auth {jwt ? 'off' : 'on'}
+      </button>
+      {jwt ? <Outlet /> : <AdminAuth updateJwt={updateJwt} />}
+      {'jwt: ' + jwt}
     </>
   );
 };

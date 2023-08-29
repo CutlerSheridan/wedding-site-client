@@ -6,9 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- delete unused routing code
-- set up AdminAuth page for logging in
-- set up AdminAuth page for signing up
+- add logic to log in
+- add logic to sign up
 
 #### TODO LATER
 
@@ -31,6 +30,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.3.1_
+
+- lift jwt state var and updateJwt() to App component
+- make admin nav show when no auth if path includes 'admin'
+- delete unused routing code
+- set up AdminAuth page for logging in
+- add swap button to go from logging in to signing up or vice versa
+- set up AdminAuth page for signing up
 
 _0.3.0_
 
