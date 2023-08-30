@@ -6,15 +6,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- start working on Dashboard
+- swap checks and Xs in tables for filled color squares
+- add ability to toggle "edit" mode on dashboard to edit table cells myself
 
 #### TODO LATER
 
 ##### Features
 
+- add display options for dashboard
 - add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
 - add RSVP button to home page
+- ? add Notes field to RSVP page
 
 ##### Behavior
 
@@ -24,12 +27,21 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
-- make password field censor password
+- make password field censor passwords
+- censor secret passphrase
 - underline active tab
 - research styling page transitions
 - add credit
 
 #### DONE
+
+_0.4.0_
+
+- get Dashboard to fetch all guests
+- put all guest RSVP info into table
+- extract table into component
+- add hidden Declined column that only shows up when specified
+- style tables a bit to make them more legible
 
 _0.3.4_
 
