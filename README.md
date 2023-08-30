@@ -7,6 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - swap checks and Xs in tables for filled color squares
+- flip words to go other direction
 - add ability to toggle "edit" mode on dashboard to edit table cells myself
 
 #### TODO LATER
@@ -34,6 +35,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.4.1_
+
+- add totals to main table when desired
 
 _0.4.0_
 

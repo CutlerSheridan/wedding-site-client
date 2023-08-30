@@ -6,6 +6,7 @@ const Table = ({
   title = 'Default',
   tableType = 'rsvp',
   declinedVisible = false,
+  includeTotals = false,
 }) => {
   let colNames;
   let fields;
@@ -74,6 +75,34 @@ const Table = ({
             </tr>
           ))}
         </tbody>
+        {includeTotals ? (
+          <tfoot>
+            <tr>
+              <th scope="row">BOAT COUNT: {guests.length + 2}</th>
+              {fields.map((field) => (
+                <td
+                  key={'tfoot_' + field}
+                  className={
+                    field === 'declined'
+                      ? `table-declinedCol-${
+                          declinedVisible ? 'visible' : 'hidden'
+                        }`
+                      : null
+                  }
+                >
+                  {guests.reduce((acc, cur) => {
+                    if (cur[field]) {
+                      return ++acc;
+                    }
+                    return acc;
+                  }, 0)}
+                </td>
+              ))}
+            </tr>
+          </tfoot>
+        ) : (
+          <></>
+        )}
       </>
     );
   };
@@ -86,7 +115,7 @@ const Table = ({
           <th scope="col"></th>
           {colNames.map((col) => (
             <th
-              key={col}
+              key={'thead_' + col}
               scope="col"
               className={
                 col.toLowerCase() === 'declined'

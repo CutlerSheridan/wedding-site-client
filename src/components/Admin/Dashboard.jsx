@@ -31,7 +31,7 @@ const Dashboard = () => {
         <button type="button">Families</button>
         <button type="button">Groups</button>
       </div>
-      <Table guests={currentGuests} title="Current List" />
+      <Table guests={currentGuests} title="Current List" includeTotals={true} />
       <Table guests={nextRoundGuests} title="Standby Guests" />
       <Table
         guests={declinedGuests}
