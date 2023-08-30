@@ -3,6 +3,7 @@ import './Table.css';
 
 const Table = ({
   guests,
+  isEditing,
   title = 'Default',
   tableType = 'rsvp',
   declinedVisible = false,
@@ -46,31 +47,33 @@ const Table = ({
   const createRsvpTableBody = (guests) => {
     return (
       <>
-        <tbody>
+        <tbody className={isEditing ? 'table-editing' : null}>
           {guests.map((guest) => (
             <tr key={guest.name}>
               <th scope="row">{guest.name}</th>
               {fields.map((field) => (
                 <td
                   key={guest.name + '_' + field}
-                  className={
-                    field === 'declined'
-                      ? `table-declinedCol-${
-                          declinedVisible ? 'visible' : 'hidden'
-                        }`
+                  className={`table-cell ${
+                    field.includes('rsvp')
+                      ? guest[field]
+                        ? 'table-cell-positive table-cell-cycle'
+                        : guest[field] === false
+                        ? 'table-cell-negative table-cell-cycle'
+                        : null
+                      : guest[field]
+                      ? field === 'declined'
+                        ? 'table-cell-negative table-cell-toggle'
+                        : 'table-cell-positive table-cell-toggle'
                       : null
                   }
-                >
-                  {field.includes('rsvp')
-                    ? guest[field]
-                      ? '✅'
-                      : guest[field] === false
-                      ? '❌'
-                      : ''
-                    : guest[field]
-                    ? `${field === 'declined' ? '❌' : '✅'}`
-                    : ''}
-                </td>
+                  ${
+                    field === 'declined'
+                      ? 'table-declinedCell table-declinedCol-' +
+                        (declinedVisible ? 'visible' : 'hidden')
+                      : null
+                  }`}
+                ></td>
               ))}
             </tr>
           ))}
@@ -82,13 +85,12 @@ const Table = ({
               {fields.map((field) => (
                 <td
                   key={'tfoot_' + field}
-                  className={
+                  className={`${
                     field === 'declined'
-                      ? `table-declinedCol-${
-                          declinedVisible ? 'visible' : 'hidden'
-                        }`
+                      ? 'table-declinedCol-' +
+                        (declinedVisible ? 'visible' : 'hidden')
                       : null
-                  }
+                  }`}
                 >
                   {guests.reduce((acc, cur) => {
                     if (cur[field]) {

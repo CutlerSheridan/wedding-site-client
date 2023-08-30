@@ -6,9 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- swap checks and Xs in tables for filled color squares
+- make admin login work on mobile
 - flip words to go other direction
-- add ability to toggle "edit" mode on dashboard to edit table cells myself
 
 #### TODO LATER
 
@@ -23,6 +22,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Behavior
 
 - get "Toggle stored groupId" button on RSVP page working again
+- on admin login page, prevent auto-capitalizing first letter and autocomplete / auto-correct
 - should 404 "Go back" button go to previous page or to home page?
 - add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
 
@@ -35,6 +35,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.4.2_
+
+- swap checks and Xs in tables for filled color squares
+- add ability to toggle "edit" mode on dashboard to edit table cells myself
+- make Dashboard table cells appropriate color on hover when editing
 
 _0.4.1_
 

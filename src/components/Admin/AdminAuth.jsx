@@ -10,6 +10,7 @@ const AdminAuth = ({ updateJwt }) => {
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [errors, setErrors] = useState([]);
   const submitButton = useRef(null);
+  const [testCounter, setTestCounter] = useState(0);
 
   const pageName = isSigningUp ? 'Sign up' : 'Log in';
 
@@ -19,6 +20,7 @@ const AdminAuth = ({ updateJwt }) => {
   };
 
   const handleSubmit = async (e) => {
+    setTestCounter((prev) => ++prev);
     const parsedResponse = await getResponseFromFetch(e);
 
     if (parsedResponse.hasOwnProperty('token')) {
@@ -112,13 +114,18 @@ const AdminAuth = ({ updateJwt }) => {
 
         {isSigningUp ? (
           <button
+            type="submit"
             ref={submitButton}
             disabled={!username || !password || !confirmedPassword || !secret}
           >
             Submit
           </button>
         ) : (
-          <button ref={submitButton} disabled={!username || !password}>
+          <button
+            type="submit"
+            ref={submitButton}
+            disabled={!username || !password}
+          >
             Submit
           </button>
         )}
@@ -131,6 +138,7 @@ const AdminAuth = ({ updateJwt }) => {
           {isSigningUp ? 'Log in' : 'Sign up'}
         </button>
       </form>
+      <div>{testCounter}</div>
     </>
   );
 };

@@ -1,9 +1,16 @@
 :root {
   /* color: rgba(255, 255, 255, 0.87); */
   --clr-white: rgb(222, 222, 222);
-  --clr-dark: #242424;
+  --clr-grey: #242424;
+  --clr-grey-dark: black;
+  --clr-grey-light: rgb(81, 81, 81);
+  --clr-grey-lighter: grey;
+  --clr-green: limegreen;
+  --clr-green-alpha: rgb(50, 205, 50, 0.5);
+  --clr-red: red;
+  --clr-red-alpha: rgb(255, 0, 0, 0.5);
   color: var(--clr-white);
-  background-color: var(--clr-dark);
+  background-color: var(--clr-grey);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

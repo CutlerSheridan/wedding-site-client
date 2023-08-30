@@ -7,6 +7,7 @@ import Table from '../Table';
 const Dashboard = () => {
   const { jwt, updateJwt } = useOutletContext();
   const [guests, setGuests] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
   const isLoading = guests.length === 0;
   const currentGuests = guests.filter((x) => !x.declined && !x.next_round);
   const nextRoundGuests = guests.filter((x) => x.next_round);
@@ -31,11 +32,31 @@ const Dashboard = () => {
         <button type="button">Families</button>
         <button type="button">Groups</button>
       </div>
-      <Table guests={currentGuests} title="Current List" includeTotals={true} />
-      <Table guests={nextRoundGuests} title="Standby Guests" />
+      <button
+        type="button"
+        onClick={() => {
+          setIsEditing(!isEditing);
+        }}
+      >
+        {isEditing ? 'Stop Editing' : 'Start Editing'}
+      </button>
+      <Table
+        guests={currentGuests}
+        isEditing={isEditing}
+        title="Current List"
+        includeTotals={true}
+        declinedVisible={isEditing}
+      />
+      <Table
+        guests={nextRoundGuests}
+        isEditing={isEditing}
+        title="Standby Guests"
+        declinedVisible={isEditing}
+      />
       <Table
         guests={declinedGuests}
         title="Declined Guests"
+        isEditing={isEditing}
         declinedVisible={true}
       />
     </>

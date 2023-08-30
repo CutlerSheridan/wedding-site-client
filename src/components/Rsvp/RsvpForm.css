@@ -32,5 +32,5 @@
 }
 .rsvp-button-selected {
   background: var(--clr-white);
-  color: var(--clr-dark);
+  color: var(--clr-grey);
 }
