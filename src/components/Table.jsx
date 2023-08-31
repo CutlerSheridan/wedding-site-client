@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Table.css';
+import SERVER_URL from '../serverUrl';
 
 const Table = ({
   guests,
@@ -8,6 +9,7 @@ const Table = ({
   tableType = 'rsvp',
   declinedVisible = false,
   includeTotals = false,
+  updateGuestsLocally,
 }) => {
   let colNames;
   let fields;
@@ -35,6 +37,21 @@ const Table = ({
       fields = [];
       break;
   }
+
+  const handleEdit = async (guestId, fieldName, newValue) => {
+    const payload = { [fieldName]: newValue };
+    console.log('payload: ', payload);
+    const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+    const parsedResponse = await response.json();
+    console.log(parsedResponse);
+    updateGuestsLocally(parsedResponse);
+  };
 
   const createTableBodyByType = (guests, tableType) => {
     switch (tableType) {
@@ -73,6 +90,29 @@ const Table = ({
                         (declinedVisible ? 'visible' : 'hidden')
                       : null
                   }`}
+                  onClick={() => {
+                    if (isEditing) {
+                      const guestId = guest._id;
+                      const fieldName = field;
+                      let newValue;
+                      if (field.includes('rsvp')) {
+                        switch (guest[field]) {
+                          case true:
+                            newValue = false;
+                            break;
+                          case false:
+                            newValue = null;
+                            break;
+                          default:
+                            newValue = true;
+                            break;
+                        }
+                      } else {
+                        newValue = !guest[field];
+                      }
+                      handleEdit(guestId, fieldName, newValue);
+                    }
+                  }}
                 ></td>
               ))}
             </tr>

@@ -24,6 +24,13 @@ const Dashboard = () => {
     fetchGuests();
   }, []);
 
+  const updateGuestsLocally = (updatedGuest) => {
+    const updatedGuestList = guests.map((x) =>
+      x._id === updatedGuest._id ? updatedGuest : { ...x }
+    );
+    setGuests(updatedGuestList);
+  };
+
   return (
     <>
       <h1>Dashboard</h1>
@@ -46,18 +53,21 @@ const Dashboard = () => {
         title="Current List"
         includeTotals={true}
         declinedVisible={isEditing}
+        updateGuestsLocally={updateGuestsLocally}
       />
       <Table
         guests={nextRoundGuests}
         isEditing={isEditing}
         title="Standby Guests"
         declinedVisible={isEditing}
+        updateGuestsLocally={updateGuestsLocally}
       />
       <Table
         guests={declinedGuests}
         title="Declined Guests"
         isEditing={isEditing}
         declinedVisible={true}
+        updateGuestsLocally={updateGuestsLocally}
       />
     </>
   );

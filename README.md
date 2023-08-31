@@ -6,17 +6,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- have cells call API to update guest info
+- add "next_round" col for guest table editing
 
 #### TODO LATER
 
 ##### Features
 
 - add display options for dashboard
+- add group view with addresses
+- add guest fields for game
 - add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
 - add RSVP button to home page
-- ? add Notes field to RSVP page
 
 ##### Behavior
 
@@ -26,6 +27,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
 - underline active tab
@@ -33,6 +35,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.4.4_
+
+- have guest RSVP cells call API to update guest info in DB
+- when clicking table cell, add func to update guests locally
 
 _0.4.3_
 
