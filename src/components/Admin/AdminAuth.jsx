@@ -46,7 +46,6 @@ const AdminAuth = ({ updateJwt }) => {
       }
     );
     const parsedResponse = await response.json();
-    // console.log('response: ', parsedResponse);
     return parsedResponse;
   };
 
@@ -62,6 +61,8 @@ const AdminAuth = ({ updateJwt }) => {
             onChange={(e) => setUsername(e.target.value)}
             value={username}
             name="username"
+            autoCapitalize="none"
+            autoCorrect="off"
           />
         </div>
         <div className="adminAuth-formGroup">
@@ -72,6 +73,8 @@ const AdminAuth = ({ updateJwt }) => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             name="password"
+            autoCapitalize="none"
+            autoCorrect="off"
           />
         </div>
 
@@ -85,6 +88,8 @@ const AdminAuth = ({ updateJwt }) => {
                 onChange={(e) => setConfirmedPassword(e.target.value)}
                 value={confirmedPassword}
                 name="confirmed_password"
+                autoCapitalize="none"
+                autoCorrect="off"
               />
             </div>
             <div className="adminAuth-formGroup">
@@ -95,6 +100,8 @@ const AdminAuth = ({ updateJwt }) => {
                 onChange={(e) => setSecret(e.target.value)}
                 value={secret}
                 name="secret"
+                autoCapitalize="none"
+                autoCorrect="off"
               />
             </div>
           </>

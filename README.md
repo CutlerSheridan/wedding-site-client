@@ -6,8 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make admin login work on mobile
-- flip words to go other direction
+- have cells call API to update guest info
 
 #### TODO LATER
 
@@ -22,7 +21,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Behavior
 
 - get "Toggle stored groupId" button on RSVP page working again
-- on admin login page, prevent auto-capitalizing first letter and autocomplete / auto-correct
 - should 404 "Go back" button go to previous page or to home page?
 - add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
 
@@ -35,6 +33,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.4.3_
+
+- make admin login work on mobile by changing SERVER_URL to 'http://192.168.1.187'
+- fix cell highlighting to not stick on mobile
+- adjust table display so all columns are visible on mobile
+- flip words to go other direction + make it work in Safari
+- on mobile admin login page, prevent auto-capitalizing first letter and auto-correct
+- make form inputs align-left
 
 _0.4.2_
 

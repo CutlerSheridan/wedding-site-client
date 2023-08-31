@@ -1,6 +1,7 @@
 table {
   margin: 1rem auto;
-  font-size: 1rem;
+  table-layout: fixed;
+  font-size: 0.9rem;
   border-collapse: collapse;
   border: 4px solid var(--clr-grey-dark);
 }
@@ -14,10 +15,6 @@ table > caption {
   text-align: left;
   text-transform: uppercase;
 }
-.table-rsvp > thead > tr > th {
-  text-orientation: sideways-right;
-  writing-mode: vertical-rl;
-}
 th,
 td {
   padding: 0.3rem;
@@ -25,6 +22,19 @@ td {
 }
 th {
   background: var(--clr-grey-dark);
+}
+.table-rsvp > thead > tr > th {
+  width: 8%;
+}
+@media only screen and (min-width: 600px) {
+  .table-rsvp > thead > tr > th {
+    width: min-content;
+  }
+}
+.table-rsvp > thead > tr > th > .table-colHeading-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  white-space: nowrap;
 }
 tbody > tr:nth-of-type(even) {
   background: var(--clr-grey-light);
@@ -48,22 +58,44 @@ tfoot > tr > td {
 .table-editing .table-cell {
   cursor: pointer;
 }
+
 .table-editing
-  .table-cell:not(.table-cell-positive):not(.table-cell-negative):hover {
+  .table-cell:not(.table-cell-positive):not(.table-cell-negative):active {
   background: var(--clr-green-alpha);
 }
 .table-editing
   .table-declinedCell:not(.table-cell-positive):not(
     .table-cell-negative
-  ):hover {
+  ):active {
   background: var(--clr-red-alpha);
 }
-.table-editing .table-cell-negative:hover {
+.table-editing .table-cell-negative:active {
   background: var(--clr-red-alpha);
 }
-.table-editing .table-cell-positive.table-cell-toggle:hover {
+.table-editing .table-cell-positive.table-cell-toggle:active {
   background: var(--clr-green-alpha);
 }
-.table-editing .table-cell-positive.table-cell-cycle:hover {
+.table-editing .table-cell-positive.table-cell-cycle:active {
   background: var(--clr-red-alpha);
+}
+@media only screen and (hover: hover) {
+  .table-editing
+    .table-cell:not(.table-cell-positive):not(.table-cell-negative):hover {
+    background: var(--clr-green-alpha);
+  }
+  .table-editing
+    .table-declinedCell:not(.table-cell-positive):not(
+      .table-cell-negative
+    ):hover {
+    background: var(--clr-red-alpha);
+  }
+  .table-editing .table-cell-negative:hover {
+    background: var(--clr-red-alpha);
+  }
+  .table-editing .table-cell-positive.table-cell-toggle:hover {
+    background: var(--clr-green-alpha);
+  }
+  .table-editing .table-cell-positive.table-cell-cycle:hover {
+    background: var(--clr-red-alpha);
+  }
 }

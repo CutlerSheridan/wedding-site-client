@@ -127,7 +127,7 @@ const Table = ({
                   : null
               }
             >
-              {col}
+              <div className="table-colHeading-vertical">{col}</div>
             </th>
           ))}
         </tr>
