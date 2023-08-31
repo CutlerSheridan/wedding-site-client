@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Table.css';
 import SERVER_URL from '../serverUrl';
 
@@ -21,16 +20,24 @@ const Table = ({
         'RSVP - Fri.',
         'RSVP - Sat.',
         'RSVP - Sun.',
-        'Declined',
       ];
+      if (isEditing) {
+        colNames.push('Declined', 'Next Round');
+      } else if (declinedVisible) {
+        colNames.push('Declined');
+      }
       fields = [
         'sent_savedate',
         'sent_invite',
         'fri_rsvp',
         'sat_rsvp',
         'sun_rsvp',
-        'declined',
       ];
+      if (isEditing) {
+        fields.push('declined', 'next_round');
+      } else if (declinedVisible) {
+        fields.push('declined');
+      }
       break;
     case 'address':
       colNames = [];

@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add "next_round" col for guest table editing
+- add :active style on desktop for clicking RSVP cells
 
 #### TODO LATER
 
@@ -18,6 +18,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
 - add RSVP button to home page
+- add admin user setting to dictate if admin can only view admin site or if they can edit too
 
 ##### Behavior
 
@@ -35,6 +36,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.4.5_
+
+- add "next_round" col for guest table editing
 
 _0.4.4_
 

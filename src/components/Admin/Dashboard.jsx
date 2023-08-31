@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [isEditing, setIsEditing] = useState(false);
   const isLoading = guests.length === 0;
   const currentGuests = guests.filter((x) => !x.declined && !x.next_round);
-  const nextRoundGuests = guests.filter((x) => x.next_round);
+  const nextRoundGuests = guests.filter((x) => x.next_round && !x.declined);
   const declinedGuests = guests.filter((x) => x.declined);
 
   useEffect(() => {

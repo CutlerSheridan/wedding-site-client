@@ -50,8 +50,9 @@ tfoot > tr > td {
   background: var(--clr-red);
 }
 
+/* .table-nextRoundCol-hidden, */
 .table-declinedCol-hidden {
-  display: none;
+  /* display: none; */
 }
 
 /* EDITING UI */
