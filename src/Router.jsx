@@ -14,6 +14,7 @@ import AdminWrapper from './components/Admin/AdminWrapper.jsx';
 import Dashboard from './components/Admin/Dashboard.jsx';
 import AdminAuth from './components/Admin/AdminAuth.jsx';
 import Loading from './components/Loading.jsx';
+import Addresses from './components/Addresses.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -57,6 +58,10 @@ const Router = () => {
             {
               path: 'dashboard',
               element: <Dashboard />,
+            },
+            {
+              path: 'addresses',
+              element: '',
             },
           ],
         },

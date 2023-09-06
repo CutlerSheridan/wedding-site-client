@@ -1,0 +1,37 @@
+.addresses-wrapper {
+  --grid-borders: 4px solid var(--clr-grey-dark);
+  --grid-gap-thin: 1px;
+  --grid-gap-thick: 0.13rem;
+  background: var(--clr-grey-lighter);
+  border: var(--grid-borders);
+  /* border-top: var(--grid-borders);
+  border-bottom: var(--grid-borders); */
+}
+.addresses-groupWrapper {
+  margin: auto;
+  max-width: 80rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 6fr;
+  gap: var(--grid-gap-thin);
+  background: var(--clr-grey-light);
+  /* border-left: var(--grid-borders);
+  border-right: var(--grid-borders); */
+}
+.addresses-groupWrapper:not(:last-of-type) {
+  margin-bottom: var(--grid-gap-thick);
+}
+.addresses-fieldGrouping {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: var(--grid-gap-thin);
+  white-space: pre;
+}
+.addresses-fieldWrapper {
+  padding: 0.25rem 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-grey-dark);
+}

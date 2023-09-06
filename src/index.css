@@ -84,3 +84,7 @@ ul {
 input {
   text-align: left;
 }
+
+.app-contentWrapper {
+  margin: 0 2rem;
+}

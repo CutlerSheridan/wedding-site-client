@@ -50,11 +50,6 @@ tfoot > tr > td {
   background: var(--clr-red);
 }
 
-/* .table-nextRoundCol-hidden, */
-.table-declinedCol-hidden {
-  /* display: none; */
-}
-
 /* EDITING UI */
 .table-editing .table-cell {
   cursor: pointer;
@@ -85,18 +80,41 @@ tfoot > tr > td {
     background: var(--clr-green-alpha);
   }
   .table-editing
+    .table-cell:not(.table-cell-positive):not(.table-cell-negative):active {
+    background: var(--clr-green);
+  }
+
+  .table-editing
     .table-declinedCell:not(.table-cell-positive):not(
       .table-cell-negative
     ):hover {
     background: var(--clr-red-alpha);
   }
+  .table-editing
+    .table-declinedCell:not(.table-cell-positive):not(
+      .table-cell-negative
+    ):active {
+    background: var(--clr-red);
+  }
+
   .table-editing .table-cell-negative:hover {
     background: var(--clr-red-alpha);
   }
+  .table-editing .table-cell-negative:active {
+    background: transparent;
+  }
+
   .table-editing .table-cell-positive.table-cell-toggle:hover {
     background: var(--clr-green-alpha);
   }
+  .table-editing .table-cell-positive.table-cell-toggle:active {
+    background: transparent;
+  }
+
   .table-editing .table-cell-positive.table-cell-cycle:hover {
     background: var(--clr-red-alpha);
+  }
+  .table-editing .table-cell-positive.table-cell-cycle:active {
+    background: var(--clr-red);
   }
 }

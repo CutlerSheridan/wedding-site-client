@@ -40,8 +40,8 @@ const Table = ({
       }
       break;
     case 'address':
-      colNames = [];
-      fields = [];
+      colNames = ['Sent Character Info', 'Address'];
+      fields = ['sent_character', 'address'];
       break;
   }
 

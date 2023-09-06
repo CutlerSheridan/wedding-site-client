@@ -20,9 +20,11 @@ function App() {
   };
 
   return (
-    <div className="pageWrapper">
+    <div className="app-pageWrapper">
       <Navbar jwt={jwt} />
-      <Outlet context={{ jwt, updateJwt }} />
+      <div className="app-contentWrapper">
+        <Outlet context={{ jwt, updateJwt }} />
+      </div>
     </div>
   );
 }

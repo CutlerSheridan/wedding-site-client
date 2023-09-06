@@ -6,36 +6,61 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add :active style on desktop for clicking RSVP cells
+- delete address logic from Table.jsx
+- add heading for addresses grid
+- in addresses, use different functions to create field groupings to customize control
+- add checkbox to edit column for having sent character info
+- add checkbox to edit column for having sent invite
+- add ability to edit address(es)
+- ? delete address logic from Dashboard.jsx if it's going in its own page
 
 #### TODO LATER
 
 ##### Features
 
-- add display options for dashboard
-- add group view with addresses
-- add guest fields for game
+- ? move Addresses to Addresses page
+- ? refactor Dashboard so URI dictates display style
+- add Characters page for game
 - add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
 - add RSVP button to home page
 - add admin user setting to dictate if admin can only view admin site or if they can edit too
+- add character page with condensed view and expanded view
+- on character page, add ability to edit things
+- add view to see all info about all guests in specific group
+  - make component for each individual person
+  - maybe lookup by name, maybe click through from list, maybe both
 
 ##### Behavior
 
+- make sure, if token doesn't validate to fetch data, that user is redirected to login page
 - get "Toggle stored groupId" button on RSVP page working again
 - should 404 "Go back" button go to previous page or to home page?
 - add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
 
 ##### Style
 
+- ? add highlight to RSVP totals in table
+- make tables consistent widths
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
 - underline active tab
 - research styling page transitions
+- ? remove 'declined' column for declined guests when not editing
 - add credit
 
 #### DONE
+
+_0.5.0_
+
+- add :active style on desktop for clicking RSVP cells
+- add 'families' display option to Dashboard
+- add 'addresses' display option with bespoke component
+- wrap all page content in div and add page edge margin
+- make group addresses display all if they're different or just one if they're the same or if only one is filled out
+- style addresses grid for readability
+- make verticle grid lines as thin as guest divider lines instead of as thick as group divider lines
 
 _0.4.5_
 
