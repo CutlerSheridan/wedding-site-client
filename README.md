@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make Addresses toggles display :active and :hover appropriately
+- increase group separator visibility in Addresses when edit view is active
+- ? alternate colors of field group cells in Addresses
 
 #### TODO LATER
 
@@ -46,6 +47,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.3_
+
+- make Addresses toggles display :active and :hover appropriately
 
 _0.5.2_
 

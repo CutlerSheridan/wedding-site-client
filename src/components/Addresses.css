@@ -43,3 +43,21 @@
 .addresses-toggle-on {
   background: var(--clr-green);
 }
+
+/* EDITING UI */
+
+/* toggle :hover and :active styles */
+.addresses-wrapper-editing .addresses-toggle {
+  cursor: pointer;
+}
+.addresses-wrapper-editing .addresses-toggle:active {
+  background: var(--clr-green-alpha);
+}
+@media only screen and (hover: hover) {
+  .addresses-wrapper-editing .addresses-toggle:hover {
+    background: var(--clr-green-alpha);
+  }
+  .addresses-wrapper-editing .addresses-toggle:active {
+    background: var(--clr-green);
+  }
+}

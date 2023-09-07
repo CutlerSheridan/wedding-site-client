@@ -12,7 +12,7 @@ const AddressesTextInput = ({ guest, field, isEditing, handleEdit }) => {
         />
         <button
           type="button"
-          onClick={(e) => {
+          onClick={() => {
             handleEdit(guest._id, field, inputText);
           }}
         >

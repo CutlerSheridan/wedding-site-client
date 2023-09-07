@@ -100,7 +100,11 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
   const colNames = ['', 'Invited', 'Sent Char.', 'Address(es)'];
 
   return (
-    <div className="addresses-wrapper">
+    <div
+      className={`addresses-wrapper ${
+        isEditing ? 'addresses-wrapper-editing' : ''
+      }`}
+    >
       <div className="addresses-groupWrapper addresses-headingWrapper">
         {colNames.map((col) => (
           <div
