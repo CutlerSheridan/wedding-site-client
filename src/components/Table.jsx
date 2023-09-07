@@ -1,5 +1,4 @@
 import './Table.css';
-import SERVER_URL from '../serverUrl';
 
 const Table = ({
   guests,
@@ -7,7 +6,7 @@ const Table = ({
   title = 'Default',
   declinedVisible = false,
   includeTotals = false,
-  updateGuestsLocally,
+  handleEdit,
 }) => {
   const colNames = [
     'Save the Date',
@@ -30,21 +29,6 @@ const Table = ({
     colNames.push('Declined');
     fields.push('declined');
   }
-
-  const handleEdit = async (guestId, fieldName, newValue) => {
-    const payload = { [fieldName]: newValue };
-    console.log('payload: ', payload);
-    const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
-    const parsedResponse = await response.json();
-    console.log(parsedResponse);
-    updateGuestsLocally(parsedResponse);
-  };
 
   const createTableBody = (guests) => {
     return (

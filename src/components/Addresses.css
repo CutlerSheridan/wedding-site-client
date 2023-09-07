@@ -8,7 +8,7 @@
 }
 .addresses-groupWrapper {
   display: grid;
-  grid-template-columns: 1fr 3rem 3rem 2fr;
+  grid-template-columns: 1fr 2rem 2rem 2fr;
   gap: var(--grid-gap-thin);
   background: var(--clr-grey-light);
 }
@@ -38,4 +38,8 @@
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   white-space: nowrap;
+}
+
+.addresses-toggle-on {
+  background: var(--clr-green);
 }

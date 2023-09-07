@@ -27,6 +27,20 @@ const Dashboard = () => {
     fetchGuests();
   }, []);
 
+  const handleEdit = async (guestId, fieldName, newValue) => {
+    const payload = { [fieldName]: newValue };
+    console.log('payload: ', payload);
+    const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+    const parsedResponse = await response.json();
+    console.log(parsedResponse);
+    updateGuestsLocally(parsedResponse);
+  };
   const updateGuestsLocally = (updatedGuest) => {
     const updatedGuestList = guests.map((x) =>
       x._id === updatedGuest._id ? updatedGuest : { ...x }
@@ -53,21 +67,21 @@ const Dashboard = () => {
           title="Current List"
           includeTotals={true}
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
         <Table
           guests={nextRoundGuests}
           isEditing={isEditing}
           title="Standby Guests"
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
         <Table
           guests={declinedGuests}
           title="Declined Guests"
           isEditing={isEditing}
           declinedVisible={true}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
       </>
     );
@@ -81,7 +95,7 @@ const Dashboard = () => {
           title="Cutler's Family"
           includeTotals={true}
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
         <Table
           guests={currentGuests.filter((x) => x.family === 'tyler')}
@@ -89,7 +103,7 @@ const Dashboard = () => {
           title="Tyler's Family"
           includeTotals={true}
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
         <Table
           guests={currentGuests.filter(
@@ -99,7 +113,7 @@ const Dashboard = () => {
           title="Friends"
           includeTotals={true}
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
 
         <Table
@@ -107,14 +121,14 @@ const Dashboard = () => {
           isEditing={isEditing}
           title="Standby Guests"
           declinedVisible={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
         <Table
           guests={declinedGuests}
           title="Declined Guests"
           isEditing={isEditing}
           declinedVisible={true}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
       </>
     );
@@ -126,7 +140,7 @@ const Dashboard = () => {
         <Addresses
           currentGuests={currentGuests}
           isEditing={isEditing}
-          updateGuestsLocally={updateGuestsLocally}
+          handleEdit={handleEdit}
         />
       </>
     );

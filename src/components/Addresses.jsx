@@ -1,7 +1,7 @@
 import './Addresses.css';
-import SERVER_URL from '../serverUrl';
+import AddressesTextInput from './AddressesTextInput';
 
-const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
+const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
   const groups = currentGuests.reduce((acc, cur) => {
     const accCopy = [...acc];
     if (!accCopy.length) {
@@ -16,14 +16,66 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
     }
     return accCopy;
   }, []);
-  const colNames = ['', 'Invited', 'Sent Char.', 'Address(es)'];
-  const fields = ['name', 'sent_invite', 'sent_character', 'address'];
 
-  const createFieldWrapper = (group, field) => {
+  const createNameFieldGrouping = (group, field) => {
+    return (
+      <div className="addresses-fieldGrouping">
+        {group.map((guest) => (
+          <div
+            key={`guest_${guest.name}_${field}`}
+            className="addresses-fieldWrapper"
+          >
+            {guest[field]}
+          </div>
+        ))}
+      </div>
+    );
+  };
+  const createToggleFieldGrouping = (group, field) => {
+    return (
+      <div className="addresses-fieldGrouping">
+        {group.map((guest) => createToggle(guest, field))}
+      </div>
+    );
+  };
+  const createToggle = (guest, field) => {
+    const value = guest[field];
+    return (
+      <div
+        key={`guest_${guest.name}_${field}`}
+        className={`addresses-fieldWrapper addresses-cell addresses-toggle ${
+          value ? 'addresses-toggle-on' : ''
+        }`}
+        onClick={() => {
+          if (isEditing) {
+            handleEdit(guest._id, field, !guest[field]);
+          }
+        }}
+      ></div>
+    );
+  };
+
+  const createTextInputFieldGrouping = (group, field) => {
+    const groupAddresses = getAddresses(group);
+
     return (
       <div className="addresses-fieldGrouping">
         {(() => {
-          const groupAddresses = getAddresses(group);
+          if (isEditing || (field === 'address' && groupAddresses.length > 1)) {
+            return (
+              <>
+                {group.map((guest) => (
+                  <AddressesTextInput
+                    key={`guest_${guest.name}_${field}`}
+                    guest={guest}
+                    field={field}
+                    isEditing={isEditing}
+                    handleEdit={handleEdit}
+                  />
+                ))}
+              </>
+            );
+          }
           if (field === 'address' && !groupAddresses.length) {
             return <div className="addresses-fieldWrapper"></div>;
           }
@@ -32,21 +84,6 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
               <div className="addresses-fieldWrapper">{groupAddresses[0]}</div>
             );
           }
-          return (
-            <>
-              {group.map((guest) => (
-                <div
-                  key={`guest_${guest.name}_${field}`}
-                  className="addresses-fieldWrapper"
-                >
-                  {typeof guest[field] === 'string' ||
-                  typeof guest[field] === 'boolean'
-                    ? `${guest[field]}`
-                    : null}
-                </div>
-              ))}
-            </>
-          );
         })()}
       </div>
     );
@@ -59,6 +96,8 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
       }
       return acc;
     }, []);
+
+  const colNames = ['', 'Invited', 'Sent Char.', 'Address(es)'];
 
   return (
     <div className="addresses-wrapper">
@@ -75,10 +114,10 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
 
       {groups.map((gr) => (
         <div key={`group_${gr[0].name}`} className="addresses-groupWrapper">
-          {createFieldWrapper(gr, 'name')}
-          {createFieldWrapper(gr, 'sent_invite')}
-          {createFieldWrapper(gr, 'sent_character')}
-          {createFieldWrapper(gr, 'address')}
+          {createNameFieldGrouping(gr, 'name')}
+          {createToggleFieldGrouping(gr, 'sent_invite')}
+          {createToggleFieldGrouping(gr, 'sent_character')}
+          {createTextInputFieldGrouping(gr, 'address')}
         </div>
       ))}
     </div>

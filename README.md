@@ -6,17 +6,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- extract handleEdit() from Table.jsx to Dashboard.jsx so it can be passed down to Table and to Addresses
-- in addresses, use different functions to create field groupings to customize control
-- add checkbox to edit column for having sent character info
-- add checkbox to edit column for having sent invite
-- add ability to edit address(es)
-- ? delete address logic from Dashboard.jsx if it's going in its own page
+- make Addresses toggles display :active and :hover appropriately
 
 #### TODO LATER
 
 ##### Features
 
+- ? delete address logic from Dashboard.jsx if it's going in its own page
 - ? move Addresses to Addresses page
 - ? refactor Dashboard so URI dictates display style
 - add Characters page for game
@@ -50,6 +46,16 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.2_
+
+- extract handleEdit() from Table.jsx to Dashboard.jsx so it can be passed down to Table and to Addresses
+- in addresses, use different functions to create field groupings to customize control
+- add working toggle to toggle-able columns in Addresses
+- create component for text input fields in Addresses
+- add ability to edit address(es)
+- in Addresses, make edit view display an address box for each guest in a group even if only one is filled (unlike in non-edit view)
+- tighten up createTextInputFieldGrouping() code
 
 _0.5.1_
 
