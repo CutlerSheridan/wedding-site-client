@@ -1,21 +1,16 @@
 .addresses-wrapper {
-  --grid-borders: 4px solid var(--clr-grey-dark);
   --grid-gap-thin: 1px;
   --grid-gap-thick: 0.13rem;
+  margin: auto;
+  max-width: 50rem;
   background: var(--clr-grey-lighter);
-  border: var(--grid-borders);
-  /* border-top: var(--grid-borders);
-  border-bottom: var(--grid-borders); */
+  border: 4px solid var(--clr-grey-dark);
 }
 .addresses-groupWrapper {
-  margin: auto;
-  max-width: 80rem;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 6fr;
+  grid-template-columns: 1fr 3rem 3rem 2fr;
   gap: var(--grid-gap-thin);
   background: var(--clr-grey-light);
-  /* border-left: var(--grid-borders);
-  border-right: var(--grid-borders); */
 }
 .addresses-groupWrapper:not(:last-of-type) {
   margin-bottom: var(--grid-gap-thick);
@@ -34,4 +29,13 @@
   justify-content: center;
   align-items: center;
   background: var(--clr-grey-dark);
+}
+
+.addresses-headingWrapper {
+  font-weight: bold;
+}
+.addresses-headingField:not(:last-of-type) {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  white-space: nowrap;
 }

@@ -6,8 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- delete address logic from Table.jsx
-- add heading for addresses grid
+- extract handleEdit() from Table.jsx to Dashboard.jsx so it can be passed down to Table and to Addresses
 - in addresses, use different functions to create field groupings to customize control
 - add checkbox to edit column for having sent character info
 - add checkbox to edit column for having sent invite
@@ -51,6 +50,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.1_
+
+- adjust addresses grid sizing and placement
+- delete addresses logic from Table.jsx
+- add heading for addresses grid
 
 _0.5.0_
 

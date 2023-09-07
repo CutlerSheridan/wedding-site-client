@@ -16,6 +16,8 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
     }
     return accCopy;
   }, []);
+  const colNames = ['', 'Invited', 'Sent Char.', 'Address(es)'];
+  const fields = ['name', 'sent_invite', 'sent_character', 'address'];
 
   const createFieldWrapper = (group, field) => {
     return (
@@ -60,6 +62,17 @@ const Addresses = ({ currentGuests, isEditing, updateGuestsLocally }) => {
 
   return (
     <div className="addresses-wrapper">
+      <div className="addresses-groupWrapper addresses-headingWrapper">
+        {colNames.map((col) => (
+          <div
+            key={col}
+            className="addresses-fieldWrapper addresses-headingField"
+          >
+            {col}
+          </div>
+        ))}
+      </div>
+
       {groups.map((gr) => (
         <div key={`group_${gr[0].name}`} className="addresses-groupWrapper">
           {createFieldWrapper(gr, 'name')}

@@ -5,44 +5,30 @@ const Table = ({
   guests,
   isEditing,
   title = 'Default',
-  tableType = 'rsvp',
   declinedVisible = false,
   includeTotals = false,
   updateGuestsLocally,
 }) => {
-  let colNames;
-  let fields;
-  switch (tableType) {
-    case 'rsvp':
-      colNames = [
-        'Save the Date',
-        'Invitation',
-        'RSVP - Fri.',
-        'RSVP - Sat.',
-        'RSVP - Sun.',
-      ];
-      if (isEditing) {
-        colNames.push('Declined', 'Next Round');
-      } else if (declinedVisible) {
-        colNames.push('Declined');
-      }
-      fields = [
-        'sent_savedate',
-        'sent_invite',
-        'fri_rsvp',
-        'sat_rsvp',
-        'sun_rsvp',
-      ];
-      if (isEditing) {
-        fields.push('declined', 'next_round');
-      } else if (declinedVisible) {
-        fields.push('declined');
-      }
-      break;
-    case 'address':
-      colNames = ['Sent Character Info', 'Address'];
-      fields = ['sent_character', 'address'];
-      break;
+  const colNames = [
+    'Save the Date',
+    'Invitation',
+    'RSVP - Fri.',
+    'RSVP - Sat.',
+    'RSVP - Sun.',
+  ];
+  const fields = [
+    'sent_savedate',
+    'sent_invite',
+    'fri_rsvp',
+    'sat_rsvp',
+    'sun_rsvp',
+  ];
+  if (isEditing) {
+    colNames.push('Declined', 'Next Round');
+    fields.push('declined', 'next_round');
+  } else if (declinedVisible) {
+    colNames.push('Declined');
+    fields.push('declined');
   }
 
   const handleEdit = async (guestId, fieldName, newValue) => {
@@ -60,15 +46,7 @@ const Table = ({
     updateGuestsLocally(parsedResponse);
   };
 
-  const createTableBodyByType = (guests, tableType) => {
-    switch (tableType) {
-      case 'rsvp':
-        return createRsvpTableBody(guests);
-      case 'addresses':
-        return '';
-    }
-  };
-  const createRsvpTableBody = (guests) => {
+  const createTableBody = (guests) => {
     return (
       <>
         <tbody className={isEditing ? 'table-editing' : null}>
@@ -157,7 +135,7 @@ const Table = ({
   };
 
   return (
-    <table className={`table-${tableType}`}>
+    <table className={`table-rsvp`}>
       <caption>{title}</caption>
       <thead>
         <tr>
@@ -179,7 +157,7 @@ const Table = ({
           ))}
         </tr>
       </thead>
-      {createTableBodyByType(guests, tableType)}
+      {createTableBody(guests)}
     </table>
   );
 };
