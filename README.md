@@ -6,15 +6,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- increase group separator visibility in Addresses when edit view is active
-- ? alternate colors of field group cells in Addresses
+- ? move Addresses to Addresses page
+- ? delete address logic from Dashboard.jsx if it's going in its own page
 
 #### TODO LATER
 
 ##### Features
 
-- ? delete address logic from Dashboard.jsx if it's going in its own page
-- ? move Addresses to Addresses page
 - ? refactor Dashboard so URI dictates display style
 - add Characters page for game
 - add ability in Schedule to link or span more than once per description line
@@ -47,6 +45,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.4_
+
+- alternate colors of field group cells in Addresses
+- increase group separator visibility in Addresses
+- make :active and :hover styles apply with priority over alternating background colors
 
 _0.5.3_
 

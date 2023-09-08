@@ -1,8 +1,8 @@
 .addresses-wrapper {
   --grid-gap-thin: 1px;
-  --grid-gap-thick: 0.13rem;
+  --grid-gap-thick: 0.16rem;
   margin: auto;
-  max-width: 50rem;
+  max-width: 40rem;
   background: var(--clr-grey-lighter);
   border: 4px solid var(--clr-grey-dark);
 }
@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr 2rem 2rem 2fr;
   gap: var(--grid-gap-thin);
-  background: var(--clr-grey-light);
+  background: var(--clr-grey-lighter);
 }
 .addresses-groupWrapper:not(:last-of-type) {
   margin-bottom: var(--grid-gap-thick);
@@ -23,24 +23,34 @@
   white-space: pre;
 }
 .addresses-fieldWrapper {
-  padding: 0.25rem 0;
+  padding: 0.35rem 0;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--clr-grey-dark);
 }
+.addresses-groupWrapper:nth-of-type(odd):not(.addresses-headingWrapper)
+  .addresses-fieldWrapper {
+  background: var(--clr-grey);
+}
+.addresses-groupWrapper:nth-of-type(even):not(.addresses-headingWrapper)
+  .addresses-fieldWrapper {
+  background: var(--clr-grey-light);
+}
 
 .addresses-headingWrapper {
   font-weight: bold;
 }
-.addresses-headingField:not(:last-of-type) {
+.addresses-headingField:not(:first-of-type):not(:last-of-type) {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   white-space: nowrap;
 }
 
-.addresses-toggle-on {
+.addresses-groupWrapper
+  > .addresses-fieldGrouping
+  > .addresses-fieldWrapper.addresses-toggle-on {
   background: var(--clr-green);
 }
 
@@ -54,10 +64,10 @@
   background: var(--clr-green-alpha);
 }
 @media only screen and (hover: hover) {
-  .addresses-wrapper-editing .addresses-toggle:hover {
+  .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:hover {
     background: var(--clr-green-alpha);
   }
-  .addresses-wrapper-editing .addresses-toggle:active {
+  .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:active {
     background: var(--clr-green);
   }
 }

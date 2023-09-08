@@ -77,11 +77,15 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
             );
           }
           if (field === 'address' && !groupAddresses.length) {
-            return <div className="addresses-fieldWrapper"></div>;
+            return (
+              <div className="addresses-fieldWrapper addresses-cell"></div>
+            );
           }
           if (field === 'address' && groupAddresses.length === 1) {
             return (
-              <div className="addresses-fieldWrapper">{groupAddresses[0]}</div>
+              <div className="addresses-fieldWrapper addresses-cell">
+                {groupAddresses[0]}
+              </div>
             );
           }
         })()}
@@ -97,7 +101,7 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
       return acc;
     }, []);
 
-  const colNames = ['', 'Invited', 'Sent Char.', 'Address(es)'];
+  const colNames = ['Guest Name', 'Invited', 'Sent Char.', 'Address(es)'];
 
   return (
     <div
