@@ -29,7 +29,7 @@ const Dashboard = () => {
     };
 
     fetchGuests();
-  }, [jwt]);
+  }, []);
 
   const handleEdit = async (guestId, fieldName, newValue) => {
     const payload = { [fieldName]: newValue };
@@ -67,26 +67,19 @@ const Dashboard = () => {
       <>
         <Table
           guests={currentGuests}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           isEditing={isEditing}
           title="Current List"
           includeTotals={true}
           declinedVisible={isEditing}
           handleEdit={handleEdit}
         />
-        <Table
-          guests={nextRoundGuests}
-          isEditing={isEditing}
-          title="Standby Guests"
-          declinedVisible={isEditing}
-          handleEdit={handleEdit}
-        />
-        <Table
-          guests={declinedGuests}
-          title="Declined Guests"
-          isEditing={isEditing}
-          declinedVisible={true}
-          handleEdit={handleEdit}
-        />
+        {createRsvpsEndTables()}
       </>
     );
   };
@@ -95,43 +88,74 @@ const Dashboard = () => {
       <>
         <Table
           guests={currentGuests.filter((x) => x.family === 'cutler')}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           isEditing={isEditing}
           title="Cutler's Family"
           includeTotals={true}
-          declinedVisible={isEditing}
           handleEdit={handleEdit}
         />
         <Table
           guests={currentGuests.filter((x) => x.family === 'tyler')}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           isEditing={isEditing}
           title="Tyler's Family"
           includeTotals={true}
-          declinedVisible={isEditing}
           handleEdit={handleEdit}
         />
         <Table
           guests={currentGuests.filter(
             (x) => x.family !== 'cutler' && x.family !== 'tyler'
           )}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           isEditing={isEditing}
           title="Friends"
           includeTotals={true}
-          declinedVisible={isEditing}
           handleEdit={handleEdit}
         />
-
+        {createRsvpsEndTables()}
+      </>
+    );
+  };
+  const createRsvpsEndTables = () => {
+    return (
+      <>
         <Table
           guests={nextRoundGuests}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           isEditing={isEditing}
           title="Standby Guests"
-          declinedVisible={isEditing}
           handleEdit={handleEdit}
         />
         <Table
           guests={declinedGuests}
+          longestName={(() => {
+            const sortedGuests = [...guests].sort(
+              (x, y) => y.name.length - x.name.length
+            );
+            return sortedGuests[0].name;
+          })()}
           title="Declined Guests"
           isEditing={isEditing}
-          declinedVisible={true}
           handleEdit={handleEdit}
         />
       </>

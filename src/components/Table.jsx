@@ -2,9 +2,9 @@ import './Table.css';
 
 const Table = ({
   guests,
+  longestName,
   isEditing,
   title = 'Default',
-  declinedVisible = false,
   includeTotals = false,
   handleEdit,
 }) => {
@@ -25,10 +25,8 @@ const Table = ({
   if (isEditing) {
     colNames.push('Declined', 'Next Round');
     fields.push('declined', 'next_round');
-  } else if (declinedVisible) {
-    // colNames.push('Declined');
-    // fields.push('declined');
   }
+  const declinedVisible = isEditing;
 
   const createTableBody = (guests) => {
     return (
@@ -36,7 +34,12 @@ const Table = ({
         <tbody className={isEditing ? 'table-editing' : null}>
           {guests.map((guest) => (
             <tr key={guest.name}>
-              <th scope="row">{guest.name}</th>
+              <th
+                scope="row"
+                style={{ width: 'calc(' + (longestName.length - 1) + 'ch)' }}
+              >
+                {guest.name}
+              </th>
               {fields.map((field) => (
                 <td
                   key={guest.name + '_' + field}

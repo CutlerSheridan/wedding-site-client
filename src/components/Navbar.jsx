@@ -8,15 +8,19 @@ const Navbar = ({ jwt, updateJwt }) => {
   const adminBar = (
     <nav>
       {/* <Link to="/admin">Admin root</Link> */}
-      <a
-        href=""
-        onClick={(e) => {
-          e.preventDefault();
-          updateJwt(null);
-        }}
-      >
-        {jwt ? 'Log Out' : 'Log In'}
-      </a>
+      {jwt ? (
+        <a
+          href="/admin/auth"
+          onClick={(e) => {
+            e.preventDefault();
+            updateJwt(null);
+          }}
+        >
+          {jwt ? 'Log Out' : 'Log In'}
+        </a>
+      ) : (
+        ''
+      )}
       <Link to="/admin/dashboard">Dashboard</Link>
       {/* <Link to="/admin/addresses">Addresses</Link> */}
     </nav>

@@ -6,17 +6,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make all RSVP tables the same width
+- ? refactor Dashboard so URI dictates display style
+- indicate active tab
 
 #### TODO LATER
 
 ##### Features
 
-- ? refactor Dashboard so URI dictates display style
-- add Characters page for game
-- add ability in Schedule to link or span more than once per description line
 - add button to Rsvp to return to search
 - add RSVP button to home page
+- add Group Lookup page with all info for each member and editable
+- add Characters page for game
+- add ability in Schedule to link or span more than once per description line
 - add admin user setting to dictate if admin can only view admin site or if they can edit too
 - add character page with condensed view and expanded view
 - on character page, add ability to edit things
@@ -35,16 +36,19 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Style
 
 - ? add highlight to RSVP totals in table
-- make tables consistent widths
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
-- underline active tab
 - research styling page transitions
 - ? remove 'declined' column for declined guests when not editing
 - add credit
 
 #### DONE
+
+_0.5.7_
+
+- make all RSVP tables the same width by passing longest name to each one and setting row header widths accordingly
+- make Log Out link only appear when logged in
 
 _0.5.6_
 
