@@ -104,30 +104,32 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
   const colNames = ['Guest Name', 'Invited', 'Sent Char.', 'Address(es)'];
 
   return (
-    <div
-      className={`addresses-wrapper ${
-        isEditing ? 'addresses-wrapper-editing' : ''
-      }`}
-    >
-      <div className="addresses-groupWrapper addresses-headingWrapper">
-        {colNames.map((col) => (
-          <div
-            key={col}
-            className="addresses-fieldWrapper addresses-headingField"
-          >
-            {col}
+    <div className="table-container">
+      <div className="table-caption">Addresses</div>
+      <div
+        className={`addresses-wrapper ${
+          isEditing ? 'addresses-wrapper-editing' : ''
+        }`}
+      >
+        <div className="addresses-groupWrapper addresses-headingWrapper">
+          {colNames.map((col) => (
+            <div
+              key={col}
+              className="addresses-fieldWrapper addresses-headingField"
+            >
+              {col}
+            </div>
+          ))}
+        </div>
+        {groups.map((gr) => (
+          <div key={`group_${gr[0].name}`} className="addresses-groupWrapper">
+            {createNameFieldGrouping(gr, 'name')}
+            {createToggleFieldGrouping(gr, 'sent_invite')}
+            {createToggleFieldGrouping(gr, 'sent_character')}
+            {createTextInputFieldGrouping(gr, 'address')}
           </div>
         ))}
       </div>
-
-      {groups.map((gr) => (
-        <div key={`group_${gr[0].name}`} className="addresses-groupWrapper">
-          {createNameFieldGrouping(gr, 'name')}
-          {createToggleFieldGrouping(gr, 'sent_invite')}
-          {createToggleFieldGrouping(gr, 'sent_character')}
-          {createTextInputFieldGrouping(gr, 'address')}
-        </div>
-      ))}
     </div>
   );
 };

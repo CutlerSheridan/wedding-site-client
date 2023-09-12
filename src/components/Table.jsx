@@ -134,15 +134,6 @@ const Table = ({
           title.toLowerCase() === 'declined guests' ? 'table-declined' : ''
         }`}
       >
-        {/* <caption
-          className={
-            title.toLowerCase() === 'declined guests'
-              ? 'table-declinedRsvpCaption'
-              : ''
-          }
-        >
-          {title}
-        </caption> */}
         <thead>
           <tr>
             <th scope="col"></th>

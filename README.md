@@ -6,9 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- round inner corners in Addresses
-- ? move Addresses to Addresses page
-- ? delete address logic from Dashboard.jsx if it's going in its own page
+- make all RSVP tables the same width
 
 #### TODO LATER
 
@@ -25,6 +23,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add view to see all info about all guests in specific group
   - make component for each individual person
   - maybe lookup by name, maybe click through from list, maybe both
+- ? move Addresses to Addresses page
 
 ##### Behavior
 
@@ -46,6 +45,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.6_
+
+- add red background to Declined caption
+- clean up Table.css
+- round inner corners in Addresses
+- add caption to Addresses table
 
 _0.5.5_
 

@@ -5,14 +5,12 @@
 table {
   --outer-border-radius: 3px;
   --inner-border: 1px solid var(--clr-grey-lighter);
-  margin: 1rem auto;
+  margin: 0 auto 0.5rem;
   table-layout: fixed;
   font-size: 0.9rem;
-  /* border-collapse: collapse; */
   border-spacing: 0;
   border: 3px solid var(--clr-grey-lighter);
   border-radius: 6px;
-  /* background: var(--clr-grey-lighter); */
   overflow: hidden;
 }
 
@@ -20,21 +18,6 @@ table {
 .table-declined {
   border-color: var(--clr-red);
 }
-/* thead > tr > th:first-of-type {
-  border-top-left-radius: var(--outer-border-radius);
-}
-thead > tr > th:last-of-type {
-  border-top-right-radius: var(--outer-border-radius);
-}
-table > *:last-child > tr:last-of-type > *:first-child {
-  border-bottom-left-radius: var(--outer-border-radius);
-}
-table > *:last-child > tr:last-of-type > *:last-child {
-  border-bottom-right-radius: var(--outer-border-radius);
-} */
-/* table > *:last-child > tr:last-of-type > *:last-child {
-  border-radius: var(--outer-border-radius);
-} */
 
 tr > * {
   border-right: var(--inner-border);
@@ -49,23 +32,22 @@ table > *:last-child > tr:last-child > * {
 /* BORDER END */
 
 .table-caption {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.2rem;
+  width: max-content;
+  border-radius: 0.2rem;
   font-size: 1.1em;
   font-weight: bold;
   text-decoration: underline;
   text-align: left;
   text-transform: uppercase;
 }
-table > .table-declinedRsvpCaption {
-  /* background: var(--clr-red); */
-  /* color: var(--clr-red); */
+.table-declinedRsvpCaption {
+  background: var(--clr-red);
 }
 th,
 td {
   padding: 0.3rem;
-  /* border: 2px solid var(--clr-grey-lighter); */
-  /* border-right: 2px solid var(--clr-grey-lighter);
-  border-bottom: 2px solid var(--clr-grey-lighter); */
 }
 th {
   background: var(--clr-grey-dark);
