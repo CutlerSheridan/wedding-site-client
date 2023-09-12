@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="app-pageWrapper">
-      <Navbar jwt={jwt} />
+      <Navbar jwt={jwt} updateJwt={updateJwt} />
       <div className="app-contentWrapper">
         <Outlet context={{ jwt, updateJwt }} />
       </div>

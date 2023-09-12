@@ -1,13 +1,22 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ jwt }) => {
+const Navbar = ({ jwt, updateJwt }) => {
   const location = useLocation();
   const isAdmin = !!jwt;
 
   const adminBar = (
     <nav>
       <Link to="/admin">Admin root</Link>
+      <a
+        href=""
+        onClick={(e) => {
+          e.preventDefault();
+          updateJwt(null);
+        }}
+      >
+        {jwt ? 'Log Out' : 'Log In'}
+      </a>
       <Link to="/admin/dashboard">Dashboard</Link>
       <Link to="/admin/addresses">Addresses</Link>
     </nav>

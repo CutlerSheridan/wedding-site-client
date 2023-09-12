@@ -9,7 +9,9 @@ const AdminWrapper = () => {
     if (jwt) {
       updateJwt(null);
     } else {
-      updateJwt('lalsdjf.lafsjdklfjsf.foasdjfl');
+      updateJwt(
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGRlYWMwZTYwZDk1ODE1ODRjOWYzNjgiLCJ1c2VybmFtZSI6ImN1dGxlciIsImlhdCI6MTY5NDU0OTI4MH0.abEFKIxhO1R8iKjBLHjFYwbZ6PfFYfguVEycRy0-ils'
+      );
     }
   };
 

@@ -1,10 +1,11 @@
 .addresses-wrapper {
   --grid-gap-thin: 1px;
-  --grid-gap-thick: 0.16rem;
+  --grid-gap-thick: 0.14rem;
   margin: auto;
   max-width: 40rem;
   background: var(--clr-grey-lighter);
-  border: 4px solid var(--clr-grey-dark);
+  border: 4px solid var(--clr-grey-lighter);
+  border-radius: 6px;
 }
 .addresses-groupWrapper {
   display: grid;

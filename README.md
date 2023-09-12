@@ -6,6 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
+- round inner corners in Addresses
 - ? move Addresses to Addresses page
 - ? delete address logic from Dashboard.jsx if it's going in its own page
 
@@ -45,6 +46,16 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.5_
+
+- require valid JWT to fetch guests in Dashboard
+- remove 'declined' column from 'Declined Guests' table
+- make 'Declined Guests' table border red
+- make other table borders light grey instead of black
+- refactor table CSS to allow for rounded borders
+- extract table caption into separate div
+- round Addresses outer corners
 
 _0.5.4_
 

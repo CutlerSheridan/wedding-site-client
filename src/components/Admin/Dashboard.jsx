@@ -18,14 +18,18 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchGuests = async () => {
-      const response = await fetch(`${SERVER_URL}/api/1/guests`);
+      const response = await fetch(`${SERVER_URL}/api/1/guests`, {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+      });
       const parsedResponse = await response.json();
       console.log('guests: ', parsedResponse.guests);
       setGuests(parsedResponse.guests);
     };
 
     fetchGuests();
-  }, []);
+  }, [jwt]);
 
   const handleEdit = async (guestId, fieldName, newValue) => {
     const payload = { [fieldName]: newValue };

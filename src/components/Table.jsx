@@ -26,8 +26,8 @@ const Table = ({
     colNames.push('Declined', 'Next Round');
     fields.push('declined', 'next_round');
   } else if (declinedVisible) {
-    colNames.push('Declined');
-    fields.push('declined');
+    // colNames.push('Declined');
+    // fields.push('declined');
   }
 
   const createTableBody = (guests) => {
@@ -119,30 +119,53 @@ const Table = ({
   };
 
   return (
-    <table className={`table-rsvp`}>
-      <caption>{title}</caption>
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          {colNames.map((col) => (
-            <th
-              key={'thead_' + col}
-              scope="col"
-              className={
-                col.toLowerCase() === 'declined'
-                  ? `table-declinedCol-${
-                      declinedVisible ? 'visible' : 'hidden'
-                    }`
-                  : null
-              }
-            >
-              <div className="table-colHeading-vertical">{col}</div>
-            </th>
-          ))}
-        </tr>
-      </thead>
-      {createTableBody(guests)}
-    </table>
+    <div className="table-container">
+      <h2
+        className={`table-caption ${
+          title.toLowerCase() === 'declined guests'
+            ? 'table-declinedRsvpCaption'
+            : ''
+        }`}
+      >
+        {title}
+      </h2>
+      <table
+        className={`table-rsvp ${
+          title.toLowerCase() === 'declined guests' ? 'table-declined' : ''
+        }`}
+      >
+        {/* <caption
+          className={
+            title.toLowerCase() === 'declined guests'
+              ? 'table-declinedRsvpCaption'
+              : ''
+          }
+        >
+          {title}
+        </caption> */}
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            {colNames.map((col) => (
+              <th
+                key={'thead_' + col}
+                scope="col"
+                className={
+                  col.toLowerCase() === 'declined'
+                    ? `table-declinedCol-${
+                        declinedVisible ? 'visible' : 'hidden'
+                      }`
+                    : null
+                }
+              >
+                <div className="table-colHeading-vertical">{col}</div>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        {createTableBody(guests)}
+      </table>
+    </div>
   );
 };
 
