@@ -6,9 +6,9 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- ? move Addresses to Addresses page
-
 - create Group Lookup page
+  - maybe lookup by name, maybe click through from list, maybe both
+  - include ability to create new group
 - create AdminGuestCard.jsx
   - refactor Table.jsx to use for checkboxes
   - use AddressesTextInput.jsx for text fields
@@ -19,15 +19,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - add button to Rsvp to return to search
 - add RSVP button to home page
-- add Group Lookup page with all info for each member and editable
-- add Characters page for game
 - add ability in Schedule to link or span more than once per description line
 - add admin user setting to dictate if admin can only view admin site or if they can edit too
 - add character page with condensed view and expanded view
-- on character page, add ability to edit things
-- add view to see all info about all guests in specific group
-  - make component for each individual person
-  - maybe lookup by name, maybe click through from list, maybe both
+  - on character page, add ability to edit things
 - make error page "go back" button navigate(-1)
 
 ##### Behavior
@@ -47,6 +42,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.11_
+
+- move Addresses to its own page
+- make edit buttons smaller
+- remove Addresses logic from Dashboard
 
 _0.5.10_
 

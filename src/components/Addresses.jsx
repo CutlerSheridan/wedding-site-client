@@ -102,7 +102,6 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
 
   return (
     <div className="table-container">
-      <div className="table-caption">Addresses</div>
       <div
         className={`addresses-wrapper ${
           isEditing ? 'addresses-wrapper-editing' : ''

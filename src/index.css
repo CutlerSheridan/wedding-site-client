@@ -71,7 +71,13 @@ button:focus:not(:focus-visible) {
 button:focus:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.button-small {
+  font-size: 0.7rem;
+}
 
+h1 {
+  font-size: 1.6em;
+}
 p {
   margin: auto;
   max-width: 60ch;

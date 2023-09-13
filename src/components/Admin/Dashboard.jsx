@@ -60,8 +60,6 @@ const Dashboard = () => {
         return createMergedDisplay();
       case 'families':
         return createFamiliesDisplay();
-      case 'addresses':
-        return createAddressList();
     }
   };
   const createMergedDisplay = () => {
@@ -164,18 +162,6 @@ const Dashboard = () => {
     );
   };
 
-  const createAddressList = () => {
-    return (
-      <>
-        <Addresses
-          currentGuests={currentGuests}
-          isEditing={isEditing}
-          handleEdit={handleEdit}
-        />
-      </>
-    );
-  };
-
   return (
     <>
       <h1>Dashboard</h1>
@@ -204,22 +190,10 @@ const Dashboard = () => {
         >
           Families
         </button>
-        <button
-          type="button"
-          className={`dashboard-displayButton dashboard-displayButton${
-            displayStyle === 'addresses' ? '-active' : ''
-          }`}
-          onClick={() =>
-            navigate(styleParam ? '../addresses' : 'addresses', {
-              relative: 'path',
-            })
-          }
-        >
-          Addresses
-        </button>
       </div>
       <button
         type="button"
+        className="button-small"
         onClick={() => {
           setIsEditing(!isEditing);
         }}
