@@ -8,8 +8,8 @@
   --clr-grey-lightest: rgb(166, 166, 166);
   --clr-green: limegreen;
   --clr-green-alpha: rgb(50, 205, 50, 0.5);
-  --clr-red: red;
-  --clr-red-alpha: rgb(255, 0, 0, 0.5);
+  --clr-red: rgb(213, 0, 0);
+  --clr-red-alpha: rgb(213, 0, 0, 0.5);
   color: var(--clr-white);
   background-color: var(--clr-grey);
 

@@ -23,8 +23,8 @@ const Table = ({
     'sun_rsvp',
   ];
   if (isEditing) {
-    colNames.push('Declined', 'Next Round');
-    fields.push('declined', 'next_round');
+    colNames.push('Next Round', 'Declined');
+    fields.push('next_round', 'declined');
   }
   const declinedVisible = isEditing;
 
@@ -98,6 +98,10 @@ const Table = ({
                 <td
                   key={'tfoot_' + field}
                   className={`${
+                    field.toLowerCase().includes('rsvp')
+                      ? 'table-rsvp-total'
+                      : ''
+                  } ${
                     field === 'declined'
                       ? 'table-declinedCol-' +
                         (declinedVisible ? 'visible' : 'hidden')

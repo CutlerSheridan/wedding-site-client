@@ -7,7 +7,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - ? refactor Dashboard so URI dictates display style
-- indicate active tab
 
 #### TODO LATER
 
@@ -28,22 +27,26 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
-- make sure, if token doesn't validate to fetch data, that user is redirected to login page
 - get "Toggle stored groupId" button on RSVP page working again
 - should 404 "Go back" button go to previous page or to home page?
 - add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
 
 ##### Style
 
-- ? add highlight to RSVP totals in table
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
 - research styling page transitions
-- ? remove 'declined' column for declined guests when not editing
+
 - add credit
 
 #### DONE
+
+_0.5.8_
+
+- indicate active tab
+- bold and underline RSVP totals in table
+- reorder Declined and Next Round columns in RSVP tables
 
 _0.5.7_
 

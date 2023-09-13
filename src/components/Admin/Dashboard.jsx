@@ -178,13 +178,31 @@ const Dashboard = () => {
     <>
       <h1>Dashboard</h1>
       <div className="dashboard-controls">
-        <button type="button" onClick={() => setDisplayStyle('merged')}>
+        <button
+          type="button"
+          className={`dashboard-displayButton dashboard-displayButton${
+            displayStyle === 'merged' ? '-active' : ''
+          }`}
+          onClick={() => setDisplayStyle('merged')}
+        >
           Merged
         </button>
-        <button type="button" onClick={() => setDisplayStyle('families')}>
+        <button
+          type="button"
+          className={`dashboard-displayButton dashboard-displayButton${
+            displayStyle === 'families' ? '-active' : ''
+          }`}
+          onClick={() => setDisplayStyle('families')}
+        >
           Families
         </button>
-        <button type="button" onClick={() => setDisplayStyle('addresses')}>
+        <button
+          type="button"
+          className={`dashboard-displayButton dashboard-displayButton${
+            displayStyle === 'addresses' ? '-active' : ''
+          }`}
+          onClick={() => setDisplayStyle('addresses')}
+        >
           Addresses
         </button>
       </div>

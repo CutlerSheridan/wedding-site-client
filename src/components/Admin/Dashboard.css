@@ -5,3 +5,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
+.dashboard-displayButton {
+  border: 2px solid transparent;
+  transition: all 0.12s;
+}
+.dashboard-displayButton-active {
+  border-color: var(--clr-white);
+}

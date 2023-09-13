@@ -82,6 +82,11 @@ tfoot > tr > td {
   background: var(--clr-red);
 }
 
+.table-rsvp-total {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* EDITING UI */
 .table-editing .table-cell {
   cursor: pointer;

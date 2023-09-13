@@ -29,7 +29,6 @@ const AdminWrapper = () => {
       ) : (
         <AdminAuth updateJwt={updateJwt} />
       )}
-      <p>{'jwt: ' + jwt}</p>
     </>
   );
 };

@@ -8,6 +8,9 @@ const Navbar = ({ jwt, updateJwt }) => {
   const adminBar = (
     <nav>
       {/* <Link to="/admin">Admin root</Link> */}
+
+      <Link to="/admin/dashboard">Dashboard</Link>
+      {/* <Link to="/admin/addresses">Addresses</Link> */}
       {jwt ? (
         <a
           href="/admin/auth"
@@ -21,8 +24,6 @@ const Navbar = ({ jwt, updateJwt }) => {
       ) : (
         ''
       )}
-      <Link to="/admin/dashboard">Dashboard</Link>
-      {/* <Link to="/admin/addresses">Addresses</Link> */}
     </nav>
   );
 
