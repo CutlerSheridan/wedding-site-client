@@ -60,6 +60,10 @@ const Router = () => {
               element: <Dashboard />,
             },
             {
+              path: 'dashboard/:styleParam',
+              element: <Dashboard />,
+            },
+            {
               path: 'addresses',
               element: '',
             },

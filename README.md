@@ -6,7 +6,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- ? refactor Dashboard so URI dictates display style
+- ? move Addresses to Addresses page
+
+- create Group Lookup page
+- create AdminGuestCard.jsx
+  - refactor Table.jsx to use for checkboxes
+  - use AddressesTextInput.jsx for text fields
 
 #### TODO LATER
 
@@ -23,10 +28,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add view to see all info about all guests in specific group
   - make component for each individual person
   - maybe lookup by name, maybe click through from list, maybe both
-- ? move Addresses to Addresses page
+- make error page "go back" button navigate(-1)
 
 ##### Behavior
 
+- use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - get "Toggle stored groupId" button on RSVP page working again
 - should 404 "Go back" button go to previous page or to home page?
 - add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
@@ -41,6 +47,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.5.10_
+
+- refactor Dashboard so URI dictates display style
+- make display style tabs navigate between display style paths (had to use {relative: 'path'})
+- make default /dashboard page render with default display style
+- account for tabs to switch style whether path specifies style or not
 
 _0.5.9_
 

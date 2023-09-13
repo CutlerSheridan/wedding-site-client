@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useParams, useNavigate } from 'react-router-dom';
 import SERVER_URL from '../../serverUrl';
 import './Dashboard.css';
 import Table from '../Table';
@@ -7,10 +7,12 @@ import Loading from '../Loading';
 import Addresses from '../Addresses';
 
 const Dashboard = () => {
-  const { jwt, updateJwt } = useOutletContext();
+  const { jwt } = useOutletContext();
   const [guests, setGuests] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [displayStyle, setDisplayStyle] = useState('merged');
+  const { styleParam } = useParams();
+  const displayStyle = styleParam || 'merged';
+  const navigate = useNavigate();
   const isLoading = guests.length === 0;
   const currentGuests = guests.filter((x) => !x.declined && !x.next_round);
   const nextRoundGuests = guests.filter((x) => x.next_round && !x.declined);
@@ -183,7 +185,9 @@ const Dashboard = () => {
           className={`dashboard-displayButton dashboard-displayButton${
             displayStyle === 'merged' ? '-active' : ''
           }`}
-          onClick={() => setDisplayStyle('merged')}
+          onClick={() =>
+            navigate(styleParam ? '../merged' : 'merged', { relative: 'path' })
+          }
         >
           Merged
         </button>
@@ -192,7 +196,11 @@ const Dashboard = () => {
           className={`dashboard-displayButton dashboard-displayButton${
             displayStyle === 'families' ? '-active' : ''
           }`}
-          onClick={() => setDisplayStyle('families')}
+          onClick={() =>
+            navigate(styleParam ? '../families' : 'families', {
+              relative: 'path',
+            })
+          }
         >
           Families
         </button>
@@ -201,7 +209,11 @@ const Dashboard = () => {
           className={`dashboard-displayButton dashboard-displayButton${
             displayStyle === 'addresses' ? '-active' : ''
           }`}
-          onClick={() => setDisplayStyle('addresses')}
+          onClick={() =>
+            navigate(styleParam ? '../addresses' : 'addresses', {
+              relative: 'path',
+            })
+          }
         >
           Addresses
         </button>
