@@ -59,7 +59,9 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
     const groupAddresses = getAddresses(group);
 
     return (
-      <div className="addresses-fieldGrouping">
+      <div
+        className={`addresses-fieldGrouping addresses-fieldGrouping-${field}`}
+      >
         {(() => {
           if (isEditing || (field === 'address' && groupAddresses.length > 1)) {
             return (
@@ -76,12 +78,7 @@ const Addresses = ({ currentGuests, isEditing, handleEdit }) => {
               </>
             );
           }
-          if (field === 'address' && !groupAddresses.length) {
-            return (
-              <div className="addresses-fieldWrapper addresses-cell"></div>
-            );
-          }
-          if (field === 'address' && groupAddresses.length === 1) {
+          if (field === 'address') {
             return (
               <div className="addresses-fieldWrapper addresses-cell">
                 {groupAddresses[0]}

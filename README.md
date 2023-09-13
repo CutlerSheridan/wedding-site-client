@@ -42,6 +42,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.5.9_
+
+- touch up Addresses table formatting
+
 _0.5.8_
 
 - indicate active tab

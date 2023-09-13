@@ -7,6 +7,7 @@ const AddressesTextInput = ({ guest, field, isEditing, handleEdit }) => {
     return (
       <form className={`addresses-fieldWrapper addresses-cell`}>
         <textarea
+          className={`addresses-textarea`}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />

@@ -17,6 +17,7 @@
 .addresses-groupWrapper:not(:last-of-type) {
   margin-bottom: var(--grid-gap-thick);
 }
+
 .addresses-fieldGrouping {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,10 @@
   gap: var(--grid-gap-thin);
   white-space: pre;
 }
+.addresses-fieldGrouping-address {
+  font-size: 0.9em;
+}
+
 .addresses-fieldWrapper {
   padding: 0.35rem;
   height: 100%;
@@ -58,6 +63,10 @@
 
 /* EDITING UI */
 
+.addresses-textarea {
+  padding: 0.1rem;
+  text-align: left;
+}
 /* toggle :hover and :active styles */
 .addresses-wrapper-editing .addresses-toggle {
   cursor: pointer;
