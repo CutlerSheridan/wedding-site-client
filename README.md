@@ -6,12 +6,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- create Group Lookup page
-  - maybe lookup by name, maybe click through from list, maybe both
-  - include ability to create new group
+- add clickable list on GroupLookup page with every group
 - create AdminGuestCard.jsx
   - refactor Table.jsx to use for checkboxes
   - use AddressesTextInput.jsx for text fields
+- add ability to create new group
 
 #### TODO LATER
 
@@ -35,6 +34,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Style
 
 - change Edit buttons so they always say "edit" and indicate status via white fill
+- make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
@@ -42,6 +42,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.0_
+
+- add GroupEdit page logic that loads and fetches guests if signed in
+- add GroupLookup component that lets user search name and redirects them to the appropriate group page
 
 _0.5.12_
 

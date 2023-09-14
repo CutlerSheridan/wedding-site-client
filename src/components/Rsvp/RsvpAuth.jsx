@@ -1,7 +1,7 @@
 import { useState, seEffect, useRef } from 'react';
 import SERVER_URL from '../../serverUrl';
 
-const RsvpAuth = (props) => {
+const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
   const [inputName, setInputName] = useState('');
   const [errors, setErrors] = useState([]);
   const submitButton = useRef(null);
@@ -17,8 +17,8 @@ const RsvpAuth = (props) => {
 
     if (Array.isArray(guests)) {
       setErrors([]);
-      props.setGuestsInGroup(guests);
-      props.setGroupId(guests[0].group);
+      setGuestsInGroup(guests);
+      setGroupId(guests[0].group);
       localStorage.setItem('groupId', guests[0].group);
     } else if (!guests) {
       submitButton.current.disabled = false;

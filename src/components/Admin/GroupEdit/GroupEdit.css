@@ -1,0 +1,12 @@
+.groupLookup-searchWrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.groupLookup-error {
+  color: var(--clr-red);
+}
+.groupLookup-error-hidden {
+  visibility: hidden;
+}

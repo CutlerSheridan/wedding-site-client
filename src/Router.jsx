@@ -15,6 +15,7 @@ import Dashboard from './components/Admin/Dashboard.jsx';
 import AdminAuth from './components/Admin/AdminAuth.jsx';
 import Loading from './components/Loading.jsx';
 import Addresses from './components/Admin/Addresses.jsx';
+import GroupEdit from './components/Admin/GroupEdit/GroupEdit.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -69,7 +70,11 @@ const Router = () => {
             },
             {
               path: 'group-edit',
-              element: '',
+              element: <GroupEdit />,
+            },
+            {
+              path: 'group-edit/:groupId',
+              element: <GroupEdit />,
             },
           ],
         },
