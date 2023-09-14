@@ -11,8 +11,8 @@ const Navbar = ({ jwt, updateJwt }) => {
 
       <Link to="/admin/dashboard">Dashboard</Link>
       <Link to="/admin/addresses">Addresses</Link>
-      <Link to="/admin/grouplookup">Group Lookup</Link>
-      <Link to="/admin/gameinfo">Game Info</Link>
+      <Link to="/admin/gameinfo">Characters</Link>
+      <Link to="/admin/grouplookup">Group Edit</Link>
       {jwt ? (
         <a
           href="/admin/auth"

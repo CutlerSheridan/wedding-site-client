@@ -34,14 +34,20 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- change Edit buttons so they always say "edit" and indicate status via white fill
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
 - censor secret passphrase
 - research styling page transitions
-
 - add credit
 
 #### DONE
+
+_0.5.12_
+
+- create (empty) pages for GroupEdit components
+- restructure component directories so Admin components are actually in Admin folder
+- move all Addresses logic to Addresses component and delete AddressesPage wrapper
 
 _0.5.11_
 

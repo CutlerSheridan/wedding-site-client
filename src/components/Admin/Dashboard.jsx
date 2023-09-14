@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { useOutletContext, useParams, useNavigate } from 'react-router-dom';
 import SERVER_URL from '../../serverUrl';
 import './Dashboard.css';
-import Table from '../Table';
+import Table from './Table';
 import Loading from '../Loading';
-import Addresses from '../Addresses';
 
 const Dashboard = () => {
   const { jwt } = useOutletContext();

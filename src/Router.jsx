@@ -14,7 +14,7 @@ import AdminWrapper from './components/Admin/AdminWrapper.jsx';
 import Dashboard from './components/Admin/Dashboard.jsx';
 import AdminAuth from './components/Admin/AdminAuth.jsx';
 import Loading from './components/Loading.jsx';
-import AddressesPage from './components/Admin/AddressesPage.jsx';
+import Addresses from './components/Admin/Addresses.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -65,7 +65,11 @@ const Router = () => {
             },
             {
               path: 'addresses',
-              element: <AddressesPage />,
+              element: <Addresses />,
+            },
+            {
+              path: 'group-edit',
+              element: '',
             },
           ],
         },
