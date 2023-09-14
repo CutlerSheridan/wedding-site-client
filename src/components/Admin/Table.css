@@ -50,7 +50,7 @@ td {
   padding: 0.3rem;
 }
 th {
-  background: var(--clr-grey-dark);
+  background: var(--clr-black);
 }
 .table-rsvp > thead > tr > th {
   width: 8%;
@@ -72,7 +72,7 @@ tbody > tr:nth-of-type(odd) {
   background: var(--clr-grey);
 }
 tfoot > tr > td {
-  background: var(--clr-grey-dark);
+  background: var(--clr-black);
 }
 
 .table-cell-positive {

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const GroupLookup = ({ guests }) => {
@@ -6,18 +6,17 @@ const GroupLookup = ({ guests }) => {
   const [inputName, setInputName] = useState('');
   const [showError, setShowError] = useState(false);
   const groups = guests.reduce((acc, cur) => {
-    const accCopy = [...acc];
-    if (!accCopy.length) {
-      accCopy.push([cur]);
-    } else {
-      const lastIndex = accCopy.length - 1;
-      if (accCopy[lastIndex][0].group === cur.group) {
-        accCopy[lastIndex].push(cur);
-      } else {
-        accCopy.push([cur]);
-      }
+    if (!acc.length) {
+      acc.push([cur]);
+      return acc;
     }
-    return accCopy;
+    const groupIndex = acc.findIndex((group) => group[0].group === cur.group);
+    if (groupIndex >= 0) {
+      acc[groupIndex].push(cur);
+    } else {
+      acc.push([cur]);
+    }
+    return acc;
   }, []);
 
   const handleSubmit = (e) => {
@@ -34,10 +33,35 @@ const GroupLookup = ({ guests }) => {
     }
   };
 
+  const createGroupCard = (group) => {
+    return (
+      <div
+        key={`groupCard_${group[0].group}`}
+        className="groupLookup-groupCard"
+        onClick={() => navigate(group[0].group)}
+      >
+        {group.map((guest) => (
+          <div
+            key={`groupLookup_groupCard_${guest.name}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(guest.group);
+            }}
+            className="groupLookup-guestName"
+          >
+            {guest.name}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <>
       <h1>Group Lookup</h1>
+
       <form className="groupLookup-searchWrapper">
+        <div className="groupLookup-searchLabel">Enter guest name:</div>
         <div className="groupLookup-searchInputAndButton">
           <input
             className="groupLookup-searchInput"
@@ -54,6 +78,10 @@ const GroupLookup = ({ guests }) => {
           <li>No guest found with that name</li>
         </ul>
       </form>
+
+      <div className="groupLookup-groupList">
+        {groups.map((group) => createGroupCard(group))}
+      </div>
     </>
   );
 };

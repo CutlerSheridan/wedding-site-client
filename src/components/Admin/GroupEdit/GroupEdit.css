@@ -1,12 +1,65 @@
 .groupLookup-searchWrapper {
-  margin-top: 1rem;
+  margin: 1rem auto;
+  width: max-content;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.groupLookup-searchLabel {
+  width: 100%;
+  text-align: left;
+  font-weight: 550;
+}
+.groupLookup-searchWrapper input {
+  margin-right: 0.4rem;
+  max-width: 65%;
 }
 .groupLookup-error {
   color: var(--clr-red);
 }
 .groupLookup-error-hidden {
   visibility: hidden;
+}
+
+.groupLookup-groupList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.groupLookup-groupCard {
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  background: var(--clr-black);
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+}
+.groupLookup-guestName {
+  display: block;
+  font-size: 0.7em;
+}
+@media only screen and (min-width: 600px) {
+  .groupLookup-groupList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .groupLookup-guestName {
+    font-size: 1em;
+  }
+}
+.groupLookup-groupCard:active {
+  background: var(--clr-grey-light);
+}
+@media only screen and (hover: hover) {
+  .groupLookup-groupCard:hover {
+    cursor: pointer;
+    background: var(--clr-grey-light);
+  }
+  .groupLookup-groupCard:active {
+    background: var(--clr-grey-dark);
+  }
 }

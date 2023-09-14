@@ -12,18 +12,17 @@ const AddressesPage = () => {
   const isLoading = guests.length === 0;
   const currentGuests = guests.filter((x) => !x.declined && !x.next_round);
   const groups = currentGuests.reduce((acc, cur) => {
-    const accCopy = [...acc];
-    if (!accCopy.length) {
-      accCopy.push([cur]);
+    if (!acc.length) {
+      acc.push([cur]);
     } else {
-      const lastIndex = accCopy.length - 1;
-      if (accCopy[lastIndex][0].group === cur.group) {
-        accCopy[lastIndex].push(cur);
+      const lastIndex = acc.length - 1;
+      if (acc[lastIndex][0].group === cur.group) {
+        acc[lastIndex].push(cur);
       } else {
-        accCopy.push([cur]);
+        acc.push([cur]);
       }
     }
-    return accCopy;
+    return acc;
   }, []);
 
   useEffect(() => {

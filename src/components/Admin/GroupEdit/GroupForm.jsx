@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const GroupForm = ({ guests, groupId }) => {
   const navigate = useNavigate();
@@ -7,6 +7,7 @@ const GroupForm = ({ guests, groupId }) => {
   return (
     <>
       <h1>Group Info</h1>
+
       <button type="button">Edit</button>
       <button
         type="button"
@@ -14,7 +15,6 @@ const GroupForm = ({ guests, groupId }) => {
       >
         Back
       </button>
-      <div>{guestsInGroup[0].name}</div>
     </>
   );
 };

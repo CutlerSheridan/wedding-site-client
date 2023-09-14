@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--clr-grey-dark);
+  background: var(--clr-black);
 }
 .addresses-groupWrapper:nth-of-type(odd):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {

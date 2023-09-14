@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add clickable list on GroupLookup page with every group
-- create AdminGuestCard.jsx
+- reformat Navbar so it doesn't overflow on mobile
+- create GuestCard.jsx
   - refactor Table.jsx to use for checkboxes
   - use AddressesTextInput.jsx for text fields
 - add ability to create new group
@@ -41,6 +41,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.2_
+
+- add clickable list on GroupLookup page with every group listed
+- make group list flex on wide screens, grid on thin ones
+- add label to search bar
+- keep search bar on one line on mobile
+- add gap between search bar and search button
 
 _0.6.1_
 

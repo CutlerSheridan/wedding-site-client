@@ -1,8 +1,8 @@
 :root {
-  /* color: rgba(255, 255, 255, 0.87); */
   --clr-white: rgb(222, 222, 222);
+  --clr-black: black;
   --clr-grey: #242424;
-  --clr-grey-dark: black;
+  --clr-grey-dark: rgb(16, 16, 16);
   --clr-grey-light: rgb(81, 81, 81);
   --clr-grey-lighter: rgb(125, 125, 125);
   --clr-grey-lightest: rgb(166, 166, 166);
