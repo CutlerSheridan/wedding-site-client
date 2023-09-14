@@ -1,3 +1,8 @@
 .error404 {
+  margin: 1rem;
   color: red;
+}
+.error404 > a {
+  margin-top: 0.7rem;
+  display: block;
 }

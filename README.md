@@ -28,8 +28,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - get "Toggle stored groupId" button on RSVP page working again
-- should 404 "Go back" button go to previous page or to home page?
-- add page fade after brief delay to RSVP so it doesn't flicker "loading" for super fast loads
+- add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
 
 ##### Style
 
@@ -42,6 +41,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.1_
+
+- make 404 page 'go back' button actually go back to last page
+- add Navbar to 404 page
 
 _0.6.0_
 
