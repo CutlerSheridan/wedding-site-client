@@ -1,0 +1,8 @@
+.guestCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--clr-white);
+}
+.guestCard-gridCell {
+  border: 1px solid pink;
+}

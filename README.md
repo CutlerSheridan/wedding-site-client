@@ -6,6 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
+- refactor all handleEdit() methods to use object arguments instead of separate single field and value args for scalability
 - create GuestCard.jsx
   - refactor Table.jsx to use for checkboxes
   - use AddressesTextInput.jsx for text fields
@@ -40,6 +41,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.5_
+
+- clean up Table.jsx and remove dependence on declinedVisible variable
+- create initial structure for guest cards
 
 _0.6.4_
 

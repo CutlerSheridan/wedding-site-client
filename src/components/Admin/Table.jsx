@@ -26,7 +26,6 @@ const Table = ({
     colNames.push('Next Round', 'Declined');
     fields.push('next_round', 'declined');
   }
-  const declinedVisible = isEditing;
 
   const createTableBody = (guests) => {
     return (
@@ -56,12 +55,7 @@ const Table = ({
                         : 'table-cell-positive table-cell-toggle'
                       : null
                   }
-                  ${
-                    field === 'declined'
-                      ? 'table-declinedCell table-declinedCol-' +
-                        (declinedVisible ? 'visible' : 'hidden')
-                      : null
-                  }`}
+                  ${field === 'declined' ? 'table-declinedCell' : ''}`}
                   onClick={() => {
                     if (isEditing) {
                       const guestId = guest._id;
@@ -101,11 +95,6 @@ const Table = ({
                     field.toLowerCase().includes('rsvp')
                       ? 'table-rsvp-total'
                       : ''
-                  } ${
-                    field === 'declined'
-                      ? 'table-declinedCol-' +
-                        (declinedVisible ? 'visible' : 'hidden')
-                      : null
                   }`}
                 >
                   {guests.reduce((acc, cur) => {
@@ -145,17 +134,7 @@ const Table = ({
           <tr>
             <th scope="col"></th>
             {colNames.map((col) => (
-              <th
-                key={'thead_' + col}
-                scope="col"
-                className={
-                  col.toLowerCase() === 'declined'
-                    ? `table-declinedCol-${
-                        declinedVisible ? 'visible' : 'hidden'
-                      }`
-                    : null
-                }
-              >
+              <th key={'thead_' + col} scope="col">
                 <div className="table-colHeading-vertical">{col}</div>
               </th>
             ))}

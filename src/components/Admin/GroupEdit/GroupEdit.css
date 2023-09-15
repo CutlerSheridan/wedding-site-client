@@ -63,3 +63,10 @@
     background: var(--clr-grey-dark);
   }
 }
+
+.groupForm-controls {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
