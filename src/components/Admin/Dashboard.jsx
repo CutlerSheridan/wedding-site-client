@@ -32,8 +32,8 @@ const Dashboard = () => {
     fetchGuests();
   }, []);
 
-  const handleEdit = async (guestId, fieldName, newValue) => {
-    const payload = { [fieldName]: newValue };
+  // payload should be {field: value, field2: value2}
+  const handleEdits = async (guestId, payload) => {
     console.log('payload: ', payload);
     const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
       method: 'PUT',
@@ -76,7 +76,7 @@ const Dashboard = () => {
           title="Current List"
           includeTotals={true}
           declinedVisible={isEditing}
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
         {createRsvpsEndTables()}
       </>
@@ -96,7 +96,7 @@ const Dashboard = () => {
           isEditing={isEditing}
           title="Cutler's Family"
           includeTotals={true}
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
         <Table
           guests={currentGuests.filter((x) => x.family === 'tyler')}
@@ -109,7 +109,7 @@ const Dashboard = () => {
           isEditing={isEditing}
           title="Tyler's Family"
           includeTotals={true}
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
         <Table
           guests={currentGuests.filter(
@@ -124,7 +124,7 @@ const Dashboard = () => {
           isEditing={isEditing}
           title="Friends"
           includeTotals={true}
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
         {createRsvpsEndTables()}
       </>
@@ -143,7 +143,7 @@ const Dashboard = () => {
           })()}
           isEditing={isEditing}
           title="Standby Guests"
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
         <Table
           guests={declinedGuests}
@@ -155,7 +155,7 @@ const Dashboard = () => {
           })()}
           title="Declined Guests"
           isEditing={isEditing}
-          handleEdit={handleEdit}
+          handleEdits={handleEdits}
         />
       </>
     );

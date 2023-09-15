@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const AddressesTextInput = ({ guest, field, isEditing, handleEdit }) => {
+const AddressesTextInput = ({ guest, field, isEditing, handleEdits }) => {
   const [inputText, setInputText] = useState(guest[field] ?? undefined);
 
   if (isEditing) {
@@ -14,7 +14,7 @@ const AddressesTextInput = ({ guest, field, isEditing, handleEdit }) => {
         <button
           type="button"
           onClick={() => {
-            handleEdit(guest._id, field, inputText);
+            handleEdits(guest._id, { [field]: inputText });
           }}
         >
           Save

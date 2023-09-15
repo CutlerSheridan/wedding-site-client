@@ -6,7 +6,7 @@ const Table = ({
   isEditing,
   title = 'Default',
   includeTotals = false,
-  handleEdit,
+  handleEdits,
 }) => {
   const colNames = [
     'Save the Date',
@@ -76,7 +76,7 @@ const Table = ({
                       } else {
                         newValue = !guest[field];
                       }
-                      handleEdit(guestId, fieldName, newValue);
+                      handleEdits(guestId, { [fieldName]: newValue });
                     }
                   }}
                 ></td>
