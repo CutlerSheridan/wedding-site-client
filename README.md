@@ -43,7 +43,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 _0.6.6 (in branch: 'handle-multiple-edits')_
 
-- refactor all handleEdits() methods to use object arguments instead of separate single field and value args for scalability
+- refactor all handleEdit() methods to use object arguments instead of separate single field and value args for scalability
+- change name to 'handleEdits()'
 
 _0.6.5_
 
