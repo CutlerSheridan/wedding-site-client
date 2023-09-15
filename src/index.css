@@ -71,6 +71,10 @@ button:focus:not(:focus-visible) {
 button:focus:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.button-selected {
+  background: var(--clr-white);
+  color: var(--clr-black);
+}
 .button-small {
   font-size: 0.7rem;
 }

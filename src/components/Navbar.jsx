@@ -30,7 +30,7 @@ const Navbar = ({ jwt, updateJwt }) => {
             updateJwt(null);
           }}
         >
-          {jwt ? 'Log Out' : 'Log In'}
+          Log Out
         </a>
       ) : (
         ''

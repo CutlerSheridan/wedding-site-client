@@ -142,19 +142,19 @@ const AddressesPage = () => {
       return acc;
     }, []);
 
-  const colNames = ['Guest Name', 'Invited', 'Sent Char.', 'Address(es)'];
+  const colNames = ['Guest Name', 'Ready to Send', 'Sent Char.', 'Address(es)'];
 
   return (
     <>
       <h1>Addresses</h1>
       <button
         type="button"
-        className="button-small"
+        className={`button-small ${isEditing ? 'button-selected' : ''}`}
         onClick={() => {
           setIsEditing(!isEditing);
         }}
       >
-        {isEditing ? 'Stop Editing' : 'Start Editing'}
+        Edit
       </button>
       {isLoading ? (
         <Loading />
@@ -181,7 +181,7 @@ const AddressesPage = () => {
                 className="addresses-groupWrapper"
               >
                 {createNameFieldGrouping(gr, 'name')}
-                {createToggleFieldGrouping(gr, 'sent_invite')}
+                {createToggleFieldGrouping(gr, 'ready_to_send')}
                 {createToggleFieldGrouping(gr, 'sent_character')}
                 {createTextInputFieldGrouping(gr, 'address')}
               </div>

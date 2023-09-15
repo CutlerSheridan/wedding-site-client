@@ -192,12 +192,12 @@ const Dashboard = () => {
       </div>
       <button
         type="button"
-        className="button-small"
+        className={`button-small ${isEditing ? 'button-selected' : ''}`}
         onClick={() => {
           setIsEditing(!isEditing);
         }}
       >
-        {isEditing ? 'Stop Editing' : 'Start Editing'}
+        Edit
       </button>
       {isLoading ? <Loading /> : createDisplay()}
     </>

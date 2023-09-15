@@ -32,7 +32,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Style
 
 - on mobile, adjust top margins of pages now that navbar is gone
-- change Edit buttons so they always say "edit" and indicate status via white fill
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
 - make password field censor passwords
@@ -41,6 +40,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.4_
+
+- change Edit buttons so they always just say "edit" and indicate status via white fill
+- show 'Ready to send' column in Addresses
 
 _0.6.3_
 
