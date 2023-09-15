@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- reformat Navbar so it doesn't overflow on mobile
 - create GuestCard.jsx
   - refactor Table.jsx to use for checkboxes
   - use AddressesTextInput.jsx for text fields
@@ -32,6 +31,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- on mobile, adjust top margins of pages now that navbar is gone
 - change Edit buttons so they always say "edit" and indicate status via white fill
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
@@ -41,6 +41,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.3_
+
+- create hamburger navbar for mobile
+- add transitions for hamburger slide in and out
+- eliminate top-of-page gap when on mobile and hamburger button is to the side
+- make it so clicking the translucent overlay of the hamburger menu dismisses it
+- put the hamburger navbar higher in the z-index so it superimposes the "add to calendar" buttons
+- dismiss hamburger after clicking link
 
 _0.6.2_
 
