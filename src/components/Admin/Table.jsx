@@ -7,24 +7,55 @@ const Table = ({
   title = 'Default',
   includeTotals = false,
   handleEdits,
+  tableType = 'dashboard',
 }) => {
-  const colNames = [
-    'Save the Date',
-    'Invitation',
-    'RSVP - Fri.',
-    'RSVP - Sat.',
-    'RSVP - Sun.',
-  ];
-  const fields = [
-    'sent_savedate',
-    'sent_invite',
-    'fri_rsvp',
-    'sat_rsvp',
-    'sun_rsvp',
-  ];
-  if (isEditing) {
-    colNames.push('Next Round', 'Declined');
-    fields.push('next_round', 'declined');
+  let colNames, fields;
+  switch (tableType) {
+    case 'dashboard':
+      colNames = [
+        'Save the Date',
+        'Invited',
+        'RSVP - Fri.',
+        'RSVP - Sat.',
+        'RSVP - Sun.',
+      ];
+      fields = [
+        'sent_savedate',
+        'sent_invite',
+        'fri_rsvp',
+        'sat_rsvp',
+        'sun_rsvp',
+      ];
+      if (isEditing) {
+        colNames.push('Next Round', 'Declined');
+        fields.push('next_round', 'declined');
+      }
+      break;
+    case 'soloGuest':
+      colNames = [
+        'Save the Date',
+        'Invited',
+        'RSVP - Fri.',
+        'RSVP - Sat.',
+        'RSVP - Sun.',
+        'Next Round',
+        'Declined',
+        'Can Send Char.',
+        'Sent Char.',
+        'Survives',
+      ];
+      fields = [
+        'sent_savedate',
+        'sent_invite',
+        'fri_rsvp',
+        'sat_rsvp',
+        'sun_rsvp',
+        'next_round',
+        'declined',
+        'ready_to_send',
+        'sent_character',
+        'survives',
+      ];
   }
 
   const createTableBody = (guests) => {
@@ -115,7 +146,7 @@ const Table = ({
   };
 
   return (
-    <div className="table-container">
+    <div className={`table-container table-container-${tableType}`}>
       <h2
         className={`table-caption ${
           title.toLowerCase() === 'declined guests'

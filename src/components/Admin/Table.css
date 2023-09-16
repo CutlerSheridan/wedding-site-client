@@ -14,6 +14,17 @@ table {
   overflow: hidden;
 }
 
+/* SOLO GUEST TABLE START */
+.table-container-soloGuest .table-caption,
+.table-container-soloGuest thead > tr > th:first-of-type,
+.table-container-soloGuest tbody > * > th {
+  display: none;
+}
+.table-container-soloGuest td {
+  height: 2rem;
+}
+/* SOLO GUEST TABLE END */
+
 /* BORDER START */
 .table-declined {
   border-color: var(--clr-red);

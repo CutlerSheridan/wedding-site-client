@@ -7,6 +7,8 @@ const GroupForm = ({ guests, groupId }) => {
   const navigate = useNavigate();
   const guestsInGroup = guests.filter((x) => x.group === groupId);
 
+  const [newGroupId] = useState(randomizeId());
+
   return (
     <>
       <h1>Group Info</h1>
@@ -33,7 +35,12 @@ const GroupForm = ({ guests, groupId }) => {
       <div className="groupForm-guestsWrapper">
         {guestsInGroup.map((x) => (
           <div key={`groupCard_${x.name}`}>
-            <GuestCard guest={x} guests={guests} isEditing={isEditing} />
+            <GuestCard
+              guest={x}
+              guests={guests}
+              isEditing={isEditing}
+              newGroupId={newGroupId}
+            />
           </div>
         ))}
       </div>
@@ -42,3 +49,17 @@ const GroupForm = ({ guests, groupId }) => {
 };
 
 export default GroupForm;
+
+const randomizeId = () => {
+  let _charOptions = 'abcdefghijklmnopqrstuvwxyz';
+  _charOptions += _charOptions.toUpperCase();
+  _charOptions += '0123456789';
+  let randomId = '';
+  for (let i = 0; i < 24; i++) {
+    const randomIndex = Math.floor(
+      (Math.random() * 100 * _charOptions.length) / 100
+    );
+    randomId += _charOptions.charAt(randomIndex);
+  }
+  return randomId;
+};

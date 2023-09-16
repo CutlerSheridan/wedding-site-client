@@ -6,9 +6,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- create GuestCard.jsx
-  - refactor Table.jsx to use for checkboxes
-  - use AddressesTextInput.jsx for text fields
+- extract short input text to component
+- extract selector to component
+- make textarea component
+- add all fields for guest cards
 - add ability to create new group
 
 #### TODO LATER
@@ -25,6 +26,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
+- in GroupForm, should table toggles auto-update in database or only update on save?
 - use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - get "Toggle stored groupId" button on RSVP page working again
 - add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
@@ -41,7 +43,19 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
-_0.6.6 (in branch: 'handle-multiple-edits')_
+_0.6.7_
+
+- add short text inputs to guest cards
+- refactor Table.jsx to use for checkboxes in guest cards
+- create selector creation func for guest cards
+- add families for selector
+- make display values match selected value label
+- add guest names and group IDs for selector
+- make guest names alphabetical
+- add ability to put guest in new group
+- make new group option display "New Group" when not editing (had to pass down randomized new group ID as state from parent so it didn't regenerate)
+
+_0.6.6 (branch: 'handle-multiple-edits')_
 
 - refactor all handleEdit() methods to use object arguments instead of separate single field and value args for scalability
 - change name to 'handleEdits()'
