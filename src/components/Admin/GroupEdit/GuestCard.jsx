@@ -3,6 +3,7 @@ import './GuestCard.css';
 import Table from '../Table';
 import ShortTextInput from '../../Inputs/ShortTextInput';
 import Selector from '../../Inputs/Selector';
+import TextareaInput from '../../Inputs/TextareaInput';
 
 const GuestCard = ({
   guest,
@@ -34,9 +35,34 @@ const GuestCard = ({
       <div className="guestCard-gridCell">
         <ShortTextInput
           field="name"
-          label="Name"
           value={localGuest.name}
           handleChange={localUpdateGuest}
+          isEditing={isEditing}
+        />
+        <div className="guestCard-horizontalFields">
+          <Selector
+            field="family"
+            value={localGuest.family}
+            handleChange={localUpdateGuest}
+            optionLabels={familyNames}
+            optionValues={familyValues}
+            isEditing={isEditing}
+          />
+          <Selector
+            field="group"
+            value={localGuest.group}
+            handleChange={localUpdateGuest}
+            optionLabels={abcGuestNames}
+            optionValues={groupIdsArray}
+            isEditing={isEditing}
+          />
+        </div>
+        <Selector
+          field="character"
+          value={localGuest.character}
+          handleChange={localUpdateGuest}
+          optionLabels={[]}
+          optionValues={[]}
           isEditing={isEditing}
         />
       </div>
@@ -50,22 +76,18 @@ const GuestCard = ({
         />
       </div>
       <div className="guestCard-gridCell">
-        <Selector
-          field="family"
-          label="Family"
-          value={localGuest.family}
+        <TextareaInput
+          field="address"
+          value={localGuest.address}
           handleChange={localUpdateGuest}
-          optionLabels={familyNames}
-          optionValues={familyValues}
           isEditing={isEditing}
         />
-        <Selector
-          field="group"
-          label="Family"
-          value={localGuest.group}
+      </div>
+      <div className="guestCard-gridCell">
+        <TextareaInput
+          field="notes"
+          value={localGuest.notes}
           handleChange={localUpdateGuest}
-          optionLabels={abcGuestNames}
-          optionValues={groupIdsArray}
           isEditing={isEditing}
         />
       </div>

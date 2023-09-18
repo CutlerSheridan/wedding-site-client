@@ -12,3 +12,7 @@
 .dashboard-displayButton-active {
   border-color: var(--clr-white);
 }
+.dashboard-tablesWrapper {
+  margin: auto;
+  width: max-content;
+}

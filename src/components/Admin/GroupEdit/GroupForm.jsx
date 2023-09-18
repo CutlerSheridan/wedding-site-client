@@ -32,14 +32,17 @@ const GroupForm = ({ guests, groupId }) => {
       </div>
 
       <div className="groupForm-guestsWrapper">
-        {guestsInGroup.map((x) => (
-          <div key={`groupCard_${x.name}`}>
+        {guestsInGroup.map((x, index) => (
+          <div key={`guestCard_${x.name}`}>
             <GuestCard
               guest={x}
               guests={guests}
               isEditing={isEditing}
               newGroupId={newGroupId}
             />
+            {index < guestsInGroup.length - 1 ? (
+              <div className="groupForm-guestSeparator"></div>
+            ) : null}
           </div>
         ))}
       </div>

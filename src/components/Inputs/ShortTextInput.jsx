@@ -1,6 +1,12 @@
 import './Inputs.css';
 
-const ShortTextInput = ({ field, label, value, handleChange, isEditing }) => {
+const ShortTextInput = ({
+  field,
+  label = field,
+  value,
+  handleChange,
+  isEditing,
+}) => {
   return (
     <div
       className={`input-grouping ${field === 'name' ? 'input-nameGroup' : ''}`}
@@ -9,7 +15,7 @@ const ShortTextInput = ({ field, label, value, handleChange, isEditing }) => {
       {isEditing ? (
         <input
           onChange={(e) => handleChange({ [field]: e.target.value })}
-          value={value}
+          value={value ?? ''}
         />
       ) : (
         <div
@@ -17,7 +23,7 @@ const ShortTextInput = ({ field, label, value, handleChange, isEditing }) => {
             field === 'name' ? 'input-displayEmphasis' : ''
           }`}
         >
-          {value}
+          {value ?? ' '}
         </div>
       )}
     </div>

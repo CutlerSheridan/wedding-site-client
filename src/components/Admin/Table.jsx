@@ -42,7 +42,6 @@ const Table = ({
         'Declined',
         'Can Send Char.',
         'Sent Char.',
-        'Survives',
       ];
       fields = [
         'sent_savedate',
@@ -54,7 +53,6 @@ const Table = ({
         'declined',
         'ready_to_send',
         'sent_character',
-        'survives',
       ];
   }
 

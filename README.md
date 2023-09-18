@@ -6,8 +6,9 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make textarea component
-- add all fields for guest cards
+- add ability to save changes
+- prevent saving if no name
+- add 'delete guest' button
 - add ability to create new group
 
 #### TODO LATER
@@ -34,12 +35,21 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - on mobile, adjust top margins of pages now that navbar is gone
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
+- fix table sizes in safari
 - make password field censor passwords
 - censor secret passphrase
 - research styling page transitions
 - add credit
 
 #### DONE
+
+_0.6.9_
+
+- make textarea component
+- reorganize GuestCard layout
+- auto-assign 'label' to input components if it's not specified
+- add all fields for guest cards
+- make guest cards legible in iOS Safari
 
 _0.6.8_
 

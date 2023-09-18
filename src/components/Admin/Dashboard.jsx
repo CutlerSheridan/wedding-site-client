@@ -63,7 +63,7 @@ const Dashboard = () => {
   };
   const createMergedDisplay = () => {
     return (
-      <>
+      <div className="dashboard-tablesWrapper">
         <Table
           guests={currentGuests}
           longestName={(() => {
@@ -79,12 +79,12 @@ const Dashboard = () => {
           handleEdits={handleEdits}
         />
         {createRsvpsEndTables()}
-      </>
+      </div>
     );
   };
   const createFamiliesDisplay = () => {
     return (
-      <>
+      <div className="dashboard-tablesWrapper">
         <Table
           guests={currentGuests.filter((x) => x.family === 'cutler')}
           longestName={(() => {
@@ -127,7 +127,7 @@ const Dashboard = () => {
           handleEdits={handleEdits}
         />
         {createRsvpsEndTables()}
-      </>
+      </div>
     );
   };
   const createRsvpsEndTables = () => {

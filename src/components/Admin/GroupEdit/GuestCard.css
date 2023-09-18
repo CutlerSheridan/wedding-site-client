@@ -1,14 +1,25 @@
 .guestCard {
-  margin-bottom: 1rem;
+  padding: 1rem 1.3rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 1px solid var(--clr-white);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  /* border: 1px solid var(--clr-white); */
+  background: var(--clr-black);
+  border-radius: 0.3rem;
+}
+@media only screen and (min-width: 600px) {
+  .guestCard {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .guestCard-gridCell {
-  padding: 0.7rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0.3rem;
-  border: 1px solid pink;
+  justify-content: space-between;
+  gap: 1rem;
+  /* border: 1px solid pink; */
+}
+.guestCard-horizontalFields {
+  display: flex;
+  gap: 1.5rem;
 }

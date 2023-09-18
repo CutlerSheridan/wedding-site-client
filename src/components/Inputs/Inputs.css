@@ -5,16 +5,28 @@
   align-items: flex-start;
   justify-content: center;
 }
-.input-nameGroup {
-  height: 100%;
+.input-grouping * {
+  text-align: left;
+  white-space: pre;
 }
 .input-label {
+  font-size: 0.9em;
   color: var(--clr-grey-lightest);
+  text-transform: capitalize;
 }
 .input-displayText {
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1.1em;
 }
 .input-displayEmphasis {
+  font-size: 1.5em;
   font-weight: bold;
+  text-decoration: underline;
+}
+.input-grouping select {
+  font-size: 0.75em;
+}
+@media only screen and (min-width: 600px) {
+  .input-grouping select {
+    font-size: inherit;
+  }
 }

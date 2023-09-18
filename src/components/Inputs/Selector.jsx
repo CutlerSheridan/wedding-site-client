@@ -2,7 +2,7 @@ import './Inputs.css';
 
 const Selector = ({
   field,
-  label,
+  label = field,
   value,
   handleChange,
   optionLabels,
@@ -14,18 +14,22 @@ const Selector = ({
       <div className="input-label">{label}:</div>
       {isEditing ? (
         <select
-          value={value}
+          value={value ?? ''}
           onChange={(e) => handleChange({ [field]: e.target.value })}
         >
           {optionLabels.map((x, index) => (
-            <option key={x} value={optionValues[index]}>
+            <option
+              key={x}
+              className="input-selectorOption"
+              value={optionValues[index]}
+            >
               {x}
             </option>
           ))}
         </select>
       ) : (
         <div className="input-displayText">
-          {!value ? 'None' : optionLabels[optionValues.indexOf(value)]}
+          {!value ? ' ' : optionLabels[optionValues.indexOf(value)]}
         </div>
       )}
     </div>
