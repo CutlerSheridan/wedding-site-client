@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './GuestCard.css';
 import Table from '../Table';
+import ShortTextInput from '../../Inputs/ShortTextInput';
+import Selector from '../../Inputs/Selector';
 
 const GuestCard = ({
   guest,
@@ -27,72 +29,16 @@ const GuestCard = ({
     setLocalGuest((prev) => ({ ...prev, ...newFieldValue }));
   };
 
-  const createShortTextInput = (field, label, value, handleChange) => {
-    return (
-      <div
-        className={`input-grouping ${
-          field === 'name' ? 'input-nameGroup' : ''
-        }`}
-      >
-        <div className="input-label">{label}:</div>
-        {isEditing ? (
-          <input
-            onChange={(e) => handleChange({ [field]: e.target.value })}
-            value={value}
-          />
-        ) : (
-          <div
-            className={`input-displayText ${
-              field === 'name' ? 'input-displayEmphasis' : ''
-            }`}
-          >
-            {value}
-          </div>
-        )}
-      </div>
-    );
-  };
-
-  const createSelector = (
-    field,
-    label,
-    value,
-    handleChange,
-    optionLabels,
-    optionValues
-  ) => {
-    return (
-      <div className="input-grouping">
-        <div className="input-label">{label}:</div>
-        {isEditing ? (
-          <select
-            value={value}
-            onChange={(e) => handleChange({ [field]: e.target.value })}
-          >
-            {optionLabels.map((x, index) => (
-              <option key={x} value={optionValues[index]}>
-                {x}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <div className="input-displayText">
-            {!value ? 'None' : optionLabels[optionValues.indexOf(value)]}
-          </div>
-        )}
-      </div>
-    );
-  };
-
   return (
     <div className="guestCard">
       <div className="guestCard-gridCell">
-        {createShortTextInput(
-          'name',
-          'Name',
-          localGuest.name,
-          localUpdateGuest
-        )}
+        <ShortTextInput
+          field="name"
+          label="Name"
+          value={localGuest.name}
+          handleChange={localUpdateGuest}
+          isEditing={isEditing}
+        />
       </div>
       <div className="guestCard-gridCell">
         <Table
@@ -104,22 +50,24 @@ const GuestCard = ({
         />
       </div>
       <div className="guestCard-gridCell">
-        {createSelector(
-          'family',
-          'Family',
-          localGuest.family,
-          localUpdateGuest,
-          familyNames,
-          familyValues
-        )}
-        {createSelector(
-          'group',
-          'Group',
-          localGuest.group,
-          localUpdateGuest,
-          abcGuestNames,
-          groupIdsArray
-        )}
+        <Selector
+          field="family"
+          label="Family"
+          value={localGuest.family}
+          handleChange={localUpdateGuest}
+          optionLabels={familyNames}
+          optionValues={familyValues}
+          isEditing={isEditing}
+        />
+        <Selector
+          field="group"
+          label="Family"
+          value={localGuest.group}
+          handleChange={localUpdateGuest}
+          optionLabels={abcGuestNames}
+          optionValues={groupIdsArray}
+          isEditing={isEditing}
+        />
       </div>
     </div>
   );

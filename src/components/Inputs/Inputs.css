@@ -1,0 +1,20 @@
+.input-grouping {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.input-nameGroup {
+  height: 100%;
+}
+.input-label {
+  color: var(--clr-grey-lightest);
+}
+.input-displayText {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.input-displayEmphasis {
+  font-weight: bold;
+}

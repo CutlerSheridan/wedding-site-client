@@ -12,21 +12,3 @@
   gap: 0.3rem;
   border: 1px solid pink;
 }
-
-.input-grouping {
-  width: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.input-nameGroup {
-  height: 100%;
-}
-.input-displayText {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.input-displayEmphasis {
-  font-weight: bold;
-}

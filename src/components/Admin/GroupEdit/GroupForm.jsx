@@ -6,7 +6,6 @@ const GroupForm = ({ guests, groupId }) => {
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
   const guestsInGroup = guests.filter((x) => x.group === groupId);
-
   const [newGroupId] = useState(randomizeId());
 
   return (

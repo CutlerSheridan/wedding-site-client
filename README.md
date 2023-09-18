@@ -6,8 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- extract short input text to component
-- extract selector to component
 - make textarea component
 - add all fields for guest cards
 - add ability to create new group
@@ -42,6 +40,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.8_
+
+- extract short input text to component
+- extract selector to component
 
 _0.6.7_
 
