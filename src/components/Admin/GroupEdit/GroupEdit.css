@@ -70,6 +70,12 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.groupForm-error {
+  color: var(--clr-red);
+}
+.groupForm-error-hidden {
+  display: none;
+}
 .groupForm-guestsWrapper {
   margin: auto;
   width: max-content;

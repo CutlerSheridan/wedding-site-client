@@ -14,8 +14,8 @@ const ShortTextInput = ({
       <div className="input-label">{label}:</div>
       {isEditing ? (
         <input
-          onChange={(e) => handleChange({ [field]: e.target.value })}
           value={value ?? ''}
+          onChange={(e) => handleChange({ [field]: e.target.value })}
         />
       ) : (
         <div

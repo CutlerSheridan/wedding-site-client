@@ -15,7 +15,13 @@ const Selector = ({
       {isEditing ? (
         <select
           value={value ?? ''}
-          onChange={(e) => handleChange({ [field]: e.target.value })}
+          onChange={(e) => {
+            let newValue = e.target.value;
+            if (newValue === 'false') {
+              newValue = false;
+            }
+            handleChange({ [field]: newValue });
+          }}
         >
           {optionLabels.map((x, index) => (
             <option

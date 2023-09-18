@@ -27,7 +27,8 @@ const GroupEdit = () => {
   }, []);
 
   // payload should be {field: value, field2: value2}
-  const handleEdits = async (guestId, payload) => {
+  // const saveGroupEdits = async (groupId)
+  const saveGuestEdits = async (guestId, payload) => {
     console.log('payload: ', payload);
     const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
       method: 'PUT',

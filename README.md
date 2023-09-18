@@ -6,8 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add ability to save changes
-- prevent saving if no name
 - add 'delete guest' button
 - add ability to create new group
 
@@ -42,6 +40,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.10_
+
+- add ability to save changes
+- fix Selector component saving false bool value as string
+- prevent saving if guest name is empty
+- refactor react keys so ShortTextInput doesn't lose focus after every keystroke
 
 _0.6.9_
 

@@ -1,12 +1,50 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import GuestCard from './GuestCard';
+import SERVER_URL from '../../../serverUrl';
 
 const GroupForm = ({ guests, groupId }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const navigate = useNavigate();
-  const guestsInGroup = guests.filter((x) => x.group === groupId);
   const [newGroupId] = useState(randomizeId());
+  const [guestsInGroup, setGuestsInGroup] = useState(
+    guests.filter((x) => x.group === groupId)
+  );
+  const saveButton = useRef(null);
+  const errorElement = useRef(null);
+  const navigate = useNavigate();
+
+  const localUpdateGuest = (guestId, updatedFieldValuePairs) => {
+    setGuestsInGroup((prev) =>
+      prev.map((x) =>
+        x._id === guestId ? { ...x, ...updatedFieldValuePairs } : x
+      )
+    );
+  };
+  const saveGuests = async () => {
+    if (guestsInGroup.some((x) => !x.name)) {
+      errorElement.current.classList.remove('groupForm-error-hidden');
+      return;
+    }
+    errorElement.current.classList.add('groupForm-error-hidden');
+    saveButton.current.classList.add('button-selected');
+
+    await Promise.all(
+      guestsInGroup.map(async (guest) => {
+        await saveOneGuest(guest._id, guest);
+      })
+    );
+
+    saveButton.current.classList.remove('button-selected');
+  };
+  const saveOneGuest = (guestId, payload) => {
+    return fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+  };
 
   return (
     <>
@@ -22,7 +60,9 @@ const GroupForm = ({ guests, groupId }) => {
         >
           Edit
         </button>
-        <button type="button">Save</button>
+        <button type="button" ref={saveButton} onClick={saveGuests}>
+          Save
+        </button>
         <button
           type="button"
           onClick={() => navigate('..', { relative: 'path' })}
@@ -30,15 +70,22 @@ const GroupForm = ({ guests, groupId }) => {
           Back
         </button>
       </div>
+      <div
+        ref={errorElement}
+        className="groupForm-error groupForm-error-hidden"
+      >
+        Make sure every guest has a name
+      </div>
 
       <div className="groupForm-guestsWrapper">
         {guestsInGroup.map((x, index) => (
-          <div key={`guestCard_${x.name}`}>
+          <div key={`guestCard_${x._id}`}>
             <GuestCard
               guest={x}
               guests={guests}
               isEditing={isEditing}
               newGroupId={newGroupId}
+              localUpdateGuest={localUpdateGuest}
             />
             {index < guestsInGroup.length - 1 ? (
               <div className="groupForm-guestSeparator"></div>

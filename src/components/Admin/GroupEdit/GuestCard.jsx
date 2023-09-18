@@ -9,11 +9,9 @@ const GuestCard = ({
   guest,
   guests: allGuests,
   isEditing,
-  saveEdits,
+  localUpdateGuest,
   newGroupId,
 }) => {
-  const [localGuest, setLocalGuest] = useState({ ...guest });
-
   const familyNames = ['Cutler', 'Tyler', 'None'];
   const familyValues = ['cutler', 'tyler', false];
   const abcGuests = [...allGuests];
@@ -23,11 +21,8 @@ const GuestCard = ({
   const groupIdsArray = abcGuests.map((x) => x.group);
   groupIdsArray.unshift(newGroupId);
 
-  const localUpdateGuest = (newFieldValue) => {
-    setLocalGuest((prev) => ({ ...prev, ...newFieldValue }));
-  };
-  const localUpdateGuestForTable = (unusedId, newFieldValue) => {
-    setLocalGuest((prev) => ({ ...prev, ...newFieldValue }));
+  const localUpdateGuestAddId = (newFieldValue) => {
+    localUpdateGuest(guest._id, newFieldValue);
   };
 
   return (
@@ -35,23 +30,23 @@ const GuestCard = ({
       <div className="guestCard-gridCell">
         <ShortTextInput
           field="name"
-          value={localGuest.name}
-          handleChange={localUpdateGuest}
+          value={guest.name}
+          handleChange={localUpdateGuestAddId}
           isEditing={isEditing}
         />
         <div className="guestCard-horizontalFields">
           <Selector
             field="family"
-            value={localGuest.family}
-            handleChange={localUpdateGuest}
+            value={guest.family}
+            handleChange={localUpdateGuestAddId}
             optionLabels={familyNames}
             optionValues={familyValues}
             isEditing={isEditing}
           />
           <Selector
             field="group"
-            value={localGuest.group}
-            handleChange={localUpdateGuest}
+            value={guest.group}
+            handleChange={localUpdateGuestAddId}
             optionLabels={abcGuestNames}
             optionValues={groupIdsArray}
             isEditing={isEditing}
@@ -59,8 +54,8 @@ const GuestCard = ({
         </div>
         <Selector
           field="character"
-          value={localGuest.character}
-          handleChange={localUpdateGuest}
+          value={guest.character}
+          handleChange={localUpdateGuestAddId}
           optionLabels={[]}
           optionValues={[]}
           isEditing={isEditing}
@@ -68,26 +63,26 @@ const GuestCard = ({
       </div>
       <div className="guestCard-gridCell">
         <Table
-          guests={[localGuest]}
+          guests={[guest]}
           tableType="soloGuest"
           isEditing={isEditing}
-          longestName={localGuest.name}
-          handleEdits={localUpdateGuestForTable}
+          longestName={guest.name}
+          handleEdits={localUpdateGuest}
         />
       </div>
       <div className="guestCard-gridCell">
         <TextareaInput
           field="address"
-          value={localGuest.address}
-          handleChange={localUpdateGuest}
+          value={guest.address}
+          handleChange={localUpdateGuestAddId}
           isEditing={isEditing}
         />
       </div>
       <div className="guestCard-gridCell">
         <TextareaInput
           field="notes"
-          value={localGuest.notes}
-          handleChange={localUpdateGuest}
+          value={guest.notes}
+          handleChange={localUpdateGuestAddId}
           isEditing={isEditing}
         />
       </div>
