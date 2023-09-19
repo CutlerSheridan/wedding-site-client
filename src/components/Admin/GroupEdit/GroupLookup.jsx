@@ -70,6 +70,9 @@ const GroupLookup = ({ guests }) => {
           />
           <button onClick={handleSubmit}>Search</button>
         </div>
+        <button type="button" onClick={() => navigate('new')}>
+          New Group
+        </button>
         <ul
           className={`groupLookup-error${
             !showError ? ' groupLookup-error-hidden' : ''

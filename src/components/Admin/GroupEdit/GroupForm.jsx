@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import GuestCard from './GuestCard';
 import SERVER_URL from '../../../serverUrl';
 
-const GroupForm = ({ jwt, guests, groupId, updateGuestsLocally }) => {
+const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newGroupId] = useState(randomizeId());
   const [guestsInGroup, setGuestsInGroup] = useState(
@@ -12,10 +12,17 @@ const GroupForm = ({ jwt, guests, groupId, updateGuestsLocally }) => {
   // const [newGuests, setNewGuests] = useState(
   //   guests.some((x) => x.group === groupId) ? [] : [_createDefaultGuest(0)]
   // );
-  const [newGuests, setNewGuests] = useState([]);
+  const [newGuests, setNewGuests] = useState(
+    groupId === 'new' ? [_createDefaultGuest(0)] : []
+  );
   const saveButton = useRef(null);
   const errorElement = useRef(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setGuestsInGroup(guests.filter((x) => x.group === groupId));
+    setNewGuests(groupId === 'new' ? [_createDefaultGuest(0)] : []);
+  }, [guests]);
 
   const localUpdateGuest = (guestId, updatedFieldValuePairs) => {
     // this checks if it's a new guest
@@ -46,29 +53,33 @@ const GroupForm = ({ jwt, guests, groupId, updateGuestsLocally }) => {
     errorElement.current.classList.add('groupForm-error-hidden');
     saveButton.current.classList.add('button-selected');
     const usedNewGuests = newGuests.filter((x) => x.used);
-    console.log('used new guests: ', usedNewGuests);
-    updateGuestsLocally([...guestsInGroup, ...usedNewGuests]);
+    // updateGuestsLocally([...guestsInGroup, ...usedNewGuests]);
 
     await Promise.all(
       guestsInGroup.map(async (guest) => {
         await saveOneGuest(guest);
       }),
-      // usedNewGuests.map(async (guest) => {
-      //   await saveOneGuest(guest);
-      // })
       saveNewGuests(usedNewGuests)
     );
 
     saveButton.current.classList.remove('button-selected');
+    if (groupId === 'new') {
+      navigate(`../${usedNewGuests[0].group}`, { relative: 'path' });
+    }
+    refreshGuests();
   };
-  const saveOneGuest = (payload) => {
-    return fetch(`${SERVER_URL}/api/1/guests/${payload._id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
+  const saveOneGuest = async (payload) => {
+    const responseDoc = await fetch(
+      `${SERVER_URL}/api/1/guests/${payload._id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+    const addedUser = await responseDoc.json();
   };
   const saveNewGuests = (newGuests) => {
     if (newGuests.length) {
@@ -98,8 +109,8 @@ const GroupForm = ({ jwt, guests, groupId, updateGuestsLocally }) => {
     return {
       used: false,
       _id: id,
-      family: guestsInGroup[0].family ?? newGuests[0].family ?? false,
-      group: groupId ?? newGroupId,
+      family: guestsInGroup[0]?.family ?? false,
+      group: groupId !== 'new' ? groupId : newGroupId,
       declined: false,
       sent_savedate: false,
       sent_invite: false,
@@ -113,6 +124,7 @@ const GroupForm = ({ jwt, guests, groupId, updateGuestsLocally }) => {
   return (
     <>
       <h1>Group Info</h1>
+      <div>SAVE any changes!</div>
 
       <div className="groupForm-controls">
         <button

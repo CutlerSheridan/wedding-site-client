@@ -7,7 +7,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - add 'delete guest' button
-- add ability to create new group
 
 #### TODO LATER
 
@@ -41,6 +40,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.13_
+
+- make new guest in group's ID refresh upon save and take the new ID from db so you can edit the new guest again
+- add ability to create new group
+- enable creating multiple guests in a new group
+- after saving new guest in group, navigate to edit page of first new guest's group
 
 _0.6.12_
 
