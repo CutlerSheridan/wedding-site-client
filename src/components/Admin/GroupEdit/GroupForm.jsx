@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import GuestCard from './GuestCard';
 import SERVER_URL from '../../../serverUrl';
 
-const GroupForm = ({ guests, groupId }) => {
+const GroupForm = ({ guests, groupId, updateGuestsLocally }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newGroupId] = useState(randomizeId());
   const [guestsInGroup, setGuestsInGroup] = useState(
@@ -27,6 +27,7 @@ const GroupForm = ({ guests, groupId }) => {
     }
     errorElement.current.classList.add('groupForm-error-hidden');
     saveButton.current.classList.add('button-selected');
+    updateGuestsLocally(guestsInGroup);
 
     await Promise.all(
       guestsInGroup.map(async (guest) => {

@@ -7,6 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - add 'delete guest' button
+- add ability to add new guest to group
 - add ability to create new group
 
 #### TODO LATER
@@ -40,6 +41,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.11_
+
+- make groups update if you back out of group then go back in
 
 _0.6.10_
 

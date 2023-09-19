@@ -27,25 +27,30 @@ const GroupEdit = () => {
   }, []);
 
   // payload should be {field: value, field2: value2}
-  // const saveGroupEdits = async (groupId)
-  const saveGuestEdits = async (guestId, payload) => {
-    console.log('payload: ', payload);
-    const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(payload),
+  // const saveGuestEdits = async (guestId, payload) => {
+  //   console.log('payload: ', payload);
+  //   const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //     },
+  //     body: JSON.stringify(payload),
+  //   });
+  //   const parsedResponse = await response.json();
+  //   console.log(parsedResponse);
+  //   updateGuestsLocally([parsedResponse]);
+  // };
+  const updateGuestsLocally = (updatedGroup) => {
+    const updatedGuests = [...guests];
+    updatedGroup.forEach((guest) => {
+      const guestIndex = updatedGuests.findIndex((x) => x._id === guest._id);
+      if (guestIndex > -1) {
+        updatedGuests[guestIndex] = guest;
+      } else {
+        updatedGuests.push(guest);
+      }
+      setGuests(updatedGuests);
     });
-    const parsedResponse = await response.json();
-    console.log(parsedResponse);
-    updateGuestsLocally(parsedResponse);
-  };
-  const updateGuestsLocally = (updatedGuest) => {
-    const updatedGuestList = guests.map((x) =>
-      x._id === updatedGuest._id ? updatedGuest : { ...x }
-    );
-    setGuests(updatedGuestList);
   };
 
   return (
@@ -53,7 +58,11 @@ const GroupEdit = () => {
       {isLoading ? (
         <Loading />
       ) : groupId ? (
-        <GroupForm guests={guests} groupId={groupId} />
+        <GroupForm
+          guests={guests}
+          groupId={groupId}
+          updateGuestsLocally={updateGuestsLocally}
+        />
       ) : (
         <GroupLookup guests={guests} />
       )}
