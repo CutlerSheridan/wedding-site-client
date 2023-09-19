@@ -59,6 +59,7 @@ const GroupEdit = () => {
         <Loading />
       ) : groupId ? (
         <GroupForm
+          jwt={jwt}
           guests={guests}
           groupId={groupId}
           updateGuestsLocally={updateGuestsLocally}

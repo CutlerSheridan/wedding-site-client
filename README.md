@@ -7,7 +7,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - add 'delete guest' button
-- add ability to add new guest to group
 - add ability to create new group
 
 #### TODO LATER
@@ -28,6 +27,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - get "Toggle stored groupId" button on RSVP page working again
 - add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
+- add error if server is called and doesn't respond
 
 ##### Style
 
@@ -41,6 +41,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.12_
+
+- add ability to add new guest to preexisting group
+- add ability to add multiple guests to group at once
+- make new guests in group inherit family and groupId
+- add property to new guests to check if they've been edited or not so unused new guests can be auto-deleted
+- add ability to save new guests in group
 
 _0.6.11_
 

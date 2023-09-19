@@ -66,7 +66,7 @@ const GuestCard = ({
           guests={[guest]}
           tableType="soloGuest"
           isEditing={isEditing}
-          longestName={guest.name}
+          longestName={guest.name ?? ''}
           handleEdits={localUpdateGuest}
         />
       </div>

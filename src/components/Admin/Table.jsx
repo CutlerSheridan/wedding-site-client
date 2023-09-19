@@ -61,7 +61,7 @@ const Table = ({
       <>
         <tbody className={isEditing ? 'table-editing' : null}>
           {guests.map((guest) => (
-            <tr key={guest.name}>
+            <tr key={guest.name + '_row'}>
               <th
                 scope="row"
                 style={{ width: 'calc(' + (longestName.length - 1) + 'ch)' }}
