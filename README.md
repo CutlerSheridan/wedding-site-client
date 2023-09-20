@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- clean up debugging logs from solving previous issue
 - enable deleting unused new guest cards
 
 #### TODO LATER
@@ -41,6 +40,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.17_
+
+- clean up debugging logs from solving previous issue
+- simplify GroupForm's saveUpdatesToDb API calls
 
 _0.6.16_
 

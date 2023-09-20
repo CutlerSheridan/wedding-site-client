@@ -41,7 +41,6 @@ const Selector = ({
             : optionLabels[optionValues.indexOf(value)]}
         </div>
       )}
-      <div>value: {`${value}`}</div>
     </div>
   );
 };

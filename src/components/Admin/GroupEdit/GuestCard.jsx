@@ -28,8 +28,6 @@ const GuestCard = ({
 
   return (
     <div className="guestCard">
-      <div>ID: {guest._id}</div>
-      <div>'</div>
       <div className="guestCard-gridCell">
         <ShortTextInput
           field="name"
