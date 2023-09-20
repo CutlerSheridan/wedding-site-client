@@ -15,6 +15,7 @@ const GroupEdit = () => {
 
   useEffect(() => {
     if (needsRefresh) {
+      console.log('refreshing...');
       const fetchGuests = async () => {
         const response = await fetch(`${SERVER_URL}/api/1/guests`, {
           headers: {

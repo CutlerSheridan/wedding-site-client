@@ -11,6 +11,7 @@ const GuestCard = ({
   isEditing,
   localUpdateGuest,
   newGroupId,
+  handleDelete,
 }) => {
   const familyNames = ['Cutler', 'Tyler', 'None'];
   const familyValues = ['cutler', 'tyler', false];
@@ -86,6 +87,13 @@ const GuestCard = ({
           isEditing={isEditing}
         />
       </div>
+      <button
+        type="button"
+        className="guestCard-deleteButton"
+        onClick={() => handleDelete(guest._id)}
+      >
+        X
+      </button>
     </div>
   );
 };

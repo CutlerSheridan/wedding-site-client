@@ -1,4 +1,5 @@
 .guestCard {
+  position: relative;
   padding: 1rem 1.3rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -22,4 +23,21 @@
 .guestCard-horizontalFields {
   display: flex;
   gap: 1.5rem;
+}
+.guestCard-deleteButton {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: var(--clr-red);
+}
+.guestCard-deleteButton:active {
+  background: var(--clr-red-alpha);
+}
+@media only screen and (hover: hover) {
+  .guestCard-deleteButton:active {
+    background: var(--clr-red);
+  }
+  .guestCard-deleteButton:hover {
+    background: var(--clr-red-alpha);
+  }
 }

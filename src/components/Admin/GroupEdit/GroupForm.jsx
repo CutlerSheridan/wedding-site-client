@@ -9,19 +9,36 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
   const [guestsInGroup, setGuestsInGroup] = useState(
     guests.filter((x) => x.group === groupId)
   );
-  // const [newGuests, setNewGuests] = useState(
-  //   guests.some((x) => x.group === groupId) ? [] : [_createDefaultGuest(0)]
-  // );
   const [newGuests, setNewGuests] = useState(
     groupId === 'new' ? [_createDefaultGuest(0)] : []
   );
+  const [guestsToDelete, setGuestsToDelete] = useState([]);
+  const [needsRefresh, setNeedsRefresh] = useState(false);
   const saveButton = useRef(null);
   const errorElement = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log('vvv INITIAL USEEFFECT vvv');
+    console.log('guestsInGroup: ', guestsInGroup);
+    console.log('newGuests: ', newGuests);
+    console.log('guestsToDelete: ', guestsToDelete);
+    console.log('^^^ INITIAL USEEFFECT ^^^');
+  }, [guestsInGroup, newGuests, guestsToDelete]);
+  useEffect(() => {
+    if (needsRefresh) {
+      refreshGuests();
+      setNeedsRefresh(false);
+    }
+  }, [needsRefresh]);
+  useEffect(() => {
+    console.log('GUESTS UPDATED');
     setGuestsInGroup(guests.filter((x) => x.group === groupId));
     setNewGuests(groupId === 'new' ? [_createDefaultGuest(0)] : []);
+    setGuestsToDelete([]);
+    // if (groupId === 'new' && newGuests.findIndex((x) => x.used)) {
+    //   navigate(`../${newGuests[0].group}`, { relative: 'path' });
+    // }
   }, [guests]);
 
   const localUpdateGuest = (guestId, updatedFieldValuePairs) => {
@@ -42,7 +59,12 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
       )
     );
   };
-  const saveGuests = async () => {
+  const localDeleteGuest = (guestId) => {
+    const guestToDelete = guestsInGroup.find((x) => x._id === guestId);
+    setGuestsInGroup((prev) => prev.filter((x) => x._id !== guestId));
+    setGuestsToDelete((prev) => [...prev, guestToDelete]);
+  };
+  const saveUpdatesToDb = async () => {
     if (
       guestsInGroup.some((x) => !x.name) ||
       newGuests.some((x) => x.used && !x.name)
@@ -55,34 +77,47 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
     const usedNewGuests = newGuests.filter((x) => x.used);
     // updateGuestsLocally([...guestsInGroup, ...usedNewGuests]);
 
-    await Promise.all(
-      guestsInGroup.map(async (guest) => {
-        await saveOneGuest(guest);
-      }),
-      saveNewGuests(usedNewGuests)
-    );
+    try {
+      await Promise.all(
+        guestsInGroup.map(async (guest) => {
+          await saveGuestUpdateToDb(guest);
+        }),
+        saveNewGuestsToDb(usedNewGuests),
+        guestsToDelete.map(async (x) => {
+          await deleteGuestFromDb(x);
+        })
+      );
+    } catch (err) {
+      console.log(err);
+    }
+    // await guestsInGroup.map(async (guest) => {
+    //   await saveGuestUpdateToDb(guest);
+    // });
+    // await saveNewGuestsToDb(usedNewGuests);
+    // await guestsToDelete.map(async (guest) => {
+    //   await deleteGuestFromDb(guest);
+    // });
 
     saveButton.current.classList.remove('button-selected');
-    if (groupId === 'new') {
-      navigate(`../${usedNewGuests[0].group}`, { relative: 'path' });
-    }
+    // setNeedsRefresh(true);
     refreshGuests();
+    // if (groupId === 'new' && usedNewGuests.length) {
+    //   navigate(`../${usedNewGuests[0].group}`, { relative: 'path' });
+    // }
   };
-  const saveOneGuest = async (payload) => {
-    const responseDoc = await fetch(
-      `${SERVER_URL}/api/1/guests/${payload._id}`,
-      {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      }
-    );
-    const addedUser = await responseDoc.json();
+  const saveGuestUpdateToDb = async (payload) => {
+    console.log('guest update: ', payload);
+    return fetch(`${SERVER_URL}/api/1/guests/${payload._id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
   };
-  const saveNewGuests = (newGuests) => {
+  const saveNewGuestsToDb = (newGuests) => {
     if (newGuests.length) {
+      console.log('newguests w/ length: ', newGuests);
       const guestsWithoutIds = newGuests.map((x) => {
         delete x._id;
         return x;
@@ -97,10 +132,20 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
       });
     }
   };
+  const deleteGuestFromDb = (guest) => {
+    console.log('deleting guest: ', guest);
+    return fetch(`${SERVER_URL}/api/1/guests/${guest._id}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    });
+  };
 
   const addNewGuest = () => {
     setNewGuests((prev) => [...prev, _createDefaultGuest(newGuests.length)]);
   };
+
   const removeNewGuest = () => {
     setNewGuests((prev) => {});
   };
@@ -136,7 +181,7 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
         >
           Edit
         </button>
-        <button type="button" ref={saveButton} onClick={saveGuests}>
+        <button type="button" ref={saveButton} onClick={saveUpdatesToDb}>
           Save
         </button>
         <button
@@ -162,6 +207,7 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
               isEditing={isEditing}
               newGroupId={newGroupId}
               localUpdateGuest={localUpdateGuest}
+              handleDelete={localDeleteGuest}
             />
             {/* {index < guestsInGroup.length - 1 ? ( */}
             <div className="groupForm-guestSeparator"></div>

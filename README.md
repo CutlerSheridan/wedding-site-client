@@ -6,7 +6,9 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add 'delete guest' button
+- prevent saving guest NOT in edit mode from reappearing (/re-disappearing) after saving (correctly updates database, just displays wrong)
+  - when starting new guest from preexisting but empty group, 'Group: ' does not list the old group or "new group'
+- enable deleting unused new guest cards
 
 #### TODO LATER
 
@@ -40,6 +42,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.14_
+
+- prevent error when saving in new group when no new user has been created
+- add 'delete guest' button that deletes saved guests
+- prevent deleting all guests in group then saving from repopulating deleted guests (as they correctly are deleted and show as such upon refresh)
 
 _0.6.13_
 
