@@ -25,12 +25,12 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
     console.log('guestsToDelete: ', guestsToDelete);
     console.log('^^^ INITIAL USEEFFECT ^^^');
   }, [guestsInGroup, newGuests, guestsToDelete]);
-  useEffect(() => {
-    if (needsRefresh) {
-      refreshGuests();
-      setNeedsRefresh(false);
-    }
-  }, [needsRefresh]);
+  // useEffect(() => {
+  //   if (needsRefresh) {
+  //     refreshGuests();
+  //     setNeedsRefresh(false);
+  //   }
+  // }, [needsRefresh]);
   useEffect(() => {
     console.log('GUESTS UPDATED');
     setGuestsInGroup(guests.filter((x) => x.group === groupId));
@@ -100,10 +100,10 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
 
     saveButton.current.classList.remove('button-selected');
     // setNeedsRefresh(true);
+    if (groupId === 'new' && usedNewGuests.length) {
+      navigate(`../${usedNewGuests[0].group}`, { relative: 'path' });
+    }
     refreshGuests();
-    // if (groupId === 'new' && usedNewGuests.length) {
-    //   navigate(`../${usedNewGuests[0].group}`, { relative: 'path' });
-    // }
   };
   const saveGuestUpdateToDb = async (payload) => {
     console.log('guest update: ', payload);

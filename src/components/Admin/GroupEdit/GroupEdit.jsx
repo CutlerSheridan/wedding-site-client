@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useOutletContext, useParams } from 'react-router-dom';
+import { useOutletContext, useParams, useNavigate } from 'react-router-dom';
 import Loading from '../../Loading';
 import SERVER_URL from '../../../serverUrl';
 import './GroupEdit.css';
@@ -11,25 +11,27 @@ const GroupEdit = () => {
   const [guests, setGuests] = useState([]);
   const [needsRefresh, setNeedsRefresh] = useState(true);
   const { groupId } = useParams();
+  const navigate = useNavigate();
   const isLoading = guests.length === 0;
 
   useEffect(() => {
-    if (needsRefresh) {
-      console.log('refreshing...');
-      const fetchGuests = async () => {
-        const response = await fetch(`${SERVER_URL}/api/1/guests`, {
-          headers: {
-            Authorization: `Bearer ${jwt}`,
-          },
-        });
-        const parsedResponse = await response.json();
-        setGuests(parsedResponse.guests);
-        setNeedsRefresh(false);
-      };
+    // if (needsRefresh) {
+    console.log('refreshing...');
+    // navigate(0);
+    const fetchGuests = async () => {
+      const response = await fetch(`${SERVER_URL}/api/1/guests`, {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+      });
+      const parsedResponse = await response.json();
+      setGuests(parsedResponse.guests);
+      setNeedsRefresh(false);
+    };
 
-      fetchGuests();
-    }
-  }, [needsRefresh]);
+    fetchGuests();
+    // }
+  }, []);
 
   // payload should be {field: value, field2: value2}
   // const saveGuestEdits = async (guestId, payload) => {
@@ -60,7 +62,8 @@ const GroupEdit = () => {
   // };
 
   const refreshGuests = () => {
-    setNeedsRefresh(true);
+    // setNeedsRefresh(true);
+    navigate(0);
   };
 
   return (

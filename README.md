@@ -7,6 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - prevent saving guest NOT in edit mode from reappearing (/re-disappearing) after saving (correctly updates database, just displays wrong)
+  - also vice versa
   - when starting new guest from preexisting but empty group, 'Group: ' does not list the old group or "new group'
 - enable deleting unused new guest cards
 
@@ -42,6 +43,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.15_
+
+- hack the guest cards to refresh the page upon saving so the correct things show up; this is just to get it working--try to use more react-friendly method in next commit
 
 _0.6.14_
 
