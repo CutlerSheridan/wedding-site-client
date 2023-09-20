@@ -15,23 +15,23 @@ const GroupEdit = () => {
   const isLoading = guests.length === 0;
 
   useEffect(() => {
-    // if (needsRefresh) {
-    console.log('refreshing...');
-    // navigate(0);
-    const fetchGuests = async () => {
-      const response = await fetch(`${SERVER_URL}/api/1/guests`, {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-        },
-      });
-      const parsedResponse = await response.json();
-      setGuests(parsedResponse.guests);
-      setNeedsRefresh(false);
-    };
+    if (needsRefresh) {
+      console.log('R - refreshing...');
+      const fetchGuests = async () => {
+        const response = await fetch(`${SERVER_URL}/api/1/guests`, {
+          headers: {
+            Authorization: `Bearer ${jwt}`,
+          },
+        });
+        const parsedResponse = await response.json();
+        console.log('R - refreshed guests: ', parsedResponse);
+        setGuests(parsedResponse.guests);
+        setNeedsRefresh(false);
+      };
 
-    fetchGuests();
-    // }
-  }, []);
+      fetchGuests();
+    }
+  }, [needsRefresh]);
 
   // payload should be {field: value, field2: value2}
   // const saveGuestEdits = async (guestId, payload) => {
@@ -62,8 +62,8 @@ const GroupEdit = () => {
   // };
 
   const refreshGuests = () => {
-    // setNeedsRefresh(true);
-    navigate(0);
+    setNeedsRefresh(true);
+    // navigate(0);
   };
 
   return (

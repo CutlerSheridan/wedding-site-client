@@ -6,9 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- prevent saving guest NOT in edit mode from reappearing (/re-disappearing) after saving (correctly updates database, just displays wrong)
-  - also vice versa
-  - when starting new guest from preexisting but empty group, 'Group: ' does not list the old group or "new group'
+- clean up debugging logs from solving previous issue
 - enable deleting unused new guest cards
 
 #### TODO LATER
@@ -43,6 +41,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add credit
 
 #### DONE
+
+_0.6.16_
+
+- fix how, when starting new guest from preexisting but empty group, 'Group: ' does not list the old group or "new group" or even a blank space
+- prevent saving guest NOT in edit mode from reappearing (/re-disappearing) after saving (correctly updates database, just displays wrong)
+  - also vice versa
 
 _0.6.15_
 

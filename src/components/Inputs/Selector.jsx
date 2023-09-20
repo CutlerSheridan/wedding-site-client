@@ -9,6 +9,7 @@ const Selector = ({
   optionValues,
   isEditing,
 }) => {
+  const valueLocInValues = optionValues.indexOf(value);
   return (
     <div className="input-grouping">
       <div className="input-label">{label}:</div>
@@ -35,9 +36,12 @@ const Selector = ({
         </select>
       ) : (
         <div className="input-displayText">
-          {!value ? ' ' : optionLabels[optionValues.indexOf(value)]}
+          {!value || valueLocInValues === -1
+            ? ' '
+            : optionLabels[optionValues.indexOf(value)]}
         </div>
       )}
+      <div>value: {`${value}`}</div>
     </div>
   );
 };

@@ -13,8 +13,8 @@ const GuestCard = ({
   newGroupId,
   handleDelete,
 }) => {
-  const familyNames = ['Cutler', 'Tyler', 'None'];
-  const familyValues = ['cutler', 'tyler', false];
+  const familyNames = ['None', 'Cutler', 'Tyler'];
+  const familyValues = [false, 'cutler', 'tyler'];
   const abcGuests = [...allGuests];
   abcGuests.sort((x, y) => x.name.localeCompare(y.name));
   const abcGuestNames = abcGuests.map((x) => x.name);
@@ -28,6 +28,8 @@ const GuestCard = ({
 
   return (
     <div className="guestCard">
+      <div>ID: {guest._id}</div>
+      <div>'</div>
       <div className="guestCard-gridCell">
         <ShortTextInput
           field="name"
