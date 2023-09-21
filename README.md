@@ -6,28 +6,29 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
+- design home page
+
 #### TODO LATER
 
 ##### Features
 
-- add button to Rsvp to return to search
 - add RSVP button to home page
 - add ability in Schedule to link or span more than once per description line
-- add admin user setting to dictate if admin can only view admin site or if they can edit too
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
-- make error page "go back" button navigate(-1)
+- ? add admin user setting to dictate if admin can only view admin site or if they can edit too
+- ? wedding hashtag
 
 ##### Behavior
 
 - in GroupForm, should table toggles auto-update in database or only update on save?
 - use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
-- get "Toggle stored groupId" button on RSVP page working again
 - add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
 - add error if server is called and doesn't respond
 
 ##### Style
 
+- look into dynamic column count on Edit Group
 - on mobile, adjust top margins of pages now that navbar is gone
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
@@ -44,6 +45,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.0_
+
+- center Addresses table
+- Fix "Toggle stored groupId" button on RSVP page
+- add button to Rsvp to return to search
 
 _0.6.18_
 
@@ -155,7 +162,7 @@ _0.6.2_
 
 _0.6.1_
 
-- make 404 page 'go back' button actually go back to last page
+- make error 404 page 'go back' button actually go back to last page with navigate(-1)
 - add Navbar to 404 page
 
 _0.6.0_

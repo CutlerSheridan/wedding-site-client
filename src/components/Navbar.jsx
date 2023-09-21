@@ -20,7 +20,7 @@ const Navbar = ({ jwt, updateJwt }) => {
     <>
       <Link to="/admin/dashboard">Dashboard</Link>
       <Link to="/admin/addresses">Addresses</Link>
-      <Link to="/admin/group-edit">Group Edit</Link>
+      <Link to="/admin/group-edit">Edit Group</Link>
       <Link to="/admin/gameinfo">Characters</Link>
       {jwt ? (
         <a

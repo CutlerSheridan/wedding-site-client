@@ -30,6 +30,9 @@ const Rsvp = () => {
     let eventCounter = 0;
     return (
       <div>
+        <button type="button" className="button-small" onClick={forgetGroupId}>
+          Back to Search
+        </button>
         <p>Please respond as soon as possible.</p>
         <p>
           You do not need to RSVP for all events at the same time. If you only
@@ -82,9 +85,13 @@ const Rsvp = () => {
       setGuestsInGroup([]);
       setGroupId(undefined);
     } else {
-      localStorage.setItem('groupId', '2hen1qB3QqjYwP8LbvDVx0nJ');
-      setGroupId('2hen1qB3QqjYwP8LbvDVx0nJ');
+      localStorage.setItem('groupId', 'mnRFfusx1qUOIdzu3Yvd6QYe');
+      setGroupId('mnRFfusx1qUOIdzu3Yvd6QYe');
     }
+  };
+  const forgetGroupId = () => {
+    localStorage.removeItem('groupId');
+    setGroupId(undefined);
   };
 
   return (
