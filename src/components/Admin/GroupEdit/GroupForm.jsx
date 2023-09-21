@@ -112,9 +112,8 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
   const addNewGuest = () => {
     setNewGuests((prev) => [...prev, _createDefaultGuest(newGuests.length)]);
   };
-
-  const removeNewGuest = () => {
-    setNewGuests((prev) => {});
+  const removeNewGuest = (guestId) => {
+    setNewGuests((prev) => prev.filter((x) => x._id !== guestId));
   };
 
   function _createDefaultGuest(id) {
@@ -187,6 +186,7 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
               isEditing={isEditing}
               newGroupId={newGroupId}
               localUpdateGuest={localUpdateGuest}
+              handleDelete={removeNewGuest}
             />
             <div className="groupForm-guestSeparator"></div>
           </div>

@@ -6,8 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- enable deleting unused new guest cards
-
 #### TODO LATER
 
 ##### Features
@@ -39,7 +37,17 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - research styling page transitions
 - add credit
 
+##### Production Deployment Checklist
+
+- Remove 'toggle stored groupId' button
+- Remove 'Toggle auth' button
+- change default backend db to production db
+
 #### DONE
+
+_0.6.18_
+
+- enable deleting unused new guest cards
 
 _0.6.17_
 
