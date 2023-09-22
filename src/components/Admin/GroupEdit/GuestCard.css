@@ -16,6 +16,31 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.guestCard::before {
+  --width: 5rem;
+  position: absolute;
+  content: '';
+  left: calc(-1 * var(--width) / 2);
+  top: calc(50% - (var(--width) / 2));
+  width: var(--width);
+  height: var(--width);
+  background: var(--clr-white-2);
+  border: 3px dotted var(--clr-black);
+  border-left: none;
+  border-bottom: none;
+  border-radius: 5rem;
+  transform: rotate(45deg);
+}
+.guestCard::after {
+  --width: 6rem;
+  position: absolute;
+  content: '';
+  left: calc(-1 * var(--width) / 2 - 3px);
+  top: calc(50% - (var(--width) / 2));
+  width: calc(var(--width) / 2);
+  height: var(--width);
+  background: var(--clr-white-2);
+}
 
 .guestCard-gridCell {
   display: flex;

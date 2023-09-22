@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- try adding ticket holes to tickets
 - make RSVPs look like tickets like I did with guest cards
 - figure out style
 - try changing table backgrounds like I did with guest cards
@@ -48,6 +47,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.4_
+
+- add ticket holes to guest card tickets
 
 _0.7.3_
 
