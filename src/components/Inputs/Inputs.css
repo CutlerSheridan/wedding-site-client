@@ -10,12 +10,13 @@
   white-space: pre;
 }
 .input-label {
-  font-size: 0.9em;
-  color: var(--clr-grey-lightest);
+  /* font-family: var(--font-1); */
+  font-size: 1em;
+  color: var(--clr-grey-lighter);
   text-transform: capitalize;
 }
 .input-displayText {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .input-displayEmphasis {
   margin-top: 0.4rem;

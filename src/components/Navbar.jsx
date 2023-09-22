@@ -1,11 +1,19 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = ({ jwt, updateJwt }) => {
   const location = useLocation();
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
   const isAdmin = !!jwt;
+
+  useEffect(() => {
+    if (hamburgerIsOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [hamburgerIsOpen]);
 
   const generalBar = (
     <>

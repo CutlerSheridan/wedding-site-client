@@ -9,16 +9,20 @@
   z-index: 2;
 }
 .hamburger-button {
-  margin: 0.5rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.4rem;
-  font-size: 1.3em;
-  transform: rotate(90deg);
+  margin: 0.5rem 1rem;
+  padding: 0.2rem 0.7rem 0.2rem 0.4rem;
+  min-height: 3.5rem;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  letter-spacing: -0.3rem;
+  transform: rotate(-90deg);
 }
 .hamburger-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   visibility: hidden;
@@ -28,7 +32,6 @@
 .hamburger-overlay-visible {
   visibility: visible;
   background-color: rgb(20, 20, 20, 0.6);
-  overflow-y: hidden;
 }
 .hamburger-wrapper {
   position: absolute;
@@ -47,13 +50,13 @@
 }
 .hamburger-closeButton {
   margin: 0.3rem 0.5rem 0;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .hamburger-nav {
-  padding: 0.5rem 1.5rem 1rem;
+  padding: 0.5rem 2.5rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 @media only screen and (min-width: 600px) {

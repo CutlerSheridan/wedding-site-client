@@ -7,6 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - figure out style
+- try changing table backgrounds like I did with guest cards
 
 #### TODO LATER
 
@@ -45,6 +46,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.2_
+
+- recolor guest cards in Edit Group
+- adjust font sizes in guest cards
+- recolor and resize separators
+- prevent background scrolling when hamburger menu is open on mobile
+- make hamburger button smaller
 
 _0.7.1 (branch: site-ui)_
 

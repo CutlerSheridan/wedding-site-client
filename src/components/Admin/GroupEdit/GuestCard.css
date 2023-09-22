@@ -4,10 +4,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  /* border: 1px solid var(--clr-white); */
-  background: var(--clr-black);
+  border: 1px solid var(--clr-black);
+  /* background: var(--clr-black); */
   border-radius: 1rem;
-  color: var(--clr-white);
+  /* color: var(--clr-white); */
+  color: var(--clr-black);
 }
 @media only screen and (min-width: 600px) {
   .guestCard {
@@ -22,7 +23,7 @@
 }
 .guestCard-horizontalFields {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 .guestCard-deleteButton {
   position: absolute;

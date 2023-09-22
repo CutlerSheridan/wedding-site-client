@@ -93,8 +93,8 @@
   }
 }
 .groupForm-guestSeparator {
-  margin: 0.7rem auto;
+  margin: 2.5rem auto;
   width: 80%;
   height: 1px;
-  background: var(--clr-grey-light);
+  background: var(--clr-red);
 }
