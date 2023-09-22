@@ -9,7 +9,7 @@
 .groupLookup-searchLabel {
   width: 100%;
   text-align: left;
-  font-weight: 550;
+  /* font-weight: 550; */
 }
 .groupLookup-searchWrapper input {
   margin-right: 0.4rem;
@@ -23,23 +23,26 @@
 }
 
 .groupLookup-groupList {
+  margin: auto;
+  max-width: 100rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 1.6rem;
+  color: var(--clr-white);
 }
 .groupLookup-groupCard {
-  padding: 0.7rem;
+  padding: 1.1rem 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.2rem;
   background: var(--clr-black);
   border: 2px solid transparent;
-  border-radius: 0.3rem;
+  border-radius: 0.7rem;
 }
 .groupLookup-guestName {
   display: block;
-  font-size: 0.7em;
+  font-size: 0.85em;
 }
 @media only screen and (min-width: 600px) {
   .groupLookup-groupList {
@@ -49,6 +52,9 @@
   }
   .groupLookup-guestName {
     font-size: 1em;
+  }
+  .groupLookup-groupCard {
+    padding: 1.2rem 1.5rem;
   }
 }
 .groupLookup-groupCard:active {
@@ -65,10 +71,10 @@
 }
 
 .groupForm-controls {
-  margin: 0.5rem 0;
+  margin: 1rem 0 2rem;
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 .groupForm-error {
   color: var(--clr-red);
@@ -83,7 +89,7 @@
 }
 @media only screen and (min-width: 600px) {
   .groupForm-guestsWrapper {
-    max-width: 35rem;
+    max-width: 100rem;
   }
 }
 .groupForm-guestSeparator {

@@ -33,25 +33,28 @@ const Rsvp = () => {
         <button type="button" className="button-small" onClick={forgetGroupId}>
           Back to Search
         </button>
-        <p>Please respond as soon as possible.</p>
-        <p>
-          You do not need to RSVP for all events at the same time. If you only
-          know you'll be there Saturday, go ahead and select your answer for
-          Saturday and leave the others blank.
-        </p>
+        <div className="rsvp-instructions">
+          <p>Please respond as soon as possible.</p>
+          <p>
+            You do not need to RSVP for all events or guests at the same time.
+          </p>
+        </div>
         {guests.length > 1 ? <p></p> : <></>}
         {EVENTS.map((ev) => {
           if (ev.needsRsvp) {
             return (
-              <RsvpForm
-                key={ev.title}
-                event={ev}
-                guests={guests}
-                rsvpField={rsvpFields[eventCounter++]}
-                fieldType="checkbox"
-              />
+              <div key={ev.title}>
+                <RsvpForm
+                  event={ev}
+                  guests={guests}
+                  rsvpField={rsvpFields[eventCounter++]}
+                  fieldType="checkbox"
+                />
+                <div className="rsvp-separator"></div>
+              </div>
             );
           }
+          return '';
         })}
         <RsvpForm
           event={{
@@ -79,24 +82,24 @@ const Rsvp = () => {
     setGuestsInGroup(newGuests);
   };
 
-  const toggleStoredGroupId = () => {
-    if (localStorage.getItem('groupId')) {
-      localStorage.removeItem('groupId');
-      setGuestsInGroup([]);
-      setGroupId(undefined);
-    } else {
-      localStorage.setItem('groupId', 'mnRFfusx1qUOIdzu3Yvd6QYe');
-      setGroupId('mnRFfusx1qUOIdzu3Yvd6QYe');
-    }
-  };
   const forgetGroupId = () => {
     localStorage.removeItem('groupId');
     setGroupId(undefined);
   };
+  // const toggleStoredGroupId = () => {
+  //   if (localStorage.getItem('groupId')) {
+  //     localStorage.removeItem('groupId');
+  //     setGuestsInGroup([]);
+  //     setGroupId(undefined);
+  //   } else {
+  //     localStorage.setItem('groupId', 'mnRFfusx1qUOIdzu3Yvd6QYe');
+  //     setGroupId('mnRFfusx1qUOIdzu3Yvd6QYe');
+  //   }
+  // };
 
   return (
     <div>
-      <button onClick={toggleStoredGroupId}>Toggle stored groupId</button>
+      {/* <button className='button-small' onClick={toggleStoredGroupId}>Toggle stored groupId</button> */}
       <h1>RSVP</h1>
 
       {isLoading ? (

@@ -42,33 +42,33 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
 
   return (
     <div className="rsvpSelector-wrapper">
-      <h2>{guest.name}</h2>
+      <h2 className="rsvp-guestName">{guest.name}</h2>
       <div className="rsvp-buttonsWrapper">
         <button
           type="button"
           ref={acceptButton}
           className={`rsvp-button ${
-            guest[rsvpField] ? 'rsvp-button-selected' : null
-          }`}
+            guest[rsvpField] ? 'button-selected' : null
+          } rsvp-checkbox`}
           onClick={() => {
             handleButton(acceptButton);
           }}
           data-bool="true"
         >
-          YES
+          Yes
         </button>
         <button
           type="button"
           ref={declineButton}
           className={`rsvp-button ${
-            guest[rsvpField] === false ? 'rsvp-button-selected' : null
-          }`}
+            guest[rsvpField] === false ? 'button-selected' : null
+          } rsvp-checkbox`}
           onClick={() => {
             handleButton(declineButton);
           }}
           data-bool="false"
         >
-          NO
+          No
         </button>
       </div>
     </div>

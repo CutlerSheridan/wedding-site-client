@@ -1,6 +1,6 @@
 .dashboard-controls {
   margin: 0.5rem auto;
-  max-width: 12rem;
+  max-width: 25rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -10,7 +10,7 @@
   transition: all 0.12s;
 }
 .dashboard-displayButton-active {
-  border-color: var(--clr-white);
+  /* border-color: var(--clr-red); */
 }
 .dashboard-tablesWrapper {
   margin: auto;

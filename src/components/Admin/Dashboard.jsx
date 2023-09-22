@@ -167,8 +167,8 @@ const Dashboard = () => {
       <div className="dashboard-controls">
         <button
           type="button"
-          className={`dashboard-displayButton dashboard-displayButton${
-            displayStyle === 'merged' ? '-active' : ''
+          className={`dashboard-displayButton ${
+            displayStyle === 'merged' ? 'button-selected' : ''
           }`}
           onClick={() =>
             navigate(styleParam ? '../merged' : 'merged', { relative: 'path' })
@@ -178,8 +178,8 @@ const Dashboard = () => {
         </button>
         <button
           type="button"
-          className={`dashboard-displayButton dashboard-displayButton${
-            displayStyle === 'families' ? '-active' : ''
+          className={`dashboard-displayButton ${
+            displayStyle === 'families' ? 'button-selected' : ''
           }`}
           onClick={() =>
             navigate(styleParam ? '../families' : 'families', {

@@ -1,23 +1,47 @@
-.rsvp-formWrapper {
+.rsvp-instructions {
+  margin-top: 1rem;
   display: flex;
-  border: 1px solid pink;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.9em;
+}
+
+.rsvp-formWrapper {
+  margin: 2rem auto;
+  display: flex;
+  max-width: 80rem;
 }
 .rsvp-formWrapper > * {
   width: 50%;
-  border: 1px solid green;
 }
 .rsvp-eventWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
-
+.rsvp-eventWrapper > h2 {
+  font-family: var(--font-1);
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
 .rsvp-fieldsWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 
+.rsvpSelector-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.rsvp-guestName {
+  font-family: var(--font-1);
+  text-transform: uppercase;
+}
 .rsvp-buttonsWrapper {
   display: flex;
   justify-content: center;
@@ -25,12 +49,27 @@
 }
 .rsvp-button {
   width: 5ch;
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
+.rsvp-checkbox:not(.button-selected) {
+  background: var(--clr-grey-lightest);
+  color: var(--clr-black);
+}
+/* .rsvp-checkbox.button-selected {
+  background: var(--clr-grey);
+} */
 .rsvp-button-disabled {
   pointer-events: none;
 }
 .rsvp-button-selected {
   background: var(--clr-white);
   color: var(--clr-grey);
+}
+
+.rsvp-separator {
+  margin: 0.7rem auto;
+  width: 80%;
+  max-width: 100rem;
+  height: 1px;
+  background: var(--clr-red);
 }

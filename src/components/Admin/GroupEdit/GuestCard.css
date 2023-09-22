@@ -1,12 +1,13 @@
 .guestCard {
   position: relative;
-  padding: 1rem 1.3rem;
+  padding: 2rem 2.5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   /* border: 1px solid var(--clr-white); */
   background: var(--clr-black);
-  border-radius: 0.3rem;
+  border-radius: 1rem;
+  color: var(--clr-white);
 }
 @media only screen and (min-width: 600px) {
   .guestCard {
@@ -18,7 +19,6 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  /* border: 1px solid pink; */
 }
 .guestCard-horizontalFields {
   display: flex;
@@ -26,8 +26,11 @@
 }
 .guestCard-deleteButton {
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  right: 1rem;
+  bottom: 1rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.2em;
   background: var(--clr-red);
 }
 .guestCard-deleteButton:active {

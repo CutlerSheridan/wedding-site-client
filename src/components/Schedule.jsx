@@ -3,15 +3,15 @@ import './Schedule.css';
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 const Schedule = () => {
-  let dayCounter = 0;
-
   return (
     <div>
       <h1>Itinerary</h1>
       {EVENTS.map((event) => {
         return (
           <div className="schedule-eventWrapper" key={event.title}>
-            {event.needsRsvp ? <h2>{event.date}</h2> : null}
+            {event.needsRsvp ? (
+              <h2 className="schedule-eventDate">{event.date}</h2>
+            ) : null}
             <div>
               <h3 className="schedule-eventTitle">{event.title}</h3>
               <p>
@@ -50,20 +50,11 @@ const Schedule = () => {
                 ></AddToCalendarButton>
               </div>
               <ul>
-                {event.description.map((x) => {
-                  if (typeof x === 'string') {
-                    return <li key={x}>{x}</li>;
-                  }
-                  if (x.elementType === 'link') {
-                    return (
-                      <li key={x.preString}>
-                        {x.preString}
-                        <a href={x.href}>{x.midString}</a>
-                        {x.postString}
-                      </li>
-                    );
-                  }
-                })}
+                {event.description.map((x) => (
+                  <li className="schedule-eventDescription" key={x}>
+                    {x}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

@@ -2,15 +2,26 @@
   --grid-gap-thin: 1px;
   --grid-gap-thick: 0.14rem;
   margin: auto;
-  max-width: 40rem;
+  max-width: 80rem;
   background: var(--clr-grey-lighter);
   border: 3px solid var(--clr-grey-lighter);
   border-radius: 6px;
   overflow: hidden;
 }
+.addresses-headingWrapper {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.addresses-headingField:not(:first-of-type):not(:last-of-type) {
+  padding: 1rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
 .addresses-groupWrapper {
   display: grid;
-  grid-template-columns: 1fr 2rem 2rem 2fr;
+  grid-template-columns: 1fr 4rem 4rem 2fr;
   gap: var(--grid-gap-thin);
   background: var(--clr-grey-lighter);
 }
@@ -44,15 +55,6 @@
 .addresses-groupWrapper:nth-of-type(even):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {
   background: var(--clr-grey-light);
-}
-
-.addresses-headingWrapper {
-  font-weight: bold;
-}
-.addresses-headingField:not(:first-of-type):not(:last-of-type) {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  white-space: nowrap;
 }
 
 .addresses-groupWrapper

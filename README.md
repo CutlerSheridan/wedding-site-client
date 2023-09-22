@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- design home page
+- figure out style
 
 #### TODO LATER
 
@@ -45,6 +45,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.1 (branch: site-ui)_
+
+- do tons of style changes, especially re: fonts and colors
+- resize Dashboard elements
+- resize Addresses elements
+- resize and recolor Edit Group selection cards
+- resize Edit Group group page
 
 _0.7.0_
 

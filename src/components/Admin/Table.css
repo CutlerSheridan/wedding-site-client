@@ -2,13 +2,15 @@
   margin: auto;
   width: max-content;
   max-width: 90vw;
+  color: var(--clr-white);
+  font-size: 2.2rem;
 }
 table {
   --outer-border-radius: 3px;
   --inner-border: 1px solid var(--clr-grey-lighter);
   margin: 0 auto 0.5rem;
   table-layout: fixed;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   border-spacing: 0;
   border: 3px solid var(--clr-grey-lighter);
   border-radius: 6px;
@@ -22,7 +24,7 @@ table {
   display: none;
 }
 .table-container-soloGuest td {
-  height: 2rem;
+  height: 4rem;
 }
 /* SOLO GUEST TABLE END */
 
@@ -45,28 +47,33 @@ table > *:last-child > tr:last-child > * {
 
 .table-caption {
   margin: 1rem 0 0.5rem 0;
-  padding: 0.2rem;
+  padding: 0.5rem;
   width: max-content;
   border-radius: 0.2rem;
+  font-family: var(--font-1);
   font-size: 1.1em;
   font-weight: bold;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-align: left;
   text-transform: uppercase;
+  color: var(--clr-black);
 }
 .table-declinedRsvpCaption {
+  /* padding: 0.5rem; */
   background: var(--clr-red);
+  color: var(--clr-white);
 }
 th,
 td {
-  padding: 0.3rem;
-  min-width: 1.4rem;
+  padding: 0.5rem;
+  min-width: 4rem;
 }
 th {
+  font-weight: 500;
   background: var(--clr-black);
 }
 .table-rsvp > thead > tr > th {
-  width: 8%;
+  width: 10%;
 }
 @media only screen and (min-width: 600px) {
   .table-rsvp > thead > tr > th {

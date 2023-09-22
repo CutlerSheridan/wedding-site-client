@@ -18,9 +18,12 @@
   font-size: 1.1em;
 }
 .input-displayEmphasis {
+  margin-top: 0.4rem;
+  font-family: var(--font-1);
+  text-transform: uppercase;
   font-size: 1.5em;
   font-weight: bold;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .input-grouping select {
   font-size: 0.75em;

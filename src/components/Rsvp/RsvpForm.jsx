@@ -16,12 +16,16 @@ const RsvpForm = ({ event, guests, rsvpField, fieldType }) => {
           <>
             <p>{event.date}</p>
             <p>{time}</p>
-            {event.address.map((addressLine) => (
+            {/* {event.address.map((addressLine) => (
               <p key={addressLine}>{addressLine}</p>
-            ))}
+            ))} */}
+            {/* <p>{event.dressCode}</p> */}
           </>
-        ) : null}
-        <p>{event.description[0]}</p>
+        ) : event.title.toLowerCase() === 'address' ? (
+          <p>{event.description[0]}</p>
+        ) : (
+          ''
+        )}
       </div>
       <div className="rsvp-fieldsWrapper">
         {guests.map((guest) =>
