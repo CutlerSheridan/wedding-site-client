@@ -51,10 +51,10 @@
   width: 5ch;
   border: 1px solid transparent;
 }
-.rsvp-checkbox:not(.button-selected) {
+/* .rsvp-checkbox:not(.button-selected) {
   background: var(--clr-grey-lightest);
   color: var(--clr-black);
-}
+} */
 /* .rsvp-checkbox.button-selected {
   background: var(--clr-grey);
 } */
@@ -62,7 +62,7 @@
   pointer-events: none;
 }
 .rsvp-button-selected {
-  background: var(--clr-white);
+  background: var(--clr-white-2);
   color: var(--clr-grey);
 }
 

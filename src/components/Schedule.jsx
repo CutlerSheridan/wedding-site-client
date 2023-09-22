@@ -47,6 +47,10 @@ const Schedule = () => {
                   endTime={event.metaData[3]}
                   timeZone="America/Los_Angeles"
                   debug="true"
+                  // buttonStyle="flat"
+                  // lightMode="dark"
+                  styleLight="--btn-shadow:none; --btn-background:var(--clr-grey); --btn-text:var(--clr-white-2); --font:var(--font-1)"
+                  // styleDark="--btn-shadow:transparent; --btn-border:none --btn-background:var(--clr-grey)"
                 ></AddToCalendarButton>
               </div>
               <ul>

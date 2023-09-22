@@ -4,10 +4,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  border: 1px solid var(--clr-black);
+  background: var(--clr-white);
+  border: 3px dotted var(--clr-black);
   /* background: var(--clr-black); */
   border-radius: 1rem;
-  /* color: var(--clr-white); */
+  /* color: var(--clr-white-2); */
   color: var(--clr-black);
 }
 @media only screen and (min-width: 600px) {
@@ -15,6 +16,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .guestCard-gridCell {
   display: flex;
   flex-direction: column;
@@ -33,6 +35,7 @@
   height: 4rem;
   font-size: 1.2em;
   background: var(--clr-red);
+  color: var(--clr-white-2);
 }
 .guestCard-deleteButton:active {
   background: var(--clr-red-alpha);

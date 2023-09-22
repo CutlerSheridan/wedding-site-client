@@ -2,7 +2,7 @@
   margin: auto;
   width: max-content;
   max-width: 90vw;
-  color: var(--clr-white);
+  color: var(--clr-white-2);
   font-size: 2.2rem;
 }
 table {
@@ -61,7 +61,7 @@ table > *:last-child > tr:last-child > * {
 .table-declinedRsvpCaption {
   /* padding: 0.5rem; */
   background: var(--clr-red);
-  color: var(--clr-white);
+  color: var(--clr-white-2);
 }
 th,
 td {

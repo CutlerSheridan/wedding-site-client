@@ -6,6 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
+- try adding ticket holes to tickets
+- make RSVPs look like tickets like I did with guest cards
 - figure out style
 - try changing table backgrounds like I did with guest cards
 
@@ -46,6 +48,17 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.3_
+
+- edit sizing and styles of Schedule text
+- change Edit Group colors
+- make group card and guest card borders dotted like tickets
+- change button colors
+- make hamburger button red
+- make group + guest cards white
+- make group cards' border solid on hover
+- make guest card delete button text white
 
 _0.7.2_
 

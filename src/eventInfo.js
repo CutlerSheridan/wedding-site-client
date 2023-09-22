@@ -27,9 +27,9 @@ const EVENTS = [
     'Fri. - January 26th, 2024',
     '8:00pm',
     'Business casual',
-    ['A casual mixer for anyone already in town who feels like mingling.'],
+    ['A casual mixer for anyone in town who feels like mingling.'],
     true,
-    ['2024-01-26', '2024-01-26', '20:00', '22:00']
+    ['2024-01-26', '2024-01-26', '20:00', '23:00']
   ),
   _Event(
     'Wedding Voyage',
@@ -55,7 +55,7 @@ const EVENTS = [
     'Party time!',
     ["Naja's Place", '154 International Blvd.', 'Redondo Beach, CA 90277'],
     'Sat. - January 27th, 2024',
-    '7:00pm - 2:00am?',
+    '7:00pm - 2:00am',
     'Black tie',
     [
       'Once we disembark, everyone will walk over to this cool dive bar.',

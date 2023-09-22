@@ -70,7 +70,11 @@ const GroupLookup = ({ guests }) => {
           />
           <button onClick={handleSubmit}>Search</button>
         </div>
-        <button type="button" onClick={() => navigate('new')}>
+        <button
+          type="button"
+          className="groupLookup-newGroupButton"
+          onClick={() => navigate('new')}
+        >
           New Group
         </button>
         <ul

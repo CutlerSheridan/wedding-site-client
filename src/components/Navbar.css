@@ -19,6 +19,8 @@
   font-size: 0.9em;
   letter-spacing: -0.3rem;
   transform: rotate(-90deg);
+  background: var(--clr-red);
+  color: var(--clr-white-2);
 }
 .hamburger-overlay {
   position: absolute;

@@ -1,25 +1,36 @@
 .groupLookup-searchWrapper {
-  margin: 1rem auto;
+  margin: 1rem auto 2rem;
+  padding: 1.5rem 1rem;
   width: max-content;
   max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 2px solid var(--clr-red); */
+  /* color: var(--clr-white-2); */
 }
 .groupLookup-searchLabel {
-  width: 100%;
-  text-align: left;
+  align-self: start;
+  margin-left: 1.5rem;
   /* font-weight: 550; */
 }
 .groupLookup-searchWrapper input {
   margin-right: 0.4rem;
   max-width: 65%;
 }
+.groupLookup-newGroupButton {
+  margin-top: 0.5rem;
+}
 .groupLookup-error {
+  margin: 1rem;
+  font-size: 0.9em;
   color: var(--clr-red);
+  color: var(--clr-white-2);
+  max-width: 100%;
 }
 .groupLookup-error-hidden {
   visibility: hidden;
+  display: none;
 }
 
 .groupLookup-groupList {
@@ -28,7 +39,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
-  color: var(--clr-white);
+  color: var(--clr-white-2);
 }
 .groupLookup-groupCard {
   padding: 1.1rem 1.3rem;
@@ -36,9 +47,13 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.2rem;
-  background: var(--clr-black);
-  border: 2px solid transparent;
+  /* background: var(--clr-black); */
+  /* border: 2px solid transparent; */
+  /* background: var(--clr-grey-lightest); */
+  border: 2px dotted var(--clr-black);
+  background: var(--clr-white);
   border-radius: 0.7rem;
+  color: var(--clr-black);
 }
 .groupLookup-guestName {
   display: block;
@@ -58,15 +73,19 @@
   }
 }
 .groupLookup-groupCard:active {
-  background: var(--clr-grey-light);
+  /* background: var(--clr-grey-lightest); */
+  /* background: var(--clr-white-2); */
+  border-style: solid;
 }
 @media only screen and (hover: hover) {
   .groupLookup-groupCard:hover {
     cursor: pointer;
-    background: var(--clr-grey-light);
+    /* background: var(--clr-grey-lightest); */
+    /* background: var(--clr-white-2); */
+    border-style: solid;
   }
   .groupLookup-groupCard:active {
-    background: var(--clr-grey-dark);
+    /* background: var(--clr-grey-lightest); */
   }
 }
 

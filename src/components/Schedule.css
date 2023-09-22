@@ -3,13 +3,16 @@
   font-family: var(--font-1);
   font-size: 3.5rem;
   /* font-weight: 500; */
-  /* text-decoration: underline; */
-  color: var(--clr-red);
+  text-decoration: underline;
+  /* color: var(--clr-red); */
+  /* text-transform: uppercase; */
 }
 .schedule-eventTitle {
   margin-top: 1.5rem;
   font-family: var(--font-1);
   font-size: 3rem;
+  color: var(--clr-red);
+  text-transform: uppercase;
 }
 .schedule-calendarButtonWrapper {
   margin: auto;
@@ -18,7 +21,7 @@
 .schedule-eventDescription {
   margin: auto;
   text-align: left;
-  max-width: 45ch;
+  max-width: 60ch;
   font-size: 0.89em;
 }
 .schedule-eventDescription:not(:last-of-type) {
