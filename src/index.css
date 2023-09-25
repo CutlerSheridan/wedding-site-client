@@ -67,7 +67,7 @@ a:hover {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 0.7rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -78,17 +78,25 @@ button {
   transition: background 0.1s;
 }
 button:disabled {
-  color: var(--clr-grey-light);
+  color: var(--clr-grey-lighter);
   cursor: default;
 }
-button:hover {
-  border-color: #646cff;
+button:disabled:hover {
+  border-color: transparent;
 }
 button:focus:not(:focus-visible) {
   outline: none;
 }
 button:focus:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+button:active {
+  border-color: var(--clr-grey);
+}
+@media only screen and (hover: hover) {
+  button:hover {
+    border-color: var(--clr-grey);
+  }
 }
 .button-selected {
   background: var(--clr-red);
@@ -99,7 +107,8 @@ button:focus:focus-visible {
 }
 
 h1 {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  margin: 2rem 0;
   font-family: var(--font-1);
   font-size: 5rem;
   text-transform: uppercase;

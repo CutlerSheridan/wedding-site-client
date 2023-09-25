@@ -1,5 +1,6 @@
 import { useState, seEffect, useRef } from 'react';
 import SERVER_URL from '../../serverUrl';
+import './RsvpForm.css';
 
 const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
   const [inputName, setInputName] = useState('');
@@ -46,19 +47,27 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
         Enter the first and last name of one member of your party below. You
         will be able to RSVP for your entire group on the next page.
       </p>
-      <form>
+      <form className="rsvpAuth-inputAndButtonWrapper">
         <input
+          className="rsvpAuth-nameInput"
           value={inputName}
           onChange={handleNameChange}
           placeholder='Ex. "John Smith"'
         />
-        <button ref={submitButton} onClick={submitName} disabled={!inputName}>
+        <button
+          ref={submitButton}
+          className="rsvpAuth-submitButton"
+          onClick={submitName}
+          disabled={!inputName}
+        >
           Submit
         </button>
       </form>
       <ul>
         {errors.map((x, index) => (
-          <li key={index}>{x}</li>
+          <li className="rsvpAuth-error" key={x}>
+            {x}
+          </li>
         ))}
       </ul>
     </div>

@@ -30,9 +30,6 @@ const Rsvp = () => {
     let eventCounter = 0;
     return (
       <div>
-        <button type="button" className="button-small" onClick={forgetGroupId}>
-          Back to Search
-        </button>
         <div className="rsvp-instructions">
           <p>Please respond as soon as possible.</p>
           <p>
@@ -71,6 +68,11 @@ const Rsvp = () => {
           rsvpField="address"
           fieldType="address"
         />
+
+        <div className="rsvp-separator"></div>
+        <button type="button" className="button-small" onClick={forgetGroupId}>
+          Back to Search
+        </button>
       </div>
     );
   };

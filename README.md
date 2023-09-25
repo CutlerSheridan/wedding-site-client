@@ -6,9 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make RSVPs look like tickets like I did with guest cards
 - figure out style
-- try changing table backgrounds like I did with guest cards
+- try pivoting style to more elegant look
 
 #### TODO LATER
 
@@ -30,7 +29,9 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
-- look into dynamic column count on Edit Group
+- change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
+- move RSVP page's 'back to search' button to bottom of page
+- make address inputs shift below address label in RSVP on mobile
 - on mobile, adjust top margins of pages now that navbar is gone
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
@@ -47,6 +48,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.7.5 (merge branch to main)_
+
+- make RSVPs look like tickets like I did with guest cards
+- change button hover border colors
+- adjust sizing and layout of RSVP search page
+- adjust sizing and layout of group lookup search elements
+- make RSVP buttons equal widths
 
 _0.7.4_
 

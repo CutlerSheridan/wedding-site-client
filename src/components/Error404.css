@@ -3,6 +3,12 @@
   color: red;
 }
 .error404 > a {
-  margin-top: 0.7rem;
+  margin: 0.7rem auto;
+  width: max-content;
   display: block;
+  color: var(--clr-black);
+  text-decoration: underline;
+}
+.error404 > a:hover {
+  color: var(--clr-grey-light);
 }

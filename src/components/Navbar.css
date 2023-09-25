@@ -53,6 +53,8 @@
 .hamburger-closeButton {
   margin: 0.3rem 0.5rem 0;
   font-size: 1.5em;
+  background: var(--clr-grey);
+  color: var(--clr-white-2);
 }
 .hamburger-nav {
   padding: 0.5rem 2.5rem 1rem;
@@ -63,8 +65,12 @@
 
 @media only screen and (min-width: 600px) {
   .navbar-wrapper-full {
-    padding: 0.5rem;
-    display: block;
+    padding: 1rem;
+    min-height: 5ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--clr-red);
   }
   .navbar-wrapper-hamburger {

@@ -1,6 +1,7 @@
 const _Event = (
   title,
   address,
+  day,
   date,
   time,
   dressCode,
@@ -11,6 +12,7 @@ const _Event = (
   return {
     title,
     address,
+    day,
     date,
     time,
     dressCode,
@@ -24,7 +26,8 @@ const EVENTS = [
   _Event(
     'Welcome Drinks',
     ['TBD', 'Redondo Beach, CA'],
-    'Fri. - January 26th, 2024',
+    'Friday',
+    'January 26th, 2024',
     '8:00pm',
     'Business casual',
     ['A casual mixer for anyone in town who feels like mingling.'],
@@ -38,7 +41,8 @@ const EVENTS = [
       '140 International Boardwalk',
       'Redondo Beach, CA 90277',
     ],
-    'Sat. - January 27th, 2024',
+    'Saturday',
+    'January 27th, 2024',
     '3:40pm# - 7:00pm',
     'Black tie.  Titanic-era influence encouraged.',
     [
@@ -54,7 +58,8 @@ const EVENTS = [
   _Event(
     'Party time!',
     ["Naja's Place", '154 International Blvd.', 'Redondo Beach, CA 90277'],
-    'Sat. - January 27th, 2024',
+    'Saturday',
+    'January 27th, 2024',
     '7:00pm - 2:00am',
     'Black tie',
     [
@@ -68,7 +73,8 @@ const EVENTS = [
   _Event(
     'Brunch',
     ['TBD', 'Redondo Beach, CA'],
-    'Sun. - January 28th, 2024',
+    'Sunday',
+    'January 28th, 2024',
     '1:00pm',
     'Casual',
     [

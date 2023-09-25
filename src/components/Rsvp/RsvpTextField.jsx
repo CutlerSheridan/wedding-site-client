@@ -24,10 +24,11 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
   };
 
   return (
-    <div className="rsvpSelector-wrapper">
-      <h2>{guest.name}</h2>
-      <form>
+    <div className="rsvp-inputGrouping">
+      <h2 className="rsvp-guestName">{guest.name}</h2>
+      <form className="rsvp-addressAndButtonWrapper">
         <textarea
+          className="rsvp-inputAddress"
           value={inputText}
           onChange={(e) => {
             setInputText(e.target.value);

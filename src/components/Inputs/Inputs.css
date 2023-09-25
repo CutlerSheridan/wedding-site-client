@@ -24,7 +24,9 @@
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: bold;
+  color: var(--clr-red);
   /* text-decoration: underline; */
+  border-bottom: 2px solid var(--clr-grey);
 }
 .input-grouping select {
   font-size: 0.75em;

@@ -26,10 +26,7 @@
   height: var(--width);
   background: var(--clr-white-2);
   border: 3px dotted var(--clr-black);
-  border-left: none;
-  border-bottom: none;
   border-radius: 5rem;
-  transform: rotate(45deg);
 }
 .guestCard::after {
   --width: 6rem;

@@ -41,7 +41,7 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
   };
 
   return (
-    <div className="rsvpSelector-wrapper">
+    <div className="rsvp-inputGrouping">
       <h2 className="rsvp-guestName">{guest.name}</h2>
       <div className="rsvp-buttonsWrapper">
         <button
