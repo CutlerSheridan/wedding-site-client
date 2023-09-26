@@ -1,7 +1,11 @@
 @font-face {
   font-family: 'Hoeffler Text Regular';
   src: local('Hoeffler Text Regular'),
-    url('./assets/Hoefler\ Text\ Regular.ttf') format('ttf');
+    url('./assets/Hoefler-Text-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Christmas Calligraphy';
+  src: url('./assets/Christmas-Calligraphy.ttf') format('truetype');
 }
 
 :root {
@@ -23,12 +27,18 @@
   color: var(--clr-white-2);
   background-color: var(--clr-pri);
 
-  /* --font-1: Gilda Display, serif; */
   --font-1: 'Hoeffler Text Regular';
-  /* --font-2: Lora, serif; */
-  --font-2: Gill Sans;
-  --font-3: Palatino, serif;
-  --font-4: Courier, monospace;
+  /* --font-1: 'Cardo', serif; */
+  /* --font-1: 'Spectral SC', serif; */
+  /* --font-1: 'Playfair Display', serif; */
+  --font-2: 'Noto Serif Makasar', serif;
+  /* --font-2: 'Caladea', serif; */
+  /* --font-2: Gill Sans; */
+  --font-3: 'Christmas Calligraphy';
+  /* --font-3: 'Ballet', cursive; */
+  /* --font-3: 'Dancing Script', cursive; */
+  --font-1-old: Palatino, serif;
+  --font-2-old: Courier, monospace;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -110,6 +120,8 @@ h1 {
   font-family: var(--font-1);
   font-size: 5rem;
   text-transform: uppercase;
+  background: var(--clr-white-2);
+  color: var(--clr-pri);
 }
 p {
   margin: 0 auto;

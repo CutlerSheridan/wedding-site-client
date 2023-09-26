@@ -13,7 +13,6 @@ import Schedule from './components/Schedule.jsx';
 import AdminWrapper from './components/Admin/AdminWrapper.jsx';
 import Dashboard from './components/Admin/Dashboard.jsx';
 import AdminAuth from './components/Admin/AdminAuth.jsx';
-import Loading from './components/Loading.jsx';
 import Addresses from './components/Admin/Addresses.jsx';
 import GroupEdit from './components/Admin/GroupEdit/GroupEdit.jsx';
 

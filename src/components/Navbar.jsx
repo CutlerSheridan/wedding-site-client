@@ -26,7 +26,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   );
   const adminBar = (
     <>
-      <Link to="/admin/dashboard">Dashboard</Link>
+      {/* <Link to="/admin/dashboard">Dashboard</Link>
       <Link to="/admin/addresses">Addresses</Link>
       <Link to="/admin/group-edit">Edit Group</Link>
       <Link to="/admin/gameinfo">Characters</Link>
@@ -42,13 +42,18 @@ const Navbar = ({ jwt, updateJwt }) => {
         </a>
       ) : (
         ''
-      )}
+      )} */}
     </>
   );
 
   return (
     <>
       <div className="navbar-wrapper-full">
+        <div className="navbar-names">
+          Cutler & Tyler
+          {/* • */}
+        </div>
+        <div className="navbar-details">January 27, 2024 • Los Angeles</div>
         <nav>{generalBar}</nav>
         {isAdmin || location.pathname.includes('admin') ? (
           <nav>{adminBar}</nav>

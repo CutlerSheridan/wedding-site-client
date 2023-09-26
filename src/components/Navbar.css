@@ -65,7 +65,7 @@
 
 @media only screen and (min-width: 600px) {
   .navbar-wrapper-full {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 1rem 2rem;
     min-height: 5ch;
     display: flex;
     flex-direction: column;
@@ -77,11 +77,25 @@
   .navbar-wrapper-hamburger {
     display: none;
   }
+  .navbar-names {
+    line-height: 1;
+    font-family: var(--font-3);
+    font-size: 6rem;
+    white-space: pre;
+  }
+  .navbar-details {
+    margin-bottom: 2rem;
+    font-family: var(--font-1);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   nav {
     display: flex;
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
     /* letter-spacing: -0.2rem; */
   }
 }

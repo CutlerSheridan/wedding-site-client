@@ -9,6 +9,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - figure out style
 - try pivoting style to more elegant look
 - try some cursive fonts, it's just not elegant enough yet
+- get appropriate navbar link to underline when on that page
 
 #### TODO LATER
 
@@ -49,6 +50,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.8.1_
+
+- spruce up itinerary styling
+- decide on fonts
+- add names, date, location to navbar
 
 _0.8.0 (branch: elegant-ui)_
 

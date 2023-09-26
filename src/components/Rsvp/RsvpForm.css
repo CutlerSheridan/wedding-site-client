@@ -30,10 +30,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 60rem;
-  /* background: var(--clr-white-2); */
-  border: 3px solid var(--clr-white-2);
+  background: var(--clr-white-2);
+  border: 3px dotted var(--clr-black);
   border-radius: 1rem;
-  color: var(--clr-white-2);
+  /* color: var(--clr-white-2); */
+  color: var(--clr-black);
 }
 @media only screen and (min-width: 600px) {
   .rsvp-formWrapper {
@@ -147,7 +148,7 @@ h2.rsvp-infoDetail {
   top: 3px;
   height: calc(100% - 6px);
   width: 1px;
-  border-left: 3px dotted var(--clr-white-2);
+  border-left: 3px dotted var(--clr-pri);
 }
 .rsvp-inputGrouping {
   display: flex;
@@ -157,8 +158,8 @@ h2.rsvp-infoDetail {
 .rsvp-guestName {
   font-size: 0.9em;
   font-family: var(--font-1);
+  font-weight: 400;
   text-transform: uppercase;
-  font-weight: bold;
 }
 .rsvp-buttonsWrapper {
   display: flex;
