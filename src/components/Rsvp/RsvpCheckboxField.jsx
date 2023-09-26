@@ -55,7 +55,7 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
           }}
           data-bool="true"
         >
-          Yes
+          YES
         </button>
         <button
           type="button"
@@ -68,7 +68,7 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
           }}
           data-bool="false"
         >
-          No
+          NO
         </button>
       </div>
     </div>

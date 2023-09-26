@@ -8,6 +8,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - figure out style
 - try pivoting style to more elegant look
+- try some cursive fonts, it's just not elegant enough yet
 
 #### TODO LATER
 
@@ -48,6 +49,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.8.0 (branch: elegant-ui)_
+
+- change color palette to deep blue + white
+- experiment with white cards on Itinerary page
 
 _0.7.5 (merge branch to main)_
 

@@ -30,9 +30,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 60rem;
-  background: var(--clr-white);
-  border: 3px dotted var(--clr-black);
+  /* background: var(--clr-white-2); */
+  border: 3px solid var(--clr-white-2);
   border-radius: 1rem;
+  color: var(--clr-white-2);
 }
 @media only screen and (min-width: 600px) {
   .rsvp-formWrapper {
@@ -51,8 +52,8 @@
   top: calc(50% - (var(--width) / 2));
   width: var(--width);
   height: var(--width);
-  background: var(--clr-white-2);
-  border: 3px dotted var(--clr-black);
+  background: var(--clr-pri);
+  border: 3px solid var(--clr-white-2);
   border-radius: 3rem;
 }
 .rsvp-formWrapper::after {
@@ -63,11 +64,7 @@
   top: calc(50% - (var(--width) / 2));
   width: calc(var(--width) / 2);
   height: var(--width);
-  background: var(--clr-white-2);
-}
-.rsvp-formWrapper > div {
-  /* padding: 2.6rem 2.5rem; */
-  /* padding: 2.6rem 0; */
+  background: var(--clr-pri);
 }
 @media only screen and (min-width: 600px) {
   .rsvp-formWrapper::before {
@@ -103,8 +100,8 @@ h2.rsvp-infoDetail {
   font-family: var(--font-1);
   font-size: 1.1em;
   text-transform: uppercase;
-  color: var(--clr-red);
-  border-bottom: 2px solid var(--clr-grey);
+  /* color: var(--clr-red); */
+  border-bottom: 2px solid var(--clr-white-2);
 }
 .rsvp-dayTimeWrapper {
   display: flex;
@@ -150,7 +147,7 @@ h2.rsvp-infoDetail {
   top: 3px;
   height: calc(100% - 6px);
   width: 1px;
-  border-left: 3px dotted var(--clr-black);
+  border-left: 3px dotted var(--clr-white-2);
 }
 .rsvp-inputGrouping {
   display: flex;
@@ -161,6 +158,7 @@ h2.rsvp-infoDetail {
   font-size: 0.9em;
   font-family: var(--font-1);
   text-transform: uppercase;
+  font-weight: bold;
 }
 .rsvp-buttonsWrapper {
   display: flex;
@@ -168,7 +166,7 @@ h2.rsvp-infoDetail {
   gap: 1.5rem;
 }
 .rsvp-button {
-  width: 4.5ch;
+  width: 5ch;
   border: 1px solid transparent;
 }
 .rsvp-button-disabled {
@@ -212,6 +210,6 @@ h2.rsvp-infoDetail {
   margin: 2rem auto;
   width: 90%;
   max-width: 80rem;
-  height: 1px;
-  background: var(--clr-red);
+  height: 0.5px;
+  background: var(--clr-white-2);
 }

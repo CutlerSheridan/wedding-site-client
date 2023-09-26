@@ -1,17 +1,13 @@
+@font-face {
+  font-family: 'Hoeffler Text Regular';
+  src: local('Hoeffler Text Regular'),
+    url('./assets/Hoefler\ Text\ Regular.ttf') format('ttf');
+}
+
 :root {
-  /* --clr-white: rgb(222, 222, 222);
-  --clr-black: black;
-  --clr-grey: #242424;
-  --clr-grey-dark: rgb(16, 16, 16);
-  --clr-grey-light: rgb(81, 81, 81);
-  --clr-grey-lighter: rgb(125, 125, 125);
-  --clr-grey-lightest: rgb(166, 166, 166);
-  --clr-green: limegreen;
-  --clr-green-alpha: rgb(50, 205, 50, 0.5);
-  --clr-red: rgb(213, 0, 0);
-  --clr-red-alpha: rgb(213, 0, 0, 0.5);
-  color: var(--clr-white);
-  background-color: var(--clr-grey); */
+  /* --clr-pri: rgb(23, 18, 104); */
+  --clr-pri: rgb(26, 23, 84);
+  --clr-pri-light: rgb(29, 24, 134);
   --clr-white: white;
   --clr-white-2: rgb(235, 235, 235);
   --clr-black: black;
@@ -24,11 +20,15 @@
   --clr-green-alpha: rgb(50, 205, 50, 0.5);
   --clr-red: rgb(211, 11, 56);
   --clr-red-alpha: rgb(211, 11, 56, 0.7);
-  color: var(--clr-black);
-  background-color: var(--clr-white-2);
+  color: var(--clr-white-2);
+  background-color: var(--clr-pri);
 
-  --font-1: Palatino;
-  --font-2: Courier;
+  /* --font-1: Gilda Display, serif; */
+  --font-1: 'Hoeffler Text Regular';
+  /* --font-2: Lora, serif; */
+  --font-2: Gill Sans;
+  --font-3: Palatino, serif;
+  --font-4: Courier, monospace;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -37,8 +37,6 @@
   font-size: 62.5%;
   font-family: var(--font-2);
   font-weight: 500;
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  /* line-height: 1.5; */
 }
 *,
 *::before,
@@ -54,14 +52,15 @@ body {
   height: 100%;
   width: 100%;
   font-size: 2rem;
-  letter-spacing: -0.1rem;
+  /* letter-spacing: -0.1rem; */
+  letter-spacing: 0.1rem;
 }
 a {
   color: var(--clr-white-2);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  text-decoration: underline;
 }
 
 button {
@@ -99,7 +98,7 @@ button:active {
   }
 }
 .button-selected {
-  background: var(--clr-red);
+  background: var(--clr-pri);
   color: var(--clr-white-2);
 }
 .button-small {
@@ -107,7 +106,6 @@ button:active {
 }
 
 h1 {
-  /* margin-top: 2rem; */
   margin: 2rem 0;
   font-family: var(--font-1);
   font-size: 5rem;

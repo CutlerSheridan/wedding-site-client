@@ -1,18 +1,37 @@
+.schedule-eventWrapper {
+  margin: auto;
+  padding-bottom: 2rem;
+  max-width: 50ch;
+  background: var(--clr-white-2);
+  color: var(--clr-pri);
+}
 .schedule-eventDate {
   margin-top: 2rem;
-  font-family: var(--font-1);
-  font-size: 3.5rem;
-  /* font-weight: 500; */
-  text-decoration: underline;
-  /* color: var(--clr-red); */
-  /* text-transform: uppercase; */
-}
-.schedule-eventTitle {
-  margin-top: 1.5rem;
+  padding-bottom: 2rem;
   font-family: var(--font-1);
   font-size: 3rem;
-  color: var(--clr-red);
+  font-weight: 400;
+  /* font-weight: 500; */
+  /* text-decoration: underline; */
+  /* color: var(--clr-red); */
   text-transform: uppercase;
+  color: var(--clr-white-2);
+  background: var(--clr-pri);
+}
+.schedule-eventTitle {
+  padding-top: 1.5rem;
+  font-family: var(--font-1);
+  font-size: 3rem;
+  font-weight: 700;
+  /* color: var(--clr-red); */
+  text-transform: uppercase;
+}
+.schedule-eventDetails {
+  margin: 1rem 0;
+}
+.schedule-eventDetails > p:first-of-type {
+  /* margin-bottom: 1rem; */
+  text-decoration: underline;
 }
 .schedule-calendarButtonWrapper {
   margin: auto;
@@ -20,9 +39,11 @@
 }
 .schedule-eventDescription {
   margin: auto;
+  padding: 0 1.5rem;
   text-align: left;
   max-width: 60ch;
   font-size: 0.89em;
+  color: var(--clr-grey-light);
 }
 .schedule-eventDescription:not(:last-of-type) {
   margin-bottom: 1rem;
