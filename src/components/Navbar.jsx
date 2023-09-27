@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -17,19 +17,74 @@ const Navbar = ({ jwt, updateJwt }) => {
 
   const generalBar = (
     <>
-      <Link to="/">Home</Link>
-      <Link to="/rsvp">RSVP</Link>
-      <Link to="/itinerary">Itinerary</Link>
-      <Link to="/hotels">Hotels</Link>
-      <Link to="/registry">Registry</Link>
+      <NavLink
+        to="/"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? 'navbar-link'
+            : isActive
+            ? 'navbar-link navbar-link-active'
+            : 'navbar-link'
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/rsvp"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? 'navbar-link'
+            : isActive
+            ? 'navbar-link navbar-link-active'
+            : 'navbar-link'
+        }
+      >
+        RSVP
+      </NavLink>
+      <NavLink
+        to="/itinerary"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? 'navbar-link'
+            : isActive
+            ? 'navbar-link navbar-link-active'
+            : 'navbar-link'
+        }
+      >
+        Itinerary
+      </NavLink>
+      <NavLink
+        to="/hotels"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? 'navbar-link'
+            : isActive
+            ? 'navbar-link navbar-link-active'
+            : 'navbar-link'
+        }
+      >
+        Hotels
+      </NavLink>
+      <NavLink
+        to="/registry"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? 'navbar-link'
+            : isActive
+            ? 'navbar-link navbar-link-active'
+            : 'navbar-link'
+        }
+      >
+        Registry
+      </NavLink>
     </>
   );
   const adminBar = (
     <>
-      {/* <Link to="/admin/dashboard">Dashboard</Link>
-      <Link to="/admin/addresses">Addresses</Link>
-      <Link to="/admin/group-edit">Edit Group</Link>
-      <Link to="/admin/gameinfo">Characters</Link>
+      {/* <NavLink to="/admin/dashboard" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Dashboard</NavLink>
+      <NavLink to="/admin/addresses" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Addresses</NavLink>
+      <NavLink to="/admin/group-edit" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Edit Group</NavLink>
+      <NavLink to="/admin/gameinfo" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Characters</NavLink>
       {jwt ? (
         <a
           href="/admin/auth"

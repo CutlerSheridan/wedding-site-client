@@ -3,7 +3,6 @@ import { useState } from 'react';
 // import viteLogo from '/vite.png';
 import Navbar from './components/Navbar';
 import './App.css';
-import christmasFont from './assets/Christmas Calligraphy.ttf';
 import { Outlet } from 'react-router-dom';
 
 function App() {

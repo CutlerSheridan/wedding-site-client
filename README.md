@@ -6,10 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- figure out style
-- try pivoting style to more elegant look
+- figure out a style that actually looks fucking good
 - try some cursive fonts, it's just not elegant enough yet
-- get appropriate navbar link to underline when on that page
 
 #### TODO LATER
 
@@ -50,6 +48,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.8.2_
+
+- swap navbar links to NavLinks so active link can be styled differently
 
 _0.8.1_
 

@@ -1,3 +1,12 @@
+.navbar-link {
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+}
+.navbar-link-active {
+  text-decoration: underline;
+}
+
+/* MOBILE NAV START */
 .navbar-wrapper-full {
   display: none;
 }
@@ -44,6 +53,7 @@
 .hamburger-wrapper-visible {
   left: 0;
 }
+
 .hamburger-nav-container {
   width: max-content;
   height: 100vh;
@@ -62,7 +72,9 @@
   flex-direction: column;
   gap: 2rem;
 }
+/* MOBILE NAV END */
 
+/* DESKTOP NAV START */
 @media only screen and (min-width: 600px) {
   .navbar-wrapper-full {
     padding: 3rem 2rem 1rem 2rem;
@@ -94,8 +106,6 @@
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
-    font-size: 1.5rem;
-    letter-spacing: 0.4rem;
-    /* letter-spacing: -0.2rem; */
   }
 }
+/* DESKTOP NAV END */
