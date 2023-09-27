@@ -5,6 +5,7 @@
 .navbar-link-active {
   text-decoration: underline;
   text-decoration-color: var(--clr-white-2);
+  text-decoration-thickness: 1px;
 }
 
 /* MOBILE NAV START */

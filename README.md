@@ -49,6 +49,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.5_
+
+- adjust thickness and offset of underlines for date and navlinks
+
 _0.8.4_
 
 - make background gradient

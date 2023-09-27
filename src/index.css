@@ -82,6 +82,7 @@ a {
 a:hover {
   text-decoration: underline;
   text-decoration-color: inherit;
+  text-decoration-thickness: 1px;
 }
 
 button {
