@@ -49,6 +49,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.3_
+
+- finesse active navlink underline and hover underline
+
 _0.8.2_
 
 - swap navbar links to NavLinks so active link can be styled differently

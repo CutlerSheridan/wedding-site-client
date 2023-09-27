@@ -4,6 +4,7 @@
 }
 .navbar-link-active {
   text-decoration: underline;
+  text-decoration-color: var(--clr-white-2);
 }
 
 /* MOBILE NAV START */

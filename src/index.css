@@ -62,15 +62,18 @@ body {
   height: 100%;
   width: 100%;
   font-size: 2rem;
-  /* letter-spacing: -0.1rem; */
   letter-spacing: 0.1rem;
 }
 a {
   color: var(--clr-white-2);
   text-decoration: inherit;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.4em;
+  transition: all 0.1s;
 }
 a:hover {
   text-decoration: underline;
+  text-decoration-color: inherit;
 }
 
 button {
