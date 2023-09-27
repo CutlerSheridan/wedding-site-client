@@ -102,7 +102,6 @@ const Rsvp = () => {
   return (
     <div>
       {/* <button className='button-small' onClick={toggleStoredGroupId}>Toggle stored groupId</button> */}
-      <h1>RSVP</h1>
 
       {isLoading ? (
         <Loading />

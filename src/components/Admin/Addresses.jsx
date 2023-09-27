@@ -146,7 +146,6 @@ const AddressesPage = () => {
 
   return (
     <>
-      <h1>Addresses</h1>
       <button
         type="button"
         className={`button-small ${isEditing ? 'button-selected' : ''}`}

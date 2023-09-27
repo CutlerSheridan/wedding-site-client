@@ -6,9 +6,9 @@
   margin: 0.7rem auto;
   width: max-content;
   display: block;
-  color: var(--clr-black);
+  color: var(--clr-white-2);
   text-decoration: underline;
 }
 .error404 > a:hover {
-  color: var(--clr-grey-light);
+  color: var(--clr-grey-lightest);
 }

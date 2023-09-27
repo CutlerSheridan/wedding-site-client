@@ -58,8 +58,6 @@ const GroupLookup = ({ guests }) => {
 
   return (
     <>
-      <h1>Group Lookup</h1>
-
       <form className="groupLookup-searchWrapper">
         <div className="groupLookup-searchLabel">Enter guest name:</div>
         <div className="groupLookup-searchInputAndButton">

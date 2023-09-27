@@ -6,6 +6,15 @@ const Navbar = ({ jwt, updateJwt }) => {
   const location = useLocation();
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
   const isAdmin = !!jwt;
+  const header = () => {
+    if (location.pathname === '/') {
+      return 'home';
+    }
+    if (location.pathname.includes('admin')) {
+      return location.pathname.slice(7);
+    }
+    return location.pathname.slice(1);
+  };
 
   useEffect(() => {
     if (hamburgerIsOpen) {
@@ -15,79 +24,51 @@ const Navbar = ({ jwt, updateJwt }) => {
     }
   }, [hamburgerIsOpen]);
 
+  const setLinkClass = ({ isActive, isPending }) => {
+    let className = 'navbar-link';
+    if (isActive) {
+      className += ' navbar-link-active';
+    }
+    return className;
+  };
+
   const generalBar = (
     <>
-      <NavLink
-        to="/"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? 'navbar-link'
-            : isActive
-            ? 'navbar-link navbar-link-active'
-            : 'navbar-link'
-        }
-      >
+      <NavLink to="/" className={setLinkClass}>
         Home
       </NavLink>
-      <NavLink
-        to="/rsvp"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? 'navbar-link'
-            : isActive
-            ? 'navbar-link navbar-link-active'
-            : 'navbar-link'
-        }
-      >
+      <NavLink to="/rsvp" className={setLinkClass}>
         RSVP
       </NavLink>
-      <NavLink
-        to="/itinerary"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? 'navbar-link'
-            : isActive
-            ? 'navbar-link navbar-link-active'
-            : 'navbar-link'
-        }
-      >
+      <NavLink to="/itinerary" className={setLinkClass}>
         Itinerary
       </NavLink>
-      <NavLink
-        to="/hotels"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? 'navbar-link'
-            : isActive
-            ? 'navbar-link navbar-link-active'
-            : 'navbar-link'
-        }
-      >
+      <NavLink to="/hotels" className={setLinkClass}>
         Hotels
       </NavLink>
-      <NavLink
-        to="/registry"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? 'navbar-link'
-            : isActive
-            ? 'navbar-link navbar-link-active'
-            : 'navbar-link'
-        }
-      >
+      <NavLink to="/registry" className={setLinkClass}>
         Registry
       </NavLink>
     </>
   );
   const adminBar = (
     <>
-      {/* <NavLink to="/admin/dashboard" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Dashboard</NavLink>
-      <NavLink to="/admin/addresses" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Addresses</NavLink>
-      <NavLink to="/admin/group-edit" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Edit Group</NavLink>
-      <NavLink to="/admin/gameinfo" className={({isActive, isPending}) => isPending ? 'navbar-link' : isActive ? 'navbar-link navbar-link-active' : 'navbar-link'}>Characters</NavLink>
+      {/* <NavLink to="/admin/dashboard" className={setLinkClass}>
+        Dashboard
+      </NavLink>
+      <NavLink to="/admin/addresses" className={setLinkClass}>
+        Addresses
+      </NavLink>
+      <NavLink to="/admin/group-edit" className={setLinkClass}>
+        Edit Group
+      </NavLink>
+      <NavLink to="/admin/gameinfo" className={setLinkClass}>
+        Characters
+      </NavLink>
       {jwt ? (
         <a
           href="/admin/auth"
+          className="navbar-link"
           onClick={(e) => {
             e.preventDefault();
             updateJwt(null);
@@ -154,6 +135,8 @@ const Navbar = ({ jwt, updateJwt }) => {
           </div>
         </div>
       </div>
+
+      <h1>{header()}</h1>
     </>
   );
 };

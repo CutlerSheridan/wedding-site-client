@@ -37,8 +37,8 @@
   /* --font-1: 'Cardo', serif; */
   /* --font-1: 'Spectral SC', serif; */
   /* --font-1: 'Playfair Display', serif; */
-  --font-2: 'Noto Serif Makasar', serif;
-  /* --font-2: 'Caladea', serif; */
+  /* --font-2: 'Noto Serif Makasar', serif; */
+  --font-2: 'Caladea', serif;
   /* --font-2: Gill Sans; */
   --font-3: 'Christmas Calligraphy';
   /* --font-3: 'Ballet', cursive; */
@@ -129,11 +129,12 @@ button:active {
 
 h1 {
   margin: 2rem 0;
+  left: 0;
   font-family: var(--font-1);
   font-size: 5rem;
   text-transform: uppercase;
-  background: var(--clr-white-2);
-  color: var(--clr-pri);
+  /* background: var(--clr-white-2); */
+  /* color: var(--clr-pri); */
 }
 p {
   margin: 0 auto;
@@ -153,10 +154,9 @@ ul {
 }
 
 .app-contentWrapper {
-  margin: 0 1.5rem;
-}
-@media only screen and (min-width: 600px) {
-  .app-contentWrapper {
-    margin: 0 2rem 2rem;
-  }
+  /* margin: 0 1.5rem; */
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: 80rem;
+  /* background: pink; */
 }

@@ -1,36 +1,52 @@
 .schedule-eventDate {
   position: relative;
   margin-top: 1rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   font-family: var(--font-3);
   font-size: 4.5rem;
   /* font-weight: 400; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
   /* text-transform: uppercase; */
   color: var(--clr-white-2);
 }
+.schedule-day-desktop {
+  display: none;
+}
+.schedule-eventDay {
+  padding-bottom: 1rem;
+  font-size: 0.9em;
+  /* font-weight: bold; */
+  font-family: var(--font-1);
+  text-transform: uppercase;
+}
 
 .schedule-eventWrapper {
   margin: auto;
-  padding: 2rem 1rem 2.5rem;
+  padding: 2rem 2rem 2.5rem;
   max-width: 70ch;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   background: var(--clr-white-2);
   color: var(--clr-pri);
 }
 .schedule-eventTitle {
+  margin-bottom: 0.7rem;
   font-family: var(--font-1);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
 }
+
 .schedule-eventDetails {
   margin: 1rem 0;
 }
 .schedule-eventDetails > p:first-of-type {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-weight: bold;
 }
 .schedule-calendarButtonWrapper {
   margin: auto;
@@ -38,7 +54,6 @@
 }
 .schedule-eventDescription {
   margin: auto;
-  padding: 0 1.5rem;
   text-align: left;
   max-width: 60ch;
   font-size: 0.89em;
@@ -46,4 +61,18 @@
 }
 .schedule-eventDescription:not(:last-of-type) {
   margin-bottom: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .schedule-day-desktop {
+    display: inline;
+  }
+  .schedule-eventDetailsAndDescription {
+    display: flex;
+    align-items: center;
+    /* gap: 1rem; */
+  }
+  .schedule-eventDetailsAndDescription > * {
+    width: 50%;
+    /* background: pink; */
+  }
 }

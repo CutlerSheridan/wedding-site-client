@@ -49,6 +49,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.6_
+
+- in itinerary, make event info side-by-side on desktop
+- add day under date
+- adjust page wrapper margins so header still extends across entire screen
+- add h1's to Navbar.jsx
+- add className-setting function to NavLinks so the file is cleaner
+- fix duplicate key react error
+
 _0.8.5_
 
 - adjust thickness and offset of underlines for date and navlinks

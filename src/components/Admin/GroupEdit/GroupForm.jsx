@@ -133,7 +133,6 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
 
   return (
     <>
-      <h1>Group Info</h1>
       <div>SAVE any changes!</div>
 
       <div className="groupForm-controls">
