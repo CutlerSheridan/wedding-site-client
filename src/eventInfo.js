@@ -50,7 +50,7 @@ const EVENTS = [
       'Black tie link',
       'LA gets chilly at night.  Dress accordingly.',
       'We recommend walking or Ubering, but a parking deck is available nearby at 200 N. Pacific Avenue.',
-      "There will be hors d'oeuvres and cocktails on the boat, but eat a snack beforehand.  Dinner isn't until afterwards.",
+      "There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand.  Dinner isn't until afterwards.",
     ],
     true,
     ['2024-01-27', '2024-01-28', '15:30', '19:00']
@@ -63,7 +63,6 @@ const EVENTS = [
     '7:00pm - 2:00am',
     'Black tie',
     [
-      'Once we disembark, everyone will walk over to this cool dive bar.',
       "Naja's Place has wine and a HUGE selection of beer on tap, but no liquor, so get your fill on the boat.",
       'Everyone will get a wristband to order dinner from the connected smash burger grill, which has a variety of options (including vegetarian).',
     ],

@@ -12,7 +12,7 @@ const Schedule = () => {
 
   const createEvent = (event) => {
     return (
-      <div className="schedule-eventWrapper" key={event.title}>
+      <>
         {/* {event.needsRsvp ? (
           <h2 className="schedule-eventDate">{event.date}</h2>
         ) : null} */}
@@ -52,12 +52,19 @@ const Schedule = () => {
                 debug="true"
                 // buttonStyle="flat"
                 // lightMode="dark"
-                styleLight="--btn-shadow:none; --btn-background:var(--clr-grey); --btn-text:var(--clr-white-2); --font:var(--font-1)"
+                styleLight="
+                  --font:var(--font-1);
+                  --btn-background:var(--clr-white-2);
+                  --btn-shadow: none;
+                  --btn-border:var(--clr-pri);
+                  --btn-text:var(--clr-pri);
+                  --btn-text-hover:var(--clr-pri);
+                  "
                 // styleDark="--btn-shadow:transparent; --btn-border:none --btn-background:var(--clr-grey)"
               ></AddToCalendarButton>
             </div>
           </div>
-          <ul>
+          <ul className="schedule-descriptionList">
             {event.description.map((x) => (
               <li className="schedule-eventDescription" key={x}>
                 {x}
@@ -65,7 +72,7 @@ const Schedule = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </>
     );
   };
   return (
@@ -73,15 +80,17 @@ const Schedule = () => {
       {eventDates.map((date) => {
         return (
           <div key={'date' + date.date} className="schedule-dayWrapper">
-            <div className="schedule-eventDate">
-              {/* <span className="schedule-day-desktop">{date.day}, </span> */}
-              {date.date}
-            </div>
-            <div className="schedule-eventDay">– {date.day} –</div>
+            <div className="schedule-eventDate">{date.date}</div>
+            <div className="schedule-eventDay">{date.day}</div>
             {EVENTS.map((event) => {
               if (event.date === date.date) {
                 return (
-                  <div key={event.title + date.date}>{createEvent(event)}</div>
+                  <div
+                    key={event.title + date.date}
+                    className="schedule-eventWrapper"
+                  >
+                    {createEvent(event)}
+                  </div>
                 );
               }
             })}

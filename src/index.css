@@ -12,7 +12,9 @@
   /* --clr-pri: rgb(23, 18, 104); */
   --clr-pri: rgb(26, 23, 84);
   --clr-pri-dark: rgb(15, 13, 48);
-  --clr-pri-light: rgb(29, 24, 134);
+  --clr-pri-light: rgb(105, 103, 142);
+  --clr-sec: rgb(161, 124, 59);
+  --clr-ter: grey;
   --clr-white: white;
   --clr-white-2: rgb(235, 235, 235);
   --clr-black: black;

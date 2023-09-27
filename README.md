@@ -49,6 +49,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.7_
+
+- italicize event descriptions in schedule
+- restyle calendar button
+- add vertical separator to desktop schedule events that takes height of whichever side is taller
+
 _0.8.6_
 
 - in itinerary, make event info side-by-side on desktop
