@@ -49,6 +49,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.8_
+
+- make date font-1
+- make event title cursive
+- remove gaps between days
+- in schedule, add horizontal day separators on mobile
+
 _0.8.7_
 
 - italicize event descriptions in schedule

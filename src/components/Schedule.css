@@ -1,31 +1,41 @@
 .schedule-dayWrapper {
-  margin-top: 2rem;
+  position: relative;
+  /* margin-top: 2rem; */
   padding: 2rem 2rem 3rem;
   background: var(--clr-white-2);
   color: var(--clr-pri);
+}
+.schedule-dayWrapper:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: var(--clr-grey-lightest);
 }
 .schedule-eventDate {
   position: relative;
   /* margin-top: 2rem; */
   /* padding-top: 2rem; */
   /* padding-bottom: 1rem; */
-  font-family: var(--font-3);
-  font-size: 4.5rem;
+  font-family: var(--font-1);
+  font-size: 3.3rem;
   /* font-weight: 400; */
   /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   /* color: var(--clr-white-2); */
   /* color: var(--clr-sec); */
 }
 .schedule-eventDay {
-  margin-top: -0.5rem;
+  /* margin-top: -0.5rem; */
   padding-bottom: 2rem;
-  font-size: 0.9em;
-  font-weight: bold;
-  font-family: var(--font-1);
-  text-transform: uppercase;
+  font-size: 1em;
+  /* font-weight: bold; */
+  font-family: var(--font-2);
+  /* text-transform: uppercase; */
   /* color: var(--clr-pri-light); */
   /* color: var(--clr-sec); */
 }
@@ -45,11 +55,11 @@
 
 .schedule-eventTitle {
   /* margin-bottom: 0.5rem; */
-  font-family: var(--font-1);
-  font-size: 2.5rem;
+  font-family: var(--font-3);
+  font-size: 4.5rem;
   font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: underline;
+  /* text-transform: uppercase; */
+  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
   /* color: var(--clr-sec); */
@@ -63,9 +73,11 @@
   /* color: var(--clr-ter); */
 }
 .schedule-eventDetails > p:first-of-type {
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem;
   /* text-decoration: underline; */
   font-weight: bold;
+  font-family: var(--font-1);
+  text-transform: uppercase;
 }
 .schedule-eventDetails > p:not(:first-of-type) {
   /* color: var(--clr-ter); */
@@ -94,6 +106,9 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .schedule-dayWrapper:not(:first-of-type)::before {
+    content: none;
+  }
   .schedule-eventDetails::after {
     content: '';
     position: absolute;
