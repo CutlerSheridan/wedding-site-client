@@ -49,6 +49,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.8.4_
+
+- make background gradient
+- restructure Schedule.jsx so event dates are their own elements and the events fill into an element beneath each one; this way, the date backgrounds can be transparent so the blue matches the background gradient
+- color mobile edges
+
 _0.8.3_
 
 - finesse active navlink underline and hover underline

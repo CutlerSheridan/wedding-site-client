@@ -11,6 +11,7 @@
 :root {
   /* --clr-pri: rgb(23, 18, 104); */
   --clr-pri: rgb(26, 23, 84);
+  --clr-pri-dark: rgb(15, 13, 48);
   --clr-pri-light: rgb(29, 24, 134);
   --clr-white: white;
   --clr-white-2: rgb(235, 235, 235);
@@ -25,7 +26,12 @@
   --clr-red: rgb(211, 11, 56);
   --clr-red-alpha: rgb(211, 11, 56, 0.7);
   color: var(--clr-white-2);
-  background-color: var(--clr-pri);
+  background-color: var(--clr-pri-dark);
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-pri),
+    var(--clr-pri-dark)
+  );
 
   --font-1: 'Hoeffler Text Regular';
   /* --font-1: 'Cardo', serif; */
@@ -59,7 +65,9 @@
   text-align: center;
 }
 body {
+  padding-bottom: 5rem;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
   font-size: 2rem;
   letter-spacing: 0.1rem;

@@ -16,10 +16,6 @@
   /* text-decoration: underline; */
   /* text-transform: uppercase; */
   color: var(--clr-white-2);
-  background: var(--clr-pri);
-}
-.schedule-eventWrapper:first-of-type .schedule-eventDate {
-  margin-top: -1rem;
 }
 .schedule-eventDate::before {
   content: '';
