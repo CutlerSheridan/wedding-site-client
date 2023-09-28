@@ -2,9 +2,13 @@
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
 }
+.navbar-linkLastLetter {
+  letter-spacing: 0rem;
+}
 .navbar-link-active {
   text-decoration: underline;
   text-decoration-thickness: 1px;
+  text-decoration-color: inherit;
 }
 
 /* MOBILE NAV START */
@@ -30,7 +34,7 @@
   font-size: 1.2em;
   letter-spacing: -0.3rem;
   transform: rotate(-90deg);
-  background: var(--clr-sec);
+  background: var(--clr-grey-lighter);
   color: var(--clr-white-2);
 }
 .hamburger-overlay {

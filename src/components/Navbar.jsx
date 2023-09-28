@@ -8,7 +8,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   const isAdmin = !!jwt;
   const header = () => {
     if (location.pathname === '/') {
-      return 'welcome';
+      return '';
     }
     if (location.pathname.includes('admin')) {
       return location.pathname.slice(7);
@@ -35,19 +35,19 @@ const Navbar = ({ jwt, updateJwt }) => {
   const generalBar = (
     <>
       <NavLink to="/" className={setLinkClass}>
-        Home
+        Hom<span className="navbar-linkLastLetter">e</span>
       </NavLink>
       <NavLink to="/rsvp" className={setLinkClass}>
-        RSVP
+        RSV<span className="navbar-linkLastLetter">P</span>
       </NavLink>
       <NavLink to="/itinerary" className={setLinkClass}>
-        Itinerary
+        Itinerar<span className="navbar-linkLastLetter">y</span>
       </NavLink>
       <NavLink to="/hotels" className={setLinkClass}>
-        Hotels
+        Hotel<span className="navbar-linkLastLetter">s</span>
       </NavLink>
       <NavLink to="/registry" className={setLinkClass}>
-        Registry
+        Registr<span className="navbar-linkLastLetter">y</span>
       </NavLink>
     </>
   );

@@ -85,7 +85,7 @@
   text-align: center;
 }
 body {
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -166,8 +166,9 @@ h1 {
   /* font-size: 7.5rem; */
   text-transform: uppercase;
   /* text-transform: capitalize; */
-  /* text-decoration: underline; */
+  text-decoration: underline;
   text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
   /* background: var(--clr-white-2); */
   /* color: var(--clr-pri); */
 }
@@ -189,7 +190,12 @@ ul {
 }
 
 .app-contentWrapper {
-  margin: auto;
+  margin: 4rem auto;
   padding: 0 1.5rem;
   max-width: 80rem;
+}
+@media only screen and (min-width: 600px) {
+  .app-contentWrapper {
+    margin: 2rem auto 5rem;
+  }
 }

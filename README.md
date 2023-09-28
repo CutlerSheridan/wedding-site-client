@@ -28,11 +28,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
-- make navlink underlines not extend past final letter
 - ? add stars to top of page
 - ? add fancy borders around page
 - ? add White Star Line logo to schedule
   - ? or omg replace navbar "&" with logo
+- ? get rid of headers altogether?
+  - if so, just make them invisible so search engines can still find the h1's
 - change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
 - move RSVP page's 'back to search' button to bottom of page
 - make address inputs shift below address label in RSVP on mobile
@@ -54,6 +55,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.1_
+
+- make navlink underlines not extend past final letter
+- adjust content margins
+- remove h1 from home
+- underline other h1's
 
 _0.9.0_
 
