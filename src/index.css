@@ -23,7 +23,6 @@
 }
 
 :root {
-  /* --clr-pri: rgb(23, 18, 104); */
   --clr-pri: rgb(26, 23, 84);
   --clr-pri-dark: rgb(15, 13, 48);
   --clr-pri-light: rgb(105, 103, 142);
@@ -180,9 +179,7 @@ ul {
 }
 
 .app-contentWrapper {
-  /* margin: 0 1.5rem; */
   margin: auto;
   padding: 0 1.5rem;
   max-width: 80rem;
-  /* background: pink; */
 }

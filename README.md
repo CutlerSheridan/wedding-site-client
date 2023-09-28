@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- clean up CSS
 - write home page
 
 #### TODO LATER
@@ -43,11 +42,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Production Deployment Checklist
 
+- clean up comments
+- clean up logs
 - Remove 'toggle stored groupId' button
 - Remove 'Toggle auth' button
 - change default backend db to production db
 
 #### DONE
+
+_0.8.10_
+
+- clean up comments in schedule
+- add dress code to wedding description
 
 _0.8.9 (merge branch to main)_
 

@@ -43,17 +43,14 @@ const Schedule = () => {
                     prev + cur + (index < event.address.length - 1 ? ', ' : '')
                   );
                 }, '')}
-                // location="Los Angeles"
                 startDate={event.metaData[0]}
                 endDate={event.metaData[1]}
                 startTime={event.metaData[2]}
                 endTime={event.metaData[3]}
                 timeZone="America/Los_Angeles"
                 debug="true"
-                // buttonStyle="flat"
                 size="2"
                 label="ADD TO CALENDAR"
-                // lightMode="dark"
                 styleLight="
                   --font:var(--font-1);
                   --btn-background:var(--clr-white-2);
@@ -62,11 +59,17 @@ const Schedule = () => {
                   --btn-text:var(--clr-pri);
                   --btn-text-hover:var(--clr-pri);
                   "
-                // styleDark="--btn-shadow:transparent; --btn-border:none --btn-background:var(--clr-grey)"
               ></AddToCalendarButton>
             </div>
           </div>
           <ul className="schedule-descriptionList">
+            {event.title.toLowerCase() === 'wedding voyage' ? (
+              <li className="schedule-eventDescription schedule-dressCode">
+                Dress Code: {event.dressCode}
+              </li>
+            ) : (
+              ''
+            )}
             {event.description.map((x) => (
               <li className="schedule-eventDescription" key={x}>
                 {x}

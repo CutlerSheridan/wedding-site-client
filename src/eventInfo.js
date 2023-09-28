@@ -47,7 +47,6 @@ const EVENTS = [
     'Black tie.  Titanic-era influence encouraged.',
     [
       "The ceremony will take place on a boat, which will depart at 4:00pm.  Don't be late or we'll leave without you!",
-      'Black tie link',
       'LA gets chilly at night.  Dress accordingly.',
       'We recommend walking or Ubering, but a parking deck is available nearby at 200 N. Pacific Avenue.',
       "There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand.  Dinner isn't until afterwards.",

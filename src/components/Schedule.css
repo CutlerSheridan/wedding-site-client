@@ -1,9 +1,11 @@
 .schedule-dayWrapper {
   position: relative;
-  /* margin-top: 2rem; */
-  padding: 2rem 2rem 3rem;
+  padding: 3.5rem 2rem 4rem;
   background: var(--clr-white-2);
   color: var(--clr-pri);
+}
+.schedule-dayWrapper:first-of-type {
+  padding-top: 4rem;
 }
 .schedule-dayWrapper:not(:first-of-type)::before {
   content: '';
@@ -16,38 +18,22 @@
 }
 .schedule-eventDate {
   position: relative;
-  /* margin-top: 2rem; */
-  /* padding-top: 2rem; */
-  /* padding-bottom: 1rem; */
   font-family: var(--font-1);
   font-size: 2.5rem;
-  /* font-weight: 400; */
-  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
   text-transform: uppercase;
-  /* color: var(--clr-white-2); */
-  /* color: var(--clr-sec); */
 }
 .schedule-eventDay {
-  /* margin-top: -0.5rem; */
   padding-bottom: 0.5rem;
   font-size: 0.9em;
-  /* font-weight: bold; */
   font-family: var(--font-2);
   letter-spacing: 0.4rem;
-  /* text-transform: uppercase; */
-  /* color: var(--clr-pri-light); */
-  /* color: var(--clr-sec); */
 }
 
 .schedule-eventWrapper {
-  margin: 0 auto 0;
-  /* padding: 2rem 2rem 2.5rem; */
-  /* padding-bottom: 3rem; */
+  margin: auto;
   max-width: 70ch;
-  /* font-size: 0.9em; */
-  /* background: var(--clr-white-2); */
   color: var(--clr-pri);
 }
 .schedule-eventWrapper:not(:last-of-type) {
@@ -55,38 +41,23 @@
 }
 
 .schedule-eventTitle {
-  /* margin-bottom: 0.5rem; */
   font-family: var(--font-3);
   font-size: 4.5rem;
   font-weight: 400;
-  /* text-transform: uppercase; */
-  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
-  /* color: var(--clr-sec); */
 }
 .schedule-eventDetails {
   position: relative;
-  /* margin: 1rem 0; */
-  /* color: var(--clr-sec); */
-}
-.schedule-eventDetails > p {
-  /* letter-spacing: 0.4rem; */
-
-  /* color: var(--clr-ter); */
 }
 .schedule-eventDetails > p:first-of-type {
   margin: 0 0 0.5rem;
-  /* text-decoration: underline; */
   font-weight: bold;
   font-family: var(--font-1);
   text-transform: uppercase;
 }
 .schedule-eventDetails > p:not(:first-of-type) {
-  /* color: var(--clr-ter); */
-  /* color: var(--clr-pri-light); */
   font-size: 0.9em;
-  /* line-height: 1; */
   font-family: var(--font-2);
   letter-spacing: 0.3rem;
 }
@@ -98,25 +69,27 @@
 .schedule-descriptionList {
   position: relative;
 }
+.schedule-dressCode {
+  font-weight: bold;
+}
 .schedule-eventDescription {
   margin: auto;
   text-align: left;
   max-width: 60ch;
-  /* font-size: 1.5rem; */
   font-size: 0.75em;
-  /* letter-spacing: 0.3rem; */
   font-style: italic;
   list-style-type: '';
-  /* line-height: 1; */
   letter-spacing: 0.2rem;
-  /* font-family: var(--font-4); */
-  /* color: var(--clr-pri-light); */
 }
 .schedule-eventDescription:not(:last-of-type) {
   margin-bottom: 1.5rem;
 }
 
 @media only screen and (min-width: 600px) {
+  .schedule-dayWrapper {
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+  }
   .schedule-dayWrapper:not(:first-of-type)::before {
     content: none;
   }
@@ -147,10 +120,6 @@
   }
   .schedule-eventDetailsAndDescription > * {
     width: 50%;
-    /* background: pink; */
-  }
-  .schedule-eventDescription:not(:last-of-type) {
-    /* margin-bottom: 0; */
   }
   .schedule-eventDescription {
     margin-left: 4rem;
