@@ -4,7 +4,6 @@
 }
 .navbar-link-active {
   text-decoration: underline;
-  text-decoration-color: var(--clr-white-2);
   text-decoration-thickness: 1px;
 }
 
@@ -23,14 +22,15 @@
   margin: 0.5rem 1rem;
   padding: 0.2rem 0.7rem 0.2rem 0.4rem;
   min-height: 3.5rem;
+  min-width: 3.5rem;
   width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9em;
+  font-size: 1.2em;
   letter-spacing: -0.3rem;
   transform: rotate(-90deg);
-  background: var(--clr-red);
+  background: var(--clr-sec);
   color: var(--clr-white-2);
 }
 .hamburger-overlay {

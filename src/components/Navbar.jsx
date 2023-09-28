@@ -8,7 +8,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   const isAdmin = !!jwt;
   const header = () => {
     if (location.pathname === '/') {
-      return 'home';
+      return 'welcome';
     }
     if (location.pathname.includes('admin')) {
       return location.pathname.slice(7);

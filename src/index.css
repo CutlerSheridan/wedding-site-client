@@ -104,6 +104,16 @@ a:hover {
   text-decoration-color: inherit;
   text-decoration-thickness: 1px;
 }
+.link-onWhite {
+  color: var(--clr-pri);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-pri);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.link-onWhite:hover {
+  text-decoration-thickness: 2px;
+}
 
 button {
   border-radius: 8px;

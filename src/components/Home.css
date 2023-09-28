@@ -1,0 +1,27 @@
+.home-invitedText {
+  font-family: var(--font-1);
+  text-transform: uppercase;
+}
+.home-transitionText {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.home-name {
+  font-size: 5rem;
+  font-family: var(--font-3);
+}
+.home-dateTime {
+  font-family: var(--font-1);
+  text-transform: uppercase;
+}
+
+.home-separator {
+  margin: 2rem auto;
+  width: 82%;
+  height: 1px;
+  background: var(--clr-grey-lightest);
+}
+
+.home-bodyText {
+  font-style: italic;
+}

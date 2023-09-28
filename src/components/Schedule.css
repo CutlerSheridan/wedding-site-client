@@ -1,11 +1,12 @@
 .schedule-dayWrapper {
   position: relative;
-  padding: 3.5rem 2rem 4rem;
-  background: var(--clr-white-2);
-  color: var(--clr-pri);
+  padding: 3.5rem 0 4rem;
 }
 .schedule-dayWrapper:first-of-type {
-  padding-top: 4rem;
+  padding-top: 0;
+}
+.schedule-dayWrapper:last-of-type {
+  padding-bottom: 0;
 }
 .schedule-dayWrapper:not(:first-of-type)::before {
   content: '';
@@ -31,11 +32,6 @@
   letter-spacing: 0.4rem;
 }
 
-.schedule-eventWrapper {
-  margin: auto;
-  max-width: 70ch;
-  color: var(--clr-pri);
-}
 .schedule-eventWrapper:not(:last-of-type) {
   margin-bottom: 3rem;
 }

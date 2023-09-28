@@ -1,4 +1,5 @@
 import EVENTS from '../eventInfo';
+import Cardstock from './Cardstock';
 import './Schedule.css';
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
@@ -81,7 +82,7 @@ const Schedule = () => {
     );
   };
   return (
-    <div>
+    <Cardstock>
       {eventDates.map((date) => {
         return (
           <div key={'date' + date.date} className="schedule-dayWrapper">
@@ -102,7 +103,7 @@ const Schedule = () => {
           </div>
         );
       })}
-    </div>
+    </Cardstock>
   );
 };
 

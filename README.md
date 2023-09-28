@@ -28,6 +28,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- make navlink underlines not extend past final letter
+- ? add stars to top of page
+- ? add fancy borders around page
+- ? add White Star Line logo to schedule
+  - ? or omg replace navbar "&" with logo
 - change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
 - move RSVP page's 'back to search' button to bottom of page
 - make address inputs shift below address label in RSVP on mobile
@@ -49,6 +54,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.0_
+
+- start writing home page
+- refactor some schedule CSS so edge padding is on wrapper, not each day
+- add matte to content-containing rectangles
+- create Cardstock component to reuse matted rectangles
+- refactor Home and Schedule to use Cardstock
 
 _0.8.10_
 
