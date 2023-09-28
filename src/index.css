@@ -1,11 +1,25 @@
 @font-face {
-  font-family: 'Hoeffler Text Regular';
+  font-family: 'Hoeffler Text';
   src: local('Hoeffler Text Regular'),
     url('./assets/Hoefler-Text-Regular.ttf') format('ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Hoeffler Text';
+  src: url('./assets/Hoefler-Text-Black.ttf') format('ttf');
+  font-weight: bold;
 }
 @font-face {
   font-family: 'Christmas Calligraphy';
   src: url('./assets/Christmas-Calligraphy.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Silian Rail';
+  src: url('./assets/Sillian-rail.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Lovelyn';
+  src: url('./assets/lovelyn-regular.ttf') format('truetype');
 }
 
 :root {
@@ -35,16 +49,21 @@
     var(--clr-pri-dark)
   );
 
-  --font-1: 'Hoeffler Text Regular';
+  --font-1: 'Hoeffler Text';
   /* --font-1: 'Cardo', serif; */
   /* --font-1: 'Spectral SC', serif; */
   /* --font-1: 'Playfair Display', serif; */
-  /* --font-2: 'Noto Serif Makasar', serif; */
   --font-2: 'Caladea', serif;
+  /* --font-2: 'Noto Serif Makasar', serif; */
+  /* --font-2: 'Lovelyn'; */
+  /* --font-2: 'Silian Rail'; */
   /* --font-2: Gill Sans; */
   --font-3: 'Christmas Calligraphy';
   /* --font-3: 'Ballet', cursive; */
   /* --font-3: 'Dancing Script', cursive; */
+  --font-4: 'Lovelyn';
+  /* --font-4: 'Silian Rail'; */
+
   --font-1-old: Palatino, serif;
   --font-2-old: Courier, monospace;
   font-synthesis: none;
@@ -133,8 +152,13 @@ h1 {
   margin: 2rem 0;
   left: 0;
   font-family: var(--font-1);
+  /* font-family: var(--font-3); */
   font-size: 5rem;
+  /* font-size: 7.5rem; */
   text-transform: uppercase;
+  /* text-transform: capitalize; */
+  /* text-decoration: underline; */
+  text-decoration-thickness: 1px;
   /* background: var(--clr-white-2); */
   /* color: var(--clr-pri); */
 }

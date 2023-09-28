@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- figure out a style that actually looks fucking good
-- try some cursive fonts, it's just not elegant enough yet
+- clean up CSS
+- write home page
 
 #### TODO LATER
 
@@ -48,6 +48,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.8.9 (merge branch to main)_
+
+- continue improving itinerary
+- make 'add to calendar' button smaller
 
 _0.8.8_
 

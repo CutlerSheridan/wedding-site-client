@@ -51,6 +51,8 @@ const Schedule = () => {
                 timeZone="America/Los_Angeles"
                 debug="true"
                 // buttonStyle="flat"
+                size="2"
+                label="ADD TO CALENDAR"
                 // lightMode="dark"
                 styleLight="
                   --font:var(--font-1);
