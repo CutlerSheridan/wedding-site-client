@@ -2,9 +2,16 @@
   font-family: var(--font-1);
   text-transform: uppercase;
 }
+.home-invitedText,
+.home-dateTime {
+  /* margin: 1rem 0; */
+  font-size: 1.1em;
+}
 .home-transitionText {
   font-size: 0.9em;
   font-style: italic;
+  color: var(--clr-grey-lighter);
+  /* letter-spacing: 0.3rem; */
 }
 .home-name {
   font-size: 5rem;
@@ -24,10 +31,49 @@
 
 .home-bodyText {
   font-style: italic;
+  color: var(--clr-grey-lighter);
+}
+
+.home-imgsRow {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.home-imgContainer {
+  position: relative;
+
+  width: 100%;
+  max-width: 50%;
+}
+/* The below makes them the same height while maintaining
+their individual aspect ratios */
+.home-imgContainer:first-of-type {
+  /* flex: 0.6721; */
+}
+.home-imgContainer:last-of-type {
+  /* flex: 0.7546; */
+}
+.home-imgContainer > img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border: 3px solid var(--clr-grey-lighter);
+  object-fit: cover;
+  /* object-position: left center; */
+  /* box-shadow: 0rem 0rem 1rem 0rem var(--clr-grey-lighter); */
 }
 
 @media only screen and (min-width: 600px) {
   .home-name {
     font-size: 8rem;
   }
+  .home-imgsRow {
+    margin: 3rem 5rem;
+    gap: 3rem;
+  }
 }
+
+/* .6721  1.4879  */
+/* .7546  1.3252 */

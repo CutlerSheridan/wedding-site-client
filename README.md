@@ -7,6 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - write home page
+- add letter-spacing and margins to home page text
 
 #### TODO LATER
 
@@ -35,9 +36,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - ? get rid of headers altogether?
   - if so, just make them invisible so search engines can still find the h1's
 - change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
-- move RSVP page's 'back to search' button to bottom of page
 - make address inputs shift below address label in RSVP on mobile
-- on mobile, adjust top margins of pages now that navbar is gone
 - make Addresses columns equal widths on iOS
 - get dashboard table headers looking better on Safari
 - fix table sizes in safari
@@ -55,6 +54,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.3_
+
+- add photos to home page
+- make photos equal widths and heights while remaining responsive, cropping the originally-wider image horizontally to achieve the new aspect ratio
+- make some text on home page grey
 
 _0.9.2_
 
