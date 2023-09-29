@@ -85,10 +85,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   return (
     <>
       <div className="navbar-wrapper-full">
-        <div className="navbar-names">
-          Cutler & Tyler
-          {/* • */}
-        </div>
+        <div className="navbar-names">Cutler & Tyler</div>
         <div className="navbar-details">January 27, 2024 • Los Angeles</div>
         <nav>{generalBar}</nav>
         {isAdmin || location.pathname.includes('admin') ? (
@@ -96,16 +93,26 @@ const Navbar = ({ jwt, updateJwt }) => {
         ) : (
           <></>
         )}
+        <div className="navbar-separator"></div>
       </div>
 
+      {/* <div className="navbar-separator hamburger-separator"></div> */}
+
+      <div className="hamburger-topBarWrapper">
+        <div className="hamburger-topBar">
+          <button
+            type="button"
+            className="hamburger-button"
+            onClick={() => setHamburgerIsOpen(true)}
+          >
+            |||
+          </button>
+          <div className="navbar-names hamburger-names">C & T</div>
+          <div className="hamburger-topBarFiller"> </div>
+        </div>
+        <div className="navbar-separator hamburger-separator"></div>
+      </div>
       <div className="navbar-wrapper-hamburger">
-        <button
-          type="button"
-          className="hamburger-button"
-          onClick={() => setHamburgerIsOpen(true)}
-        >
-          |||
-        </button>
         <div
           className={`hamburger-overlay ${
             hamburgerIsOpen ? 'hamburger-overlay-visible' : ''

@@ -12,10 +12,10 @@ const Home = () => {
         <p className="home-name">Tyler Reeves</p>
         <p className="home-transitionText">and</p>
         <p className="home-name">Cutler Sheridan</p>
-        <p className="home-transitionText">on</p>
-        <p className="home-dateTime">January 27, 2024</p>
         <p className="home-transitionText">at</p>
         <p className="home-dateTime">4:00pm</p>
+        <p className="home-transitionText">on</p>
+        <p className="home-dateTime">January 27, 2024</p>
         <p className="home-transitionText">in</p>
         <p className="home-dateTime">Los Angeles, California</p>
       </div>

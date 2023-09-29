@@ -10,33 +10,55 @@
   text-decoration-thickness: 1px;
   text-decoration-color: inherit;
 }
-
+.navbar-names {
+  line-height: 1;
+  font-family: var(--font-3);
+}
+.navbar-separator {
+  margin: auto;
+  width: 100%;
+  max-width: 65rem;
+  height: 0.3px;
+  background: var(--clr-grey-lightest);
+}
 /* MOBILE NAV START */
 .navbar-wrapper-full {
   display: none;
+}
+
+.hamburger-topBar {
+  padding: 0.7rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger-names {
+  margin-top: 0.4rem;
+  font-size: 2.8rem;
 }
 .navbar-wrapper-hamburger {
   position: absolute;
   top: 0;
   left: 0;
-  text-align: left;
-  z-index: 2;
+  z-index: 3;
 }
 .hamburger-button {
-  margin: 0.5rem 1rem;
-  padding: 0.2rem 0.7rem 0.2rem 0.4rem;
-  min-height: 3.5rem;
-  min-width: 3.5rem;
-  width: max-content;
+  padding-top: 0.3rem;
+  height: 5rem;
+  width: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2em;
-  letter-spacing: -0.3rem;
+  font-size: 1.5em;
+  font-weight: bold;
   transform: rotate(-90deg);
-  background: var(--clr-grey-lighter);
+  background: transparent;
   color: var(--clr-white-2);
 }
+.hamburger-topBarFiller {
+  width: 5rem;
+}
+
 .hamburger-overlay {
   position: absolute;
   inset: 0;
@@ -82,8 +104,14 @@
 
 /* DESKTOP NAV START */
 @media only screen and (min-width: 600px) {
+  .hamburger-topBarWrapper {
+    display: none;
+  }
+  .navbar-wrapper-hamburger {
+    display: none;
+  }
   .navbar-wrapper-full {
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 3rem 2rem 0 2rem;
     min-height: 5ch;
     display: flex;
     flex-direction: column;
@@ -92,14 +120,23 @@
     gap: 1rem;
     /* background: var(--clr-red); */
   }
-  .navbar-wrapper-hamburger {
+  .hamburger-names {
     display: none;
   }
   .navbar-names {
     line-height: 1;
     font-family: var(--font-3);
     font-size: 6rem;
-    white-space: pre;
+  }
+  .hamburger-separator {
+    display: none;
+  }
+  .navbar-separator {
+    margin: auto;
+    width: 86%;
+    max-width: 65rem;
+    height: 0.5px;
+    background: var(--clr-grey-lightest);
   }
   .navbar-details {
     margin-bottom: 2rem;

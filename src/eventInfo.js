@@ -44,7 +44,7 @@ const EVENTS = [
     'Saturday',
     'January 27, 2024',
     '3:40pm# - 7:00pm',
-    'Black tie.  Titanic-era influence encouraged.',
+    'Black tie mandatory.  Titanic-era influence encouraged.',
     [
       "The ceremony will take place on a boat, which will depart at 4:00pm.  Don't be late or we'll leave without you!",
       'LA gets chilly at night.  Dress accordingly.',

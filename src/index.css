@@ -166,7 +166,7 @@ h1 {
   /* font-size: 7.5rem; */
   text-transform: uppercase;
   /* text-transform: capitalize; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
   /* background: var(--clr-white-2); */
@@ -190,7 +190,7 @@ ul {
 }
 
 .app-contentWrapper {
-  margin: 4rem auto;
+  margin: 2rem auto;
   padding: 0 1.5rem;
   max-width: 80rem;
 }

@@ -25,3 +25,9 @@
 .home-bodyText {
   font-style: italic;
 }
+
+@media only screen and (min-width: 600px) {
+  .home-name {
+    font-size: 8rem;
+  }
+}

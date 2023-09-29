@@ -56,6 +56,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.9.2_
+
+- add initials to mobile navbar
+- restructure mobile top bar so hamburger button and initials are grouped
+- make hamburger button look better
+- add separator to mobile top bar
+- adjust mobile .app-contentWrapper margin
+
 _0.9.1_
 
 - make navlink underlines not extend past final letter
