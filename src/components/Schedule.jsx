@@ -56,9 +56,9 @@ const Schedule = () => {
                   --font:var(--font-1);
                   --btn-background:var(--clr-white-2);
                   --btn-shadow: none;
-                  --btn-border:var(--clr-pri);
-                  --btn-text:var(--clr-pri);
-                  --btn-text-hover:var(--clr-pri);
+                  --btn-border:var(--clr-grey-lighter);
+                  --btn-text:var(--clr-grey-lighter);
+                  --btn-text-hover:var(--clr-grey-lighter);
                   "
               ></AddToCalendarButton>
             </div>

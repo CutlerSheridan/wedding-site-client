@@ -6,14 +6,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- write home page
-- add letter-spacing and margins to home page text
+- decide on RSVP deadline
+- make navbar cursive names link to home
+- ? add fancy borders to Cardstock corners
 
 #### TODO LATER
 
 ##### Features
 
-- add RSVP button to home page
 - add ability in Schedule to link or span more than once per description line
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
@@ -54,6 +54,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.4_
+
+- add letter-spacing and margins to home page text
+- adjust text sizes on home page
+- adjust home page margins and sizes for desktop vs. mobile
+- make days in Schedule grey
+- make home page body links open next page at top of page
 
 _0.9.3_
 

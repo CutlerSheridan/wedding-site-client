@@ -3,21 +3,31 @@
   text-transform: uppercase;
 }
 .home-invitedText,
-.home-dateTime {
+.home-detailsText {
   /* margin: 1rem 0; */
   font-size: 1.1em;
+  letter-spacing: 0.15rem;
 }
 .home-transitionText {
+  margin: 0.5rem auto;
   font-size: 0.9em;
   font-style: italic;
   color: var(--clr-grey-lighter);
-  /* letter-spacing: 0.3rem; */
+  /* letter-spacing: 0.1rem; */
+}
+.home-transitionTextPreNames {
+  margin-bottom: 3.3rem;
 }
 .home-name {
   font-size: 5rem;
   font-family: var(--font-3);
+  /* background: pink; */
+  line-height: 1;
 }
-.home-dateTime {
+.home-transitionTextPostNames {
+  margin-top: 1.8rem;
+}
+.home-detailsText {
   font-family: var(--font-1);
   text-transform: uppercase;
 }
@@ -30,8 +40,10 @@
 }
 
 .home-bodyText {
+  margin: 1rem auto;
   font-style: italic;
-  color: var(--clr-grey-lighter);
+  /* color: var(--clr-grey-lighter); */
+  font-size: 1.8rem;
 }
 
 .home-imgsRow {
@@ -66,8 +78,22 @@ their individual aspect ratios */
 }
 
 @media only screen and (min-width: 600px) {
+  .home-invitedText,
+  .home-detailsText {
+    font-size: 1.1em;
+  }
+  .home-transitionText {
+    margin: 1rem auto;
+    font-size: 1em;
+  }
+  .home-transitionTextPreNames {
+    margin-bottom: 4rem;
+  }
   .home-name {
     font-size: 8rem;
+  }
+  .home-transitionTextPostNames {
+    margin-top: 2.2rem;
   }
   .home-imgsRow {
     margin: 3rem 5rem;

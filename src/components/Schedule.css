@@ -30,6 +30,7 @@
   font-size: 0.9em;
   font-family: var(--font-2);
   letter-spacing: 0.4rem;
+  color: var(--clr-grey-lighter);
 }
 
 .schedule-eventWrapper:not(:last-of-type) {
