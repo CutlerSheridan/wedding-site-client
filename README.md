@@ -6,8 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- decide on RSVP deadline
-- make navbar cursive names link to home
 - ? add fancy borders to Cardstock corners
 
 #### TODO LATER
@@ -54,6 +52,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.5_
+
+- change RSVP deadline
+- make navbar cursive names link to home
 
 _0.9.4_
 

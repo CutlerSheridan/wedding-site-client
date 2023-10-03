@@ -13,6 +13,10 @@
 .navbar-names {
   line-height: 1;
   font-family: var(--font-3);
+  cursor: pointer;
+}
+.navbar-details {
+  cursor: pointer;
 }
 .navbar-separator {
   margin: auto;

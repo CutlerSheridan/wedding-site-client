@@ -37,7 +37,7 @@ const Home = () => {
         >
           RSVP here
         </Link>{' '}
-        by November 5th.
+        by December 17th.
       </p>
       <p className="home-bodyText">
         More details can be found on the{' '}
@@ -48,8 +48,9 @@ const Home = () => {
             window.scroll(0, 0);
           }}
         >
-          full itinerary.
+          full itinerary
         </Link>
+        .
       </p>
       <div className="home-imgsRow">
         <div className="home-imgContainer">

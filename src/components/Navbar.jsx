@@ -1,10 +1,11 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = ({ jwt, updateJwt }) => {
   const location = useLocation();
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
+  const navigate = useNavigate();
   const isAdmin = !!jwt;
   const header = () => {
     if (location.pathname === '/') {
@@ -81,12 +82,21 @@ const Navbar = ({ jwt, updateJwt }) => {
       )} */}
     </>
   );
+  const goHome = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+  };
 
   return (
     <>
       <div className="navbar-wrapper-full">
-        <div className="navbar-names">Cutler & Tyler</div>
-        <div className="navbar-details">January 27, 2024 • Los Angeles</div>
+        <div className="navbar-names" onClick={goHome}>
+          Cutler & Tyler
+        </div>
+        <div className="navbar-details" onClick={goHome}>
+          January 27, 2024 • Los Angeles
+        </div>
         <nav>{generalBar}</nav>
         {isAdmin || location.pathname.includes('admin') ? (
           <nav>{adminBar}</nav>
@@ -107,7 +117,9 @@ const Navbar = ({ jwt, updateJwt }) => {
           >
             |||
           </button>
-          <div className="navbar-names hamburger-names">C & T</div>
+          <div className="navbar-names hamburger-names" onClick={goHome}>
+            C & T
+          </div>
           <div className="hamburger-topBarFiller"> </div>
         </div>
         <div className="navbar-separator hamburger-separator"></div>
