@@ -1,14 +1,84 @@
 .cardstock-outerContainer {
+  --corner-margin: 2px;
+  --corner-size-top: 8rem;
+  --corner-size-bottom: 4rem;
+  position: relative;
   padding: 0.5rem;
   width: 100%;
   background: var(--clr-white-2);
   color: var(--clr-pri);
 }
 .cardstock-innerContainer {
+  position: relative;
   padding: 4rem 1.2rem;
   width: 100%;
   background: var(--clr-white-2);
-  /* border: 0.5rem solid var(--clr-white-2); */
+  /* border: 0.3rem solid var(--clr-white-2); */
   border: 0.3rem solid var(--clr-grey-lighter);
-  /* border: .5rem solid var(--clr-pri); */
+  /* border: .3rem solid var(--clr-pri); */
+}
+
+/* CORNERS START */
+.cardstock-outerContainer::before {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--corner-margin) + 0.8rem);
+  left: calc(var(--corner-margin) + 0.8rem);
+  width: var(--corner-size-bottom);
+  height: var(--corner-size-bottom);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_bottomLeft.png);
+  background-size: contain;
+  z-index: 1;
+}
+.cardstock-outerContainer::after {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--corner-margin) + 0.8rem);
+  right: calc(var(--corner-margin) + 0.8rem);
+  width: var(--corner-size-bottom);
+  height: var(--corner-size-bottom);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_bottomRight.png);
+  background-size: contain;
+  z-index: 1;
+}
+.cardstock-innerContainer::before {
+  content: '';
+  position: absolute;
+  top: var(--corner-margin);
+  left: var(--corner-margin);
+  width: var(--corner-size-top);
+  height: var(--corner-size-top);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_topLeft.png);
+  background-size: contain;
+  /* filter: grayscale(100) brightness(0) invert(0.49); */
+}
+.cardstock-innerContainer::after {
+  content: '';
+  position: absolute;
+  top: var(--corner-margin);
+  right: var(--corner-margin);
+  width: var(--corner-size-top);
+  height: var(--corner-size-top);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_topRight.png);
+  background-size: contain;
+  /* filter: grayscale(100) brightness(0) invert(0.49); */
+}
+/* CORNERS END */
+
+@media only screen and (min-width: 600px) {
+  .cardstock-outerContainer {
+    --corner-margin: 2px;
+    --corner-size-top: 13rem;
+    --corner-size-bottom: 8rem;
+  }
+  .cardstock-innerContainer::before,
+  .cardstock-innerContainer::after,
+  .cardstock-outerContainer::before,
+  .cardstock-outerContainer::after {
+    /* display: none; */
+  }
 }

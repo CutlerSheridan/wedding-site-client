@@ -2,6 +2,9 @@
   font-family: var(--font-1);
   text-transform: uppercase;
 }
+.home-invitedText:first-of-type {
+  margin: 0rem 3rem;
+}
 .home-invitedText,
 .home-detailsText {
   /* margin: 1rem 0; */
@@ -13,7 +16,6 @@
   font-size: 0.9em;
   font-style: italic;
   color: var(--clr-grey-lighter);
-  /* letter-spacing: 0.1rem; */
 }
 .home-transitionTextPreNames {
   margin-bottom: 3.3rem;
@@ -21,7 +23,6 @@
 .home-name {
   font-size: 5rem;
   font-family: var(--font-3);
-  /* background: pink; */
   line-height: 1;
 }
 .home-transitionTextPostNames {
@@ -78,6 +79,9 @@ their individual aspect ratios */
 }
 
 @media only screen and (min-width: 600px) {
+  .home-invitedText:first-of-type {
+    margin: 2.2rem 3rem 0;
+  }
   .home-invitedText,
   .home-detailsText {
     font-size: 1.1em;
@@ -87,13 +91,13 @@ their individual aspect ratios */
     font-size: 1em;
   }
   .home-transitionTextPreNames {
-    margin-bottom: 4rem;
+    margin-bottom: 4.7rem;
   }
   .home-name {
     font-size: 8rem;
   }
   .home-transitionTextPostNames {
-    margin-top: 2.2rem;
+    margin-top: 2.8rem;
   }
   .home-imgsRow {
     margin: 3rem 5rem;

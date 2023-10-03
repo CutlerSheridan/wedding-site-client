@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- ? add fancy borders to Cardstock corners
+- remove fancy corners from navbar
+- add fancy loops besetting names in navbar
 
 #### TODO LATER
 
@@ -52,6 +53,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.6_
+
+- add fancy corners to Cardstock
+- add corners to both versions of navbar
 
 _0.9.5_
 

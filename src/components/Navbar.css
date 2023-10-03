@@ -31,10 +31,41 @@
 }
 
 .hamburger-topBar {
-  padding: 0.7rem 0.7rem;
+  --corner-margin: 3px;
+  --corner-size-top: 5.8rem;
+  position: relative;
+  padding: 0.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.hamburger-topBar::before,
+.hamburger-topBar::after {
+  display: none;
+}
+.hamburger-topBar::before {
+  content: '';
+  position: absolute;
+  top: var(--corner-margin);
+  left: var(--corner-margin);
+  width: var(--corner-size-top);
+  height: var(--corner-size-top);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_topLeft.png);
+  background-size: contain;
+  filter: grayscale(100) brightness(0) invert(0.922);
+}
+.hamburger-topBar::after {
+  content: '';
+  position: absolute;
+  top: var(--corner-margin);
+  right: var(--corner-margin);
+  width: var(--corner-size-top);
+  height: var(--corner-size-top);
+  font-size: 3rem;
+  background: url(../assets/corners/corner_topRight.png);
+  background-size: contain;
+  filter: grayscale(100) brightness(0) invert(0.922);
 }
 .hamburger-names {
   margin-top: 0.4rem;
@@ -44,7 +75,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 999;
 }
 .hamburger-button {
   padding-top: 0.3rem;
@@ -115,6 +146,9 @@
     display: none;
   }
   .navbar-wrapper-full {
+    --corner-margin: 5px;
+    --corner-size-top: 15rem;
+    position: relative;
     padding: 3rem 2rem 0 2rem;
     min-height: 5ch;
     display: flex;
@@ -153,6 +187,31 @@
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+  }
+
+  .navbar-wrapper-full::before {
+    content: '';
+    position: absolute;
+    top: var(--corner-margin);
+    left: var(--corner-margin);
+    width: var(--corner-size-top);
+    height: var(--corner-size-top);
+    font-size: 3rem;
+    background: url(../assets/corners/corner_topLeft.png);
+    background-size: contain;
+    filter: grayscale(100) brightness(0) invert(0.922);
+  }
+  .navbar-wrapper-full::after {
+    content: '';
+    position: absolute;
+    top: var(--corner-margin);
+    right: var(--corner-margin);
+    width: var(--corner-size-top);
+    height: var(--corner-size-top);
+    font-size: 3rem;
+    background: url(../assets/corners/corner_topRight.png);
+    background-size: contain;
+    filter: grayscale(100) brightness(0) invert(0.922);
   }
 }
 /* DESKTOP NAV END */
