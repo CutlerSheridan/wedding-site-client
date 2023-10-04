@@ -45,7 +45,7 @@ const Navbar = ({ jwt, updateJwt }) => {
         Itinerar<span className="navbar-linkLastLetter">y</span>
       </NavLink>
       <NavLink to="/hotels" className={setLinkClass}>
-        Hotel<span className="navbar-linkLastLetter">s</span>
+        Hote<span className="navbar-linkLastLetter">l</span>
       </NavLink>
       <NavLink to="/registry" className={setLinkClass}>
         Registr<span className="navbar-linkLastLetter">y</span>

@@ -52,6 +52,19 @@ const Home = () => {
         </Link>
         .
       </p>
+      <p className="home-bodyText">
+        To reserve a room from our hotel block, please see{' '}
+        <Link
+          to="./itinerary"
+          className="link-onWhite"
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
+          these instructions
+        </Link>
+        .
+      </p>
       <div className="home-imgsRow">
         <div className="home-imgContainer">
           <img

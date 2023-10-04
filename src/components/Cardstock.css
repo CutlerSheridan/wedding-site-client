@@ -1,7 +1,7 @@
 .cardstock-outerContainer {
   --corner-margin: 2px;
   --corner-size-top: 8rem;
-  --corner-size-bottom: 4rem;
+  --corner-size-bottom: 8rem;
   position: relative;
   padding: 0.5rem;
   width: 100%;
@@ -10,7 +10,7 @@
 }
 .cardstock-innerContainer {
   position: relative;
-  padding: 4rem 1.2rem;
+  padding: 4rem 1.5rem 10rem;
   width: 100%;
   background: var(--clr-white-2);
   /* border: 0.3rem solid var(--clr-white-2); */
@@ -73,7 +73,10 @@
   .cardstock-outerContainer {
     --corner-margin: 2px;
     --corner-size-top: 13rem;
-    --corner-size-bottom: 8rem;
+    --corner-size-bottom: 13rem;
+  }
+  .cardstock-innerContainer {
+    padding: 4rem 2rem 10rem;
   }
   .cardstock-innerContainer::before,
   .cardstock-innerContainer::after,

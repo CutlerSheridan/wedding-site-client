@@ -6,8 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- adjust picture spacing on home
-- try making fancy bottom corners same size as top corners
+- add route straight to each picture
 
 #### TODO LATER
 
@@ -53,6 +52,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.8_
+
+- adjust picture spacing on home
+- make fancy bottom corners same size as top corners
+- adjust bottom spacing for pictures
+- adjust bottom spacing for itinerary
 
 _0.9.7_
 
