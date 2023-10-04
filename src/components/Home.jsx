@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Cardstock from './Cardstock';
 import './Home.css';
 import titanicPosterPic from '../assets/engagement-pic.jpg';
 import dressyPic from '../assets/dressy-pic.jpeg';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const getFilename = (fullPath) => {
+    const assetsIndex = fullPath.indexOf('assets');
+    const filenameIndex = assetsIndex + 7;
+    return fullPath.slice(filenameIndex);
+  };
+
   return (
     <Cardstock>
       <div className="home-invitationWrapper">
@@ -70,12 +78,18 @@ const Home = () => {
           <img
             src={dressyPic}
             alt="Cutler and Tyler dressed up drinking martinis by the water"
+            onClick={() => {
+              console.log('dressyPic: ', dressyPic);
+            }}
           />
         </div>
         <div className="home-imgContainer">
           <img
             src={titanicPosterPic}
             alt="Cutler holding Tyler in a pose recreating Jack holding Rose on the Titanic poster behind them"
+            onClick={() => {
+              navigate('/pictures/' + getFilename(titanicPosterPic));
+            }}
           />
         </div>
       </div>

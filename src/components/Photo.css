@@ -1,0 +1,17 @@
+.photo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.photo-container {
+  margin: 1.5rem 0 2.5rem;
+  width: 100%;
+  border: 3px solid var(--clr-grey-lighter);
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.photo-wrapper > a {
+  text-decoration: underline;
+}

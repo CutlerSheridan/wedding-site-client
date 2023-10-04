@@ -15,6 +15,7 @@ import Dashboard from './components/Admin/Dashboard.jsx';
 import AdminAuth from './components/Admin/AdminAuth.jsx';
 import Addresses from './components/Admin/Addresses.jsx';
 import GroupEdit from './components/Admin/GroupEdit/GroupEdit.jsx';
+import Photo from './components/Photo.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const Router = () => {
         {
           path: 'registry',
           element: <Registry />,
+        },
+        {
+          path: 'pictures/:photoPath',
+          element: <Photo />,
         },
         {
           path: 'admin',

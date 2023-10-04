@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add route straight to each picture
+- link both pictures to Photo pages
+- fix img element sources on Photo component so image loads properly upon refresh (currently only loads the first time you click)
 
 #### TODO LATER
 
@@ -52,6 +53,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.9_
+
+- create Photo component
+- add route straight to each picture
 
 _0.9.8_
 

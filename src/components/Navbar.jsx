@@ -14,6 +14,9 @@ const Navbar = ({ jwt, updateJwt }) => {
     if (location.pathname.includes('admin')) {
       return location.pathname.slice(7);
     }
+    if (location.pathname.includes('pictures/')) {
+      return '';
+    }
     return location.pathname.slice(1);
   };
 
