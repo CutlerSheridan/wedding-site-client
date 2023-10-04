@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- remove fancy corners from navbar
-- add fancy loops besetting names in navbar
+- adjust picture spacing on home
+- try making fancy bottom corners same size as top corners
 
 #### TODO LATER
 
@@ -53,6 +53,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.7_
+
+- remove fancy corners from navbar
+- add flourishes besetting names in navbar
 
 _0.9.6_
 

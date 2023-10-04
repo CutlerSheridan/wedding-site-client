@@ -31,45 +31,43 @@
 }
 
 .hamburger-topBar {
-  --corner-margin: 3px;
-  --corner-size-top: 5.8rem;
-  position: relative;
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.hamburger-topBar::before,
-.hamburger-topBar::after {
-  display: none;
-}
-.hamburger-topBar::before {
-  content: '';
-  position: absolute;
-  top: var(--corner-margin);
-  left: var(--corner-margin);
-  width: var(--corner-size-top);
-  height: var(--corner-size-top);
-  font-size: 3rem;
-  background: url(../assets/corners/corner_topLeft.png);
-  background-size: contain;
-  filter: grayscale(100) brightness(0) invert(0.922);
-}
-.hamburger-topBar::after {
-  content: '';
-  position: absolute;
-  top: var(--corner-margin);
-  right: var(--corner-margin);
-  width: var(--corner-size-top);
-  height: var(--corner-size-top);
-  font-size: 3rem;
-  background: url(../assets/corners/corner_topRight.png);
-  background-size: contain;
-  filter: grayscale(100) brightness(0) invert(0.922);
-}
 .hamburger-names {
+  --flourish-width: 4.5rem;
+  /* If flourish_1, use 4.91; if flourish_2, 3.31 */
+  --flourish-height: calc(var(--flourish-width) * 3.31 / 10);
+  --flourish-margin: 1.2rem;
+  --flourish-top-margin: 0.8rem;
+  position: relative;
   margin-top: 0.4rem;
   font-size: 2.8rem;
+  letter-spacing: 0rem;
+}
+.hamburger-names::before {
+  content: '';
+  position: absolute;
+  top: var(--flourish-top-margin);
+  left: calc(-1 * var(--flourish-width) - var(--flourish-margin));
+  width: var(--flourish-width);
+  height: var(--flourish-height);
+  background: url('../assets/flourishes/flourish_2_left.png');
+  background-size: cover;
+  filter: grayscale(100) brightness(0) invert(0.922);
+}
+.hamburger-names::after {
+  content: '';
+  position: absolute;
+  top: var(--flourish-top-margin);
+  right: calc(-1 * var(--flourish-width) - var(--flourish-margin));
+  width: var(--flourish-width);
+  height: var(--flourish-height);
+  background: url('../assets/flourishes/flourish_2_right.png');
+  background-size: cover;
+  filter: grayscale(100) brightness(0) invert(0.922);
 }
 .navbar-wrapper-hamburger {
   position: absolute;
@@ -146,9 +144,6 @@
     display: none;
   }
   .navbar-wrapper-full {
-    --corner-margin: 5px;
-    --corner-size-top: 15rem;
-    position: relative;
     padding: 3rem 2rem 0 2rem;
     min-height: 5ch;
     display: flex;
@@ -156,15 +151,42 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    /* background: var(--clr-red); */
   }
   .hamburger-names {
     display: none;
   }
   .navbar-names {
+    --flourish-width: 11rem;
+    /* If flourish_1, use 4.91; if flourish_2, 3.31 */
+    --flourish-height: calc(var(--flourish-width) * 3.31 / 10);
+    --flourish-margin: 2rem;
+    --flourish-top-margin: 50%;
+    position: relative;
     line-height: 1;
     font-family: var(--font-3);
     font-size: 6rem;
+  }
+  .navbar-names::before {
+    content: '';
+    position: absolute;
+    top: var(--flourish-top-margin);
+    left: calc(-1 * var(--flourish-width) - var(--flourish-margin));
+    width: var(--flourish-width);
+    height: var(--flourish-height);
+    background: url('../assets/flourishes/flourish_2_left.png');
+    background-size: cover;
+    filter: grayscale(100) brightness(0) invert(0.922);
+  }
+  .navbar-names::after {
+    content: '';
+    position: absolute;
+    top: var(--flourish-top-margin);
+    right: calc(-1 * var(--flourish-width) - var(--flourish-margin));
+    width: var(--flourish-width);
+    height: var(--flourish-height);
+    background: url('../assets/flourishes/flourish_2_right.png');
+    background-size: cover;
+    filter: grayscale(100) brightness(0) invert(0.922);
   }
   .hamburger-separator {
     display: none;
@@ -187,31 +209,6 @@
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
-  }
-
-  .navbar-wrapper-full::before {
-    content: '';
-    position: absolute;
-    top: var(--corner-margin);
-    left: var(--corner-margin);
-    width: var(--corner-size-top);
-    height: var(--corner-size-top);
-    font-size: 3rem;
-    background: url(../assets/corners/corner_topLeft.png);
-    background-size: contain;
-    filter: grayscale(100) brightness(0) invert(0.922);
-  }
-  .navbar-wrapper-full::after {
-    content: '';
-    position: absolute;
-    top: var(--corner-margin);
-    right: var(--corner-margin);
-    width: var(--corner-size-top);
-    height: var(--corner-size-top);
-    font-size: 3rem;
-    background: url(../assets/corners/corner_topRight.png);
-    background-size: contain;
-    filter: grayscale(100) brightness(0) invert(0.922);
   }
 }
 /* DESKTOP NAV END */
