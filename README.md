@@ -7,7 +7,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - style RSVP page
-- populate Hotel page
 
 #### TODO LATER
 
@@ -57,6 +56,17 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.10.0_
+
+- make Photo back button navigate to previous page instead of to parent route
+- populate Hotel page
+- find hotel photo
+- figure out hotel information grouping and coloring
+- style hotel page
+- add links and phone numbers
+- move photo outside of hotel Cardstock
+- lessen bottom margin for hotel page
 
 _0.9.12_
 

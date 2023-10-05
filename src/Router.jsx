@@ -37,7 +37,7 @@ const Router = () => {
           element: <Schedule />,
         },
         {
-          path: 'hotels',
+          path: 'hotel',
           element: <Hotels />,
         },
         {

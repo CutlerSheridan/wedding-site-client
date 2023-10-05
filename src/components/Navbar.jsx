@@ -47,7 +47,7 @@ const Navbar = ({ jwt, updateJwt }) => {
       <NavLink to="/itinerary" className={setLinkClass}>
         Itinerar<span className="navbar-linkLastLetter">y</span>
       </NavLink>
-      <NavLink to="/hotels" className={setLinkClass}>
+      <NavLink to="/hotel" className={setLinkClass}>
         Hote<span className="navbar-linkLastLetter">l</span>
       </NavLink>
       <NavLink to="/registry" className={setLinkClass}>
@@ -158,7 +158,7 @@ const Navbar = ({ jwt, updateJwt }) => {
         </div>
       </div>
 
-      <h1>{header()}</h1>
+      {/* <h1>{header()}</h1> */}
     </>
   );
 };

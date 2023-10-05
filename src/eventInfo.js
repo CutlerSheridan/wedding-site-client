@@ -43,7 +43,7 @@ const EVENTS = [
     ],
     'Saturday',
     'January 27, 2024',
-    '3:40pm# - 7:00pm',
+    '3:40pm# – 7:00pm',
     'Black tie mandatory.  Titanic-era influence encouraged.',
     [
       "The ceremony will take place on a boat, which will depart at 4:00pm.  Don't be late or we'll leave without you!",
@@ -59,7 +59,7 @@ const EVENTS = [
     ["Naja's Place", '154 International Blvd.', 'Redondo Beach, CA 90277'],
     'Saturday',
     'January 27, 2024',
-    '7:00pm - 2:00am',
+    '7:00pm – 2:00am',
     'Black tie',
     [
       "Naja's Place has wine and a HUGE selection of beer on tap, but no liquor, so get your fill on the boat.",

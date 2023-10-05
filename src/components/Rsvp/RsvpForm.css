@@ -31,7 +31,7 @@
   grid-template-columns: 1fr 1fr;
   max-width: 60rem;
   background: var(--clr-white-2);
-  border: 3px dotted var(--clr-black);
+  /* border: 3px dotted var(--clr-black); */
   border-radius: 1rem;
   /* color: var(--clr-white-2); */
   color: var(--clr-black);
@@ -61,7 +61,7 @@
   --width: 4rem;
   position: absolute;
   content: '';
-  left: calc(-1 * var(--width) / 2 - 3px);
+  left: calc(-1 * var(--width) / 2);
   top: calc(50% - (var(--width) / 2));
   width: calc(var(--width) / 2);
   height: var(--width);

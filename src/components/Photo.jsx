@@ -20,11 +20,19 @@ const Photo = () => {
       ) : (
         <Loading />
       )}
-      <Link to="..">Go back</Link>
+      <Link
+        to=""
+        onClick={(e) => {
+          e.preventDefault();
+          navigate(-1);
+        }}
+      >
+        Go back
+      </Link>
       <button
         type="button"
         className="photo-backButton"
-        onClick={() => navigate('..')}
+        onClick={() => navigate(-1)}
       >
         Go back
       </button>
