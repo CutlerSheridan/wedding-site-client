@@ -53,6 +53,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.9.11_
+
+- adjust Home top and bottom margins
+- adjust Cardstock margins
+- adjust Schedule event description margins/padding
+
 _0.9.10_
 
 - fix img element sources on Photo component so image loads properly upon refresh (currently only loads the first time you click)

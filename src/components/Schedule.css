@@ -71,6 +71,7 @@
 }
 .schedule-eventDescription {
   margin: auto;
+  padding: 0 0.5rem;
   text-align: left;
   max-width: 60ch;
   font-size: 0.75em;
@@ -119,6 +120,7 @@
     width: 50%;
   }
   .schedule-eventDescription {
-    margin-left: 4rem;
+    margin-left: 3rem;
+    padding: 0;
   }
 }

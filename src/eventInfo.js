@@ -77,7 +77,7 @@ const EVENTS = [
     'Casual',
     [
       'A chill brunch in a park for anyone still in town.',
-      "We will have some basic stuff like bagels, cream cheese, fruit, orange juice, cheese, butter, etc.  If you'd prefer, feel free to get food elsewhere and bring it here!",
+      "We will have some basic stuff like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it here!",
     ],
     true,
     ['2024-01-28', '2024-01-28', '13:00', '15:00']

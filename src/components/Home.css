@@ -78,7 +78,7 @@ their individual aspect ratios */
 
 @media only screen and (min-width: 600px) {
   .home-invitedText:first-of-type {
-    margin: 2.2rem 3rem 0;
+    margin: 0rem 3rem 0;
   }
   .home-invitedText,
   .home-detailsText {
