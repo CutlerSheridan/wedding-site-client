@@ -41,7 +41,6 @@ const Hotels = () => {
           </p>
         </div>
         <div className="hotel-infoGroup">
-          {/* <p className="hotel-infoLabel">To Book:</p> */}
           <p className="hotel-info">Booking options</p>
           <ul className="hotel-list">
             <li className="hotel-infoListItem">
@@ -82,11 +81,15 @@ const Hotels = () => {
           </p>
           <p className="hotel-infoDescription"></p>
         </div>
-        <div className="hotel-infoGroup">
-          <p className="hotel-infoLabel"></p>
-          <p className="hotel-info"></p>
-          <p className="hotel-infoDescription"></p>
-        </div>
+
+        <div className="hotel-separator"></div>
+
+        {/* <h2 className="hotel-name">Alternate options</h2> */}
+        <p className="hotel-additionalInfo">
+          Additionally, there are plenty of other hotels in the area, many of
+          which are very close to the festivities. Be sure not to book a hotel
+          in Los Angeles as it is 30 – 40 minutes away from Redondo Beach.
+        </p>
       </Cardstock>
     </>
   );

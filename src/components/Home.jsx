@@ -63,7 +63,7 @@ const Home = () => {
       <p className="home-bodyText">
         To reserve a room from our hotel block, please see{' '}
         <Link
-          to="./itinerary"
+          to="./hotel"
           className="link-onWhite"
           onClick={() => {
             window.scroll(0, 0);

@@ -15,13 +15,11 @@
   border: 3px solid var(--clr-pri);
 }
 .hotel-name {
-  /* margin-bottom: 0.3rem; */
   font-family: var(--font-1);
   font-size: 2.5rem;
   text-transform: uppercase;
 }
 .hotel-address {
-  /* padding-bottom: 0.5rem; */
   font-size: 0.9em;
   font-family: var(--font-2);
   letter-spacing: 0.35rem;
@@ -39,9 +37,6 @@
 .hotel-infoGroup {
   margin: 3rem 1.5rem 0;
 }
-.hotel-infoGroup:last-of-type {
-  margin-bottom: -3rem;
-}
 .hotel-infoGroup > * {
   margin-left: 0;
   text-align: left;
@@ -49,8 +44,6 @@
 .hotel-infoLabel {
   font-family: var(--font-2);
   font-size: 0.9em;
-  /* color: var(--clr-grey-lighter); */
-  /* text-transform: uppercase; */
 }
 .hotel-info {
   margin: 0rem 0 0.3rem;
@@ -94,4 +87,17 @@
   .hotel-infoGroup {
     margin: 2.5rem 5rem 0;
   }
+}
+
+.hotel-separator {
+  margin: 5rem auto;
+  width: 85%;
+  height: 1px;
+  background: var(--clr-grey-lighter);
+}
+
+.hotel-additionalInfo {
+  padding: 0 1.5rem;
+  font-size: 0.75em;
+  letter-spacing: 0.2rem;
 }

@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- style RSVP page
+- make Hotel page fucking look good
 
 #### TODO LATER
 
@@ -28,6 +28,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- style RSVP page
 - style error page
 - style admin pages
 - style buttons
@@ -56,6 +57,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.10.1_
+
+- delete empty hotel info elements and revert bottom margin in response
+- add additional info at bottom of hotel page
 
 _0.10.0_
 
