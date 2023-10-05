@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make all non-nav links underlined with thicker underline on hover
+- style RSVP page
+- populate Hotel page
 
 #### TODO LATER
 
@@ -20,6 +21,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
+- Home photos should be focus-able; maybe swap navigation to a transparent button on top of each picture
 - in GroupForm, should table toggles auto-update in database or only update on save?
 - use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
@@ -27,8 +29,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- style error page
+- style admin pages
+- style buttons
+- decide if Photo page should use "go back" link or button
 - ? add stars to top of page
-- ? add fancy borders around page
 - ? add White Star Line logo to schedule
   - ? or omg replace navbar "&" with logo
 - ? get rid of headers altogether?
@@ -52,6 +57,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.9.12_
+
+- adjust default height of Photo component
+- make all non-nav links underlined with thicker underline on hover
+- simplify link styling for default links, links on white, and navbar links
+- add "go back" button to Photos page in addition to link
 
 _0.9.11_
 

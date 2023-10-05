@@ -1,9 +1,10 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 import './Photo.css';
 
 const Photo = () => {
   const { photoPath } = useParams();
+  const navigate = useNavigate();
 
   return (
     <div className="photo-wrapper">
@@ -12,14 +13,21 @@ const Photo = () => {
           <img
             className="photo"
             src={'/src/assets/photos/' + photoPath + '.jpg'}
-            height="500"
-            width="800"
+            height="1800"
+            width="1200"
           />
         </div>
       ) : (
         <Loading />
       )}
       <Link to="..">Go back</Link>
+      <button
+        type="button"
+        className="photo-backButton"
+        onClick={() => navigate('..')}
+      >
+        Go back
+      </button>
     </div>
   );
 };

@@ -13,5 +13,8 @@
   vertical-align: middle;
 }
 .photo-wrapper > a {
-  text-decoration: underline;
+  margin: 2rem auto;
+}
+.photo-backButton {
+  margin: auto;
 }

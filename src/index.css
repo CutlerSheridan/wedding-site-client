@@ -85,7 +85,6 @@
   text-align: center;
 }
 body {
-  /* padding-bottom: 5rem; */
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -93,26 +92,19 @@ body {
   letter-spacing: 0.1rem;
 }
 a {
-  color: var(--clr-white-2);
-  text-decoration: inherit;
-  text-decoration-color: transparent;
-  text-underline-offset: 0.4em;
+  color: inherit;
+  text-decoration-color: inherit;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
   transition: all 0.1s;
 }
 a:hover {
   text-decoration: underline;
   text-decoration-color: inherit;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
 }
 .link-onWhite {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: inherit;
-  text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-}
-.link-onWhite:hover {
-  text-decoration-thickness: 2px;
 }
 
 button {
