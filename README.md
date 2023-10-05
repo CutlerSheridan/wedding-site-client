@@ -58,6 +58,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.10.2_
+
+- add Cardstock to Registry
+- write better copy for Registry
+- style Registry
+
 _0.10.1_
 
 - delete empty hotel info elements and revert bottom margin in response

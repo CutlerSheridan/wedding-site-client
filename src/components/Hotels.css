@@ -13,6 +13,7 @@
   object-fit: cover;
   /* border: 3px solid var(--clr-grey-lighter); */
   border: 3px solid var(--clr-pri);
+  background: var(--clr-white-2);
 }
 .hotel-name {
   font-family: var(--font-1);

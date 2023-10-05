@@ -1,0 +1,23 @@
+.registry-wrapper {
+  margin: 3rem 3rem -2.5rem;
+}
+.registry-text {
+  font-size: 1.6rem;
+  max-width: 45ch;
+  /* text-align: justify; */
+  /* text-align-last: center; */
+}
+.registry-text:last-of-type {
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 600px) {
+  .registry-wrapper {
+    margin: 5rem 5rem 3.5rem;
+  }
+  .registry-text {
+    font-size: 2rem;
+  }
+  .registry-text:last-of-type {
+    margin-top: 3rem;
+  }
+}
