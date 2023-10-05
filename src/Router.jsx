@@ -45,6 +45,10 @@ const Router = () => {
           element: <Registry />,
         },
         {
+          path: 'pictures',
+          element: <Photo />,
+        },
+        {
           path: 'pictures/:photoPath',
           element: <Photo />,
         },

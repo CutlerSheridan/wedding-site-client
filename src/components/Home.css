@@ -73,8 +73,7 @@ their individual aspect ratios */
   height: 100%;
   vertical-align: middle;
   object-fit: cover;
-  /* object-position: left center; */
-  /* box-shadow: 0rem 0rem 1rem 0rem var(--clr-grey-lighter); */
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {

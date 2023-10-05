@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Cardstock from './Cardstock';
 import './Home.css';
-import titanicPosterPic from '../assets/engagement-pic.jpg';
-import dressyPic from '../assets/dressy-pic.jpeg';
+// import titanicPosterPic from '../../public/engagement-pic.jpg';
+// import dressyPic from '../assets/dressy-pic.jpeg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -76,19 +76,21 @@ const Home = () => {
       <div className="home-imgsRow">
         <div className="home-imgContainer">
           <img
-            src={dressyPic}
+            src="/src/assets/photos/dressy-pic.jpg"
             alt="Cutler and Tyler dressed up drinking martinis by the water"
             onClick={() => {
-              console.log('dressyPic: ', dressyPic);
+              navigate('/pictures/dressy-pic');
+              window.scroll(0, 0);
             }}
           />
         </div>
         <div className="home-imgContainer">
           <img
-            src={titanicPosterPic}
+            src="/src/assets/photos/engagement-pic.jpg"
             alt="Cutler holding Tyler in a pose recreating Jack holding Rose on the Titanic poster behind them"
             onClick={() => {
-              navigate('/pictures/' + getFilename(titanicPosterPic));
+              navigate('/pictures/engagement-pic');
+              window.scroll(0, 0);
             }}
           />
         </div>

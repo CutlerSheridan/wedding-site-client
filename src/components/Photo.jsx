@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import Loading from './Loading';
 import './Photo.css';
 
 const Photo = () => {
@@ -6,9 +7,18 @@ const Photo = () => {
 
   return (
     <div className="photo-wrapper">
-      <div className="photo-container">
-        <img className="photo" src={'/src/assets/' + photoPath} />
-      </div>
+      {photoPath ? (
+        <div className="photo-container">
+          <img
+            className="photo"
+            src={'/src/assets/photos/' + photoPath + '.jpg'}
+            height="500"
+            width="800"
+          />
+        </div>
+      ) : (
+        <Loading />
+      )}
       <Link to="..">Go back</Link>
     </div>
   );
