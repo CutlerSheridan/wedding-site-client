@@ -1,14 +1,18 @@
 .error404 {
-  margin: 1rem;
-  color: red;
+  margin: 4.5rem 1rem -2.5rem;
+  color: var(--clr-red);
 }
-.error404 > a {
-  margin: 0.7rem auto;
+.error-type {
+  margin-bottom: 0;
+}
+.error-link {
+  margin: 3rem auto 0;
   width: max-content;
   display: block;
-  color: var(--clr-white-2);
-  text-decoration: underline;
+  color: var(--clr-pri);
 }
-.error404 > a:hover {
-  color: var(--clr-grey-lightest);
+@media only screen and (min-width: 600px) {
+  .error404 {
+    margin: 1rem 1rem 0.5rem;
+  }
 }

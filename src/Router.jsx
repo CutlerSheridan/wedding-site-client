@@ -22,7 +22,11 @@ const Router = () => {
     {
       path: '/',
       element: <App />,
-      errorElement: <Error404 />,
+      errorElement: (
+        <App>
+          <Error404 />
+        </App>
+      ),
       children: [
         {
           index: true,

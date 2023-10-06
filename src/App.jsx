@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 
-function App() {
+const App = ({ children }) => {
   const [jwt, setJwt] = useState(localStorage.getItem('jwt'));
 
   const updateJwt = (jwtData) => {
@@ -23,10 +23,10 @@ function App() {
     <div className="app-pageWrapper">
       <Navbar jwt={jwt} updateJwt={updateJwt} />
       <div className="app-contentWrapper">
-        <Outlet context={{ jwt, updateJwt }} />
+        {children ?? <Outlet context={{ jwt, updateJwt }} />}
       </div>
     </div>
   );
-}
+};
 
 export default App;

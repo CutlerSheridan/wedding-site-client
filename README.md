@@ -29,7 +29,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Style
 
 - style RSVP page
-- style error page
 - style admin pages
 - style buttons
 - decide if Photo page should use "go back" link or button
@@ -57,6 +56,12 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.10.3_
+
+- add Cardstock to error 404 page
+- style Error 404 page
+- refactor routes and App.jsx to insert Error page into normal site layout
 
 _0.10.2_
 

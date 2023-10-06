@@ -57,7 +57,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   );
   const adminBar = (
     <>
-      {/* <NavLink to="/admin/dashboard" className={setLinkClass}>
+      <NavLink to="/admin/dashboard" className={setLinkClass}>
         Dashboard
       </NavLink>
       <NavLink to="/admin/addresses" className={setLinkClass}>
@@ -82,7 +82,7 @@ const Navbar = ({ jwt, updateJwt }) => {
         </a>
       ) : (
         ''
-      )} */}
+      )}
     </>
   );
   const goHome = () => {
