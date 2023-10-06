@@ -60,6 +60,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.10.5 (branch: booking-grid; merge branch to main)_
+
+- turn booking options list into grid
+- make grid one column on mobile, three on desktop
+- remove links from options and add buttons
+- add separators between booking options
+- add lines to the left of other Hotel infoGroups
+- link up buttons to behaviors
+
 _0.10.4_
 
 - make hotel name cursive

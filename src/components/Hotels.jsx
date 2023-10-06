@@ -40,44 +40,61 @@ const Hotels = () => {
             late.
           </p>
         </div>
-        <div className="hotel-infoGroup">
+        <div className="hotel-bookingOptions">
           <p className="hotel-info">Booking options</p>
-          <ul className="hotel-list">
-            <li className="hotel-infoListItem">
-              Book directly through{' '}
-              <Link
-                to="https://be.synxis.com/?Hotel=29023&Chain=11910&arrive=2024-01-26&depart=2024-01-28&adult=1&child=0&group=7142402"
-                className="link-onWhite"
+          <div className="hotel-list">
+            <div className="hotel-infoListItem">
+              <div className="hotel-listItemText">
+                Book directly through our custom link.
+              </div>
+              <button
+                type="button"
+                className="hotel-listItemButton"
+                onClick={() => {
+                  location.href =
+                    'https://be.synxis.com/?Hotel=29023&Chain=11910&arrive=2024-01-26&depart=2024-01-28&adult=1&child=0&group=7142402';
+                }}
               >
-                this link
-              </Link>
-            </li>
-            <li className="hotel-infoListItem">
-              Use <span className="hotel-infoEmphasis">code 7142402</span> on
-              the{' '}
-              <Link
-                to="https://www.hotelportofino.com/"
-                className="link-onWhite"
+                Click Here
+              </button>
+            </div>
+            <div className="hotel-infoListItem">
+              <div className="hotel-listItemText">
+                Call and <span className="hotel-infoEmphasis">press 5</span>;
+                ask for a room in the Reeves/Sheridan wedding block.
+              </div>
+              <button
+                type="button"
+                className="hotel-listItemButton"
+                onClick={() => {
+                  location.href = 'tel:3104214195';
+                }}
+              >
+                310 421 4195
+              </button>
+            </div>
+            <div className="hotel-infoListItem">
+              <div className="hotel-listItemText">
+                Use <span className="hotel-infoEmphasis">code 7142402</span> on
+                the hotel's general website.
+              </div>
+              <button
+                type="button"
+                className="hotel-listItemButton"
+                onClick={() => {
+                  location.href = 'https://www.hotelportofino.com/';
+                }}
               >
                 Portofino Website
-              </Link>
-            </li>
-            <li className="hotel-infoListItem">
-              Call{' '}
-              <Link to="tel:3104214195" className="link-onWhite">
-                310 421 4195
-              </Link>{' '}
-              and <span className="hotel-infoEmphasis">press 5</span>; ask for a
-              room in the Reeves/Sheridan wedding block
-            </li>
-          </ul>
+              </button>
+            </div>
+          </div>
           <p className="hotel-infoDescription">
             If the block is out of rooms or does not have the type of room you
             want, try calling and asking for{' '}
             <span className="hotel-infoEmphasis">Akira Starks</span>. If she is
             unavailable, ask for{' '}
-            <span className="hotel-infoEmphasis">Rain Villanueva</span>. One of
-            them will try to help you.
+            <span className="hotel-infoEmphasis">Rain Villanueva</span>.
           </p>
           <p className="hotel-infoDescription"></p>
         </div>

@@ -18,7 +18,7 @@
 .hotel-name {
   margin-bottom: -0.4rem;
   font-family: var(--font-3);
-  font-size: 5rem;
+  font-size: 4.3rem;
   /* text-transform: uppercase; */
 }
 .hotel-address {
@@ -31,13 +31,26 @@
   .hotel-imgContainer {
     width: 100%;
   }
+  .hotel-name {
+    font-size: 6rem;
+  }
   .hotel-address {
     letter-spacing: 0.4rem;
   }
 }
 
 .hotel-infoGroup {
-  margin: 3rem 1.5rem 0;
+  position: relative;
+  margin: 3rem 2.5rem 0;
+}
+.hotel-infoGroup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  width: 1px;
+  height: 100%;
+  background: var(--clr-grey-lighter);
 }
 .hotel-infoGroup > * {
   margin-left: 0;
@@ -53,41 +66,90 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.hotel-list {
-  margin: 1rem 0 1.3rem;
-}
-.hotel-infoListItem {
-  position: relative;
-  margin-left: 2rem;
-  font-family: var(--font-2);
-  font-size: 0.9em;
-  list-style: none;
-  letter-spacing: 0.2rem;
-  text-align: left;
-}
-.hotel-infoListItem:not(:last-of-type) {
-  margin-bottom: 1.2rem;
-}
-.hotel-infoListItem::before {
-  content: '•';
-  position: absolute;
-  top: -0.3rem;
-  left: -2rem;
-  font-size: 2.5rem;
-}
-.hotel-infoEmphasis {
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-}
 .hotel-infoDescription {
   font-size: 0.75em;
   font-style: italic;
   letter-spacing: 0.2rem;
   color: var(--clr-grey-lighter);
 }
+
+.hotel-bookingOptions {
+  margin: 3rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: pink; */
+}
+.hotel-bookingOptions > .hotel-info {
+  font-size: 2.5rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 2px; */
+}
+.hotel-list {
+  margin: 1rem auto 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  /* background: red; */
+}
+.hotel-infoListItem {
+  /* padding: 1.5rem 0.7rem; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.9em;
+  list-style: none;
+  letter-spacing: 0.2rem;
+  /* background: var(--clr-pri); */
+  /* color: var(--clr-white-2); */
+  /* border: 3px solid var(--clr-pri); */
+}
+.hotel-infoListItem:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  bottom: -1.7rem;
+  /* right: */
+  width: 85%;
+  height: 1px;
+  background: var(--clr-grey-lighter);
+}
+/* .hotel-infoListItem::before {
+  content: '•';
+  position: absolute;
+  top: -0.3rem;
+  left: -2rem;
+  font-size: 2.5rem;
+} */
+.hotel-infoEmphasis {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
 @media only screen and (min-width: 600px) {
   .hotel-infoGroup {
-    margin: 2.5rem 5rem 0;
+    margin: 3.5rem 5rem 0;
+  }
+  .hotel-bookingOptions {
+    margin: 2.5rem 2rem 0;
+  }
+  .hotel-bookingOptions > .hotel-info {
+    /* font-size: 2.7rem; */
+  }
+  .hotel-infoListItem:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    width: 1px;
+    height: 100%;
+  }
+  .hotel-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -108,7 +108,7 @@ a:hover {
 }
 
 button {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border: 1px solid transparent;
   padding: 0.5rem 0.7rem;
   font-size: 1em;
@@ -173,12 +173,10 @@ ul {
   margin: 0 auto;
   max-width: 50ch;
   text-align: left;
+  list-style: inside;
 }
 input {
   text-align: left;
-}
-ul {
-  list-style: inside;
 }
 
 .app-contentWrapper {
