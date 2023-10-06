@@ -16,15 +16,16 @@
   background: var(--clr-white-2);
 }
 .hotel-name {
-  font-family: var(--font-1);
-  font-size: 2.5rem;
-  text-transform: uppercase;
+  margin-bottom: -0.4rem;
+  font-family: var(--font-3);
+  font-size: 5rem;
+  /* text-transform: uppercase; */
 }
 .hotel-address {
   font-size: 0.9em;
   font-family: var(--font-2);
   letter-spacing: 0.35rem;
-  /* color: var(--clr-grey-lighter); */
+  color: var(--clr-grey-lighter);
 }
 @media only screen and (min-width: 600px) {
   .hotel-imgContainer {
@@ -53,7 +54,7 @@
   text-transform: uppercase;
 }
 .hotel-list {
-  margin: 0.5rem 0 0.8rem;
+  margin: 1rem 0 1.3rem;
 }
 .hotel-infoListItem {
   position: relative;

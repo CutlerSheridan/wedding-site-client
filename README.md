@@ -7,6 +7,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - make Hotel page fucking look good
+  - maybe make 'booking options' bigger and 'hotel portofino' also bigger?
+  - try making booking options into grid
 
 #### TODO LATER
 
@@ -28,6 +30,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- ? add flourish to Error 404 page
 - style RSVP page
 - style admin pages
 - style buttons
@@ -56,6 +59,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.10.4_
+
+- make hotel name cursive
+- adjust booking options spacing
 
 _0.10.3_
 
