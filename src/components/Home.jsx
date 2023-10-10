@@ -61,7 +61,7 @@ const Home = () => {
         .
       </p>
       <p className="home-bodyText">
-        To reserve a room from our hotel block, please see{' '}
+        To reserve a room from our hotel block, please follow{' '}
         <Link
           to="./hotel"
           className="link-onWhite"

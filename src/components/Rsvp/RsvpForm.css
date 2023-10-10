@@ -1,4 +1,7 @@
 /* RSVP AUTH START */
+.rsvpAuth-instructions {
+  max-width: 55ch;
+}
 .rsvpAuth-inputAndButtonWrapper {
   margin: 2rem auto;
   display: flex;
@@ -24,76 +27,67 @@
 }
 
 .rsvp-formWrapper {
+  --border-width: 1px;
+  --hole-width: 3.5rem;
+  --ticket-margin-left: 3rem;
   position: relative;
   margin: 0rem auto;
   /* padding: 2.6rem 2.5rem; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  width: 95%;
   max-width: 60rem;
-  background: var(--clr-white-2);
-  /* border: 3px dotted var(--clr-black); */
+  background: var(--clr-white);
+  border: var(--border-width) solid var(--clr-black);
   border-radius: 1rem;
-  /* color: var(--clr-white-2); */
-  color: var(--clr-black);
+  /* box-shadow: 0 0 7px 0.5px var(--clr-grey-lighter); */
 }
 @media only screen and (min-width: 600px) {
   .rsvp-formWrapper {
+    --hole-width: 5rem;
+    --ticket-margin-left: 4rem;
     /* padding: 2.6rem 2rem 2.6rem 4rem; */
-    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    grid-template-columns: 7fr 4fr;
   }
   .rsvp-formWrapper-address {
     grid-template-columns: 1fr 1fr;
   }
 }
-.rsvp-formWrapper::before {
-  --width: 3.5rem;
-  position: absolute;
-  content: '';
-  left: calc(-1 * var(--width) / 2);
-  top: calc(50% - (var(--width) / 2));
-  width: var(--width);
-  height: var(--width);
-  background: var(--clr-pri);
-  border: 3px solid var(--clr-white-2);
-  border-radius: 3rem;
-}
-.rsvp-formWrapper::after {
-  --width: 4rem;
-  position: absolute;
-  content: '';
-  left: calc(-1 * var(--width) / 2);
-  top: calc(50% - (var(--width) / 2));
-  width: calc(var(--width) / 2);
-  height: var(--width);
-  background: var(--clr-pri);
-}
-@media only screen and (min-width: 600px) {
-  .rsvp-formWrapper::before {
-    --width: 5rem;
-  }
-  .rsvp-formWrapper::after {
-    --width: 6rem;
-  }
-}
 
 /* LEFT SIDE START */
 .rsvp-eventWrapper {
+  position: relative;
   /* padding-right: 0.5rem; */
-  margin: 2.6rem 1rem 2.6rem 2.5rem;
+  margin: 2.6rem 1rem 2.6rem var(--ticket-margin-left);
   /* padding: 2.6rem 0 2.6rem 2.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.4rem;
+}
+.rsvp-eventWrapper::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - var(--hole-width) / 2);
+  left: calc(-1 * var(--hole-width) / 2 - var(--ticket-margin-left) - 1px);
+  width: var(--hole-width);
+  height: var(--hole-width);
+  border: var(--border-width) solid var(--clr-black);
+  border-top-color: var(--clr-white-2);
+  border-left-color: var(--clr-white-2);
+  border-radius: 3rem;
+  transform: rotate(-45deg);
+  background: var(--clr-white-2);
 }
 .rsvp-infoLabel {
-  color: var(--clr-grey-lighter);
+  margin-bottom: -0.1rem;
   text-align: left;
-  font-size: 0.75em;
+  font-size: 0.8em;
+  color: var(--clr-grey-lighter);
 }
 .rsvp-infoDetail {
-  font-size: 0.9em;
   text-align: left;
 }
 h2.rsvp-infoDetail {
@@ -102,32 +96,27 @@ h2.rsvp-infoDetail {
   font-size: 1.1em;
   text-transform: uppercase;
   /* color: var(--clr-red); */
-  border-bottom: 2px solid var(--clr-white-2);
+  border-bottom: 1px solid var(--clr-grey-lightest);
+}
+.rsvp-infoDetail:not(h2) {
+  letter-spacing: 0.2rem;
 }
 .rsvp-dayTimeWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 .rsvp-addressInstructions {
   font-size: 0.9em;
 }
 @media only screen and (min-width: 600px) {
-  .rsvp-eventWrapper {
-    margin-left: 3rem;
-  }
   .rsvp-infoLabel {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .rsvp-infoDetail:not(h2):not(.rsvp-addressInstructions) {
     font-size: 1.1em;
   }
   h2.rsvp-infoDetail {
     font-size: 1.4em;
-  }
-  .rsvp-dayTimeWrapper {
-    flex-direction: row;
-    gap: 2.5rem;
   }
 }
 /* LEFT SIDE END */
@@ -144,20 +133,42 @@ h2.rsvp-infoDetail {
 .rsvp-fieldsWrapper::before {
   content: '';
   position: absolute;
-  left: 0rem;
-  top: 3px;
-  height: calc(100% - 6px);
-  width: 1px;
-  border-left: 3px dotted var(--clr-pri);
+  top: calc(50% - var(--hole-width) / 2);
+  left: calc(-1 * var(--hole-width) / 2 - 1px);
+  width: var(--hole-width);
+  height: var(--hole-width);
+  border: var(--border-width) solid var(--clr-black);
+  border-top-color: var(--clr-white-2);
+  border-left-color: var(--clr-white-2);
+  border-radius: 3rem;
+  transform: rotate(-45deg);
+  background: var(--clr-white-2);
+}
+.rsvp-fieldsWrapper::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  border-top: 2px dotted var(--clr-black);
 }
 .rsvp-inputGrouping {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+.rsvp-textGrouping > *:first-child {
+  /* margin-top: -1.2rem; */
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* background: pink; */
+}
 .rsvp-guestName {
-  font-size: 0.9em;
   font-family: var(--font-1);
+  /* font-size: 3rem; */
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -168,41 +179,45 @@ h2.rsvp-infoDetail {
 }
 .rsvp-button {
   width: 5ch;
-  border: 1px solid transparent;
 }
 .rsvp-button-disabled {
   pointer-events: none;
-}
-.rsvp-button-selected {
-  background: var(--clr-white-2);
-  color: var(--clr-grey);
 }
 .rsvp-addressAndButtonWrapper {
   margin: auto;
   width: max-content;
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 1rem;
-  /* background: pink; */
-}
-.rsvp-addressAndButtonWrapper > .rsvp-button {
-  width: 5.5ch;
 }
 .rsvp-inputAddress {
   margin: auto;
+  padding: 0.3rem 0.5rem;
   max-width: 100%;
-  width: 15rem;
+  width: 23rem;
   height: 8ch;
-  font-size: 0.8em;
+  font-size: 0.85em;
   text-align: left;
 }
+.rsvp-addressAndButtonWrapper > .rsvp-button {
+  width: 5.5ch;
+  text-transform: uppercase;
+}
 @media only screen and (min-width: 600px) {
-  .rsvp-guestName {
-    font-size: inherit;
+  .rsvp-fieldsWrapper::before {
+    display: none;
+  }
+  .rsvp-fieldsWrapper::after {
+    left: 0rem;
+    top: -1px;
+    height: calc(100% + 2px);
+    width: 0;
+    border-left: 3px dotted var(--clr-black);
+    border-top: none;
   }
   .rsvp-inputAddress {
     width: 23rem;
-    height: 6ch;
   }
 }
 /* RIGHT SIDE END */
@@ -211,6 +226,6 @@ h2.rsvp-infoDetail {
   margin: 2rem auto;
   width: 90%;
   max-width: 80rem;
-  height: 0.5px;
-  background: var(--clr-white-2);
+  height: 1px;
+  background: var(--clr-grey-lightest);
 }

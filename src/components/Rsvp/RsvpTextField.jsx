@@ -24,7 +24,7 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
   };
 
   return (
-    <div className="rsvp-inputGrouping">
+    <div className="rsvp-inputGrouping rsvp-textGrouping">
       <h2 className="rsvp-guestName">{guest.name}</h2>
       <form className="rsvp-addressAndButtonWrapper">
         <textarea

@@ -9,13 +9,13 @@ const Navbar = ({ jwt, updateJwt }) => {
   const isAdmin = !!jwt;
   const header = () => {
     if (location.pathname === '/') {
-      return '';
+      return 'home';
     }
     if (location.pathname.includes('admin')) {
       return location.pathname.slice(7);
     }
     if (location.pathname.includes('pictures/')) {
-      return '';
+      return 'picture';
     }
     return location.pathname.slice(1);
   };
@@ -158,7 +158,7 @@ const Navbar = ({ jwt, updateJwt }) => {
         </div>
       </div>
 
-      {/* <h1>{header()}</h1> */}
+      <h1 className="internalHeader">{header()}</h1>
     </>
   );
 };

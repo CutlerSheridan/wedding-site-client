@@ -4,6 +4,7 @@ import RsvpForm from './RsvpForm';
 import Loading from '../Loading';
 import EVENTS from '../../eventInfo';
 import SERVER_URL from '../../serverUrl';
+import Cardstock from '../Cardstock';
 
 const Rsvp = () => {
   const [groupId, setGroupId] = useState(localStorage.getItem('groupId'));
@@ -29,9 +30,9 @@ const Rsvp = () => {
     const rsvpFields = ['fri_rsvp', 'sat_rsvp', 'sun_rsvp'];
     let eventCounter = 0;
     return (
-      <div>
+      <>
         <div className="rsvp-instructions">
-          <p>Please respond as soon as possible.</p>
+          <p>Please respond by December 17th.</p>
           <p>
             You do not need to RSVP for all events or guests at the same time.
           </p>
@@ -61,7 +62,7 @@ const Rsvp = () => {
               `If ${
                 guests.length === 2 ? 'both' : 'all'
               } members of your party are
-            at the same address, you only need to fill it in for one person.`,
+            at the same address, you only need to fill this in for one person.`,
             ],
           }}
           guests={guests}
@@ -73,7 +74,7 @@ const Rsvp = () => {
         <button type="button" className="button-small" onClick={forgetGroupId}>
           Back to Search
         </button>
-      </div>
+      </>
     );
   };
 
@@ -100,8 +101,8 @@ const Rsvp = () => {
   // };
 
   return (
-    <div>
-      {/* <button className='button-small' onClick={toggleStoredGroupId}>Toggle stored groupId</button> */}
+    <Cardstock>
+      <h1>RSVP</h1>
 
       {isLoading ? (
         <Loading />
@@ -113,7 +114,7 @@ const Rsvp = () => {
           setGuestsInGroup={updateGuestsInGroup}
         />
       )}
-    </div>
+    </Cardstock>
   );
 };
 

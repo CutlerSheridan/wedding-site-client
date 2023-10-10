@@ -42,8 +42,8 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
   };
 
   return (
-    <div>
-      <p>
+    <>
+      <p className="rsvpAuth-instructions">
         Enter the first and last name of one member of your party below. You
         will be able to RSVP for your entire group on the next page.
       </p>
@@ -70,7 +70,7 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

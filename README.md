@@ -6,9 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- make Hotel page fucking look good
-  - maybe make 'booking options' bigger and 'hotel portofino' also bigger?
-  - try making booking options into grid
+- get RSVP to actually fucking look good
+- rewrite itinerary copy
 
 #### TODO LATER
 
@@ -30,8 +29,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
-- ? add flourish to Error 404 page
-- style RSVP page
+- decide on calendar button font color
+- ? add flourishes to Error 404 page
 - style admin pages
 - style buttons
 - decide if Photo page should use "go back" link or button
@@ -59,6 +58,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.0_
+
+- update RSVP ticket style to current theme
+- update RSVP style for mobile
+- adjust perforation placement / length
+- refactor ticket holes on mobile and desktop
+- make mobile tickets have two holes - one for top half, one fo bottom half
+- adjust horizontal spacing for mobile address input so it's not so close to the hole
+- on RSVP, change accent colors to grey-lightest instead of grey-lighter
+- on Hotels, also change accent colors to grey-lightest
+- add invisible h1's to each page so search engines can find them
 
 _0.10.5 (branch: booking-grid; merge branch to main)_
 

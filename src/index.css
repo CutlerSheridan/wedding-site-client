@@ -111,7 +111,9 @@ button {
   /* border-radius: 8px; */
   border: 1px solid transparent;
   padding: 0.5rem 0.7rem;
-  font-size: 1em;
+  /* height: 1.75em; */
+  height: 3.5rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--clr-grey-lightest);
@@ -146,11 +148,13 @@ button:active {
   color: var(--clr-white-2);
 }
 .button-small {
+  height: 3.05rem;
   font-size: 1.6rem;
 }
 
 h1 {
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  margin: 0 0 1rem;
   left: 0;
   font-family: var(--font-1);
   /* font-family: var(--font-3); */
@@ -163,6 +167,10 @@ h1 {
   text-underline-offset: 0.1em;
   /* background: var(--clr-white-2); */
   /* color: var(--clr-pri); */
+}
+h1.internalHeader {
+  visibility: hidden;
+  margin: -5.75rem 0 0;
 }
 p {
   margin: 0 auto;
