@@ -58,16 +58,16 @@ const Navbar = ({ jwt, updateJwt }) => {
   const adminBar = (
     <>
       <NavLink to="/admin/dashboard" className={setLinkClass}>
-        Dashboard
+        Dashboar<span className="navbar-linkLastLetter">d</span>
       </NavLink>
       <NavLink to="/admin/addresses" className={setLinkClass}>
-        Addresses
+        Addresse<span className="navbar-linkLastLetter">s</span>
       </NavLink>
       <NavLink to="/admin/group-edit" className={setLinkClass}>
-        Edit Group
+        Edit Grou<span className="navbar-linkLastLetter">p</span>
       </NavLink>
       <NavLink to="/admin/gameinfo" className={setLinkClass}>
-        Characters
+        Character<span className="navbar-linkLastLetter">s</span>
       </NavLink>
       {jwt ? (
         <a
@@ -78,7 +78,7 @@ const Navbar = ({ jwt, updateJwt }) => {
             updateJwt(null);
           }}
         >
-          Log Out
+          Log Ou<span className="navbar-linkLastLetter">t</span>
         </a>
       ) : (
         ''

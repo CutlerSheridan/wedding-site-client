@@ -23,7 +23,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - Home photos should be focus-able; maybe swap navigation to a transparent button on top of each picture
 - in GroupForm, should table toggles auto-update in database or only update on save?
-- use NavLinks for navigation buttons: https://reactrouter.com/en/main/components/nav-link
 - add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
 - add error if server is called and doesn't respond
 
@@ -58,6 +57,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.1_
+
+- add inner border around RSVP ticket
+- make border 'double' instead of 'solid'
+- make Cardstock border double too
+- make ticket outline .5px
+- fix navbar admin links so underline doesn't extend past last letter of each link
 
 _0.11.0_
 

@@ -14,7 +14,7 @@
   width: 100%;
   background: var(--clr-white-2);
   /* border: 0.3rem solid var(--clr-white-2); */
-  border: 0.3rem solid var(--clr-grey-lighter);
+  border: 0.3rem double var(--clr-grey-lighter);
   /* border: .3rem solid var(--clr-pri); */
 }
 
