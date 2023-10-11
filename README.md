@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- refactor Table cell hover behavior so cell is outlined instead of fully changing background color
+- style Addresses to current theme
 
 #### TODO LATER
 
@@ -28,6 +28,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- decide which hover/active behavior to use for Tables
 - on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
 - ? add flourishes to Error 404 page
@@ -47,6 +48,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - make password field censor passwords
 - censor secret passphrase
 - research styling page transitions
+- decide on and clean up .button-small use
 - add credit
 
 ##### Production Deployment Checklist
@@ -58,6 +60,17 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.5_
+
+- in Dashboard, improve Table label style
+- simplify cell border CSS
+- make Table border double lines
+- remove border radius from Table
+- refactor hover/active behavior for Table cells
+- adjust global button style
+- resize RSVP buttons accordingly
+- add transitions to Table buttons
 
 _0.11.4_
 

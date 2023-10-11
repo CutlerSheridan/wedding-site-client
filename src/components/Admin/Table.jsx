@@ -59,7 +59,7 @@ const Table = ({
   const createTableBody = (guests) => {
     return (
       <>
-        <tbody className={isEditing ? 'table-editing' : null}>
+        <tbody className={isEditing ? 'table-body-editing' : null}>
           {guests.map((guest) => (
             <tr key={guest.name + '_row'}>
               <th

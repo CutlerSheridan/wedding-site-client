@@ -227,7 +227,7 @@ h2.rsvp-infoDetail {
   gap: 1.5rem;
 }
 .rsvp-button {
-  width: 5ch;
+  width: 5.5ch;
 }
 .rsvp-button-disabled {
   pointer-events: none;
@@ -250,7 +250,7 @@ h2.rsvp-infoDetail {
   text-align: left;
 }
 .rsvp-addressAndButtonWrapper > .rsvp-button {
-  width: 5.5ch;
+  width: 6.5ch;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 600px) {

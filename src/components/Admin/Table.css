@@ -3,15 +3,13 @@
   max-width: 100%;
 }
 table {
-  --outer-border-radius: 3px;
-  --inner-border: 1px solid var(--clr-grey-light);
+  --inner-border: 0.5px solid var(--clr-grey-light);
   --cell-width: 3.2rem;
   --cell-height: 3rem;
   margin: 0 auto 0.5rem;
   table-layout: fixed;
   border-spacing: 0;
-  border: 1px solid var(--clr-grey-light);
-  border-radius: 5px;
+  border: 3px double var(--clr-grey-light);
   overflow: hidden;
   font-size: 1.4rem;
   color: var(--clr-white-2);
@@ -41,26 +39,24 @@ table {
 }
 
 tr > * {
-  border-right: var(--inner-border);
-  border-bottom: var(--inner-border);
-}
-tr > *:last-child {
-  border-right: none;
-}
-table > *:last-child > tr:last-child > * {
-  border-bottom: none;
+  border: var(--inner-border);
+  border-collapse: collapse;
 }
 /* BORDER END */
 
 .table-caption {
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
   width: max-content;
   border-radius: 0.2rem;
   font-family: var(--font-1);
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.6rem;
+  font-weight: 400;
   text-align: left;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.4rem;
 }
 .table-declinedRsvpCaption {
   padding: 0.3rem 0.5rem;
@@ -132,73 +128,107 @@ tfoot > tr > td {
 }
 
 /* EDITING UI START */
-.table-editing .table-cell {
+.table-body-editing .table-cell {
+  transition: background 0.08s;
   cursor: pointer;
 }
 
-.table-editing
+.table-body-editing .table-cell:active {
+  border-width: 1.5px;
+  border-color: var(--clr-black);
+}
+@media only screen and (hover: hover) {
+  .table-body-editing .table-cell:hover {
+    border-width: 1.5px;
+    border-color: var(--clr-black);
+  }
+  .table-body-editing .table-cell:active {
+    border-width: 2px;
+  }
+  /* .table-body-editing
+    .table-cell:not(.table-cell-positive):not(.table-cell-negative):active {
+    background: var(--clr-green-alpha);
+  }
+  .table-body-editing
+    .table-declinedCell:not(.table-cell-positive):not(
+      .table-cell-negative
+    ):active {
+    background: var(--clr-red-alpha);
+  }
+  .table-body-editing .table-cell-negative:active {
+    background: var(--clr-white-3);
+  }
+  .table-body-editing .table-cell-positive.table-cell-toggle:active {
+    background: var(--clr-white-3);
+  }
+  .table-body-editing .table-cell-positive.table-cell-cycle:active {
+    background: var(--clr-red-alpha);
+  } */
+}
+
+/* .table-body-editing
   .table-cell:not(.table-cell-positive):not(.table-cell-negative):active {
   background: var(--clr-green-alpha);
 }
-.table-editing
+.table-body-editing
   .table-declinedCell:not(.table-cell-positive):not(
     .table-cell-negative
   ):active {
   background: var(--clr-red-alpha);
 }
-.table-editing .table-cell-negative:active {
+.table-body-editing .table-cell-negative:active {
   background: var(--clr-red-alpha);
 }
-.table-editing .table-cell-positive.table-cell-toggle:active {
+.table-body-editing .table-cell-positive.table-cell-toggle:active {
   background: var(--clr-green-alpha);
 }
-.table-editing .table-cell-positive.table-cell-cycle:active {
+.table-body-editing .table-cell-positive.table-cell-cycle:active {
   background: var(--clr-red-alpha);
 }
 @media only screen and (hover: hover) {
-  .table-editing
+  .table-body-editing
     .table-cell:not(.table-cell-positive):not(.table-cell-negative):hover {
     background: var(--clr-green-alpha);
   }
-  .table-editing
+  .table-body-editing
     .table-cell:not(.table-cell-positive):not(.table-cell-negative):active {
     background: var(--clr-green);
   }
 
-  .table-editing
+  .table-body-editing
     .table-declinedCell:not(.table-cell-positive):not(
       .table-cell-negative
     ):hover {
     background: var(--clr-red-alpha);
   }
-  .table-editing
+  .table-body-editing
     .table-declinedCell:not(.table-cell-positive):not(
       .table-cell-negative
     ):active {
     background: var(--clr-red);
   }
 
-  .table-editing .table-cell-negative:hover {
+  .table-body-editing .table-cell-negative:hover {
     background: var(--clr-red-alpha);
   }
-  .table-editing .table-cell-negative:active {
+  .table-body-editing .table-cell-negative:active {
     background: transparent;
   }
 
-  .table-editing .table-cell-positive.table-cell-toggle:hover {
+  .table-body-editing .table-cell-positive.table-cell-toggle:hover {
     background: var(--clr-green-alpha);
   }
-  .table-editing .table-cell-positive.table-cell-toggle:active {
+  .table-body-editing .table-cell-positive.table-cell-toggle:active {
     background: transparent;
   }
 
-  .table-editing .table-cell-positive.table-cell-cycle:hover {
+  .table-body-editing .table-cell-positive.table-cell-cycle:hover {
     background: var(--clr-red-alpha);
   }
-  .table-editing .table-cell-positive.table-cell-cycle:active {
+  .table-body-editing .table-cell-positive.table-cell-cycle:active {
     background: var(--clr-red);
   }
-}
+} */
 /* EDITING UI END */
 
 .dashboard-separator {
