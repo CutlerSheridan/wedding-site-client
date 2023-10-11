@@ -13,6 +13,7 @@ const AddressesTextInput = ({ guest, field, isEditing, handleEdits }) => {
         />
         <button
           type="button"
+          className="addresses-saveButton"
           onClick={() => {
             handleEdits(guest._id, { [field]: inputText });
           }}

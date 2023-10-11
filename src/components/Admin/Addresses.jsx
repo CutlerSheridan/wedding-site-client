@@ -4,6 +4,7 @@ import SERVER_URL from '../../serverUrl';
 import Loading from '../Loading';
 import AddressesTextInput from './AddressesTextInput';
 import './Addresses.css';
+import Cardstock from '../Cardstock';
 
 const AddressesPage = () => {
   const { jwt } = useOutletContext();
@@ -145,10 +146,13 @@ const AddressesPage = () => {
   const colNames = ['Guest Name', 'Ready to Send', 'Sent Char.', 'Address(es)'];
 
   return (
-    <>
+    <Cardstock>
+      <h1 className="addresses-header">Addresses</h1>
       <button
         type="button"
-        className={`button-small ${isEditing ? 'button-selected' : ''}`}
+        className={`addresses-editButton button-small ${
+          isEditing ? 'button-selected' : ''
+        }`}
         onClick={() => {
           setIsEditing(!isEditing);
         }}
@@ -158,37 +162,32 @@ const AddressesPage = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="table-container">
-          <div
-            className={`addresses-wrapper ${
-              isEditing ? 'addresses-wrapper-editing' : ''
-            }`}
-          >
-            <div className="addresses-groupWrapper addresses-headingWrapper">
-              {colNames.map((col) => (
-                <div
-                  key={col}
-                  className="addresses-fieldWrapper addresses-headingField"
-                >
-                  {col}
-                </div>
-              ))}
-            </div>
-            {groups.map((gr) => (
+        <div
+          className={`addresses-wrapper ${
+            isEditing ? 'addresses-wrapper-editing' : ''
+          }`}
+        >
+          <div className="addresses-groupWrapper addresses-headingWrapper">
+            {colNames.map((col) => (
               <div
-                key={`group_${gr[0].name}`}
-                className="addresses-groupWrapper"
+                key={col}
+                className="addresses-fieldWrapper addresses-headingField"
               >
-                {createNameFieldGrouping(gr, 'name')}
-                {createToggleFieldGrouping(gr, 'ready_to_send')}
-                {createToggleFieldGrouping(gr, 'sent_character')}
-                {createTextInputFieldGrouping(gr, 'address')}
+                {col}
               </div>
             ))}
           </div>
+          {groups.map((gr) => (
+            <div key={`group_${gr[0].name}`} className="addresses-groupWrapper">
+              {createNameFieldGrouping(gr, 'name')}
+              {createToggleFieldGrouping(gr, 'ready_to_send')}
+              {createToggleFieldGrouping(gr, 'sent_character')}
+              {createTextInputFieldGrouping(gr, 'address')}
+            </div>
+          ))}
         </div>
       )}
-    </>
+    </Cardstock>
   );
 };
 

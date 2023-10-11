@@ -1,6 +1,6 @@
 .table-container {
   margin: auto;
-  max-width: 100%;
+  width: 100%;
 }
 table {
   --inner-border: 0.5px solid var(--clr-grey-light);
@@ -114,7 +114,6 @@ tbody > tr:nth-of-type(odd) {
 tfoot > tr > td {
   background: var(--clr-pri);
 }
-
 .table-cell-positive {
   background: var(--clr-green);
 }

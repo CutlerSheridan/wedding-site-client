@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- style Addresses to current theme
+- restyle Addresses hover behavior
+- restyle Group Lookup to current theme
 
 #### TODO LATER
 
@@ -28,6 +29,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- make header font smaller on mobile
 - decide which hover/active behavior to use for Tables
 - on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
@@ -38,6 +40,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - ? add stars to top of page
 - ? add White Star Line logo to schedule
   - ? or omg replace navbar "&" with logo
+  - ? also add it to Table emptay corner cells
 - ? get rid of headers altogether?
   - if so, just make them invisible so search engines can still find the h1's
 - change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
@@ -60,6 +63,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.6_
+
+- update Addresses colors to current theme
+- add page header
+- adjust Edit btn placement
+- get columns to be the correct widths on mobile
+- get table to size itself correctly
+- recolor and resize cell borders
+- change column header font and add letter-spacing
+- make Addresses table border style double
+- color thick dividers via borders instead of background so see-through table border design is visible
 
 _0.11.5_
 

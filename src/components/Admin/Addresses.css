@@ -1,16 +1,23 @@
+.addresses-header {
+  margin-bottom: 0;
+}
+.addresses-editButton {
+  margin: -0rem auto 2.5rem;
+}
 .addresses-wrapper {
   --grid-gap-thin: 1px;
-  --grid-gap-thick: 0.14rem;
+  --grid-gap-thick: 2px;
   margin: auto;
-  max-width: 80rem;
-  background: var(--clr-grey-lighter);
-  border: 3px solid var(--clr-grey-lighter);
-  border-radius: 6px;
-  overflow: hidden;
+  width: max-content;
+  max-width: 100%;
+  border: 5px double var(--clr-grey-light);
 }
 .addresses-headingWrapper {
   text-transform: uppercase;
+  font-family: var(--font-1);
+  font-size: 1.6rem;
   font-weight: 600;
+  color: var(--clr-white-2);
 }
 .addresses-headingField:not(:first-of-type):not(:last-of-type) {
   padding: 1rem;
@@ -21,12 +28,13 @@
 
 .addresses-groupWrapper {
   display: grid;
-  grid-template-columns: 1fr 4rem 4rem 2fr;
+  grid-template-columns: 3fr 3rem 3rem 5fr;
   gap: var(--grid-gap-thin);
-  background: var(--clr-grey-lighter);
+  background: var(--clr-grey-light);
 }
-.addresses-groupWrapper:not(:last-of-type) {
-  margin-bottom: var(--grid-gap-thick);
+.addresses-groupWrapper:not(:first-of-type) {
+  /* margin-bottom: var(--grid-gap-thick); */
+  border-top: var(--grid-gap-thick) solid var(--clr-grey-light);
 }
 
 .addresses-fieldGrouping {
@@ -34,27 +42,49 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: var(--grid-gap-thin);
+  font-size: 1.2rem;
   white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.addresses-fieldGrouping-address {
-  font-size: 0.9em;
+@media only screen and (min-width: 600px) {
+  .addresses-headingWrapper {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  .addresses-groupWrapper {
+    grid-template-columns: 1fr 4rem 4rem 2fr;
+  }
+  .addresses-fieldGrouping {
+    font-size: 2rem;
+  }
 }
 
+/* BACKGROUND COLORS START */
 .addresses-fieldWrapper {
   padding: 0.35rem;
   height: 100%;
+  min-height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--clr-black);
+  background: var(--clr-pri);
+}
+.addresses-fieldWrapper:not(.addresses-headingField):not(.addresses-cell) {
+  justify-content: start;
+}
+@media only screen and (min-width: 600px) {
+  .addresses-fieldWrapper:not(.addresses-headingField):not(.addresses-cell) {
+    justify-content: center;
+  }
 }
 .addresses-groupWrapper:nth-of-type(odd):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {
-  background: var(--clr-grey);
+  background: var(--clr-white-2);
 }
 .addresses-groupWrapper:nth-of-type(even):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {
-  background: var(--clr-grey-light);
+  background: var(--clr-grey-lightest);
 }
 
 .addresses-groupWrapper
@@ -62,12 +92,20 @@
   > .addresses-fieldWrapper.addresses-toggle-on {
   background: var(--clr-green);
 }
+/* BACKGROUND COLORS END */
 
-/* EDITING UI */
-
+/* EDITING UI START */
 .addresses-textarea {
-  padding: 0.1rem;
+  margin: 0.3rem 0;
+  padding: 0.15rem 0.3rem;
+  height: 6ch;
+  /* height: calc(100% + 0.5ch); */
   text-align: left;
+}
+@media only screen and (min-width: 600px) {
+  .addresses-textarea {
+    padding: 0.3rem 0.5rem;
+  }
 }
 /* toggle :hover and :active styles */
 .addresses-wrapper-editing .addresses-toggle {
@@ -84,3 +122,17 @@
     background: var(--clr-green);
   }
 }
+.addresses-saveButton {
+  margin-left: 0.7rem;
+  background: var(--clr-grey-lighter);
+}
+/* NOTE: this is MAX-width */
+@media only screen and (max-width: 600px) {
+  .addresses-saveButton {
+    margin-left: 0.3rem;
+    padding: 0.2rem;
+    height: 2.7rem;
+    font-size: 1.3rem;
+  }
+}
+/* EDITING UI END */

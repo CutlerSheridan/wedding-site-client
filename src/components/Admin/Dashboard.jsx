@@ -168,7 +168,7 @@ const Dashboard = () => {
 
   return (
     <Cardstock>
-      {/* <h1>Dashboard</h1> */}
+      <h1>Dashboard</h1>
       <div className="dashboard-controls">
         <div className="dashboard-tableTypeButtons">
           <button
