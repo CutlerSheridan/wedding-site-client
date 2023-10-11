@@ -2,12 +2,12 @@
   margin: auto;
   width: max-content;
   max-width: 90vw;
-  color: var(--clr-white-2);
-  font-size: 2.2rem;
 }
 table {
   --outer-border-radius: 3px;
   --inner-border: 1px solid var(--clr-grey-lighter);
+  --cell-width: 3.2rem;
+  --cell-height: 3rem;
   margin: 0 auto 0.5rem;
   table-layout: fixed;
   /* font-size: 0.9rem; */
@@ -15,6 +15,15 @@ table {
   border: 3px solid var(--clr-grey-lighter);
   border-radius: 6px;
   overflow: hidden;
+  font-size: 1.3rem;
+  color: var(--clr-white-2);
+}
+@media only screen and (min-width: 600px) {
+  table {
+    --cell-width: 4rem;
+    --cell-height: 3.6rem;
+    font-size: 2.2rem;
+  }
 }
 
 /* SOLO GUEST TABLE START */
@@ -22,9 +31,6 @@ table {
 .table-container-soloGuest thead > tr > th:first-of-type,
 .table-container-soloGuest tbody > * > th {
   display: none;
-}
-.table-container-soloGuest td {
-  height: 4rem;
 }
 /* SOLO GUEST TABLE END */
 
@@ -46,38 +52,56 @@ table > *:last-child > tr:last-child > * {
 /* BORDER END */
 
 .table-caption {
-  margin: 1rem 0 0.5rem 0;
-  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
   width: max-content;
   border-radius: 0.2rem;
   font-family: var(--font-1);
-  font-size: 1.1em;
+  font-size: 2.5rem;
   font-weight: bold;
-  /* text-decoration: underline; */
   text-align: left;
   text-transform: uppercase;
-  color: var(--clr-black);
 }
 .table-declinedRsvpCaption {
-  /* padding: 0.5rem; */
+  padding: 0.3rem 0.5rem;
   background: var(--clr-red);
   color: var(--clr-white-2);
 }
+
+/* CELL SIZING START */
 th,
 td {
   padding: 0.5rem;
-  min-width: 4rem;
+  width: var(--cell-width);
 }
 th {
   font-weight: 500;
   background: var(--clr-black);
 }
-.table-rsvp > thead > tr > th {
-  width: 10%;
+tbody > tr > th {
+  white-space: nowrap;
+  max-width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.table-editing > tbody > tr > th {
+  max-width: 12ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+td {
+  height: var(--cell-height);
 }
 @media only screen and (min-width: 600px) {
+  tbody > tr > th {
+    max-width: max-content;
+  }
+  .table-editing > tbody > tr > th {
+    max-width: max-content;
+    overflow: auto;
+  }
   .table-rsvp > thead > tr > th {
-    width: min-content;
+    width: var(--cell-width);
   }
 }
 .table-colHeading-vertical {
@@ -85,6 +109,8 @@ th {
   transform: rotate(180deg);
   white-space: nowrap;
 }
+/* CELL SIZING END */
+
 tbody > tr:nth-of-type(even) {
   background: var(--clr-grey-light);
 }

@@ -4,6 +4,7 @@ import SERVER_URL from '../../serverUrl';
 import './Dashboard.css';
 import Table from './Table';
 import Loading from '../Loading';
+import Cardstock from '../Cardstock';
 
 const Dashboard = () => {
   const { jwt } = useOutletContext();
@@ -162,7 +163,8 @@ const Dashboard = () => {
   };
 
   return (
-    <>
+    <Cardstock>
+      {/* <h1>Dashboard</h1> */}
       <div className="dashboard-controls">
         <button
           type="button"
@@ -199,7 +201,7 @@ const Dashboard = () => {
         Edit
       </button>
       {isLoading ? <Loading /> : createDisplay()}
-    </>
+    </Cardstock>
   );
 };
 

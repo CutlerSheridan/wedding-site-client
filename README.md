@@ -6,13 +6,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
-- rewrite itinerary copy
+- style Tables to current theme
 
 #### TODO LATER
 
 ##### Features
 
+- rewrite itinerary copy
 - add ability in Schedule to link or span more than once per description line
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
@@ -28,6 +28,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
+- on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
 - ? add flourishes to Error 404 page
 - style admin pages
@@ -57,6 +58,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.3_
+
+- put Dashboard on Cardstock
+- on Dashboard Tables, adjust font sizes on mobile
+- adjust cell sizes on mobile
+- add name overflow behavior to names column
+- make name max-width smaller when editing due to additional columns
 
 _0.11.2_
 

@@ -157,7 +157,7 @@ const Table = ({
       <table
         className={`table-rsvp ${
           title.toLowerCase() === 'declined guests' ? 'table-declined' : ''
-        }`}
+        } ${isEditing ? 'table-editing' : ''}`}
       >
         <thead>
           <tr>
