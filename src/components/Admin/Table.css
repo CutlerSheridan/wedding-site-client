@@ -1,21 +1,19 @@
 .table-container {
   margin: auto;
-  width: max-content;
-  max-width: 90vw;
+  max-width: 100%;
 }
 table {
   --outer-border-radius: 3px;
-  --inner-border: 1px solid var(--clr-grey-lighter);
+  --inner-border: 1px solid var(--clr-grey-light);
   --cell-width: 3.2rem;
   --cell-height: 3rem;
   margin: 0 auto 0.5rem;
   table-layout: fixed;
-  /* font-size: 0.9rem; */
   border-spacing: 0;
-  border: 3px solid var(--clr-grey-lighter);
-  border-radius: 6px;
+  border: 1px solid var(--clr-grey-light);
+  border-radius: 5px;
   overflow: hidden;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--clr-white-2);
 }
 @media only screen and (min-width: 600px) {
@@ -31,6 +29,9 @@ table {
 .table-container-soloGuest thead > tr > th:first-of-type,
 .table-container-soloGuest tbody > * > th {
   display: none;
+}
+.table-container-soloGuest td {
+  height: var(--cell-height);
 }
 /* SOLO GUEST TABLE END */
 
@@ -52,7 +53,7 @@ table > *:last-child > tr:last-child > * {
 /* BORDER END */
 
 .table-caption {
-  margin: 1rem 0 1rem 0;
+  margin: 0 auto 1rem;
   width: max-content;
   border-radius: 0.2rem;
   font-family: var(--font-1);
@@ -68,29 +69,26 @@ table > *:last-child > tr:last-child > * {
 }
 
 /* CELL SIZING START */
-th,
-td {
-  padding: 0.5rem;
+thead > tr > th {
   width: var(--cell-width);
 }
 th {
+  padding: 0.5rem;
   font-weight: 500;
-  background: var(--clr-black);
+  background: var(--clr-pri);
 }
 tbody > tr > th {
+  height: var(--cell-height);
   white-space: nowrap;
   max-width: 20ch;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .table-editing > tbody > tr > th {
-  max-width: 12ch;
+  max-width: 14ch;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-td {
-  height: var(--cell-height);
 }
 @media only screen and (min-width: 600px) {
   tbody > tr > th {
@@ -112,13 +110,13 @@ td {
 /* CELL SIZING END */
 
 tbody > tr:nth-of-type(even) {
-  background: var(--clr-grey-light);
+  background: var(--clr-white-2);
 }
 tbody > tr:nth-of-type(odd) {
-  background: var(--clr-grey);
+  background: var(--clr-grey-lightest);
 }
 tfoot > tr > td {
-  background: var(--clr-black);
+  background: var(--clr-pri);
 }
 
 .table-cell-positive {
@@ -133,7 +131,7 @@ tfoot > tr > td {
   text-decoration: underline;
 }
 
-/* EDITING UI */
+/* EDITING UI START */
 .table-editing .table-cell {
   cursor: pointer;
 }
@@ -200,4 +198,12 @@ tfoot > tr > td {
   .table-editing .table-cell-positive.table-cell-cycle:active {
     background: var(--clr-red);
   }
+}
+/* EDITING UI END */
+
+.dashboard-separator {
+  margin: 2.4rem auto 2rem;
+  height: 1px;
+  width: 80%;
+  background: var(--clr-grey-lightest);
 }

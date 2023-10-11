@@ -99,6 +99,7 @@ const Dashboard = () => {
           includeTotals={true}
           handleEdits={handleEdits}
         />
+        <div className="dashboard-separator"></div>
         <Table
           guests={currentGuests.filter((x) => x.family === 'tyler')}
           longestName={(() => {
@@ -112,6 +113,7 @@ const Dashboard = () => {
           includeTotals={true}
           handleEdits={handleEdits}
         />
+        <div className="dashboard-separator"></div>
         <Table
           guests={currentGuests.filter(
             (x) => x.family !== 'cutler' && x.family !== 'tyler'
@@ -134,6 +136,7 @@ const Dashboard = () => {
   const createRsvpsEndTables = () => {
     return (
       <>
+        <div className="dashboard-separator"></div>
         <Table
           guests={nextRoundGuests}
           longestName={(() => {
@@ -146,6 +149,7 @@ const Dashboard = () => {
           title="Standby Guests"
           handleEdits={handleEdits}
         />
+        <div className="dashboard-separator"></div>
         <Table
           guests={declinedGuests}
           longestName={(() => {
@@ -166,40 +170,44 @@ const Dashboard = () => {
     <Cardstock>
       {/* <h1>Dashboard</h1> */}
       <div className="dashboard-controls">
+        <div className="dashboard-tableTypeButtons">
+          <button
+            type="button"
+            className={`dashboard-displayButton ${
+              displayStyle === 'merged' ? 'button-selected' : ''
+            }`}
+            onClick={() =>
+              navigate(styleParam ? '../merged' : 'merged', {
+                relative: 'path',
+              })
+            }
+          >
+            Merged
+          </button>
+          <button
+            type="button"
+            className={`dashboard-displayButton ${
+              displayStyle === 'families' ? 'button-selected' : ''
+            }`}
+            onClick={() =>
+              navigate(styleParam ? '../families' : 'families', {
+                relative: 'path',
+              })
+            }
+          >
+            Families
+          </button>
+        </div>
         <button
           type="button"
-          className={`dashboard-displayButton ${
-            displayStyle === 'merged' ? 'button-selected' : ''
-          }`}
-          onClick={() =>
-            navigate(styleParam ? '../merged' : 'merged', { relative: 'path' })
-          }
+          className={`button-small ${isEditing ? 'button-selected' : ''}`}
+          onClick={() => {
+            setIsEditing(!isEditing);
+          }}
         >
-          Merged
-        </button>
-        <button
-          type="button"
-          className={`dashboard-displayButton ${
-            displayStyle === 'families' ? 'button-selected' : ''
-          }`}
-          onClick={() =>
-            navigate(styleParam ? '../families' : 'families', {
-              relative: 'path',
-            })
-          }
-        >
-          Families
+          Edit
         </button>
       </div>
-      <button
-        type="button"
-        className={`button-small ${isEditing ? 'button-selected' : ''}`}
-        onClick={() => {
-          setIsEditing(!isEditing);
-        }}
-      >
-        Edit
-      </button>
       {isLoading ? <Loading /> : createDisplay()}
     </Cardstock>
   );

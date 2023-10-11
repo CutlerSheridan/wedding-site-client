@@ -1,18 +1,18 @@
 .dashboard-controls {
-  margin: 0.5rem auto;
-  max-width: 25rem;
+  margin-bottom: 2rem;
+}
+.dashboard-tableTypeButtons {
+  margin: 0 auto 1rem;
+  max-width: 20rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-.dashboard-displayButton {
-  border: 2px solid transparent;
-  transition: all 0.12s;
-}
-.dashboard-displayButton-active {
-  /* border-color: var(--clr-red); */
-}
 .dashboard-tablesWrapper {
-  margin: auto;
-  width: max-content;
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .dashboard-tableTypeButtons {
+    max-width: 25rem;
+  }
 }

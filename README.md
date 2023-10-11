@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- style Tables to current theme
+- refactor Table cell hover behavior so cell is outlined instead of fully changing background color
 
 #### TODO LATER
 
@@ -58,6 +58,14 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.4_
+
+- update Table color scheme to new theme
+- fix table resizing upon toggling Edit
+- simplify max-width of table on mobile
+- center table headers
+- adjust Dashboard control buttons sizes on mobile
 
 _0.11.3_
 
