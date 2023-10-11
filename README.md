@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- get RSVP to actually fucking look good
+- on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - rewrite itinerary copy
 
 #### TODO LATER
@@ -57,6 +57,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.2_
+
+- on RSVP tickets, make event labels all caps
+- make event labels smaller
+- remove border radii from tickets and inner borders
+- make event title cursive
+- change perferation separator into more subtle separator
+- change separator back
 
 _0.11.1_
 

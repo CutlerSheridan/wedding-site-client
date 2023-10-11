@@ -28,7 +28,7 @@
 
 .rsvp-formWrapper {
   --border-width: 0.5px;
-  --hole-width: 3.5rem;
+  --hole-width: 3.7rem;
   --ticket-margin-left: 3rem;
   --inner-border-inset: 5px;
   --inner-border-width: 3px;
@@ -44,7 +44,7 @@
   max-width: 60rem;
   background: var(--clr-white);
   border: var(--border-width) solid var(--clr-grey-lighter);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   /* box-shadow: 0 0 7px 0.5px var(--clr-grey-lighter); */
 }
 .rsvp-formWrapper::before {
@@ -53,7 +53,7 @@
   inset: var(--inner-border-inset);
   background: transparent;
   border: var(--inner-border-width) double var(--clr-pri);
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
 }
 @media only screen and (min-width: 600px) {
   .rsvp-formWrapper {
@@ -92,7 +92,6 @@
   border-radius: 3rem;
   transform: rotate(-45deg);
   background: var(--clr-white-2);
-  z-index: 3;
 }
 /* .rsvp-eventWrapper::after {
   content: '';
@@ -131,19 +130,22 @@
 .rsvp-infoLabel {
   margin-bottom: -0.1rem;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: var(--clr-grey-lighter);
+  font-family: var(--font-1);
+  text-transform: uppercase;
 }
 .rsvp-infoDetail {
   text-align: left;
 }
 h2.rsvp-infoDetail {
-  margin-right: 1.7rem;
-  font-family: var(--font-1);
-  font-size: 1.1em;
-  text-transform: uppercase;
-  /* color: var(--clr-red); */
-  border-bottom: 1px solid var(--clr-grey-lightest);
+  margin-right: 1rem;
+  /* font-family: var(--font-1); */
+  /* font-size: 2.3rem; */
+  font-family: var(--font-3);
+  font-size: 3.5rem;
+  /* text-transform: uppercase; */
+  /* border-bottom: 1px solid var(--clr-grey-lightest); */
 }
 .rsvp-infoDetail:not(h2) {
   letter-spacing: 0.2rem;
@@ -156,14 +158,12 @@ h2.rsvp-infoDetail {
   font-size: 0.9em;
 }
 @media only screen and (min-width: 600px) {
-  .rsvp-infoLabel {
-    font-size: 0.85em;
-  }
   .rsvp-infoDetail:not(h2):not(.rsvp-addressInstructions) {
     font-size: 1.1em;
   }
   h2.rsvp-infoDetail {
-    font-size: 1.4em;
+    /* font-size: 2.8rem; */
+    font-size: 4rem;
   }
 }
 /* LEFT SIDE END */
@@ -198,8 +198,9 @@ h2.rsvp-infoDetail {
   top: 0;
   width: 100%;
   height: 0;
-  border-top: 2px dotted var(--clr-black);
-  border-style: 'e';
+  border-top: 2px dotted;
+  border-color: var(--clr-grey-lighter);
+  /* background: var(--clr-grey-lightest); */
 }
 .rsvp-inputGrouping {
   display: flex;
@@ -207,7 +208,7 @@ h2.rsvp-infoDetail {
   gap: 0.5rem;
 }
 .rsvp-textGrouping > *:first-child {
-  height: 3.5rem;
+  /* height: 3.5rem; */
   display: flex;
   justify-content: center;
   align-items: end;
@@ -252,16 +253,30 @@ h2.rsvp-infoDetail {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 600px) {
+  .rsvp-fieldsWrapper {
+    margin: calc(var(--inner-border-inset) + var(--inner-border-width)) 0;
+  }
   .rsvp-fieldsWrapper::before {
     display: none;
   }
   .rsvp-fieldsWrapper::after {
     left: 0rem;
-    top: calc(-1 * var(--border-width));
-    height: calc(100% + var(--border-width) * 2);
+    /* top: calc(-1 * var(--border-width)); */
+    top: calc(
+      -1 * var(--border-width) - var(--inner-border-inset) - var(--inner-border-width)
+    );
+    /* top: 8%; */
+    /* height: calc(100% + var(--border-width) * 2); */
+    height: calc(
+      100% + var(--border-width) * 2 + var(--inner-border-inset) * 2 +
+        var(--inner-border-width) * 2
+    );
+    /* height: 84%; */
     width: 0;
-    border-left: 3px dotted var(--clr-black);
+    border-left-width: 3px;
+    border-left-style: dotted;
     border-top: none;
+    /* background: var(--clr-grey-lightest); */
   }
   .rsvp-inputAddress {
     width: 23rem;
