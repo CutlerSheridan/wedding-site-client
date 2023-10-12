@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- restyle Group Lookup to current theme
+- restyle GuestCards to current theme
 
 #### TODO LATER
 
@@ -55,6 +55,19 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.9_
+
+- strikethrough Characters navlink for the time being
+- surround Group Lookup with Cardstock
+- improve layout, spacing, and sizing of group lookup search section
+- remove border radius from group cards
+- adjust border style on group cards
+- adjust group card font sizes on mobile
+- adjust group card gaps
+- make secret h1 positioning absolute so it doesn't interfere with page layout
+- style group edit instructions
+- adjust spacing on Home
 
 _0.11.8_
 

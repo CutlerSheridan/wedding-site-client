@@ -1,32 +1,32 @@
+/* GROUP SEARCH START */
 .groupLookup-searchWrapper {
-  margin: 0rem auto;
-  /* padding: 0rem 1rem; */
+  margin: 1rem auto 0;
   width: max-content;
   max-width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .groupLookup-searchLabel {
-  /* align-self: start; */
-  /* margin-left: 1.5rem; */
-  margin-bottom: 0.5rem;
+  font-family: var(--font-1);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.1rem;
 }
 .groupLookup-searchInputAndButton {
+  margin: 0.7rem 0 1rem;
   display: flex;
   justify-content: space-between;
-  /* gap: 1rem; */
-  /* background: pink; */
+  align-items: center;
+  gap: 1rem;
 }
 .groupLookup-searchWrapper input {
-  /* margin-right: 1rem; */
   padding: 0.5rem 0.7rem;
   width: 69%;
   max-width: 20ch;
 }
 .groupLookup-newGroupButton {
-  margin: 0.8rem 0 0;
-  align-self: end;
+  align-self: center;
 }
 .groupLookup-error {
   font-size: 0.9em;
@@ -37,38 +37,47 @@
   visibility: hidden;
   display: none;
 }
+@media only screen and (min-width: 600px) {
+  .groupLookup-searchWrapper {
+    margin: 0 auto;
+  }
+  .groupLookup-searchLabel {
+    font-size: 2.4rem;
+  }
+}
+/* GROUP SEARCH END */
 
+/* GROUPS LIST START */
 .groupLookup-groupList {
   margin: 2rem auto;
   max-width: 100rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.6rem;
-  color: var(--clr-white-2);
+  gap: 1rem;
 }
 .groupLookup-groupCard {
-  padding: 1.1rem 1.3rem;
+  padding: 1.1rem 0.7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.2rem;
-  border: 2px dotted var(--clr-black);
+  border: 1px solid var(--clr-grey-lightest);
   background: var(--clr-white);
-  border-radius: 0.7rem;
-  color: var(--clr-black);
+  /* border-radius: 0.7rem; */
 }
 .groupLookup-guestName {
   display: block;
-  font-size: 0.85em;
+  font-size: 1.7rem;
 }
 @media only screen and (min-width: 600px) {
   .groupLookup-groupList {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1.6rem;
   }
   .groupLookup-guestName {
-    font-size: 1em;
+    font-size: 2rem;
   }
   .groupLookup-groupCard {
     padding: 1.2rem 1.5rem;
@@ -78,6 +87,7 @@
   /* background: var(--clr-grey-lightest); */
   /* background: var(--clr-white-2); */
   border-style: solid;
+  /* border-width: 2px; */
 }
 @media only screen and (hover: hover) {
   .groupLookup-groupCard:hover {
@@ -85,17 +95,37 @@
     /* background: var(--clr-grey-lightest); */
     /* background: var(--clr-white-2); */
     border-style: solid;
+    /* border-width: 2px; */
+    border-color: var(--clr-black);
   }
   .groupLookup-groupCard:active {
     /* background: var(--clr-grey-lightest); */
   }
 }
+/* GROUPS END */
 
+.groupForm-instructions {
+  margin: auto;
+  padding: 0.7rem 0.9rem;
+  width: max-content;
+  font-size: 2rem;
+  font-family: var(--font-1);
+  text-transform: uppercase;
+  background: var(--clr-pri);
+  color: var(--clr-white-2);
+  border: 3px double var(--clr-grey-lightest);
+}
+.groupForm-instructionsEmphasis {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  font-weight: bold;
+}
 .groupForm-controls {
-  margin: 1rem 0 2rem;
+  margin: 1.2rem 0 2rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .groupForm-error {
   color: var(--clr-red);
@@ -106,9 +136,15 @@
 .groupForm-guestsWrapper {
   margin: auto;
   width: max-content;
-  max-width: 95%;
+  max-width: 100%;
 }
 @media only screen and (min-width: 600px) {
+  .groupForm-instructions {
+    font-size: 2.4rem;
+  }
+  .groupForm-controls {
+    gap: 1.5rem;
+  }
   .groupForm-guestsWrapper {
     max-width: 100rem;
   }
@@ -117,5 +153,5 @@
   margin: 2.5rem auto;
   width: 80%;
   height: 1px;
-  background: var(--clr-red);
+  background: var(--clr-grey-lightest);
 }

@@ -5,6 +5,7 @@ import SERVER_URL from '../../../serverUrl';
 import './GroupEdit.css';
 import GroupLookup from './GroupLookup';
 import GroupForm from './GroupForm';
+import Cardstock from '../../Cardstock';
 
 const GroupEdit = () => {
   const { jwt } = useOutletContext();
@@ -35,7 +36,7 @@ const GroupEdit = () => {
   };
 
   return (
-    <div className="group-pageWrapper">
+    <Cardstock>
       {isLoading ? (
         <Loading />
       ) : groupId ? (
@@ -48,7 +49,7 @@ const GroupEdit = () => {
       ) : (
         <GroupLookup guests={guests} />
       )}
-    </div>
+    </Cardstock>
   );
 };
 

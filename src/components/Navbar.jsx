@@ -67,7 +67,9 @@ const Navbar = ({ jwt, updateJwt }) => {
         Edit Grou<span className="navbar-linkLastLetter">p</span>
       </NavLink>
       <NavLink to="/admin/gameinfo" className={setLinkClass}>
-        Character<span className="navbar-linkLastLetter">s</span>
+        <span className="text-strikethrough">
+          Character<span className="navbar-linkLastLetter">s</span>
+        </span>
       </NavLink>
       {jwt ? (
         <a

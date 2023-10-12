@@ -10,7 +10,7 @@
   margin: auto;
   width: max-content;
   max-width: 100%;
-  border: 5px double var(--clr-grey-light);
+  border: 4px double var(--clr-grey-light);
 }
 .addresses-headingWrapper {
   text-transform: uppercase;

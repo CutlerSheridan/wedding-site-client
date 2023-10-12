@@ -133,8 +133,10 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
 
   return (
     <>
-      <div>SAVE any changes!</div>
-
+      <div className="groupForm-instructions">
+        <span className="groupForm-instructionsEmphasis">SAVE</span> any
+        changes!
+      </div>
       <div className="groupForm-controls">
         <button
           type="button"
