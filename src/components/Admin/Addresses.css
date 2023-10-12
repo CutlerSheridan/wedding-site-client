@@ -99,7 +99,6 @@
   margin: 0.3rem 0;
   padding: 0.15rem 0.3rem;
   height: 6ch;
-  /* height: calc(100% + 0.5ch); */
   text-align: left;
 }
 @media only screen and (min-width: 600px) {
@@ -110,16 +109,20 @@
 /* toggle :hover and :active styles */
 .addresses-wrapper-editing .addresses-toggle {
   cursor: pointer;
+  transition: background 0.08s;
 }
 .addresses-wrapper-editing .addresses-toggle:active {
-  background: var(--clr-green-alpha);
+  /* background: var(--clr-green-alpha); */
+  border: 1px solid var(--clr-black);
 }
 @media only screen and (hover: hover) {
   .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:hover {
-    background: var(--clr-green-alpha);
+    /* background: var(--clr-green-alpha); */
+    border: 1px solid var(--clr-black);
   }
   .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:active {
-    background: var(--clr-green);
+    /* background: var(--clr-green); */
+    border: 1.5px solid var(--clr-black);
   }
 }
 .addresses-saveButton {

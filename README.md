@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- restyle Addresses hover behavior
 - restyle Group Lookup to current theme
 
 #### TODO LATER
@@ -30,7 +29,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Style
 
 - make header font smaller on mobile
-- decide which hover/active behavior to use for Tables
+- decide which hover/active behavior to use for Dashboard tables and Addresses table
 - on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
 - ? add flourishes to Error 404 page
@@ -63,6 +62,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.7_
+
+- restyle Addresses hover behavior
 
 _0.11.6_
 
