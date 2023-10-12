@@ -27,7 +27,7 @@ const GuestCard = ({
   };
 
   return (
-    <div className="guestCard">
+    <div className={`guestCard ${isEditing ? 'guestCard-editing' : ''}`}>
       <div className="guestCard-gridCell">
         <ShortTextInput
           field="name"

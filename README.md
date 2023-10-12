@@ -6,8 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- add ticket hole to GuestCard
-- hide GuestCard delete button when not in edit mode
+- style login page
+- check breakpoints; add more where needed
 
 #### TODO LATER
 
@@ -17,6 +17,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - add ability in Schedule to link or span more than once per description line
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
+- add SEO
 - ? add admin user setting to dictate if admin can only view admin site or if they can edit too
 - ? wedding hashtag
 
@@ -31,7 +32,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - make header font smaller on mobile
 - decide which hover/active behavior to use for Dashboard tables and Addresses table
-- on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
 - ? add flourishes to Error 404 page
 - decide if Photo page should use "go back" link or button
@@ -56,6 +56,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.11_
+
+- add ticket hole to GuestCard
+- hide GuestCard delete button when not in edit mode
+- make Save btn revert Group Edit page to not-editing
+- hide New Guest btn and last separator when not editing
 
 _0.11.10_
 

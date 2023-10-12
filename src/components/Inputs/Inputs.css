@@ -5,9 +5,12 @@
   align-items: flex-start;
   justify-content: center;
 }
+.input-grouping.input-grouping-textarea {
+  width: 100%;
+}
 .input-grouping * {
   text-align: left;
-  white-space: pre;
+  white-space: pre-line;
 }
 .input-label {
   margin-bottom: -0.1rem;
@@ -15,6 +18,9 @@
   font-size: 1.4rem;
   color: var(--clr-grey-lighter);
   text-transform: uppercase;
+}
+.input-displayText {
+  white-space: pre-wrap;
 }
 .input-displayText:not(.input-displayEmphasis) {
   letter-spacing: 0.2rem;

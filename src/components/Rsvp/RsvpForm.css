@@ -41,7 +41,7 @@
   margin: 0rem auto;
   display: grid;
   grid-template-columns: 1fr;
-  width: 95%;
+  width: 97%;
   max-width: 65rem;
   background: var(--clr-white);
   border: var(--border-width) solid var(--clr-grey-lighter);

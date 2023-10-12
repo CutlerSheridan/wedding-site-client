@@ -148,7 +148,14 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
         >
           Edit
         </button>
-        <button type="button" ref={saveButton} onClick={saveUpdatesToDb}>
+        <button
+          type="button"
+          ref={saveButton}
+          onClick={async () => {
+            await saveUpdatesToDb();
+            setIsEditing(false);
+          }}
+        >
           Save
         </button>
         <button
@@ -165,9 +172,13 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
         Make sure every guest has a name
       </div>
 
-      <div className="groupForm-guestsWrapper">
-        {guestsInGroup.map((x, index) => (
-          <div key={`guestCard_${x._id}`}>
+      <div
+        className={`groupForm-guestsWrapper ${
+          isEditing ? 'groupForm-guestsWrapper-editing' : ''
+        }`}
+      >
+        {guestsInGroup.map((x) => (
+          <div key={`guestCard_${x._id}`} className="groupForm-cardWrapper">
             <GuestCard
               guest={x}
               guests={guests}
@@ -193,7 +204,11 @@ const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
             <div className="groupForm-guestSeparator"></div>
           </div>
         ))}
-        <button type="button" onClick={addNewGuest}>
+        <button
+          type="button"
+          className="groupForm-newGuestButton"
+          onClick={addNewGuest}
+        >
           +
         </button>
       </div>

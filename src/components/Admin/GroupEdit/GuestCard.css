@@ -5,8 +5,11 @@
   --inner-border-inset: 5px;
   --inner-border-width: 3px;
   position: relative;
+  margin: auto;
   padding: 2rem 2.5rem;
-  max-width: 100%;
+  width: 100%;
+  /* width: calc(100% - var(--hole-width) / 2); */
+  width: 97%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -20,6 +23,28 @@
   background: transparent;
   border: var(--inner-border-width) double var(--clr-pri);
 }
+.guestCard::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - var(--hole-width) / 2);
+  /* left: calc(
+    -1 * var(--hole-width) / 2 - var(--ticket-margin-left) - var(--border-width)
+  ); */
+  left: calc(-1 * var(--hole-width) / 2 - var(--border-width));
+  width: var(--hole-width);
+  height: var(--hole-width);
+  border: var(--border-width) solid var(--clr-grey-lighter);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 3rem;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    to bottom right,
+    transparent 50%,
+    var(--clr-white-2) 50%
+  );
+  z-index: 0;
+}
 @media only screen and (min-width: 600px) {
   .guestCard {
     --hole-width: 5rem;
@@ -29,7 +54,7 @@
   }
 }
 .guestCard > * {
-  z-index: 1;
+  z-index: 2;
 }
 
 .guestCard-gridCell {
@@ -43,14 +68,18 @@
   gap: 3rem;
 }
 .guestCard-deleteButton {
+  display: none;
   position: absolute;
   right: 1.5rem;
   bottom: 1.5rem;
-  width: 4rem;
-  height: 4rem;
-  font-size: 1.2em;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.6rem;
   background: var(--clr-red);
   color: var(--clr-white-2);
+}
+.guestCard-editing .guestCard-deleteButton {
+  display: block;
 }
 .guestCard-deleteButton:active {
   background: var(--clr-red-alpha);

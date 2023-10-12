@@ -63,7 +63,6 @@
   gap: 0.2rem;
   border: 1px solid var(--clr-grey-lightest);
   background: var(--clr-white);
-  /* border-radius: 0.7rem; */
 }
 .groupLookup-guestName {
   display: block;
@@ -84,22 +83,13 @@
   }
 }
 .groupLookup-groupCard:active {
-  /* background: var(--clr-grey-lightest); */
-  /* background: var(--clr-white-2); */
   border-style: solid;
-  /* border-width: 2px; */
 }
 @media only screen and (hover: hover) {
   .groupLookup-groupCard:hover {
     cursor: pointer;
-    /* background: var(--clr-grey-lightest); */
-    /* background: var(--clr-white-2); */
     border-style: solid;
-    /* border-width: 2px; */
     border-color: var(--clr-black);
-  }
-  .groupLookup-groupCard:active {
-    /* background: var(--clr-grey-lightest); */
   }
 }
 /* GROUPS END */
@@ -134,7 +124,7 @@
   display: none;
 }
 .groupForm-guestsWrapper {
-  margin: auto;
+  margin: 0 auto 0;
   max-width: 100%;
 }
 @media only screen and (min-width: 600px) {
@@ -148,9 +138,31 @@
     max-width: 100rem;
   }
 }
+
 .groupForm-guestSeparator {
   margin: 2.5rem auto;
   width: 80%;
   height: 1px;
   background: var(--clr-grey-lightest);
+}
+.groupForm-cardWrapper:last-of-type > .groupForm-guestSeparator {
+  display: none;
+}
+.groupForm-newGuestButton {
+  display: none;
+  margin: auto;
+  font-size: 2.6rem;
+  line-height: 0;
+  letter-spacing: 0;
+}
+.groupForm-guestsWrapper-editing
+  .groupForm-cardWrapper:last-of-type
+  > .groupForm-guestSeparator,
+.groupForm-guestsWrapper-editing .groupForm-newGuestButton {
+  display: block;
+}
+@media only screen and (min-width: 600px) {
+  .groupForm-guestsWrapper:not(.groupForm-guestsWrapper-editing):last-of-type {
+    margin-bottom: 5rem;
+  }
 }
