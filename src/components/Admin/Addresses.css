@@ -95,6 +95,10 @@
 /* BACKGROUND COLORS END */
 
 /* EDITING UI START */
+.addresses-wrapper-editing .addresses-cell {
+  flex-direction: column;
+  align-items: end;
+}
 .addresses-textarea {
   margin: 0.3rem 0;
   padding: 0.15rem 0.3rem;
@@ -102,8 +106,25 @@
   text-align: left;
 }
 @media only screen and (min-width: 600px) {
+  .addresses-wrapper-editing .addresses-cell {
+    flex-direction: row;
+    align-items: center;
+  }
   .addresses-textarea {
     padding: 0.3rem 0.5rem;
+  }
+}
+.addresses-saveButton {
+  margin-left: 0.7rem;
+  background: var(--clr-grey-lighter);
+}
+/* NOTE: this is MAX-width */
+@media only screen and (max-width: 600px) {
+  .addresses-saveButton {
+    margin-left: 0.3rem;
+    padding: 0.2rem;
+    height: 2.2rem;
+    font-size: 1.3rem;
   }
 }
 /* toggle :hover and :active styles */
@@ -125,17 +146,5 @@
     border: 1.5px solid var(--clr-black);
   }
 }
-.addresses-saveButton {
-  margin-left: 0.7rem;
-  background: var(--clr-grey-lighter);
-}
-/* NOTE: this is MAX-width */
-@media only screen and (max-width: 600px) {
-  .addresses-saveButton {
-    margin-left: 0.3rem;
-    padding: 0.2rem;
-    height: 2.7rem;
-    font-size: 1.3rem;
-  }
-}
+
 /* EDITING UI END */

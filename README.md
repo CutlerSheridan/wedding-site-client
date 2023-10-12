@@ -33,8 +33,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - on RSVP, see if, on mobile, ticket hole needs to be brought in a little deeper
 - decide on calendar button font color
 - ? add flourishes to Error 404 page
-- style admin pages
-- style buttons
 - decide if Photo page should use "go back" link or button
 - ? add stars to top of page
 - ? add White Star Line logo to schedule
@@ -42,11 +40,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
   - ? also add it to Table emptay corner cells
 - ? get rid of headers altogether?
   - if so, just make them invisible so search engines can still find the h1's
-- change table cell hover behavior to just outline so it's easier to see that it changes post-clicking
-- make address inputs shift below address label in RSVP on mobile
-- make Addresses columns equal widths on iOS
-- get dashboard table headers looking better on Safari
-- fix table sizes in safari
 - make password field censor passwords
 - censor secret passphrase
 - research styling page transitions
@@ -62,6 +55,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.8_
+
+- make Save btn shift below address input on mobile in Addresses
 
 _0.11.7_
 
