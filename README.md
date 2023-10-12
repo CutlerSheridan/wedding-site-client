@@ -6,7 +6,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- restyle GuestCards to current theme
+- add ticket hole to GuestCard
+- hide GuestCard delete button when not in edit mode
 
 #### TODO LATER
 
@@ -55,6 +56,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.10_
+
+- improve RSVP ticket holes so responsive sizing never results in camouflaged half of hole covering Cardstock border
+- style GuestCard labels and name
+- get GuestCard ticket responsive width for mobile
+- fix hidden h1 so long URL doesn't cause blank page to extend to the right
 
 _0.11.9_
 

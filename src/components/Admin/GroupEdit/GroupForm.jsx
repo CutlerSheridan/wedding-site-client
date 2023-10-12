@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import GuestCard from './GuestCard';
 import SERVER_URL from '../../../serverUrl';
+import './GroupEdit.css';
 
 const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
   const [isEditing, setIsEditing] = useState(false);

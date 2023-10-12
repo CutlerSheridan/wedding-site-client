@@ -1,42 +1,35 @@
 .guestCard {
+  --border-width: 0.5px;
+  --hole-width: 3.7rem;
+  --ticket-margin-left: 3rem;
+  --inner-border-inset: 5px;
+  --inner-border-width: 3px;
   position: relative;
   padding: 2rem 2.5rem;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   background: var(--clr-white);
-  border: 3px dotted var(--clr-black);
-  /* background: var(--clr-black); */
-  border-radius: 1rem;
-  /* color: var(--clr-white-2); */
-  color: var(--clr-black);
+  border: var(--border-width) solid var(--clr-grey-lighter);
+}
+.guestCard::before {
+  content: '';
+  position: absolute;
+  inset: var(--inner-border-inset);
+  background: transparent;
+  border: var(--inner-border-width) double var(--clr-pri);
 }
 @media only screen and (min-width: 600px) {
   .guestCard {
-    grid-template-columns: repeat(2, 1fr);
+    --hole-width: 5rem;
+    --ticket-margin-left: 4rem;
+    padding: 2.5rem 3.5rem;
+    grid-template-columns: 1fr 1fr;
   }
 }
-.guestCard::before {
-  --width: 5rem;
-  position: absolute;
-  content: '';
-  left: calc(-1 * var(--width) / 2);
-  top: calc(50% - (var(--width) / 2));
-  width: var(--width);
-  height: var(--width);
-  background: var(--clr-white-2);
-  border: 3px dotted var(--clr-black);
-  border-radius: 5rem;
-}
-.guestCard::after {
-  --width: 6rem;
-  position: absolute;
-  content: '';
-  left: calc(-1 * var(--width) / 2 - 3px);
-  top: calc(50% - (var(--width) / 2));
-  width: calc(var(--width) / 2);
-  height: var(--width);
-  background: var(--clr-white-2);
+.guestCard > * {
+  z-index: 1;
 }
 
 .guestCard-gridCell {
@@ -51,8 +44,8 @@
 }
 .guestCard-deleteButton {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
   width: 4rem;
   height: 4rem;
   font-size: 1.2em;

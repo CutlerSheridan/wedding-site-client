@@ -87,7 +87,6 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  font-weight: bold;
   transform: rotate(-90deg);
   background: transparent;
   color: var(--clr-white-2);
