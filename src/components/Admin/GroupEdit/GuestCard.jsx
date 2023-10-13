@@ -53,16 +53,16 @@ const GuestCard = ({
             isEditing={isEditing}
           />
         </div>
-        <Selector
+        {/* <Selector
           field="character"
           value={guest.character}
           handleChange={localUpdateGuestAddId}
           optionLabels={[]}
           optionValues={[]}
           isEditing={isEditing}
-        />
+        /> */}
       </div>
-      <div className="guestCard-gridCell">
+      <div className="guestCard-gridCell guestCard-tableCell">
         <Table
           guests={[guest]}
           tableType="soloGuest"

@@ -68,9 +68,16 @@
 }
 /* CORNERS END */
 
+@media only screen and (min-width: 450px) {
+  .cardstock-outerContainer {
+    --corner-size: 10rem;
+  }
+  .cardstock-innerContainer {
+    padding: 6rem 2rem 8rem;
+  }
+}
 @media only screen and (min-width: 600px) {
   .cardstock-outerContainer {
-    --corner-margin: 2px;
     --corner-size: 13rem;
   }
   .cardstock-innerContainer {

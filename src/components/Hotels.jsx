@@ -61,7 +61,7 @@ const Hotels = () => {
             <div className="hotel-infoListItem">
               <div className="hotel-listItemText">
                 Call and <span className="hotel-infoEmphasis">press 5</span>;
-                ask for a room in the Reeves/Sheridan wedding block.
+                ask for a room in the Reeves / Sheridan wedding block.
               </div>
               <button
                 type="button"
@@ -85,7 +85,7 @@ const Hotels = () => {
                   location.href = 'https://www.hotelportofino.com/';
                 }}
               >
-                Portofino Website
+                Hotel Site
               </button>
             </div>
           </div>

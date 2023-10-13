@@ -6,33 +6,31 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- check breakpoints; add more where needed
+- do another mobile pass with Kenna's old iPhone Max
+- add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
+- rewrite itinerary copy
 
 #### TODO LATER
 
 ##### Features
 
-- rewrite itinerary copy
+- ? wedding hashtag
 - add ability in Schedule to link or span more than once per description line
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
 - add SEO
 - ? add admin user setting to dictate if admin can only view admin site or if they can edit too
-- ? wedding hashtag
 
 ##### Behavior
 
-- Home photos should be focus-able; maybe swap navigation to a transparent button on top of each picture
-- in GroupForm, should table toggles auto-update in database or only update on save?
-- add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
+- make Home photos focus-able; maybe swap navigation to a transparent button on top of each picture
 - add error if server is called and doesn't respond
 
 ##### Style
 
-- make header font smaller on mobile
+- decide how to lay out pictures on Home
 - decide which hover/active behavior to use for Dashboard tables and Addresses table
 - decide on calendar button font color
-- ? add flourishes to Error 404 page
 - decide if Photo page should use "go back" link or button
 - ? add stars to top of page
 - ? add White Star Line logo to schedule
@@ -40,10 +38,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
   - ? also add it to Table emptay corner cells
 - ? get rid of headers altogether?
   - if so, just make them invisible so search engines can still find the h1's
-- make password field censor passwords
-- censor secret passphrase
-- research styling page transitions
 - decide on and clean up .button-small use
+- on Photo page, decide if "go back" should be above or below the picture
 - add credit
 
 ##### Production Deployment Checklist
@@ -56,6 +52,27 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.11.13_
+
+- check breakpoints; add more where needed
+  - [x] Cardstock
+  - [x] Home
+  - [x] Navbar
+  - [x] Photo
+  - [x] RSVP Auth
+  - [x] RSVP Form
+  - [x] Itinerary
+  - [x] Hotel
+  - [x] Registry
+  - [x] Dashboard
+  - [x] Addresses
+  - [x] Group Lookup
+  - [x] Group Edit
+  - [x] Login
+  - [x] Signup
+  - [x] Error 404
+- make header font smaller on mobile
+
 _0.11.12_
 
 - style login page to current theme
@@ -64,6 +81,8 @@ _0.11.12_
 - fix GuestCard detail wrapping, not sure when this fucked up again
 - adjust spacing of labels when in edit mode
 - make letter-spacing normal everywhere that's cursive
+- make password field censor passwords
+- censor secret passphrase
 
 _0.11.11_
 

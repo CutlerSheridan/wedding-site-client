@@ -13,7 +13,7 @@
 .input-label {
   margin-bottom: -0.1rem;
   font-family: var(--font-1);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--clr-grey-lighter);
   text-transform: uppercase;
 }
@@ -21,9 +21,9 @@
   margin-bottom: 0.1rem;
 }
 .input-displayText {
-  letter-spacing: 0.2rem;
+  font-size: 1.9rem;
 }
-.input-displayEmphasis {
+.input-displayText.input-displayEmphasis {
   margin-top: 0.4rem;
   font-family: var(--font-3);
   font-size: 4rem;
@@ -36,23 +36,57 @@
 }
 .input-grouping textarea {
   height: 5rem;
+  width: 20rem;
 }
 .input-grouping select {
   padding: 0.2rem;
   font-size: 1.6rem;
 }
+@media only screen and (min-width: 450px) {
+  .input-grouping textarea {
+    width: 25rem;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .input-label {
+    font-size: 1.4rem;
+  }
+  .input-displayText {
+    font-size: 2rem;
+  }
+}
 @media only screen and (min-width: 600px) {
-  .input-displayEmphasis {
-    font-size: 4.5rem;
+  .input-label {
+    font-size: 1.2rem;
+  }
+  .input-displayText {
+    font-size: 1.8rem;
+  }
+  .input-displayText.input-displayEmphasis {
+    font-size: 3.5rem;
+  }
+  .input-grouping textarea {
+    height: 6rem;
+  }
+}
+@media only screen and (min-width: 725px) {
+  .input-label {
+    font-size: 1.4rem;
+  }
+  .input-displayText {
+    font-size: 2rem;
   }
   .input-grouping input[type='text'],
   .input-grouping textarea {
     font-size: 1.8rem;
   }
-  .input-grouping textarea {
-    height: 6rem;
-  }
   .input-grouping select {
     font-size: inherit;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .input-displayText.input-displayEmphasis {
+    font-size: 4.5rem;
   }
 }

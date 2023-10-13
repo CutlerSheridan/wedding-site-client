@@ -4,12 +4,18 @@
 }
 .error-type {
   margin-bottom: 0;
+  font-size: 4.5rem;
 }
 .error-link {
   margin: 3rem auto 0;
   width: max-content;
   display: block;
   color: var(--clr-pri);
+}
+@media only screen and (min-width: 400px) {
+  .error-type {
+    font-size: 5rem;
+  }
 }
 @media only screen and (min-width: 600px) {
   .error404 {

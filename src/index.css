@@ -73,7 +73,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  font-size: 62.5%;
+  font-size: 55%;
   font-family: var(--font-2);
   font-weight: 500;
 }
@@ -93,6 +93,11 @@ body {
   width: 100%;
   font-size: 2rem;
   letter-spacing: 0.1rem;
+}
+@media only screen and (min-width: 350px) {
+  :root {
+    font-size: 62.5%;
+  }
 }
 a {
   color: inherit;
@@ -114,7 +119,7 @@ button {
   border: 1px solid transparent;
   padding: 0.5rem 0.9rem;
   height: 3.5rem;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 500;
   font-family: inherit;
   text-transform: uppercase;
@@ -156,22 +161,25 @@ button:active {
   /* height: 3.05rem; */
   /* font-size: 1.6rem; */
 }
+@media only screen and (min-width: 500px) {
+  button {
+    font-size: 1.8rem;
+  }
+}
 
 h1 {
-  /* margin: 2rem 0; */
   margin: 0 0 1rem;
   left: 0;
   font-family: var(--font-1);
-  /* font-family: var(--font-3); */
-  font-size: 5rem;
-  /* font-size: 7.5rem; */
+  font-size: 3.8rem;
   text-transform: uppercase;
-  /* text-transform: capitalize; */
-  /* text-decoration: underline; */
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
-  /* background: var(--clr-white-2); */
-  /* color: var(--clr-pri); */
+}
+@media only screen and (min-width: 450px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 h1.internalHeader {
   visibility: hidden;

@@ -59,15 +59,21 @@
   margin: 0.5rem auto;
   width: max-content;
 }
+.schedule-descriptionList {
+  margin: auto;
+  /* max-width: 60ch; */
+  font-size: 0.75em;
+  /* background: pink; */
+}
 .schedule-dressCode {
   font-weight: bold;
 }
 .schedule-eventDescription {
-  margin: auto;
+  margin: 0 1rem;
+  /* margin: auto; */
   padding: 0 0.5rem;
   text-align: left;
-  max-width: 60ch;
-  font-size: 0.75em;
+  /* max-width: 60ch; */
   font-style: italic;
   list-style-type: '';
   letter-spacing: 0.2rem;
@@ -96,6 +102,9 @@
     width: 1px;
     background: var(--clr-grey-lightest);
   }
+  .schedule-eventTitle {
+    font-size: 4rem;
+  }
   .schedule-descriptionList {
     position: relative;
   }
@@ -118,5 +127,10 @@
   .schedule-eventDescription {
     margin-left: 3rem;
     padding: 0;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .schedule-eventTitle {
+    font-size: 4.5rem;
   }
 }

@@ -8,6 +8,15 @@ const Photo = () => {
 
   return (
     <div className="photo-wrapper">
+      <Link
+        to=""
+        onClick={(e) => {
+          e.preventDefault();
+          navigate(-1);
+        }}
+      >
+        Go back
+      </Link>
       {photoPath ? (
         <div className="photo-container">
           <img
@@ -20,22 +29,13 @@ const Photo = () => {
       ) : (
         <Loading />
       )}
-      <Link
-        to=""
-        onClick={(e) => {
-          e.preventDefault();
-          navigate(-1);
-        }}
-      >
-        Go back
-      </Link>
-      <button
+      {/* <button
         type="button"
         className="photo-backButton"
         onClick={() => navigate(-1)}
       >
         Go back
-      </button>
+      </button> */}
     </div>
   );
 };

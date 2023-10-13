@@ -47,6 +47,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media only screen and (min-width: 500px) {
+  .addresses-fieldGrouping {
+    font-size: 1.6rem;
+  }
+}
 @media only screen and (min-width: 600px) {
   .addresses-headingWrapper {
     font-size: 2rem;
