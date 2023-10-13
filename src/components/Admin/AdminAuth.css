@@ -1,11 +1,43 @@
+.adminAuth-formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.adminAuth-formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.adminAuth-formGroup input {
+  padding: 0.3rem 0.5rem;
+}
 .adminAuth-errorsList {
   max-width: 25ch;
 }
+.adminAuth-errorsList {
+  padding-left: 1rem;
+  list-style: outside;
+}
+@media only screen and (min-width: 600px) {
+  .adminAuth-errorsList {
+    padding-left: 0;
+  }
+}
 .adminAuth-error {
-  color: crimson;
+  font-size: 1.7rem;
+  text-align: left;
+  color: var(--clr-red);
+  line-height: 2ch;
+}
+.adminAuth-error:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 .adminAuth-swapModalButton {
-  font-size: 0.7em;
+  margin-left: 1rem;
+  font-size: 1.4rem;
   background: transparent;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }

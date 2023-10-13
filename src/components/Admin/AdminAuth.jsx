@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import SERVER_URL from '../../serverUrl';
 import './AdminAuth.css';
+import Cardstock from '../Cardstock';
 
 const AdminAuth = ({ updateJwt }) => {
   const [username, setUsername] = useState('');
@@ -10,7 +11,6 @@ const AdminAuth = ({ updateJwt }) => {
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [errors, setErrors] = useState([]);
   const submitButton = useRef(null);
-  const [testCounter, setTestCounter] = useState(0);
 
   const pageName = isSigningUp ? 'Sign up' : 'Log in';
 
@@ -20,7 +20,6 @@ const AdminAuth = ({ updateJwt }) => {
   };
 
   const handleSubmit = async (e) => {
-    setTestCounter((prev) => ++prev);
     const parsedResponse = await getResponseFromFetch(e);
 
     if (parsedResponse.hasOwnProperty('token')) {
@@ -50,9 +49,13 @@ const AdminAuth = ({ updateJwt }) => {
   };
 
   return (
-    <>
+    <Cardstock>
       <h1>{pageName}</h1>
-      <form method="POST" onSubmit={handleSubmit}>
+      <form
+        method="POST"
+        className="adminAuth-formWrapper"
+        onSubmit={handleSubmit}
+      >
         <div className="adminAuth-formGroup">
           <label htmlFor="username">Username:</label>
           <input
@@ -68,6 +71,7 @@ const AdminAuth = ({ updateJwt }) => {
         <div className="adminAuth-formGroup">
           <label htmlFor="password">Password:</label>
           <input
+            type="password"
             className="adminAuth-formControl"
             id="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -83,6 +87,7 @@ const AdminAuth = ({ updateJwt }) => {
             <div className="adminAuth-formGroup">
               <label htmlFor="confirmedPassword">Confirm Password:</label>
               <input
+                type="password"
                 className="adminAuth-formControl"
                 id="confirmedPassword"
                 onChange={(e) => setConfirmedPassword(e.target.value)}
@@ -119,34 +124,34 @@ const AdminAuth = ({ updateJwt }) => {
           ))}
         </ul>
 
-        {isSigningUp ? (
+        <div className="adminAuth-controls">
+          {isSigningUp ? (
+            <button
+              type="submit"
+              ref={submitButton}
+              disabled={!username || !password || !confirmedPassword || !secret}
+            >
+              Submit
+            </button>
+          ) : (
+            <button
+              type="submit"
+              ref={submitButton}
+              disabled={!username || !password}
+            >
+              Submit
+            </button>
+          )}
           <button
-            type="submit"
-            ref={submitButton}
-            disabled={!username || !password || !confirmedPassword || !secret}
+            type="button"
+            className="adminAuth-swapModalButton"
+            onClick={swapModals}
           >
-            Submit
+            {isSigningUp ? 'Log in' : 'Sign up'}
           </button>
-        ) : (
-          <button
-            type="submit"
-            ref={submitButton}
-            disabled={!username || !password}
-          >
-            Submit
-          </button>
-        )}
-
-        <button
-          type="button"
-          className="adminAuth-swapModalButton"
-          onClick={swapModals}
-        >
-          {isSigningUp ? 'Log in' : 'Sign up'}
-        </button>
+        </div>
       </form>
-      <div>{testCounter}</div>
-    </>
+    </Cardstock>
   );
 };
 

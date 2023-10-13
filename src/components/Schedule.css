@@ -39,6 +39,7 @@
   font-weight: 400;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
+  letter-spacing: normal;
 }
 .schedule-eventDetails {
   position: relative;

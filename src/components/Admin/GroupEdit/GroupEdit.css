@@ -65,8 +65,9 @@
   background: var(--clr-white);
 }
 .groupLookup-guestName {
-  display: block;
+  margin: 0.2rem auto;
   font-size: 1.7rem;
+  line-height: 17px;
 }
 @media only screen and (min-width: 600px) {
   .groupLookup-groupList {
@@ -76,6 +77,7 @@
     gap: 1.6rem;
   }
   .groupLookup-guestName {
+    margin: 0.4rem auto;
     font-size: 2rem;
   }
   .groupLookup-groupCard {
@@ -83,12 +85,11 @@
   }
 }
 .groupLookup-groupCard:active {
-  border-style: solid;
+  border-color: var(--clr-black);
 }
 @media only screen and (hover: hover) {
   .groupLookup-groupCard:hover {
     cursor: pointer;
-    border-style: solid;
     border-color: var(--clr-black);
   }
 }

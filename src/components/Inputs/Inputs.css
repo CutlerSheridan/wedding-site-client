@@ -1,16 +1,14 @@
 .input-grouping {
   width: max-content;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-.input-grouping.input-grouping-textarea {
-  width: 100%;
-}
 .input-grouping * {
   text-align: left;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 .input-label {
   margin-bottom: -0.1rem;
@@ -19,23 +17,40 @@
   color: var(--clr-grey-lighter);
   text-transform: uppercase;
 }
-.input-displayText {
-  white-space: pre-wrap;
+.guestCard-editing .input-label {
+  margin-bottom: 0.1rem;
 }
-.input-displayText:not(.input-displayEmphasis) {
+.input-displayText {
   letter-spacing: 0.2rem;
 }
 .input-displayEmphasis {
   margin-top: 0.4rem;
   font-family: var(--font-3);
-  font-size: 3.5rem;
+  font-size: 4rem;
+  letter-spacing: normal;
+}
+.input-grouping input,
+.input-grouping textarea {
+  padding: 0.2rem 0.5rem;
+  font-size: 1.6rem;
+}
+.input-grouping textarea {
+  height: 5rem;
 }
 .input-grouping select {
-  font-size: 0.75em;
+  padding: 0.2rem;
+  font-size: 1.6rem;
 }
 @media only screen and (min-width: 600px) {
   .input-displayEmphasis {
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+  .input-grouping input[type='text'],
+  .input-grouping textarea {
+    font-size: 1.8rem;
+  }
+  .input-grouping textarea {
+    height: 6rem;
   }
   .input-grouping select {
     font-size: inherit;

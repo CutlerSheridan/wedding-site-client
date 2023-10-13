@@ -16,7 +16,7 @@ const TextareaInput = ({
           onChange={(e) => handleChange({ [field]: e.target.value })}
         />
       ) : (
-        <div className="input-displayText">{value ?? ' \n '}</div>
+        <div className="input-displayText">{value || ' \n '}</div>
       )}
     </div>
   );

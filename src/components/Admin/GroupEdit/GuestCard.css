@@ -8,10 +8,9 @@
   margin: auto;
   padding: 2rem 2.5rem;
   width: 100%;
-  /* width: calc(100% - var(--hole-width) / 2); */
   width: 97%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   gap: 1rem;
   background: var(--clr-white);
   border: var(--border-width) solid var(--clr-grey-lighter);
@@ -27,9 +26,6 @@
   content: '';
   position: absolute;
   top: calc(50% - var(--hole-width) / 2);
-  /* left: calc(
-    -1 * var(--hole-width) / 2 - var(--ticket-margin-left) - var(--border-width)
-  ); */
   left: calc(-1 * var(--hole-width) / 2 - var(--border-width));
   width: var(--hole-width);
   height: var(--hole-width);
@@ -50,7 +46,7 @@
     --hole-width: 5rem;
     --ticket-margin-left: 4rem;
     padding: 2.5rem 3.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
   }
 }
 .guestCard > * {
@@ -65,7 +61,14 @@
 }
 .guestCard-horizontalFields {
   display: flex;
-  gap: 3rem;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+@media only screen and (min-width: 600px) {
+  .guestCard-horizontalFields {
+    gap: 3rem;
+  }
 }
 .guestCard-deleteButton {
   display: none;

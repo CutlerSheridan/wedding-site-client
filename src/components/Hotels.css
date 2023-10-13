@@ -19,6 +19,7 @@
   margin-bottom: -0.4rem;
   font-family: var(--font-3);
   font-size: 4.3rem;
+  letter-spacing: normal;
 }
 .hotel-address {
   font-size: 0.9em;

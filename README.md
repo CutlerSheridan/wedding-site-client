@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- style login page
 - check breakpoints; add more where needed
 
 #### TODO LATER
@@ -56,6 +55,15 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.12_
+
+- style login page to current theme
+- adjust spacing of Group Card names so it's more clear when one name is breaking vs. two names are stacked
+- add padding to GuestCard input fields
+- fix GuestCard detail wrapping, not sure when this fucked up again
+- adjust spacing of labels when in edit mode
+- make letter-spacing normal everywhere that's cursive
 
 _0.11.11_
 
