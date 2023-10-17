@@ -71,7 +71,14 @@ const Rsvp = () => {
         />
 
         <div className="rsvp-separator"></div>
-        <button type="button" className="button-small" onClick={forgetGroupId}>
+        <button
+          type="button"
+          className="button-small"
+          onClick={() => {
+            forgetGroupId();
+            window.scroll(0, 0);
+          }}
+        >
           Back to Search
         </button>
       </>
@@ -104,10 +111,23 @@ const Rsvp = () => {
     <Cardstock>
       <h1>RSVP</h1>
 
-      {isLoading ? (
+      {/* {isLoading ? (
         <Loading />
       ) : guestsInGroup.length ? (
         createFormComponents(guestsInGroup)
+      ) : (
+        <RsvpAuth
+          setGroupId={updateGroupId}
+          setGuestsInGroup={updateGuestsInGroup}
+        />
+      )} */}
+      {groupId ? (
+        isLoading ? (
+          <Loading />
+        ) : (
+          createFormComponents(guestsInGroup)
+          // <Loading />
+        )
       ) : (
         <RsvpAuth
           setGroupId={updateGroupId}

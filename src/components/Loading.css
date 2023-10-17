@@ -1,0 +1,11 @@
+.loading-wrapper {
+  /* display: flex; */
+  /* align-items: center; */
+  height: 20rem;
+}
+.loading-text {
+  margin-top: 4rem;
+  font-size: 6rem;
+  font-family: var(--font-3);
+  letter-spacing: normal;
+}

@@ -43,13 +43,13 @@ const EVENTS = [
     ],
     'Saturday',
     'January 27, 2024',
-    '3:40pm# – 7:00pm',
+    '3:45pm# – 7:00pm',
     'Black tie mandatory.  Titanic-era influence encouraged.',
     [
-      "The ceremony will take place on a boat, which will depart at 4:00pm.  Don't be late or we'll leave without you!",
+      "The ceremony will take place on a boat, which will board at 3:45pm.  Don't be late or we will leave without you!",
       'LA gets chilly at night.  Dress accordingly.',
       'We recommend walking or Ubering, but a parking deck is available nearby at 200 N. Pacific Avenue.',
-      "There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand.  Dinner isn't until afterwards.",
+      "Dinner will be served after we disembark. There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand if you need to.",
     ],
     true,
     ['2024-01-27', '2024-01-28', '15:30', '19:00']
@@ -62,7 +62,7 @@ const EVENTS = [
     '7:00pm – 2:00am',
     'Black tie',
     [
-      "Naja's Place has wine and a HUGE selection of beer on tap, but no liquor, so get your fill on the boat.",
+      "Naja's Place has wine and a huge selection of beer on tap, but no liquor, so get your fill on the boat.",
       'Everyone will get a wristband to order dinner from the connected smash burger grill, which has a variety of options (including vegetarian).',
     ],
     false,
@@ -77,7 +77,7 @@ const EVENTS = [
     'Casual',
     [
       'A chill brunch in a park for anyone still in town.',
-      "We will have some basic stuff like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it here!",
+      "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it here!",
     ],
     true,
     ['2024-01-28', '2024-01-28', '13:00', '15:00']

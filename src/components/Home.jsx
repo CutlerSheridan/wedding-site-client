@@ -27,7 +27,7 @@ const Home = () => {
         </p>
         <p className="home-name">Cutler Sheridan</p>
         {/* <p className="home-transitionText">at</p>
-        <p className="home-detailsText">4:00pm</p> */}
+          <p className="home-detailsText">4:00pm</p> */}
         <p className="home-transitionText home-transitionTextPostNames">on</p>
         <p className="home-detailsText">January 27, 2024</p>
         <p className="home-transitionText">in</p>

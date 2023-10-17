@@ -1,7 +1,7 @@
 {
   "name": "wedding-site-client",
   "private": true,
-  "version": "0.11.13",
+  "version": "0.11.14",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "add-to-calendar-button-react": "^2.3.3",
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0"

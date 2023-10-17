@@ -6,9 +6,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- do another mobile pass with Kenna's old iPhone Max
-- add page fade after brief delay to RSVP et. al. so they don't flicker "loading" for super fast loads
+- prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
 - rewrite itinerary copy
+- figure out correct address for harbor
+- do another mobile pass with Kenna's old iPhone Max
 
 #### TODO LATER
 
@@ -51,6 +52,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.14_
+
+- add page transitions using framer-motion package
+- adjust RSVP loading so user with no stored group ID doesn't see Loading component upon loading search bar
+- fix how, on mobile, clicking "back to search" reverts page to RsvpAuth but doesn't scroll page up
+  - (didn't really figure out the issue but I added scroll-to-top behavior to "back to search" button)
 
 _0.11.13_
 
