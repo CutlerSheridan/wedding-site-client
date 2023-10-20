@@ -11,12 +11,16 @@ const Hotels = () => {
     <>
       <Transitions>
         <div className="hotel-imgContainer">
-          <img
-            className="hotel-img"
-            src={hotelPic}
+          <Link
+            to=""
+            className="hotel-pictureLink"
             onClick={() => {
               navigate('/pictures/hotel-room');
             }}
+          ></Link>
+          <img
+            className="hotel-img"
+            src={hotelPic}
             alt="A hotel room with a view of the marina"
             height="800"
             width="800"
@@ -49,46 +53,33 @@ const Hotels = () => {
                 <div className="hotel-listItemText">
                   Book directly through our custom link.
                 </div>
-                <button
-                  type="button"
-                  className="hotel-listItemButton"
-                  onClick={() => {
-                    location.href =
-                      'https://be.synxis.com/?Hotel=29023&Chain=11910&arrive=2024-01-26&depart=2024-01-28&adult=1&child=0&group=7142402';
-                  }}
-                >
-                  Click Here
-                </button>
+                <Link to="https://be.synxis.com/?Hotel=29023&Chain=11910&arrive=2024-01-26&depart=2024-01-28&adult=1&child=0&group=7142402">
+                  <button type="button" className="hotel-listItemButton">
+                    Click Here
+                  </button>
+                </Link>
               </div>
               <div className="hotel-infoListItem">
                 <div className="hotel-listItemText">
                   Call and <span className="hotel-infoEmphasis">press 5</span>;
                   ask for a room in the Reeves / Sheridan wedding block.
                 </div>
-                <button
-                  type="button"
-                  className="hotel-listItemButton"
-                  onClick={() => {
-                    location.href = 'tel:3104214195';
-                  }}
-                >
-                  310 421 4195
-                </button>
+                <Link to="tel:3104214195">
+                  <button type="button" className="hotel-listItemButton">
+                    310 421 4195
+                  </button>
+                </Link>
               </div>
               <div className="hotel-infoListItem">
                 <div className="hotel-listItemText">
                   Use <span className="hotel-infoEmphasis">code 7142402</span>{' '}
                   on the hotel's general website.
                 </div>
-                <button
-                  type="button"
-                  className="hotel-listItemButton"
-                  onClick={() => {
-                    location.href = 'https://www.hotelportofino.com/';
-                  }}
-                >
-                  Hotel Site
-                </button>
+                <Link to="https://www.hotelportofino.com/">
+                  <button type="button" className="hotel-listItemButton">
+                    Hotel Site
+                  </button>
+                </Link>
               </div>
             </div>
             <p className="hotel-infoDescription">
@@ -98,7 +89,6 @@ const Hotels = () => {
               is unavailable, ask for{' '}
               <span className="hotel-infoEmphasis">Rain Villanueva</span>.
             </p>
-            <p className="hotel-infoDescription"></p>
           </div>
 
           <div className="hotel-separator"></div>

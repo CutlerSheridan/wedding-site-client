@@ -75,23 +75,31 @@ const Home = () => {
       </p>
       <div className="home-imgsRow">
         <div className="home-imgContainer">
-          <img
-            src="/src/assets/photos/dressy-pic.jpg"
-            alt="Cutler and Tyler dressed up drinking martinis by the water"
+          <Link
+            to=""
+            className="home-pictureLink"
             onClick={() => {
               navigate('/pictures/dressy-pic');
               window.scroll(0, 0);
             }}
+          ></Link>
+          <img
+            src="/src/assets/photos/dressy-pic.jpg"
+            alt="Cutler and Tyler dressed up drinking martinis by the water"
           />
         </div>
         <div className="home-imgContainer">
-          <img
-            src="/src/assets/photos/engagement-pic.jpg"
-            alt="Cutler holding Tyler in a pose recreating Jack holding Rose on the Titanic poster behind them"
+          <Link
+            to=""
+            className="home-pictureLink"
             onClick={() => {
               navigate('/pictures/engagement-pic');
               window.scroll(0, 0);
             }}
+          ></Link>
+          <img
+            src="/src/assets/photos/engagement-pic.jpg"
+            alt="Cutler holding Tyler in a pose recreating Jack holding Rose on the Titanic poster behind them"
           />
         </div>
       </div>

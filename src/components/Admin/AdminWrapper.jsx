@@ -17,7 +17,7 @@ const AdminWrapper = () => {
 
   return (
     <>
-      {/* <button type="button" className="button-small" onClick={toggleJwt}>
+      {/* <button type="button" onClick={toggleJwt}>
         Toggle auth {jwt ? 'off' : 'on'}
       </button> */}
       {jwt ? (

@@ -8,7 +8,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 - prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
 - rewrite itinerary copy
-- figure out correct address for harbor
 - do another mobile pass with Kenna's old iPhone Max
 
 #### TODO LATER
@@ -16,7 +15,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 ##### Features
 
 - ? wedding hashtag
-- add ability in Schedule to link or span more than once per description line
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
 - add SEO
@@ -24,23 +22,18 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
-- make Home photos focus-able; maybe swap navigation to a transparent button on top of each picture
 - add error if server is called and doesn't respond
+- ? add ability in Schedule to link or span in description line (this would really just require manually putting in event descriptions instead of including them in event objects)
 
 ##### Style
 
 - decide how to lay out pictures on Home
-- decide which hover/active behavior to use for Dashboard tables and Addresses table
 - decide on calendar button font color
-- decide if Photo page should use "go back" link or button
+- on Photo page, decide if "go back" should be above or below the picture
 - ? add stars to top of page
 - ? add White Star Line logo to schedule
   - ? or omg replace navbar "&" with logo
-  - ? also add it to Table emptay corner cells
-- ? get rid of headers altogether?
-  - if so, just make them invisible so search engines can still find the h1's
-- decide on and clean up .button-small use
-- on Photo page, decide if "go back" should be above or below the picture
+  - ? also add it to Table empty corner cells
 - add credit
 
 ##### Production Deployment Checklist
@@ -52,6 +45,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.15_
+
+- refactor hotel page buttons so you can copy the links
+- decide on and clean up .button-small use
+- make Home photos focus-able; swap navigation to a transparent button on top of each picture
+- make Hotel photo focus-able
 
 _0.11.14_
 

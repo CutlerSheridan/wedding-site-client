@@ -150,9 +150,7 @@ const AddressesPage = () => {
       <h1 className="addresses-header">Addresses</h1>
       <button
         type="button"
-        className={`addresses-editButton button-small ${
-          isEditing ? 'button-selected' : ''
-        }`}
+        className={`addresses-editButton ${isEditing ? 'button-selected' : ''}`}
         onClick={() => {
           setIsEditing(!isEditing);
         }}

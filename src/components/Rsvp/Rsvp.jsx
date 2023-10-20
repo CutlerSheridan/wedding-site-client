@@ -73,7 +73,6 @@ const Rsvp = () => {
         <div className="rsvp-separator"></div>
         <button
           type="button"
-          className="button-small"
           onClick={() => {
             forgetGroupId();
             window.scroll(0, 0);

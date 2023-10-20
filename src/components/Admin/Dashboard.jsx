@@ -200,7 +200,7 @@ const Dashboard = () => {
         </div>
         <button
           type="button"
-          className={`button-small ${isEditing ? 'button-selected' : ''}`}
+          className={`${isEditing ? 'button-selected' : ''}`}
           onClick={() => {
             setIsEditing(!isEditing);
           }}

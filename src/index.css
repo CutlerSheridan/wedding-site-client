@@ -157,10 +157,6 @@ button:active {
   background: var(--clr-pri);
   color: var(--clr-white-2);
 }
-.button-small {
-  /* height: 3.05rem; */
-  /* font-size: 1.6rem; */
-}
 @media only screen and (min-width: 500px) {
   button {
     font-size: 1.8rem;

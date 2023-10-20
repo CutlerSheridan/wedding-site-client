@@ -1,9 +1,14 @@
 .hotel-imgContainer {
+  position: relative;
   margin: 0 auto 0rem;
   width: 100%;
   /* border: 3px solid var(--clr-grey-lighter); */
   border: 5px solid var(--clr-white-2);
   border-bottom: none;
+}
+.hotel-pictureLink {
+  position: absolute;
+  inset: 0;
 }
 .hotel-img {
   width: 100%;
