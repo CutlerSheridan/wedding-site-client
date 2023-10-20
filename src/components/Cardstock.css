@@ -1,3 +1,24 @@
+.cardstock-wrapper {
+  position: relative;
+}
+.cardstock-wrapper::before {
+  --flag-width: 7rem;
+  content: '';
+  position: absolute;
+  left: calc(50% - var(--flag-width) / 2);
+  bottom: 2rem;
+  width: var(--flag-width);
+  height: calc(var(--flag-width) * 0.83984375);
+  background-image: url('../assets/white-star-line.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+@media only screen and (min-width: 500px) {
+  .cardstock-wrapper::before {
+    --flag-width: 8rem;
+  }
+}
 .cardstock-outerContainer {
   --corner-margin: 2px;
   --corner-size: 8rem;
@@ -73,14 +94,11 @@
     --corner-size: 10rem;
   }
   .cardstock-innerContainer {
-    padding: 6rem 2rem 8rem;
+    padding: 6rem 2rem 10rem;
   }
 }
 @media only screen and (min-width: 600px) {
   .cardstock-outerContainer {
     --corner-size: 13rem;
-  }
-  .cardstock-innerContainer {
-    padding: 6rem 2rem 8rem;
   }
 }

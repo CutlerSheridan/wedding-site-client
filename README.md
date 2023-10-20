@@ -6,9 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- ? add White Star Line logo to schedule
-  - ? or omg replace navbar "&" with logo
-  - ? also add it to Table empty corner cells
+- decide if I'm keeping the White Star Line logo
 - decide on calendar button font color
 - rewrite itinerary copy
 
@@ -30,7 +28,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Style
 
-- decide how to lay out pictures on Home
+- decide how to lay out pictures on Home on mobile
 - add credit
 
 ##### Production Deployment Checklist
@@ -42,6 +40,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.17_
+
+- add White Star Line logo to bottom of Cardstock
 
 _0.11.16_
 
