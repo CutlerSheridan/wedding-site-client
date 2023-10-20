@@ -6,9 +6,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
+- ? add White Star Line logo to schedule
+  - ? or omg replace navbar "&" with logo
+  - ? also add it to Table empty corner cells
+- decide on calendar button font color
 - rewrite itinerary copy
-- do another mobile pass with Kenna's old iPhone Max
 
 #### TODO LATER
 
@@ -22,18 +24,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
+- prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
 - add error if server is called and doesn't respond
 - ? add ability in Schedule to link or span in description line (this would really just require manually putting in event descriptions instead of including them in event objects)
 
 ##### Style
 
 - decide how to lay out pictures on Home
-- decide on calendar button font color
-- on Photo page, decide if "go back" should be above or below the picture
-- ? add stars to top of page
-- ? add White Star Line logo to schedule
-  - ? or omg replace navbar "&" with logo
-  - ? also add it to Table empty corner cells
 - add credit
 
 ##### Production Deployment Checklist
@@ -46,8 +43,17 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_0.11.16_
+
+- do another mobile pass with Kenna's old iPhone Max
+  - adjust 'booking options' sizes
+- add stars to top of page
+- add transparency mask to stars so they fade about halfway down a page's initial view
+- make fade occur at the same spot on each page regardless of how much content is on the page (use vh's instead of %'s for gradient switch point)
+
 _0.11.15_
 
+- move 'go back' link to bottom of Photo page
 - refactor hotel page buttons so you can copy the links
 - decide on and clean up .button-small use
 - make Home photos focus-able; swap navigation to a transparent button on top of each picture

@@ -30,6 +30,7 @@
   height: 0.3px;
   background: var(--clr-grey-lightest);
 }
+
 /* MOBILE NAV START */
 .navbar-wrapper-full {
   display: none;
@@ -41,6 +42,16 @@
   justify-content: space-between;
   align-items: center;
 }
+/* .hamburger-topBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/stars.png');
+  background-size: cover;
+} */
 .hamburger-names {
   --flourish-width: 4.5rem;
   /* If flourish_1, use 4.91; if flourish_2, 3.31 */
@@ -147,6 +158,7 @@
     display: none;
   }
   .navbar-wrapper-full {
+    /* position: relative; */
     padding: 3rem 2rem 0 2rem;
     min-height: 5ch;
     display: flex;
@@ -155,6 +167,23 @@
     align-items: center;
     gap: 1rem;
   }
+  /* .navbar-wrapper-full::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 250%;
+    max-height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(var(--clr-pri-nums), 0.5),
+        rgba(var(--clr-pri-dark-nums), 1)
+      ),
+      url('../assets/stars.png');
+    background-size: contain;
+    z-index: -1;
+  } */
   .hamburger-names {
     display: none;
   }
