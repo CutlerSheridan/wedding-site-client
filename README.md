@@ -6,7 +6,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- decide if I'm keeping the White Star Line logo
 - decide on calendar button font color
 - rewrite itinerary copy
 
@@ -40,6 +39,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.18_
+
+- make sure if someone is in 'next round' they don't show up in RSVP screen
 
 _0.11.17_
 

@@ -16,7 +16,7 @@ const Rsvp = () => {
       if (groupId && !guestsInGroup.length) {
         const response = await fetch(`${SERVER_URL}/api/1/groups/${groupId}`);
         const guests = await response.json();
-        setGuestsInGroup(guests);
+        setGuestsInGroup(guests.filter((x) => !x.next_round));
       } else if (!groupId) {
         setGuestsInGroup([]);
       }
@@ -110,22 +110,11 @@ const Rsvp = () => {
     <Cardstock>
       <h1>RSVP</h1>
 
-      {/* {isLoading ? (
-        <Loading />
-      ) : guestsInGroup.length ? (
-        createFormComponents(guestsInGroup)
-      ) : (
-        <RsvpAuth
-          setGroupId={updateGroupId}
-          setGuestsInGroup={updateGuestsInGroup}
-        />
-      )} */}
       {groupId ? (
         isLoading ? (
           <Loading />
         ) : (
           createFormComponents(guestsInGroup)
-          // <Loading />
         )
       ) : (
         <RsvpAuth
