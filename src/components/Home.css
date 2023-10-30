@@ -50,16 +50,20 @@
 }
 
 .home-imgsRow {
-  margin: 3rem 1rem 0;
+  /* margin: 3rem 1rem 0; */
+  margin: 3rem 2.2rem 0;
   display: flex;
   justify-content: center;
   gap: 0.3rem;
 }
+.home-imgsRow > .home-imgContainer:last-of-type {
+  display: none;
+}
 .home-imgContainer {
   position: relative;
   width: 100%;
-  max-width: 50%;
-  border: 3px double var(--clr-grey-lighter);
+  /* border: 3px double var(--clr-grey-lighter); */
+  border: 3px double var(--clr-pri);
   /* border: 3px solid var(--clr-pri); */
 }
 /* The below makes them the same height while maintaining
@@ -81,8 +85,18 @@ their individual aspect ratios */
   position: absolute;
   inset: 0;
 }
-
+@media only screen and (min-width: 500px) {
+  .home-imgsRow {
+    padding-bottom: 1rem;
+  }
+}
 @media only screen and (min-width: 600px) {
+  .home-imgsRow {
+    margin: 3rem 1rem 0;
+  }
+  .home-imgsRow > .home-imgContainer:last-of-type {
+    display: block;
+  }
   .home-invitedText:first-of-type {
     margin: 0rem 3rem 0;
   }

@@ -94,7 +94,7 @@ const Navbar = ({ jwt, updateJwt }) => {
   };
 
   return (
-    <>
+    <header>
       <div className="navbar-wrapper-full">
         <div className="navbar-names" onClick={goHome}>
           Cutler & Tyler
@@ -161,7 +161,7 @@ const Navbar = ({ jwt, updateJwt }) => {
       </div>
 
       <h1 className="internalHeader">{header()}</h1>
-    </>
+    </header>
   );
 };
 

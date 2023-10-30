@@ -53,6 +53,7 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
           value={inputName}
           onChange={handleNameChange}
           placeholder='Ex. "John Smith"'
+          spellCheck="false"
         />
         <button
           ref={submitButton}
@@ -60,7 +61,7 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
           onClick={submitName}
           disabled={!inputName}
         >
-          Submit
+          Search
         </button>
       </form>
       <ul>

@@ -13,20 +13,10 @@
   font-family: 'Christmas Calligraphy';
   src: url('./assets/fonts/Christmas-Calligraphy.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'Silian Rail';
-  src: url('./assets/fonts/Sillian-rail.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Lovelyn';
-  src: url('./assets/fonts/lovelyn-regular.ttf') format('truetype');
-}
 
 :root {
   --clr-pri: rgb(26, 23, 84);
-  --clr-pri-nums: 26, 23, 84;
   --clr-pri-dark: rgb(15, 13, 48);
-  --clr-pri-dark-nums: 15, 13, 48;
   --clr-pri-light: rgb(105, 103, 142);
   --clr-sec: rgb(161, 124, 59);
   --clr-ter: grey;
@@ -40,10 +30,8 @@
   --clr-grey-lighter: rgb(125, 125, 125);
   --clr-grey-lightest: rgb(166, 166, 166);
   --clr-green: rgb(85, 206, 72);
-  /* --clr-green-alpha: rgb(50, 205, 50, 0.5); */
   --clr-green-alpha: rgb(150, 225, 142);
   --clr-red: rgb(211, 11, 56);
-  /* --clr-red-alpha: rgb(211, 11, 56, 0.7); */
   --clr-red-alpha: rgb(249, 139, 163);
   color: var(--clr-white-2);
   background-color: var(--clr-pri-dark);
@@ -54,22 +42,8 @@
   );
 
   --font-1: 'Hoeffler Text';
-  /* --font-1: 'Cardo', serif; */
-  /* --font-1: 'Spectral SC', serif; */
-  /* --font-1: 'Playfair Display', serif; */
   --font-2: 'Caladea', serif;
-  /* --font-2: 'Noto Serif Makasar', serif; */
-  /* --font-2: 'Lovelyn'; */
-  /* --font-2: 'Silian Rail'; */
-  /* --font-2: Gill Sans; */
   --font-3: 'Christmas Calligraphy';
-  /* --font-3: 'Ballet', cursive; */
-  /* --font-3: 'Dancing Script', cursive; */
-  --font-4: 'Lovelyn';
-  /* --font-4: 'Silian Rail'; */
-
-  --font-1-old: Palatino, serif;
-  --font-2-old: Courier, monospace;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -248,6 +222,6 @@ input {
 
 .app-contentWrapper {
   margin: 2rem auto 5rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   max-width: 80rem;
 }

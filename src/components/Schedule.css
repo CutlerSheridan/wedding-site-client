@@ -65,11 +65,8 @@
   font-size: 0.75em;
   /* background: pink; */
 }
-.schedule-dressCode {
-  /* font-weight: bold; */
-}
 .schedule-eventDescription {
-  margin: 0 1rem;
+  margin: 0 1.2rem;
   /* margin: auto; */
   padding: 0 0.5rem;
   text-align: left;

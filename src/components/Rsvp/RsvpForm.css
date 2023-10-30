@@ -1,18 +1,22 @@
 /* RSVP AUTH START */
 .rsvpAuth-instructions {
   max-width: 50ch;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 .rsvpAuth-inputAndButtonWrapper {
-  margin: 2rem auto;
+  margin: 2.1rem auto 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .rsvpAuth-nameInput {
-  padding: 0.5rem 0.7rem;
-  width: 65%;
+  padding: 0.7rem 1rem;
+  width: 60%;
   max-width: 20ch;
+  /* min-height: 3.6rem; */
+  font-size: 1.9rem;
+  /* color: var(--clr-pri); */
 }
 .rsvpAuth-error {
   list-style: none;
@@ -20,6 +24,10 @@
 }
 @media only screen and (min-width: 500px) {
   .rsvpAuth-instructions {
+    font-size: 2rem;
+  }
+  .rsvpAuth-nameInput {
+    padding: 0.5rem 0.7rem;
     font-size: 2rem;
   }
 }
@@ -111,6 +119,9 @@
   font-family: var(--font-1);
   text-transform: uppercase;
 }
+.rsvp-formWrapper-address .rsvp-infoGrouping:first-of-type > .rsvp-infoLabel {
+  display: none;
+}
 .rsvp-infoDetail {
   text-align: left;
 }
@@ -185,7 +196,7 @@ h2.rsvp-infoDetail {
   width: 100%;
   height: 0;
   border-top: 2px dotted;
-  border-color: var(--clr-grey-lighter);
+  border-color: var(--clr-grey-lightest);
   /* background: var(--clr-grey-lightest); */
 }
 .rsvp-inputGrouping {

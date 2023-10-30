@@ -44,7 +44,7 @@
   gap: var(--grid-gap-thin);
   font-size: 1.2rem;
   white-space: pre;
-  overflow: hidden;
+  overflow-x: scroll;
   text-overflow: ellipsis;
 }
 @media only screen and (min-width: 500px) {
@@ -76,6 +76,8 @@
   background: var(--clr-pri);
 }
 .addresses-fieldWrapper:not(.addresses-headingField):not(.addresses-cell) {
+  min-width: max-content;
+  width: 100%;
   justify-content: start;
 }
 @media only screen and (min-width: 600px) {

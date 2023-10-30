@@ -30,7 +30,7 @@
 }
 .cardstock-innerContainer {
   position: relative;
-  padding: 4rem 1.2rem 10rem;
+  padding: 4rem 0.7rem 10rem;
   width: 100%;
   background: var(--clr-white-2);
   /* border: 0.3rem solid var(--clr-white-2); */

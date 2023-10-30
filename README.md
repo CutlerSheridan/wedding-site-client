@@ -6,7 +6,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### TODO NEXT
 
-- decide on calendar button font color
+- decide if one photo on home is working and which photo to show
 - add SEO
 
 #### TODO LATER
@@ -20,13 +20,13 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
+- in group edit, make "new group" start in edit mode
 - prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
 - add error if server is called and doesn't respond
 - ? add ability in Schedule to link or span in description line (this would really just require manually putting in event descriptions instead of including them in event objects)
 
 ##### Style
 
-- decide how to lay out pictures on Home on mobile
 - add credit
 
 ##### Production Deployment Checklist
@@ -38,6 +38,26 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.20_
+
+- address more of Tyler's notes
+  - General
+    - increase margins around cardstock
+    - decrease cardstock padding to compensate
+  - Home
+    - add larger gap under photos row once WSL logo gets bigger from 500px breakpoint
+    - only show one photo on mobile
+  - Hotel
+    - separate image from info
+  - RSVP
+    - change submit button to say "search"
+    - change font sizes for instructions and search field to match
+- on RSVP, remove "event:" from Address ticket
+- make perforation line lighter
+- on Addresses, make name cells scroll horizontally on mobile if necessary
+- change index.html page title and description
+- clean up preloaded and google fonts and font variables
 
 _0.11.19_
 
