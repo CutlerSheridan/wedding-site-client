@@ -78,7 +78,7 @@ const Rsvp = () => {
             window.scroll(0, 0);
           }}
         >
-          Back to Search
+          Find other guest
         </button>
       </>
     );

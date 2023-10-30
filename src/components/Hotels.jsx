@@ -51,7 +51,7 @@ const Hotels = () => {
             <div className="hotel-list">
               <div className="hotel-infoListItem">
                 <div className="hotel-listItemText">
-                  Book directly through our custom link.
+                  Book directly through our custom link
                 </div>
                 <Link to="https://be.synxis.com/?Hotel=29023&Chain=11910&arrive=2024-01-26&depart=2024-01-28&adult=1&child=0&group=7142402">
                   <button type="button" className="hotel-listItemButton">
@@ -62,7 +62,7 @@ const Hotels = () => {
               <div className="hotel-infoListItem">
                 <div className="hotel-listItemText">
                   Call and <span className="hotel-infoEmphasis">press 5</span>;
-                  ask for a room in the Reeves / Sheridan wedding block.
+                  ask for a room in the Reeves / Sheridan wedding block
                 </div>
                 <Link to="tel:3104214195">
                   <button type="button" className="hotel-listItemButton">
@@ -73,7 +73,7 @@ const Hotels = () => {
               <div className="hotel-infoListItem">
                 <div className="hotel-listItemText">
                   Use <span className="hotel-infoEmphasis">code 7142402</span>{' '}
-                  on the hotel's general website.
+                  on the hotel's general website
                 </div>
                 <Link to="https://www.hotelportofino.com/">
                   <button type="button" className="hotel-listItemButton">
@@ -95,9 +95,9 @@ const Hotels = () => {
 
           {/* <h2 className="hotel-name">Alternate options</h2> */}
           <p className="hotel-additionalInfo">
-            Additionally, there are plenty of other hotels in the area, many of
-            which are very close to the festivities. Be sure not to book a hotel
-            in Los Angeles as it is 30 – 40 minutes away from Redondo Beach.
+            Additionally, there are plenty of other hotels in the area. Be sure
+            not to book a hotel in Los Angeles as it is 30 – 40 minutes from
+            Redondo Beach.
           </p>
         </Cardstock>
       </Transitions>

@@ -2,8 +2,8 @@ import './Loading.css';
 
 const Loading = () => {
   return (
-    <div class="loading-wrapper">
-      <p class="loading-text">Loading...</p>
+    <div className="loading-wrapper">
+      <p className="loading-text">Loading...</p>
     </div>
   );
 };

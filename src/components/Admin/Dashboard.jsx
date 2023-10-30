@@ -74,7 +74,7 @@ const Dashboard = () => {
             return sortedGuests[0].name;
           })()}
           isEditing={isEditing}
-          title="Current List"
+          title="Invitees"
           includeTotals={true}
           declinedVisible={isEditing}
           handleEdits={handleEdits}

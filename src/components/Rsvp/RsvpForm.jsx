@@ -35,10 +35,6 @@ const RsvpForm = ({ event, guests, rsvpField, fieldType }) => {
                 <p className="rsvp-infoDetail">{time}</p>
               </div>
             </div>
-            {/* {event.address.map((addressLine) => (
-              <p key={addressLine}>{addressLine}</p>
-            ))} */}
-            {/* <p>{event.dressCode}</p> */}
           </>
         ) : event.title.toLowerCase() === 'address' ? (
           <div className="rsvp-infoGrouping">

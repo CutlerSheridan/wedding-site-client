@@ -7,7 +7,7 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 #### TODO NEXT
 
 - decide on calendar button font color
-- rewrite itinerary copy
+- add SEO
 
 #### TODO LATER
 
@@ -16,7 +16,6 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - ? wedding hashtag
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
-- add SEO
 - ? add admin user setting to dictate if admin can only view admin site or if they can edit too
 
 ##### Behavior
@@ -39,6 +38,28 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change default backend db to production db
 
 #### DONE
+
+_0.11.19_
+
+- fix class assignment syntax in Loading component
+- start addressing Tyler's notes
+  - make stars bigger on mobile
+  - RSVP
+    - change text of RSVP back button to "find other guest"
+  - Itinerary
+    - unbolden dress code
+    - change some copy
+    - rephrase dinner explanation without wristband info
+    - rephrase brunch copy
+  - Hotel
+    - make info labels title caps
+    - remove periods from booking options
+    - adjust Redondo distance from LA explanation copy
+  - Registry
+    - fix margins on mobile
+  - Dashboard
+    - change first list title to "invitees"
+    - make grey rows lighter
 
 _0.11.18_
 

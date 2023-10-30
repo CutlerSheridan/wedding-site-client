@@ -62,8 +62,8 @@ const EVENTS = [
     '7:00pm – 2:00am',
     'Black tie',
     [
-      "Naja's Place has wine and a huge selection of beer on tap, but no liquor, so get your fill on the boat.",
-      'Everyone will get a wristband to order dinner from the connected smash burger grill, which has a variety of options (including vegetarian).',
+      "Naja's Place has wine and an extensive selection of beer on tap, but no liquor, so get your fill on the boat.",
+      'Dinner will be served from the connected smash burger grill, which has a variety of options (including vegetarian).',
     ],
     false,
     ['2024-01-27', '2024-01-28', '19:00', '02:00']
@@ -76,8 +76,8 @@ const EVENTS = [
     '1:00pm',
     'Casual',
     [
-      'A chill brunch in a park for anyone still in town.',
-      "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it here!",
+      'Brunch in a park for anyone still in town.',
+      "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it!",
     ],
     true,
     ['2024-01-28', '2024-01-28', '13:00', '15:00']

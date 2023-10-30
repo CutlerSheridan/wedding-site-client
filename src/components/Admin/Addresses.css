@@ -89,7 +89,7 @@
 }
 .addresses-groupWrapper:nth-of-type(even):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {
-  background: var(--clr-grey-lightest);
+  background: var(--clr-white-3);
 }
 
 .addresses-groupWrapper

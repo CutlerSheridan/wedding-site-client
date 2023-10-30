@@ -74,6 +74,7 @@
 .hotel-infoLabel {
   font-family: var(--font-2);
   font-size: 0.9em;
+  text-transform: capitalize;
 }
 .hotel-info {
   margin: 0rem 0 0.3rem;

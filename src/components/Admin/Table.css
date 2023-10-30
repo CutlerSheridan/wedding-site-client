@@ -83,7 +83,6 @@ tr > * {
   text-align: left;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.4rem;
 }
@@ -138,7 +137,7 @@ tbody > tr:nth-of-type(even) {
   background: var(--clr-white-2);
 }
 tbody > tr:nth-of-type(odd) {
-  background: var(--clr-grey-lightest);
+  background: var(--clr-white-3);
 }
 tfoot > tr > td {
   background: var(--clr-pri);
