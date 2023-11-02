@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import EVENTS from '../eventInfo';
 import Cardstock from './Cardstock';
 import './Schedule.css';
@@ -14,9 +15,6 @@ const Schedule = () => {
   const createEvent = (event) => {
     return (
       <>
-        {/* {event.needsRsvp ? (
-          <h2 className="schedule-eventDate">{event.date}</h2>
-        ) : null} */}
         <div className="schedule-eventDetailsAndDescription">
           <div className="schedule-eventDetails">
             <h3 className="schedule-eventTitle">{event.title}</h3>
@@ -83,6 +81,13 @@ const Schedule = () => {
   };
   return (
     <Cardstock>
+      <Helmet>
+        <title>Itinerary</title>
+        <meta
+          name="description"
+          content="Cutler and Tyler's full wedding itinerary."
+        />
+      </Helmet>
       {eventDates.map((date) => {
         return (
           <div key={'date' + date.date} className="schedule-dayWrapper">

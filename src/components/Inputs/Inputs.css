@@ -40,6 +40,8 @@
 }
 .input-grouping select {
   padding: 0.2rem;
+  /* width: max-content; */
+  /* max-width: 100%; */
   font-size: 1.6rem;
 }
 @media only screen and (min-width: 450px) {

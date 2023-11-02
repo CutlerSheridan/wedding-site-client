@@ -1,11 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import GuestCard from './GuestCard';
 import SERVER_URL from '../../../serverUrl';
 import './GroupEdit.css';
 
 const GroupForm = ({ jwt, guests, groupId, refreshGuests }) => {
-  const [isEditing, setIsEditing] = useState(false);
+  const location = useLocation();
+  const uri = location.pathname;
+  const [isEditing, setIsEditing] = useState(
+    uri.substring(uri.length - 3) === 'new' ? true : false
+  );
   const [newGroupId] = useState(randomizeId());
   const [guestsInGroup, setGuestsInGroup] = useState(
     guests.filter((x) => x.group === groupId)

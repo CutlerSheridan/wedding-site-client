@@ -61,16 +61,12 @@
 }
 .schedule-descriptionList {
   margin: auto;
-  /* max-width: 60ch; */
   font-size: 0.75em;
-  /* background: pink; */
 }
 .schedule-eventDescription {
   margin: 0 1.2rem;
-  /* margin: auto; */
   padding: 0 0.5rem;
   text-align: left;
-  /* max-width: 60ch; */
   font-style: italic;
   list-style-type: '';
   letter-spacing: 0.2rem;

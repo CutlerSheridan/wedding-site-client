@@ -4,8 +4,6 @@
 .registry-text {
   font-size: 1.6rem;
   max-width: 45ch;
-  /* text-align: justify; */
-  /* text-align-last: center; */
 }
 .registry-text:last-of-type {
   margin-top: 2rem;

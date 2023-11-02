@@ -5,10 +5,12 @@ import Loading from '../Loading';
 import EVENTS from '../../eventInfo';
 import SERVER_URL from '../../serverUrl';
 import Cardstock from '../Cardstock';
+import { Helmet } from 'react-helmet';
 
 const Rsvp = () => {
   const [groupId, setGroupId] = useState(localStorage.getItem('groupId'));
   const [guestsInGroup, setGuestsInGroup] = useState([]);
+  const invitedGuestsInGroup = guestsInGroup.filter((x) => !x.next_round);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ const Rsvp = () => {
       if (groupId && !guestsInGroup.length) {
         const response = await fetch(`${SERVER_URL}/api/1/groups/${groupId}`);
         const guests = await response.json();
-        setGuestsInGroup(guests.filter((x) => !x.next_round));
+        setGuestsInGroup(guests);
       } else if (!groupId) {
         setGuestsInGroup([]);
       }
@@ -95,26 +97,23 @@ const Rsvp = () => {
     localStorage.removeItem('groupId');
     setGroupId(undefined);
   };
-  // const toggleStoredGroupId = () => {
-  //   if (localStorage.getItem('groupId')) {
-  //     localStorage.removeItem('groupId');
-  //     setGuestsInGroup([]);
-  //     setGroupId(undefined);
-  //   } else {
-  //     localStorage.setItem('groupId', 'mnRFfusx1qUOIdzu3Yvd6QYe');
-  //     setGroupId('mnRFfusx1qUOIdzu3Yvd6QYe');
-  //   }
-  // };
 
   return (
     <Cardstock>
+      <Helmet>
+        <title>RSVP</title>
+        <meta
+          name="description"
+          content="RSVP for Cutler and Tyler's wedding."
+        />
+      </Helmet>
       <h1>RSVP</h1>
 
       {groupId ? (
         isLoading ? (
           <Loading />
         ) : (
-          createFormComponents(guestsInGroup)
+          createFormComponents(invitedGuestsInGroup)
         )
       ) : (
         <RsvpAuth

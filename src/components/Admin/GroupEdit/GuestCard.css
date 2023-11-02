@@ -74,6 +74,9 @@
   align-items: start;
   gap: 2rem;
 }
+.guestCard-horizontalFields > .input-grouping:last-of-type > select {
+  width: 100%;
+}
 @media only screen and (min-width: 600px) {
   .guestCard-gridCell {
     gap: 2rem;
@@ -105,13 +108,13 @@
   display: block;
 }
 .guestCard-deleteButton:active {
-  background: var(--clr-red-alpha);
+  background: var(--clr-red-light);
 }
 @media only screen and (hover: hover) {
   .guestCard-deleteButton:active {
     background: var(--clr-red);
   }
   .guestCard-deleteButton:hover {
-    background: var(--clr-red-alpha);
+    background: var(--clr-red-light);
   }
 }

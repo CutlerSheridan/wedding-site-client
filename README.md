@@ -2,12 +2,34 @@
 
 ## The guest-facing client for my wedding website
 
-Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-server).
+Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-server). To access the admin tools, append "/admin" to the URL and log in.
+
+### Admin Pages
+
+#### Dashboard
+
+- see tables grouping invitees, standby guests, and declined guests
+- manually edit who goes in which group and if people have RSVP'd
+
+#### Addresses
+
+- see addresses for each invited guest grouped by their respective groups
+- if a group only requires one address, only that one will be shown; if it requires multiple, each one will be shown
+- see which guests have physical information ready to be sent, and which ones have already had it sent to them
+- edit all of the above information
+
+#### Edit Group
+
+- select/look up a group and see individual guest cards for each group member with every possible detail listed
+- change who is in which group, create new groups, and delete guests entirely
+- change any information desired for each guest
+
+### Dev Log
 
 #### TODO NEXT
 
-- decide if one photo on home is working and which photo to show
-- add SEO
+- check if social media link preview image works
+- make sure page titles and descriptions show on mobile previews
 
 #### TODO LATER
 
@@ -20,10 +42,8 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 ##### Behavior
 
-- in group edit, make "new group" start in edit mode
 - prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
 - add error if server is called and doesn't respond
-- ? add ability in Schedule to link or span in description line (this would really just require manually putting in event descriptions instead of including them in event objects)
 
 ##### Style
 
@@ -35,9 +55,26 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - clean up logs
 - Remove 'toggle stored groupId' button
 - Remove 'Toggle auth' button
-- change default backend db to production db
+- change SERVER_URL from local to external
 
 #### DONE
+
+_1.0.0_
+
+- add titles and descriptions for SEO
+- add favicon
+- revert mobile home to show two photos
+- fix background stars so they don't shift on mobile when switching pages
+- clean up comments
+- clean up logs
+- adjust how TOTALS work in Dashboard tables
+- in group lookup, make names grey if standby, red if declined
+- in group lookup, make clicking a group card bring you to the top of that group's page
+- in group edit, make "new group" start in edit mode
+- make group selector in group lookup edit view never extend into table on desktop / past card edge on mobile
+- fix RSVP so standy guests never show up
+- make declined guests show as declined in RSVP even if each individual event has not been declined
+- customize social media link preview image
 
 _0.11.20_
 

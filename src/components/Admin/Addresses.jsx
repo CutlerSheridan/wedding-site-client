@@ -5,6 +5,7 @@ import Loading from '../Loading';
 import AddressesTextInput from './AddressesTextInput';
 import './Addresses.css';
 import Cardstock from '../Cardstock';
+import { Helmet } from 'react-helmet';
 
 const AddressesPage = () => {
   const { jwt } = useOutletContext();
@@ -34,7 +35,6 @@ const AddressesPage = () => {
         },
       });
       const parsedResponse = await response.json();
-      console.log('guests: ', parsedResponse.guests);
       setGuests(parsedResponse.guests);
     };
 
@@ -43,7 +43,6 @@ const AddressesPage = () => {
 
   // payload should be {field: value, field2: value2}
   const handleEdits = async (guestId, payload) => {
-    console.log('payload: ', payload);
     const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
       method: 'PUT',
       headers: {
@@ -52,7 +51,6 @@ const AddressesPage = () => {
       body: JSON.stringify(payload),
     });
     const parsedResponse = await response.json();
-    console.log(parsedResponse);
     updateGuestsLocally(parsedResponse);
   };
   const updateGuestsLocally = (updatedGuest) => {
@@ -147,6 +145,10 @@ const AddressesPage = () => {
 
   return (
     <Cardstock>
+      <Helmet>
+        <title>Guest Addresses</title>
+        <meta name="description" content="Track guest addresses by group." />
+      </Helmet>
       <h1 className="addresses-header">Addresses</h1>
       <button
         type="button"

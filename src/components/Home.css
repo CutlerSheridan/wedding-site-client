@@ -7,7 +7,6 @@
 }
 .home-invitedText,
 .home-detailsText {
-  /* margin: 1rem 0; */
   font-size: 1.1em;
   letter-spacing: 0.15rem;
 }
@@ -45,34 +44,19 @@
   margin: 1.5rem auto;
   padding: 0 0.5rem;
   font-style: italic;
-  /* color: var(--clr-grey-lighter); */
   font-size: 1.8rem;
 }
 
 .home-imgsRow {
-  /* margin: 3rem 1rem 0; */
   margin: 3rem 2.2rem 0;
   display: flex;
   justify-content: center;
   gap: 0.3rem;
 }
-.home-imgsRow > .home-imgContainer:last-of-type {
-  display: none;
-}
 .home-imgContainer {
   position: relative;
   width: 100%;
-  /* border: 3px double var(--clr-grey-lighter); */
-  border: 3px double var(--clr-pri);
-  /* border: 3px solid var(--clr-pri); */
-}
-/* The below makes them the same height while maintaining
-their individual aspect ratios */
-.home-imgContainer:first-of-type {
-  /* flex: 0.6721; */
-}
-.home-imgContainer:last-of-type {
-  /* flex: 0.7546; */
+  border: 3px double var(--clr-grey-lighter);
 }
 .home-imgContainer > img {
   width: 100%;
@@ -93,9 +77,6 @@ their individual aspect ratios */
 @media only screen and (min-width: 600px) {
   .home-imgsRow {
     margin: 3rem 1rem 0;
-  }
-  .home-imgsRow > .home-imgContainer:last-of-type {
-    display: block;
   }
   .home-invitedText:first-of-type {
     margin: 0rem 3rem 0;
@@ -122,6 +103,3 @@ their individual aspect ratios */
     gap: 0.6rem;
   }
 }
-
-/* .6721  1.4879  */
-/* .7546  1.3252 */

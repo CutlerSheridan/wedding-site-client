@@ -2,9 +2,7 @@
   position: relative;
   margin: 0 auto 2.4rem;
   width: 100%;
-  /* border: 3px solid var(--clr-grey-lighter); */
   border: 5px solid var(--clr-white-2);
-  /* border-bottom: none; */
 }
 .hotel-pictureLink {
   position: absolute;
@@ -16,7 +14,6 @@
   vertical-align: middle;
   cursor: pointer;
   object-fit: cover;
-  /* border: 3px solid var(--clr-grey-lighter); */
   border: 3px solid var(--clr-pri);
   background: var(--clr-white-2);
 }

@@ -116,7 +116,10 @@ const Table = ({
         {includeTotals ? (
           <tfoot>
             <tr>
-              <th scope="row">BOAT COUNT: {guests.length + 2}</th>
+              <th scope="row">
+                TOTAL: {guests.length}
+                {title.toLowerCase() === 'invitees' ? '/47' : ''}
+              </th>
               {fields.map((field) => (
                 <td
                   key={'tfoot_' + field}

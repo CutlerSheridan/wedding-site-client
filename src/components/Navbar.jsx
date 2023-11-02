@@ -111,8 +111,6 @@ const Navbar = ({ jwt, updateJwt }) => {
         <div className="navbar-separator"></div>
       </div>
 
-      {/* <div className="navbar-separator hamburger-separator"></div> */}
-
       <div className="hamburger-topBarWrapper">
         <div className="hamburger-topBar">
           <button

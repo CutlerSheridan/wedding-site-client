@@ -3,12 +3,20 @@ import hotelPic from '../assets/photos/hotel-room.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import './Hotels.css';
 import Transitions from './Transitions';
+import { Helmet } from 'react-helmet';
 
 const Hotels = () => {
   const navigate = useNavigate();
 
   return (
     <>
+      <Helmet>
+        <title>Hotel Details</title>
+        <meta
+          name="description"
+          content="Details to book a hotel room for Tyler and Cutler's wedding."
+        />
+      </Helmet>
       <Transitions>
         <div className="hotel-imgContainer">
           <Link
@@ -93,7 +101,6 @@ const Hotels = () => {
 
           <div className="hotel-separator"></div>
 
-          {/* <h2 className="hotel-name">Alternate options</h2> */}
           <p className="hotel-additionalInfo">
             Additionally, there are plenty of other hotels in the area. Be sure
             not to book a hotel in Los Angeles as it is 30 – 40 minutes from

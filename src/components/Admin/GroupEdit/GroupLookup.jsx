@@ -37,8 +37,11 @@ const GroupLookup = ({ guests }) => {
     return (
       <div
         key={`groupCard_${group[0].group}`}
-        className="groupLookup-groupCard"
-        onClick={() => navigate(group[0].group)}
+        className={`groupLookup-groupCard`}
+        onClick={() => {
+          navigate(group[0].group);
+          window.scroll(0, 0);
+        }}
       >
         {group.map((guest) => (
           <div
@@ -46,8 +49,11 @@ const GroupLookup = ({ guests }) => {
             onClick={(e) => {
               e.stopPropagation();
               navigate(guest.group);
+              window.scroll(0, 0);
             }}
-            className="groupLookup-guestName"
+            className={`groupLookup-guestName ${
+              guest.next_round ? 'groupLookup-guestName-standby' : ''
+            } ${guest.declined ? 'groupLookup-guestName-declined' : ''}`}
           >
             {guest.name}
           </div>

@@ -32,7 +32,8 @@
   --clr-green: rgb(85, 206, 72);
   --clr-green-alpha: rgb(150, 225, 142);
   --clr-red: rgb(211, 11, 56);
-  --clr-red-alpha: rgb(249, 139, 163);
+  --clr-red-light: rgb(249, 139, 163);
+  --clr-red-light-2: rgb(251, 177, 193);
   color: var(--clr-white-2);
   background-color: var(--clr-pri-dark);
   background-image: linear-gradient(
@@ -79,7 +80,7 @@ body::before {
   left: 0;
   width: 100%;
   overflow-x: hidden;
-  height: 100%;
+  height: 100vh;
   background: url('./assets/stars.png');
   background-size: 150%;
   background-position: center;

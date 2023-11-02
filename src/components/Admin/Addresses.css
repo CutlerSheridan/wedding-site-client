@@ -33,7 +33,6 @@
   background: var(--clr-grey-light);
 }
 .addresses-groupWrapper:not(:first-of-type) {
-  /* margin-bottom: var(--grid-gap-thick); */
   border-top: var(--grid-gap-thick) solid var(--clr-grey-light);
 }
 
@@ -140,16 +139,13 @@
   transition: background 0.08s;
 }
 .addresses-wrapper-editing .addresses-toggle:active {
-  /* background: var(--clr-green-alpha); */
   border: 1px solid var(--clr-black);
 }
 @media only screen and (hover: hover) {
   .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:hover {
-    /* background: var(--clr-green-alpha); */
     border: 1px solid var(--clr-black);
   }
   .addresses-wrapper-editing .addresses-fieldWrapper.addresses-toggle:active {
-    /* background: var(--clr-green); */
     border: 1.5px solid var(--clr-black);
   }
 }

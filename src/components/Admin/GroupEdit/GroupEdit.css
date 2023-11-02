@@ -69,6 +69,13 @@
   font-size: 1.7rem;
   line-height: 17px;
 }
+.groupLookup-guestName-standby {
+  color: var(--clr-grey-lighter);
+  /* font-style: italic; */
+}
+.groupLookup-guestName-declined {
+  color: var(--clr-red);
+}
 @media only screen and (min-width: 600px) {
   .groupLookup-groupList {
     display: flex;

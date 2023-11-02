@@ -88,10 +88,6 @@ const Router = () => {
               path: 'group-edit/:groupId',
               element: <GroupEdit />,
             },
-            // {
-            //   path: 'group-edit/new',
-            //   element: <GroupEdit />,
-            // },
           ],
         },
       ],

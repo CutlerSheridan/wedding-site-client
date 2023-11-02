@@ -61,7 +61,9 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
           type="button"
           ref={declineButton}
           className={`rsvp-button ${
-            guest[rsvpField] === false ? 'button-selected' : null
+            guest[rsvpField] === false || guest.declined
+              ? 'button-selected'
+              : null
           } rsvp-checkbox`}
           onClick={() => {
             handleButton(declineButton);

@@ -14,9 +14,7 @@
   padding: 0.7rem 1rem;
   width: 60%;
   max-width: 20ch;
-  /* min-height: 3.6rem; */
   font-size: 1.9rem;
-  /* color: var(--clr-pri); */
 }
 .rsvpAuth-error {
   list-style: none;
@@ -56,7 +54,6 @@
   max-width: 65rem;
   background: var(--clr-white);
   border: var(--border-width) solid var(--clr-grey-lighter);
-  /* box-shadow: 0 0 7px 0.5px var(--clr-grey-lighter); */
 }
 .rsvp-formWrapper::before {
   content: '';
@@ -127,13 +124,9 @@
 }
 h2.rsvp-infoDetail {
   margin-right: 1rem;
-  /* font-family: var(--font-1); */
-  /* font-size: 2.3rem; */
   font-family: var(--font-3);
   font-size: 3.5rem;
   letter-spacing: normal;
-  /* text-transform: uppercase; */
-  /* border-bottom: 1px solid var(--clr-grey-lightest); */
 }
 .rsvp-infoDetail:not(h2) {
   letter-spacing: 0.2rem;
@@ -155,7 +148,6 @@ h2.rsvp-infoDetail {
     font-size: 1.1em;
   }
   h2.rsvp-infoDetail {
-    /* font-size: 2.8rem; */
     font-size: 4rem;
   }
 }
@@ -197,7 +189,6 @@ h2.rsvp-infoDetail {
   height: 0;
   border-top: 2px dotted;
   border-color: var(--clr-grey-lightest);
-  /* background: var(--clr-grey-lightest); */
 }
 .rsvp-inputGrouping {
   display: flex;
@@ -205,7 +196,6 @@ h2.rsvp-infoDetail {
   gap: 0.7rem;
 }
 .rsvp-textGrouping > *:first-child {
-  /* height: 3.5rem; */
   display: flex;
   justify-content: center;
   align-items: end;

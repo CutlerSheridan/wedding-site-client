@@ -1,23 +1,22 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Cardstock from './Cardstock';
 import './Home.css';
-// import titanicPosterPic from '../../public/engagement-pic.jpg';
-// import dressyPic from '../assets/dressy-pic.jpeg';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const getFilename = (fullPath) => {
-    const assetsIndex = fullPath.indexOf('assets');
-    const filenameIndex = assetsIndex + 7;
-    return fullPath.slice(filenameIndex);
-  };
-
   return (
     <Cardstock>
+      <Helmet>
+        <title>Cutler & Tyler's Wedding</title>
+        <meta
+          name="description"
+          content="Your invitation to the wedding of Cutler Sheridan and Tyler Reeves."
+        />
+      </Helmet>
       <div className="home-invitationWrapper">
         <p className="home-invitedText">You are cordially invited</p>
-        {/* <p className="home-invitedText">invited</p> */}
         <p className="home-transitionText home-transitionTextPreNames">
           to the wedding of
         </p>
@@ -26,8 +25,6 @@ const Home = () => {
           — and —
         </p>
         <p className="home-name">Cutler Sheridan</p>
-        {/* <p className="home-transitionText">at</p>
-          <p className="home-detailsText">4:00pm</p> */}
         <p className="home-transitionText home-transitionTextPostNames">on</p>
         <p className="home-detailsText">January 27, 2024</p>
         <p className="home-transitionText">in</p>
@@ -61,7 +58,7 @@ const Home = () => {
         .
       </p>
       <p className="home-bodyText">
-        To reserve a room from our hotel block, please follow{' '}
+        To reserve a room from our hotel block, follow{' '}
         <Link
           to="./hotel"
           className="link-onWhite"

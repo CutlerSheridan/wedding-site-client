@@ -5,6 +5,7 @@ import './Dashboard.css';
 import Table from './Table';
 import Loading from '../Loading';
 import Cardstock from '../Cardstock';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
   const { jwt } = useOutletContext();
@@ -26,7 +27,6 @@ const Dashboard = () => {
         },
       });
       const parsedResponse = await response.json();
-      console.log('guests: ', parsedResponse.guests);
       setGuests(parsedResponse.guests);
     };
 
@@ -35,7 +35,6 @@ const Dashboard = () => {
 
   // payload should be {field: value, field2: value2}
   const handleEdits = async (guestId, payload) => {
-    console.log('payload: ', payload);
     const response = await fetch(`${SERVER_URL}/api/1/guests/${guestId}`, {
       method: 'PUT',
       headers: {
@@ -44,7 +43,6 @@ const Dashboard = () => {
       body: JSON.stringify(payload),
     });
     const parsedResponse = await response.json();
-    console.log(parsedResponse);
     updateGuestsLocally(parsedResponse);
   };
   const updateGuestsLocally = (updatedGuest) => {
@@ -168,6 +166,13 @@ const Dashboard = () => {
 
   return (
     <Cardstock>
+      <Helmet>
+        <title>Wedding Dashboard</title>
+        <meta
+          name="description"
+          content="Track who has been invited and RSVP'd."
+        />
+      </Helmet>
       <h1>Dashboard</h1>
       <div className="dashboard-controls">
         <div className="dashboard-tableTypeButtons">

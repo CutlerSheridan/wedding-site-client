@@ -6,6 +6,7 @@ import './GroupEdit.css';
 import GroupLookup from './GroupLookup';
 import GroupForm from './GroupForm';
 import Cardstock from '../../Cardstock';
+import { Helmet } from 'react-helmet';
 
 const GroupEdit = () => {
   const { jwt } = useOutletContext();
@@ -37,6 +38,13 @@ const GroupEdit = () => {
 
   return (
     <Cardstock>
+      <Helmet>
+        <title>Edit Group</title>
+        <meta
+          name="description"
+          content="Edit all details of individual guests or groups."
+        />
+      </Helmet>
       {isLoading ? (
         <Loading />
       ) : groupId ? (
