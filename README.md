@@ -58,6 +58,10 @@ See this site deployed at cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.0.8_
+
+- change site preview image
+
 _1.0.7_
 
 - improve social media share details
