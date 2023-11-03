@@ -58,6 +58,10 @@ See this site deployed at cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.0.6_
+
+- improve social media share details
+
 _1.0.5_
 
 - correct URL for social media link preview image
