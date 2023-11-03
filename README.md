@@ -4,6 +4,8 @@
 
 Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-server). To access the admin tools, append "/admin" to the URL and log in.
 
+See this site deployed at cutlerandtyler.netlify.app.
+
 ### Admin Pages
 
 #### Dashboard
@@ -58,6 +60,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.0.3_
+
+- change externalUrl to Render instead of fly.io
 
 _1.0.2_
 
