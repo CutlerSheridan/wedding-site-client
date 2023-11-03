@@ -59,6 +59,10 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_1.0.2_
+
+- add \_redirects file for Netlify
+
 _1.0.1_
 
 - add external server URL
