@@ -30,9 +30,6 @@ See this site deployed at cutlerandtyler.netlify.app.
 
 #### TODO NEXT
 
-- check if social media link preview image works
-- make sure page titles and descriptions show on mobile previews
-
 #### TODO LATER
 
 ##### Features
@@ -60,6 +57,11 @@ See this site deployed at cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.0.5_
+
+- correct URL for social media link preview image
+- adjust title and description to show on mobile previews
 
 _1.0.4_
 
