@@ -58,6 +58,10 @@ See this site deployed at cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.0.9_
+
+- improve mobile navbar styling
+
 _1.0.8_
 
 - change site preview image

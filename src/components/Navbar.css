@@ -126,13 +126,15 @@
   background: var(--clr-grey);
 }
 .hamburger-closeButton {
-  margin: 0.3rem 0.5rem 0;
-  font-size: 1.5em;
+  margin: 1rem 0.5rem 0;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2.2rem;
   background: var(--clr-grey);
   color: var(--clr-white-2);
 }
 .hamburger-nav {
-  padding: 0.5rem 2.5rem 1rem;
+  padding: 1rem 3rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
