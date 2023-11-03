@@ -61,6 +61,10 @@ See this site deployed at cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.0.4_
+
+- fix RSVP Auth error displaying string 'guests' instead of value of variable 'guests'
+
 _1.0.3_
 
 - change externalUrl to Render instead of fly.io

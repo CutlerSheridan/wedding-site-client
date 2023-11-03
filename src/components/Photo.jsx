@@ -17,7 +17,6 @@ const Photo = () => {
           <div className="photo-container">
             <img
               className="photo"
-              // src={'/src/assets/photos/' + photoPath + '.jpg'}
               src={pics[photoName]}
               height="1800"
               width="1200"

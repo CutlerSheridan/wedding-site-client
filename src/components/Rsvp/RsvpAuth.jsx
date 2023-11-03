@@ -26,7 +26,7 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
       setErrors(['No guests found with that name']);
     } else {
       submitButton.current.disabled = false;
-      setErrors([`guests`]);
+      setErrors([guests]);
     }
   };
   const searchName = async (nameUri) => {
