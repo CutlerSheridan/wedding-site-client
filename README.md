@@ -59,6 +59,11 @@ Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-serv
 
 #### DONE
 
+_1.0.1_
+
+- add external server URL
+- refactor image paths and imports to allow access once site is deployed
+
 _1.0.0_
 
 - add titles and descriptions for SEO

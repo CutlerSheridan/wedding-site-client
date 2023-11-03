@@ -2,9 +2,12 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 import './Photo.css';
 import Transitions from './Transitions';
+import pics from '../imageObjects';
 
 const Photo = () => {
   const { photoPath } = useParams();
+  const photoName = photoPath.replace('-', '');
+  console.log('file: ', photoName);
   const navigate = useNavigate();
 
   return (
@@ -14,7 +17,8 @@ const Photo = () => {
           <div className="photo-container">
             <img
               className="photo"
-              src={'/src/assets/photos/' + photoPath + '.jpg'}
+              // src={'/src/assets/photos/' + photoPath + '.jpg'}
+              src={pics[photoName]}
               height="1800"
               width="1200"
             />

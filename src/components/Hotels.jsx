@@ -1,5 +1,5 @@
 import Cardstock from './Cardstock';
-import hotelPic from '../assets/photos/hotel-room.jpg';
+import pics from '../imageObjects';
 import { Link, useNavigate } from 'react-router-dom';
 import './Hotels.css';
 import Transitions from './Transitions';
@@ -28,7 +28,7 @@ const Hotels = () => {
           ></Link>
           <img
             className="hotel-img"
-            src={hotelPic}
+            src={pics.hotelroom}
             alt="A hotel room with a view of the marina"
             height="800"
             width="800"
