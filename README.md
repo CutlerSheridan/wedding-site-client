@@ -4,7 +4,7 @@
 
 Find the backend repo [here](https://github.com/CutlerSheridan/wedding-site-server). To access the admin tools, append "/admin" to the URL and log in.
 
-See this site deployed at cutlerandtyler.netlify.app.
+See this site deployed at https://cutlerandtyler.netlify.app.
 
 ### Admin Pages
 
@@ -29,6 +29,8 @@ See this site deployed at cutlerandtyler.netlify.app.
 ### Dev Log
 
 #### TODO NEXT
+
+- make guest card edit view field font sizes equal
 
 #### TODO LATER
 
@@ -57,6 +59,10 @@ See this site deployed at cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.0.10_
+
+- add google site verification tag in html for google to index site
 
 _1.0.9_
 
