@@ -30,7 +30,8 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 #### TODO NEXT
 
-- make guest card edit view field font sizes equal
+- add visual indicator that RSVP choice has saved
+- disable RSVP address save button unless address has changed
 
 #### TODO LATER
 
@@ -59,6 +60,14 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.1.0_
+
+- change brunch to 12pm + button
+- describe as "picnic brunch"
+- fix Naja's Place address
+- remove periods from hotel date descriptions
+- add 'cash bar' to welcome drinks description
 
 _1.0.10_
 

@@ -30,7 +30,7 @@ const EVENTS = [
     'January 26, 2024',
     '8:00pm',
     'Business casual',
-    ['A casual mixer for anyone in town who feels like mingling.'],
+    ['A casual mixer (cash bar) for anyone in town who feels like mingling.'],
     true,
     ['2024-01-26', '2024-01-26', '20:00', '23:00']
   ),
@@ -56,7 +56,7 @@ const EVENTS = [
   ),
   _Event(
     'The Real Party',
-    ["Naja's Place", '154 International Blvd.', 'Redondo Beach, CA 90277'],
+    ["Naja's Place", '154 International Boardwalk', 'Redondo Beach, CA 90277'],
     'Saturday',
     'January 27, 2024',
     '7:00pm – 2:00am',
@@ -73,14 +73,14 @@ const EVENTS = [
     ['TBD', 'Redondo Beach, CA'],
     'Sunday',
     'January 28, 2024',
-    '1:00pm',
+    '12:00pm',
     'Casual',
     [
-      'Brunch in a park for anyone still in town.',
+      'Picnic brunch in a park for anyone still in town.',
       "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it!",
     ],
     true,
-    ['2024-01-28', '2024-01-28', '13:00', '15:00']
+    ['2024-01-28', '2024-01-28', '12:00', '14:00']
   ),
 ];
 

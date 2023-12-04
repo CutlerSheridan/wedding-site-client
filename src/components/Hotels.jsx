@@ -43,7 +43,7 @@ const Hotels = () => {
             <p className="hotel-info">January 26 – 28, 2024</p>
             <p className="hotel-infoDescription">
               The hotel will attempt to accomodate additional nights at the same
-              discounted price.
+              discounted price
             </p>
           </div>
           <div className="hotel-infoGroup">
@@ -51,7 +51,7 @@ const Hotels = () => {
             <p className="hotel-info">December 27, 2023</p>
             <p className="hotel-infoDescription">
               Be aware, the hotel is not guaranteed to have availability this
-              late.
+              late
             </p>
           </div>
           <div className="hotel-bookingOptions">
