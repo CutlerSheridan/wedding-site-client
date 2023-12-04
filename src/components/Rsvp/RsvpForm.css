@@ -207,8 +207,10 @@ h2.rsvp-infoDetail {
   text-transform: uppercase;
 }
 .rsvp-buttonsWrapper {
+  position: relative;
+  margin: auto;
+  width: max-content;
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
 }
 .rsvp-button {
@@ -216,6 +218,24 @@ h2.rsvp-infoDetail {
 }
 .rsvp-button-disabled {
   pointer-events: none;
+}
+.rsvp-confirmation {
+  display: none;
+  position: absolute;
+  top: 17%;
+  left: calc(100% + 1rem);
+}
+.rsvp-confirmation-animate {
+  display: block;
+  animation: 0.8s confirmChoice;
+}
+@keyframes confirmChoice {
+  25% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
 .rsvp-addressAndButtonWrapper {
   margin: auto;

@@ -5,6 +5,7 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
   const [guest, setGuest] = useState({ ...initialGuest });
   const acceptButton = useRef(null);
   const declineButton = useRef(null);
+  const rsvpConfirmation = useRef(null);
 
   const handleButton = async (button) => {
     acceptButton.current.classList.add('rsvp-button-disabled');
@@ -38,6 +39,10 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
     setGuest({ ...resData });
     acceptButton.current.classList.remove('rsvp-button-disabled');
     declineButton.current.classList.remove('rsvp-button-disabled');
+    rsvpConfirmation.current.addEventListener('animationend', () => {
+      rsvpConfirmation.current.classList.remove('rsvp-confirmation-animate');
+    });
+    rsvpConfirmation.current.classList.add('rsvp-confirmation-animate');
   };
 
   return (
@@ -72,6 +77,9 @@ const RsvpCheckboxField = ({ initialGuest, rsvpField }) => {
         >
           NO
         </button>
+        <div ref={rsvpConfirmation} className={`rsvp-confirmation`}>
+          ✓
+        </div>
       </div>
     </div>
   );

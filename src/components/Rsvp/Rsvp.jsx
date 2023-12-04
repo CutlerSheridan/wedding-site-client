@@ -36,7 +36,8 @@ const Rsvp = () => {
         <div className="rsvp-instructions">
           <p>Please respond by December 17th.</p>
           <p>
-            You do not need to RSVP for all events or guests at the same time.
+            If you do not yet know your full schedule, you may RSVP for some
+            events now and return to this page later to finish responding.
           </p>
         </div>
         {guests.length > 1 ? <p></p> : <></>}
