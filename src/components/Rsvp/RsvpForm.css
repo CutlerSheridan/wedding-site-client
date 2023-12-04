@@ -219,11 +219,15 @@ h2.rsvp-infoDetail {
 .rsvp-button-disabled {
   pointer-events: none;
 }
+.rsvp-saveButton {
+  position: relative;
+}
 .rsvp-confirmation {
   display: none;
   position: absolute;
   top: 17%;
   left: calc(100% + 1rem);
+  color: var(--clr-pri);
 }
 .rsvp-confirmation-animate {
   display: block;

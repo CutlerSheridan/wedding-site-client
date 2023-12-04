@@ -30,8 +30,6 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 #### TODO NEXT
 
-- disable RSVP address save button unless address has changed (or add checkmark)
-
 #### TODO LATER
 
 ##### Features
@@ -59,6 +57,11 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.1.2_
+
+- disable RSVP address save button unless address has changed
+- add confirmation checkmark after saving RSVP address
 
 _1.1.1_
 

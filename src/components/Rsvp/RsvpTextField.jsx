@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import SERVER_URL from '../../serverUrl';
 
 const RsvpTextField = ({ initialGuest, rsvpField }) => {
@@ -6,7 +6,17 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
   const [inputText, setInputText] = useState(
     initialGuest[rsvpField] || undefined
   );
+  const [saveIsDisabled, setSaveIsDisabled] = useState(true);
   const saveButton = useRef(null);
+  const rsvpConfirmation = useRef(null);
+
+  useEffect(() => {
+    if (inputText == guest.address || (!inputText && !guest.address)) {
+      setSaveIsDisabled(true);
+    } else {
+      setSaveIsDisabled(false);
+    }
+  }, [inputText]);
 
   const handleButton = async (e) => {
     e.preventDefault();
@@ -21,6 +31,11 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
     const resData = await response.json();
     setGuest({ ...resData });
     saveButton.current.classList.remove('rsvp-button-disabled');
+    setSaveIsDisabled(true);
+    rsvpConfirmation.current.addEventListener('animationend', () => {
+      rsvpConfirmation.current.classList.remove('rsvp-confirmation-animate');
+    });
+    rsvpConfirmation.current.classList.add('rsvp-confirmation-animate');
   };
 
   return (
@@ -36,11 +51,15 @@ const RsvpTextField = ({ initialGuest, rsvpField }) => {
         />
         <button
           type="button"
-          className="rsvp-button"
+          className="rsvp-button rsvp-saveButton"
           ref={saveButton}
           onClick={handleButton}
+          disabled={saveIsDisabled}
         >
           Save
+          <div ref={rsvpConfirmation} className={`rsvp-confirmation`}>
+            ✓
+          </div>
         </button>
       </form>
     </div>
