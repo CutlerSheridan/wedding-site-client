@@ -58,6 +58,10 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.1.5_
+
+- fix wedding calendar event dates
+
 _1.1.4_
 
 - change night before drinks time

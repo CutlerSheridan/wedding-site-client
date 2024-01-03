@@ -52,7 +52,7 @@ const EVENTS = [
       "Dinner will be served after we disembark. There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand if you need to.",
     ],
     true,
-    ['2024-01-27', '2024-01-28', '15:30', '19:00']
+    ['2024-01-27', '2024-01-27', '15:30', '19:00']
   ),
   _Event(
     'The Real Party',
