@@ -58,6 +58,11 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.1.4_
+
+- change night before drinks time
+- add Kincaid's zip code
+
 _1.1.3_
 
 - add address for welcome drinks

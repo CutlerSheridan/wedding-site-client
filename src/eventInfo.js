@@ -25,14 +25,14 @@ const _Event = (
 const EVENTS = [
   _Event(
     'Welcome Drinks',
-    ["Kincaid's", '500 Fishermans Wharf', 'Redondo Beach, CA'],
+    ["Kincaid's", '500 Fishermans Wharf', 'Redondo Beach, CA 90277'],
     'Friday',
     'January 26, 2024',
-    '8:00pm',
+    '7:30pm',
     'Business casual',
     ['A casual mixer (cash bar) for anyone in town who feels like mingling.'],
     true,
-    ['2024-01-26', '2024-01-26', '20:00', '23:00']
+    ['2024-01-26', '2024-01-26', '19:30', '22:00']
   ),
   _Event(
     'Wedding Voyage',
