@@ -25,7 +25,7 @@ const _Event = (
 const EVENTS = [
   _Event(
     'Welcome Drinks',
-    ['TBD', 'Redondo Beach, CA'],
+    ["Kincaid's", '500 Fishermans Wharf', 'Redondo Beach, CA'],
     'Friday',
     'January 26, 2024',
     '8:00pm',
@@ -76,7 +76,7 @@ const EVENTS = [
     '12:00pm',
     'Casual',
     [
-      'Picnic brunch in a park for anyone still in town.',
+      'Picnic brunch on the beach for anyone still in town.',
       "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it!",
     ],
     true,
