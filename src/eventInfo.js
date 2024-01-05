@@ -70,13 +70,14 @@ const EVENTS = [
   ),
   _Event(
     'Brunch',
-    ['TBD', 'Redondo Beach, CA'],
+    ['Redondo Beach', '100-G Fishermans Wharf', 'Redondo Beach, CA 90277'],
     'Sunday',
     'January 28, 2024',
     '12:00pm',
     'Casual',
     [
       'Picnic brunch on the beach for anyone still in town.',
+      'This address takes you to the restaurant next to the beach so it should be easy to find from there.',
       "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it!",
     ],
     true,
