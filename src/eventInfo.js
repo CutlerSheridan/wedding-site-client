@@ -78,7 +78,7 @@ const EVENTS = [
     [
       'Picnic brunch on the beach for anyone still in town.',
       'This address takes you to the restaurant next to the beach so it should be easy to find from there.',
-      "We will have some basic items like bagels, cream cheese, fruit, etc.  If you'd prefer, feel free to get food elsewhere and bring it!",
+      "We will have breakfast burritos from local favorite Phanny's, juice, coffee, fruit, and donuts",
     ],
     true,
     ['2024-01-28', '2024-01-28', '12:00', '14:00']
