@@ -30,7 +30,10 @@ const EVENTS = [
     'January 26, 2024',
     '7:30pm',
     'Business casual',
-    ['A casual mixer (cash bar) for anyone in town who feels like mingling.'],
+    [
+      'A casual mixer (cash bar) for anyone in town who feels like mingling.',
+      'This is not a dinner, but food is available at this location.',
+    ],
     true,
     ['2024-01-26', '2024-01-26', '19:30', '22:00']
   ),
@@ -48,7 +51,7 @@ const EVENTS = [
     [
       "The ceremony will take place on a boat, which will board at 3:45pm.  Don't be late or we will leave without you!",
       'LA gets chilly at night.  Dress accordingly.',
-      'We recommend walking or Ubering, but a parking deck is available nearby at 200 N. Pacific Avenue.',
+      'We recommend walking or Ubering, but validated parking is available at 137 N. Harbor Drive, Redondo Beach.',
       "Dinner will be served after we disembark. There will be hors d'œuvres and cocktails on the boat, but eat a snack beforehand if you need to.",
     ],
     true,

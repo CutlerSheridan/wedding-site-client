@@ -58,6 +58,10 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 #### DONE
 
+_1.1.8_
+
+- adjust itinerary details
+
 _1.1.7_
 
 - alter brunch food details
