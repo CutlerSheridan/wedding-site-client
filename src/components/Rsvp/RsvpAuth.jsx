@@ -14,14 +14,17 @@ const RsvpAuth = ({ setGuestsInGroup, setGroupId }) => {
     e.preventDefault();
     submitButton.current.disabled = true;
     const nameUri = inputName.replace(' ', '_');
-    const guests = await searchName(nameUri);
-
+    let guests = await searchName(nameUri);
     if (Array.isArray(guests)) {
+      guests = guests.filter((x) => !x.next_round);
+    }
+
+    if (Array.isArray(guests) && guests.length >= 1) {
       setErrors([]);
       setGuestsInGroup(guests);
       setGroupId(guests[0].group);
       localStorage.setItem('groupId', guests[0].group);
-    } else if (!guests) {
+    } else if (!guests || (Array.isArray(guests) && guests.length === 0)) {
       submitButton.current.disabled = false;
       setErrors(['No guests found with that name']);
     } else {

@@ -34,7 +34,6 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 ##### Features
 
-- ? wedding hashtag
 - add character page with condensed view and expanded view
   - on character page, add ability to edit things
 - ? add admin user setting to dictate if admin can only view admin site or if they can edit too
@@ -42,7 +41,7 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 ##### Behavior
 
 - prevent async loading flicker by creating stand-in views (like an empty ticket for RSVP, for example)
-- add error if server is called and doesn't respond
+- add error if server is called and doesn't respond at all
 
 ##### Style
 
@@ -57,6 +56,11 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.1.9_
+
+- make sure, if some guests in group are current round and some are next round, the current ones show up and the next round guests don't
+- prevent "next round" guests from appearing in guest lookup
 
 _1.1.8_
 
