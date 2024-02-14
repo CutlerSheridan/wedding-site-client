@@ -79,11 +79,22 @@
   width: 100%;
   justify-content: start;
 }
+.addresses-fieldWrapper.addresses-cell {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  justify-content: start;
+  text-align: left;
+  text-wrap: wrap;
+}
 @media only screen and (min-width: 600px) {
   .addresses-fieldWrapper:not(.addresses-headingField):not(.addresses-cell) {
     justify-content: center;
   }
+  .addresses-fieldWrapper.addresses-cell {
+    padding-left: 1rem;
+  }
 }
+
 .addresses-groupWrapper:nth-of-type(odd):not(.addresses-headingWrapper)
   .addresses-fieldWrapper {
   background: var(--clr-white-2);

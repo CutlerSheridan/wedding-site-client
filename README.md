@@ -45,6 +45,7 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 
 ##### Style
 
+- make long addresses in Addresses a little prettier when user has to scroll
 - add credit
 
 ##### Production Deployment Checklist
@@ -56,6 +57,10 @@ See this site deployed at https://cutlerandtyler.netlify.app.
 - change SERVER_URL from local to external
 
 #### DONE
+
+_1.1.10_
+
+- account for super long single-line addresses
 
 _1.1.9_
 
